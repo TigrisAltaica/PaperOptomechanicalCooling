@@ -1,0 +1,115 @@
+\begin{thebibliography}{10}
+
+\bibitem{BraginskiiOG}
+V.~B. BRAGINSKII{,} A.~B. MANUKIN{,} and M.~Yu. TIKHONOV.
+\newblock Investigation of dissipative ponderomotive effects of electromagnetic
+  radiation.
+\newblock {\em Soviet Physics JETP}, 1970.
+
+\bibitem{WeissOIT}
+S~Weiss{,} et~al.
+\newblock Optomechanically induced transparency.
+\newblock {\em Science}, 2010C.
+
+\bibitem{VogelOT}
+M.~Vogel{,}~C. Mooser{,} and K.~Karraia.
+\newblock Optically tunable mechanics of microlevers.
+\newblock {\em Applied Physics Letters}, 2003.
+
+\bibitem{CohadonCM}
+M.~Pinard P.~F. Cohadon{,} A.~Heidmann.
+\newblock Cooling of a mirror by radiation pressure.
+\newblock {\em Physical Review Letters}, 1999.
+
+\bibitem{CorbittOC}
+Thomas Corbitt{,} Christopher~Wipf{,} et~al.
+\newblock Optical dilution and feedback cooling of a gram-scale oscillator to
+  6.9 mk.
+\newblock {\em Physical Review Letters}, 2007.
+
+\bibitem{SchliesserRPC}
+A.~Schliesser{,} P. Del~Haye{,} et~al.
+\newblock Radiation pressure cooling of a micromechanical oscillator using
+  dynamical backaction.
+\newblock {\em Physical Review Letters}, 2006.
+
+\bibitem{LCNooshi}
+I~Wilson-Rae{,} N.~Nooshi{,} et~al.
+\newblock Cavity-assisted back action cooling of mechanical resonators.
+\newblock {\em New Journal of Physics}, 2008.
+
+\bibitem{ManciniOC}
+Stefano Mancini{,}~David Vitali{,} and Paolo Tombesi.
+\newblock Optomechanical cooling of a macroscopic oscillator by homodyne
+  feedback.
+\newblock {\em Physical Review Letters}, 1998.
+
+\bibitem{MarquardtQTOQ}
+et~al Florian~Marquardt.
+\newblock Quantum theory of optomechanical cooling.
+\newblock {\em arXiv:0803.1164v1 [quant-ph]}, 2008.
+
+\bibitem{KippenberCO}
+Thomas J. Kippenberg{,} Thomas Marquardt{,}~Markus Aspelmeyer.
+\newblock Cavity optomechanics.
+\newblock {\em Review of Modern Physics}, 2013.
+
+\bibitem{JockelMR}
+A.~Jockel{,} M.~T. Rakher.
+\newblock Realization of an optomechanical interface between ultracold atoms
+  and a membrane.
+\newblock {\em Physical Review Letters}, 107, November 2011.
+
+\bibitem{BarberisLC}
+Marc Bienert{,}~Pablo Barberis-Blostein.
+\newblock Optomechanical laser cooling with mechanical modulation.
+\newblock {\em Physical Review Letters A}, 2015.
+
+\bibitem{HanngiFM}
+Sigmund Kohler{,} Thomas Dittrich† {,}~Peter H\"{a}nggi.
+\newblock Floquet-markov description of the parametrically driven, dissipative
+  harmonic quantum oscillator.
+\newblock {\em Phys.Rev. E55}, 30 Sep 1998.
+
+\bibitem{BrownPT}
+Lowell~S. Brown.
+\newblock Quantum motion in a paul trap.
+\newblock {\em Physical Review Letters}, 1991.
+
+\bibitem{WardFT}
+M.~Ward.
+\newblock {\em Supplement: Floquet Theory and the Mathieu's Equation}.
+
+\bibitem{TesisMaestria}
+Pablo Enrique~Yanes Thomas.
+\newblock Enfriamiento optomecanico con parametros dependientes del tiempo.
+\newblock Master's thesis, Universidad Nacional Autonoma de Mexico, 2016.
+
+\bibitem{EnglertFL}
+{\em Five Lectures on Dissipative Master Equations (in Coherent Evolution in
+  Noisy Environments)}.
+\newblock Springer, 2002.
+
+\bibitem{PiatekME}
+Artur R.~Pietrykowski Marcin~Piatek.
+\newblock Classical irregular blocks, hill’s equation and pt–symmetric
+  periodic complex potentials.
+\newblock {\em arXiv:1604.03574v1 [hep-th]}, 2016.
+
+\bibitem{ZollerQN}
+Peter Zoller.
+\newblock {\em Quantum Noise:A Handbook of Markovian and Non-Markovian Quantum
+  Stochastic Methods with Applications to Quantum Optics}.
+\newblock Springer Science and Business Media, 2004.
+
+\bibitem{EnglertDB}
+Hans-Jurgen Briegel{,} Berthold-Georg Englert.
+\newblock Quantum optical master equations: The use of damping bases.
+\newblock {\em PHYSICAL REVIEW A}, 1993.
+
+\bibitem{CarmichaelQO}
+Howard Carmichael.
+\newblock {\em Statistical Methods in Quantum Optics, Vol 1}.
+\newblock Springer, 1999.
+
+\end{thebibliography}
