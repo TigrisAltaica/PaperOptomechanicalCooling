@@ -275,8 +275,8 @@ equation
 for the time evolution of the density operator $\rho'(t)$ which
 represents the coupled cavity-mechanical resonator system. The primes
 indicate that the transformation has been applied. The displaced
-Hamiltonian, that includes terms that appeared when making the
-transformation on the $L$ operators, is given by \fxnote{Valdra la pena decir que terminos?}
+Hamiltonian, which includes a pump-like term that appears when making the
+transformation on the $L$ operators, is given by
 \begin{align*}
   H'=& -\hbar \delta' a^\dagger a + \hbar\frac{W}{|f(t)|^2}\Gamma \Gamma^\dagger\\
      &-\hbar g\sqrt{\frac{\hbar}{2M}}[(a^{\dagger}a +\alpha a^{\dagger}+\alpha^* a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)]\\
@@ -290,7 +290,6 @@ $\beta(t)$ fulfill the differential equations
 \dot{\alpha} =& \alpha(-\frac{A}{2}+i(\delta+g\sqrt{\frac{\hbar}{2M}}(\gamma_-(t) \beta^* + \gamma_+(t) \beta))-i\frac{\Omega}{2},\\
 \dot{\beta} =& \beta(-\frac{\gamma}{2}-i\frac{W}{|f(t)|^2})+ig\sqrt{\frac{\hbar}{2M}}|\alpha|^2\gamma_+(t).
 \end{align}
-\fxnote{Comentamos de que parte de los terminos extras del Hamiltoniano aparecen cuando}
 
 
 The $C(t)$ term
@@ -318,8 +317,6 @@ solutions for \eqref{TimeDependentHO}, $f$ and $f^*$. For example
 C(t)_{-+} = -(C(t)_{+-})^* = \frac{i}{2}(\dot{f}^* \dot{f} - \ddot{f}^*f^*).
 \end{equation}
 
-\fxnote*{Esto es debido a los operadores L o a H?}{The transformed Hamiltonian also contains a pump-like term that
-depends on the time derivative of the Floquet operators}
 
 
 Proceeding further requires an explicit solution for
@@ -498,7 +495,7 @@ $\epsilon = \frac{n^2}{5}$. We wish for $n$ to be sufficiently large
 so as to fulfill the condition relating $\nu_0$ and $\omega$ but small
 enough so that $\epsilon \ll \nu_0$. To this end we chose
 $n=\sqrt{\frac{\nu_0}{2}}$ (rounded to the nearest integer) which
-maintains the previous ratio between the two frequencies. \textbf{This chooses a certain solution for the MAthieu equation. What does it mean physically?} As a
+maintains the previous ratio between the two frequencies. Physically, we employ a classical solution which describes a situation where the oscillator's average $\nu_0$ frequency is clearly the fastest one, while the secular frequency $\omega$ is of the order of the perturbation frequency $\epsilon$. As a
 calculation variable, we employ the ratio between the detuning
 $\delta$ and $\nu_0$ covering the range
 $\frac{\delta}{\nu_0} \in [-2,2]$
@@ -509,18 +506,16 @@ presents a shift of where to expect the minimum number of excitations
 and also, most interestingly, a region where the predicted number of
 excitations is smaller than in the non-driven case.
 
-\textbf{Here should be a discussion of the results: What is  the reason for the shift, how does the temperature change when one changes the paramerters, comparison with the result fro nour old paper, etc.}
+The temperature shift depends on $\epsilon$, as long as $\nu_0$ and $\omega$ fulfill \eqref{scattering}, altering them does not seem to alter the behavior of the final temperature. This indicates that the shift is related to the time dependent nature of the correction. One possible explanation for this shift is that $\nu_0$'s time dependence causes the cooling and heating sidebands to oscillate. If the detuning places the resonance point for the cavity's density of states closer to a particular sideband, that sideband's oscillations would, on average, spend more time near the resonance point than the other, enhancing the cooling or heating effect.  The common crossing point indicates the point where the resonance is placed at a symmetry point for the sideband's oscillations and thus the effects cancel out. This would also explain why there is better cooling to one side of this point and worse cooling to the other.   
 
 
 
 \begin{figure}
-\includegraphics[scale=.30]{GraficaTemp.pdf} 
+\includegraphics[scale=.4]{Temperature.png}  
 \caption{\textit{Comparison between the results for temperature with
-    and without the correction term} The dotted line represents the
-  standard non-time dependent prediction and the solid line represents
-  our prediction with the correction term. The correction results in a
+    varying levels of perturbation.} The correction results in a
   shift of the location of the minimum temperature, as well as a lower
-  minimum. Besides all the scattering relations already stated, we
+  minimum. All temperature curves cross the same point. Besides all the scattering relations already stated, we
   work under $\kappa \ll \nu_0$}
 \label{GraficaTemp}
 \end{figure}

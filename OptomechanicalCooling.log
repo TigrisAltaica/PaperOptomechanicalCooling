@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.4)  20 NOV 2018 17:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.4)  28 NOV 2018 13:33
 entering extended mode
 **./OptomechanicalCooling.tex
 (OptomechanicalCooling.tex
@@ -730,22 +730,17 @@ Underfull \hbox (badness 1320) in paragraph at lines 222--234
 []\OT1/cmr/m/n/10 The Hamil-to-nian con-tains two sep-a-rate har-monic
  []
 
-[2]
-FiXme Note: 'Valdra la pena decir que terminos?' on input line 279.
-FiXme Note: 'Comentamos de que parte de los terminos extras del Hamiltoniano ap
-arecen cuando' on input line 293.
-FiXme Note: 'Esto es debido a los operadores L o a H?' on input line 322.
- [3] [4]
-Overfull \hbox (6.94739pt too wide) detected at line 489
+[2] [3] [4]
+Overfull \hbox (6.94739pt too wide) detected at line 486
 [] \OT1/cmr/m/n/10 = [] + \OML/cmm/m/it/10 i[];
  []
 
-<GraficaTemp.pdf, id=33, 778.91pt x 495.8525pt>
-File: GraficaTemp.pdf Graphic file (type pdf)
-<use GraficaTemp.pdf>
-Package pdftex.def Info: GraficaTemp.pdf  used on input line 517.
-(pdftex.def)             Requested size: 233.6748pt x 148.7569pt.
-[5 <./GraficaTemp.pdf>] [6] (OptomechanicalCooling.bbl
+<Temperature.png, id=31, 602.25pt x 401.5pt>
+File: Temperature.png Graphic file (type png)
+<use Temperature.png>
+Package pdftex.def Info: Temperature.png  used on input line 514.
+(pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
+[5 <./Temperature.png>] [6] (OptomechanicalCooling.bbl
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 69.
 
 ("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -753,23 +748,24 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
-)
 
-FiXme Summary: Number of notes: 3,
+[7])
+
+FiXme Summary: Number of notes: 0,
 (FiXme)        Number of warnings: 0,
 (FiXme)        Number of errors: 0,
 (FiXme)        Number of fatal errors: 0,
-(FiXme)        Total: 3.
+(FiXme)        Total: 0.
 
-[7] (OptomechanicalCooling.aux) ) 
+[8] (OptomechanicalCooling.aux) ) 
 Here is how much of TeX's memory you used:
- 6094 strings out of 493305
- 83135 string characters out of 3129802
- 186889 words of memory out of 3000000
- 9509 multiletter control sequences out of 15000+200000
- 14634 words of font info for 54 fonts, out of 3000000 for 9000
+ 6091 strings out of 493305
+ 83075 string characters out of 3129802
+ 179889 words of memory out of 3000000
+ 9507 multiletter control sequences out of 15000+200000
+ 13994 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,60p,558b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,10n,60p,972b,353s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/anoth/AppData/Local/Programs/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/anoth/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/anoth/AppD
@@ -786,19 +782,17 @@ th/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C
 cmr6.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmr7.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmr9.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/anoth/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/anoth/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/User
-s/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy9.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmti10.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/anoth/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/anoth/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on OptomechanicalCooling.pdf (7 pages, 318748 bytes).
+9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/anoth/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/anoth/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/a
+noth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb
+><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmti9.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on OptomechanicalCooling.pdf (8 pages, 311419 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
+ 110 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
