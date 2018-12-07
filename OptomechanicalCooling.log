@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.4)  6 DEC 2018 17:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.4)  7 DEC 2018 13:08
 entering extended mode
 **./OptomechanicalCooling.tex
 (OptomechanicalCooling.tex
@@ -735,17 +735,17 @@ Overfull \hbox (6.94739pt too wide) detected at line 486
 [] \OT1/cmr/m/n/10 = [] + \OML/cmm/m/it/10 i[];
  []
 
-<Temperature.png, id=31, 602.25pt x 401.5pt>
-File: Temperature.png Graphic file (type png)
-<use Temperature.png>
-Package pdftex.def Info: Temperature.png  used on input line 514.
+<Temperature.pdf, id=31, 602.25pt x 401.5pt>
+File: Temperature.pdf Graphic file (type pdf)
+<use Temperature.pdf>
+Package pdftex.def Info: Temperature.pdf  used on input line 514.
 (pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
 [5]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
  on input line 544.
 
-[6 <./Temperature.png>] (OptomechanicalCooling.bbl
+[6 <./Temperature.pdf>] (OptomechanicalCooling.bbl
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 69.
 
 ("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -764,8 +764,8 @@ FiXme Summary: Number of notes: 0,
 
 [8] (OptomechanicalCooling.aux) ) 
 Here is how much of TeX's memory you used:
- 6099 strings out of 493305
- 83201 string characters out of 3129802
+ 6098 strings out of 493305
+ 83221 string characters out of 3129802
  181921 words of memory out of 3000000
  9515 multiletter control sequences out of 15000+200000
  13994 words of font info for 52 fonts, out of 3000000 for 9000
@@ -795,9 +795,9 @@ noth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 cm/cmti9.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on OptomechanicalCooling.pdf (8 pages, 311893 bytes).
+Output written on OptomechanicalCooling.pdf (8 pages, 1289834 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
+ 127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
