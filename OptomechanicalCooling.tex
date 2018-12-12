@@ -64,7 +64,7 @@ cavity is suspended while being able to freely oscillate.
 When photons are reflected by the mirror, there is a
 momentum transfer between the light field and the mirror and hence a coupling force. As the cavity's
 resonance depends on its length, the mechanical
-displacement affects the light field inside the cavity. First experiments of this kind demonstrated the radiation coupling between light field and mechanical object~\cite{BraginskiiOG}\textbf{Did Braginsky really do this??}. This interaction between
+displacement affects the light field inside the cavity. Some of the first theoretical work predicting this sort of coupling was performed by \cite{BraginskiiOG}. This interaction between
 the macroscopic mechanical object and the light field leads to several
 interesting effects such as optomechanically induced
 transparency \cite{WeissOIT}, the optical spring effect \cite{VogelOT}
@@ -85,17 +85,17 @@ mechanical resonator's frequency as a function of time
 \cite{JockelMR}. The effect of this dependence on the mechanical
 object's final temperature was studied in \cite{BarberisLC}. In that
 study it was found that the final temperature of the parametrically
-driven harmonic oscillator was larger than the nondriven case;
-\textbf{The rest of the paragraph is difficult to understand} The
-master equation from which the cooling rates were derived accounted
-for the natural frequency of the mechanical resonator via ad-hoc
-time-dependent coefficients, which were introduced after performing
-the Markov approximation. This approach could lead to an incomplete
-master equation and thus an incomplete description of the system's
-dynamics, as the system is being treated as essentially not
-time-dependent during the derivation of said master equation. In this
-study, we employ a different method that accounts for the time
-dependence throughout the entire derivation.
+driven harmonic oscillator was larger than the nondriven case.
+The master equation from which the cooling rates were derived,
+accounted for the natural frequency of the mechanical
+resonator via ad-hoc time-dependent coefficients. These were
+introduced after performing the Markov approximation. This approach
+could lead to an incomplete master equation and thus an incomplete
+description of the system's dynamics, as the system is being treated
+as essentially not time-dependent during the derivation of the master
+equation. In this study, we employ a different method that accounts
+for the time dependence throughout the entire derivation.
+
 
 The formalism which we apply (section \ref{OptmechH}) is based on
 Floquet theory and was demonstrated to be a more accurate treatment in
@@ -506,8 +506,14 @@ presents a shift of where to expect the minimum number of excitations
 and also, most interestingly, a region where the predicted number of
 excitations is smaller than in the non-driven case.
 
-The temperature shift depends on $\epsilon$, as long as $\nu_0$ and $\omega$ fulfill \eqref{scattering}, altering them does not seem to alter the behavior of the final temperature. This indicates that the shift is related to the time dependent nature of the correction. One possible explanation for this shift is that $\nu_0$'s time dependence causes the cooling and heating sidebands to oscillate. If the detuning places the resonance point for the cavity's density of states closer to a particular sideband, that sideband's oscillations would, on average, spend more time near the resonance point than the other, enhancing the cooling or heating effect.  The common crossing point indicates the point where the resonance is placed at a symmetry point for the sideband's oscillations and thus the effects cancel out. This would also explain why there is better cooling to one side of this point and worse cooling to the other. The parameters used appear reasonable, as controlled frequency modulation has been shown\cite{WoolleyNM}\cite{JockelS}.
+The temperature shift depends on $\epsilon$. As long as $\nu_0$ and $\omega$ fulfill \eqref{scattering}, altering them does not seem to alter the behavior of the final temperature. This indicates that the shift is related to the time dependent nature of the correction. One possible explanation for this shift is that the $\epsilon$ term causes the cooling and heating sidebands to shift away from each other.  The common crossing point indicates the point where the resonance is placed at a symmetry point for the sideband's position and thus the effect cancels out. After the shift, the resonance point with each of the sidebands is further away from the optimal point for the other sideband. This effect can be observed in figure \ref{GraficaA-}. The parameters used appear reasonable, as controlled frequency modulation has been shown \cite{WoolleyNM}\cite{JockelS}.
 
+\begin{figure}
+\includegraphics[scale=.4]{GraficaA-.pdf}
+\caption{Cooling sideband for different perturbation levels. Besides all the scattering relations already stated, we
+  work under $\kappa \ll \nu_0$}
+\label{GraficaA-}
+\end{figure}
 
 
 \begin{figure}
