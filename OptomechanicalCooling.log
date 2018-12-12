@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.4)  9 DEC 2018 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.4)  12 DEC 2018 12:57
 entering extended mode
 **./OptomechanicalCooling.tex
 (OptomechanicalCooling.tex
@@ -514,9 +514,9 @@ File: switch.def 2018/02/14 3.18 Babel switching mechanism
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\engl
+("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-spanish\span
 ish.ldf"
-Language: english 2017/06/06 v3.3r English support from the babel system
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
 
 ("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2018/02/14 3.18 Babel common definitions
@@ -527,9 +527,12 @@ File: babel.def 2018/02/14 3.18 Babel common definitions
 ef")
 \bbl@dirlevel=\count108
 )
-\l@canadian = a dialect from \language\l@american 
-\l@australian = a dialect from \language\l@british 
-\l@newzealand = a dialect from \language\l@british 
+\es@quottoks=\toks24
+\es@quotdepth=\count109
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
 ))
 ("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fixme\fixme.sty"
 Package: fixme 2017/03/05 v4.4 Collaborative annotations for LaTeX2e
@@ -540,8 +543,8 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbatim.sty
 "
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks24
-\verbatim@line=\toks25
+\every@verbatim=\toks25
+\verbatim@line=\toks26
 \verbatim@in@stream=\read1
 )
 ("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.st
@@ -552,20 +555,20 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 tex"
 ("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkvutils
 .tex"
-\XKV@toks=\toks26
-\XKV@tempa@toks=\toks27
+\XKV@toks=\toks27
+\XKV@tempa@toks=\toks28
 
 ("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\keyval.t
 ex"))
-\XKV@depth=\count109
+\XKV@depth=\count110
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \lox@file=\read2
-\c@fixmecount=\count110
-\c@fxnotecount=\count111
-\c@fxwarningcount=\count112
-\c@fxerrorcount=\count113
-\c@fxfatalcount=\count114
+\c@fixmecount=\count111
+\c@fxnotecount=\count112
+\c@fxwarningcount=\count113
+\c@fxerrorcount=\count114
+\c@fxfatalcount=\count115
 )
 ("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.
 sty"
@@ -597,7 +600,7 @@ Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen114
 \extrarowheight=\dimen115
-\NC@list=\toks28
+\NC@list=\toks29
 \extratabsurround=\skip49
 \backup@length=\skip50
 )) ("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\bm.sty"
@@ -632,21 +635,23 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
 
 ("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count115
+\scratchcounter=\count116
 \scratchdimen=\dimen116
 \scratchbox=\box43
-\nofMPsegments=\count116
-\nofMParguments=\count117
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count118
+\nofMPsegments=\count117
+\nofMParguments=\count118
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count119
 \MPscratchDim=\dimen117
-\MPnumerator=\count119
-\makeMPintoPDFobject=\count120
-\everyMPtoPDFconversion=\toks30
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
+\everyMPtoPDFconversion=\toks31
 )
 ("C:\Users\anoth\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
 base.sty"
@@ -727,7 +732,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 152.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{C:/Users/anoth/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Underfull \hbox (badness 1320) in paragraph at lines 221--233
-[]\OT1/cmr/m/n/10 The Hamil-to-nian con-tains two sep-a-rate har-monic
+[]\OT1/cmr/m/n/10 The Ha-mil-to-nian con-tains two se-pa-ra-te har-mo-nic
  []
 
 [2] [3] [4]
@@ -758,6 +763,12 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
+
+Underfull \hbox (badness 1067) in paragraph at lines 69--73
+ []\OT1/cmr/m/n/9 Sigmund Koh-ler, Tho-mas Dit-trich\OMS/cmsy/m/n/9 y \OT1/cmr/
+m/n/9 , Pe-ter Hang-gi.
+ []
+
 )
 
 FiXme Summary: Number of notes: 0,
@@ -768,13 +779,13 @@ FiXme Summary: Number of notes: 0,
 
 [8] (OptomechanicalCooling.aux) ) 
 Here is how much of TeX's memory you used:
- 6103 strings out of 493305
- 83329 string characters out of 3129802
- 184935 words of memory out of 3000000
- 9519 multiletter control sequences out of 15000+200000
+ 6518 strings out of 493305
+ 88721 string characters out of 3129802
+ 191007 words of memory out of 3000000
+ 9934 multiletter control sequences out of 15000+200000
  13994 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,60p,915b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,10n,60p,851b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/anoth/AppData/Local/Programs/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/anoth/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/anoth/AppDa
@@ -792,15 +803,16 @@ r7.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmr9.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/anoth/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/anoth/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/an
-oth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-<C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/symbols/msbm7.pfb>
-Output written on OptomechanicalCooling.pdf (8 pages, 1618313 bytes).
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/anoth/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/an
+oth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+<C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmti9.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on OptomechanicalCooling.pdf (8 pages, 1627679 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
+ 143 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
