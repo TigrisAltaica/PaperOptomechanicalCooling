@@ -468,18 +468,18 @@ that the cavity is at zero temperature ($n_p=0$).  The trace inside
 \eqref{CavityQuadrature} can be easily calculated, we obtain
 \begin{align}
 G(\nu,0)=&\int_0^\infty dt e^{(i\nu(t)+\lambda_c) t}Tr[...]\nonumber\\
-&= \int_0^\infty e^{i \nu = \nu_0 + \epsilon cos(2\omega t) t + \lambda_c t} Tr[...]dt, \nonumber\\
-&=\int_0^\infty e^{i \nu_0 t + \lambda_c t}e^{i \epsilon cos(2\omega t)t} Tr[...]dt, \nonumber\\
-&\approx \int_0^\infty e^{i \nu_0 t + \lambda_c t}(1+i \epsilon cos(2\omega t)t) Tr[...]dt, \nonumber\\
+&= \int_0^\infty e^{i \nu = \nu_0 + \epsilon' cos(2\omega t) t + \lambda_c t} Tr[...]dt, \nonumber\\
+&=\int_0^\infty e^{i \nu_0 t + \lambda_c t}e^{i \epsilon' cos(2\omega t)t} Tr[...]dt, \nonumber\\
+&\approx \int_0^\infty e^{i \nu_0 t + \lambda_c t}(1+i \epsilon' cos(2\omega t)t) Tr[...]dt, \nonumber\\
 &=\int_0^\infty e^{i \nu_0 t + \lambda_c t}Tr[...]dt\nonumber\\
-&+i\epsilon\int_0^\infty cos(2\omega t)t e^{i \nu_0 t + \lambda_c t}Tr[...]dt\, ,\nonumber
+&+i\epsilon'\int_0^\infty cos(2\omega t)t e^{i \nu_0 t + \lambda_c t}Tr[...]dt\, ,\nonumber
 \end{align}
 where $\lambda_c$ represents the eigenvalues for the cavity's states.
 This leads to an expression for \eqref{CavityQuadrature} which consist
 of two parts: one corresponding to the nondriven harmonic oscillator
 case plus a correction term proportional to $\epsilon$
 \begin{equation}
-\frac{G(\nu,0)}{g'^2}= \frac{1}{-k + 2i(\delta + \nu_0)} +i\epsilon\frac{(-k + i(\nu_0 + \delta))^2 - 4\omega^2}{((-k + i(\nu_0 + \delta))^2 + 4\omega^2)^2}\, .
+\frac{G(\nu,0)}{g'^2}= \frac{1}{-k + 2i(\delta + \nu_0)} +i\epsilon'\frac{(-k + i(\nu_0 + \delta))^2 - 4\omega^2}{((-k + i(\nu_0 + \delta))^2 + 4\omega^2)^2}\, .
 \end{equation} %where  $E_0 = g \sqrt{\frac{\hbar}{2m\nu_0}}$.
 
 We evaluate the real part of this expression numerically. In order for
@@ -487,22 +487,22 @@ the adiabatic approximation to be valid, the variation in the
 mechanical oscillator's frequency must be slow when compared to the
 frequency itself ($\omega \ll \nu_0$) which translates to classical
 solutions with $1 \ll n$ due to \eqref{scattering}. Assuming that
-$\epsilon = \frac{\nu_0}{10}$ we now have the condition
-$\epsilon = \frac{n^2}{5}$. We wish for $n$ to be sufficiently large
+$\epsilon' = \frac{\nu_0}{10}$ we now have the condition
+$\epsilon' = \frac{n^2}{5}$. We wish for $n$ to be sufficiently large
 so as to fulfill the condition relating $\nu_0$ and $\omega$ but small
-enough so that $\epsilon \ll \nu_0$. To this end we chose
+enough so that $\epsilon' \ll \nu_0$. To this end we chose
 $n=\sqrt{\frac{\nu_0}{2}}$ (rounded to the nearest integer) which
 maintains the previous ratio between the two frequencies. Physically,
 we employ a classical solution which describes a situation where the
 oscillator's average $\nu_0$ frequency is the fastest one, while the
 secular frequency $\omega$ is of the order of the perturbation
-frequency $\epsilon$. In figure \ref{GraficaTemp} it is shown the
+frequency $\epsilon'$. In figure \ref{GraficaTemp} it is shown the
 number of mechanical oscillations when $\frac{\delta}{\nu_0}$ is in
 the range of $[-2,2]$. Compared with the non-driven case, the
 parametrically driven oscillator has a frequency shift of where to
 expect the minimum number of excitations, and a region where the
 predicted number of excitations is smaller. The reason of this
-behavior is that, as $\epsilon$ increases, the parametric modulation
+behavior is that, as $\epsilon'$ increases, the parametric modulation
 causes the cooling and heating coefficients to shift away from each
 other, and its distribution becomes narrower and presents a higher
 peak. This can be observed in figure \ref{GraficaA-}. As long as
