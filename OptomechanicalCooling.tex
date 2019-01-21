@@ -151,7 +151,7 @@ can have a significant influence on the resulting temperature. (section \ref{Con
 	We employed the standard Hamiltonian for optomechanical cooling \cite{LCNooshi} in a reference system that rotates with the same frequency as a laser that continuously pumps photons into the cavity. 
 
 \begin{equation}
-H(t) = H_{mec}(t) + H_{cav} + H_{int} + H_{pump},
+H(t) =   H_{cav} + H_{mec}(t) + H_{int} + H_{pump},
 \end{equation}
 
 where
@@ -199,7 +199,7 @@ with the Wronskian $W$ for \eqref{TimeDependentHO}. Equation
 oscillator's position operator \cite{TesisMaestria}
 
 \begin{equation}
-x = \frac{b^* \Gamma - b\Gamma^\dagger}{(b^*a-ba^*)}
+\hat{x} = \frac{b^* \Gamma - b\Gamma^\dagger}{(b^*a-ba^*)}
 \end{equation} with
 
 \begin{align}
@@ -287,7 +287,7 @@ This Hamiltonian is valid as long as the coefficients $\alpha(t)$ and
 $\beta(t)$ fulfill the differential equations
 
 \begin{align}
-\dot{\alpha} =& \alpha(-\frac{A}{2}+i(\delta+g\sqrt{\frac{\hbar}{2M}}(\gamma_-(t) \beta^* + \gamma_+(t) \beta))-i\frac{\Omega}{2},\\
+\dot{\alpha} =& \alpha(-\frac{\kappa}{2}+i(\delta+g\sqrt{\frac{\hbar}{2M}}(\gamma_-(t) \beta^* + \gamma_+(t) \beta))-i\frac{\Omega}{2},\\
 \dot{\beta} =& \beta(-\frac{\gamma}{2}-i\frac{W}{|f(t)|^2})+ig\sqrt{\frac{\hbar}{2M}}|\alpha|^2\gamma_+(t).
 \end{align}
 
@@ -341,7 +341,7 @@ of variables $t'= \omega t$ and set
 $\epsilon = \frac{2\epsilon' \nu_0}{\omega^2}$ and use the scattering
 relation
 \begin{equation}
-\frac{\nu_0^2}{\omega^2} = n^2\label{scattering}
+\frac{\nu_0^2}{\omega^2} = n^2,\label{scattering}
 \end{equation}
 with $n \in \mathbb{Z}^+$ in order to guarantee stable solutions
 \cite{WardFT}. Under these restrictions and returning to the original
@@ -362,7 +362,7 @@ C(t)_{-+} =& i [1 -\frac{\epsilon}{16}e^{-2i\omega t}-\frac{6\epsilon}{16}e^{2i\
 \end{align} The $\gamma_{\pm}$ coefficients can be calculated as well
 
 \begin{equation}
-\gamma_\pm= \frac{1}{\omega}e^{\mp i\omega t}
+\gamma_\pm= \frac{1}{\omega}e^{\mp i\omega t},
 \end{equation} as can be the overall time-dependent factor for the time-dependent harmonic oscillator expressed in terms of Floquet operators,
 
 \begin{equation}
@@ -372,7 +372,7 @@ C(t)_{-+} =& i [1 -\frac{\epsilon}{16}e^{-2i\omega t}-\frac{6\epsilon}{16}e^{2i\
 With these expressions we may solve for the $\alpha(t)$ and $\beta(t)$ coefficients. The equations are
 
 \begin{align}
-\dot{\alpha} =& \alpha(-\frac{A}{2}+i(\delta+g\sqrt{\frac{\hbar}{2M}}(e^{i\omega t} \beta^* + e^{-i\omega t} \beta))-i\frac{\Omega}{2},\\
+\dot{\alpha} =& \alpha(-\frac{\kappa}{2}+i(\delta+g\sqrt{\frac{\hbar}{2M}}(e^{i\omega t} \beta^* + e^{-i\omega t} \beta))-i\frac{\Omega}{2},\\
 \dot{\beta} =& \beta(-\frac{\gamma}{2}-i 2\omega)+ig\sqrt{\frac{\hbar}{2M}}|\alpha|^2e^{i\omega t},
 \end{align}
 however our focus is on the stationary case
@@ -381,12 +381,12 @@ coefficients of first order in $g$ or higher are neglected, which
 results in two simplified equations
 
 \begin{align}
-0 =& \alpha(-\frac{A}{2}+i\delta)-i\frac{\Omega}{2},\\
+0 =& \alpha(-\frac{\kappa}{2}+i\delta)-i\frac{\Omega}{2},\\
 0 =& \beta(-\frac{\gamma}{2}-i 2\omega),
 \end{align} which are trivially solved 
 
 \begin{align}
-\alpha_0 =& \frac{\Omega}{2\delta-iA},\\
+\alpha_0 =& \frac{\Omega}{2\delta-i\kappa},\\
 \beta_0 =& 0.
 \end{align} The 0 sub-index denotes that the solutions are valid only to zeroth order in the coupling parameter. 
 
@@ -402,14 +402,14 @@ then be written as
 \begin{align}
 H =& -\hbar \delta a^{\dagger}a +\hbar\omega\Gamma^{\dagger}\Gamma \\
 &-\hbar g\sqrt{\frac{\hbar}{2M}}(a^{\dagger}a +\alpha_0 a^{\dagger}+\alpha^*_0 a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)\nonumber.
-\end{align} We focus on the case where $|\alpha| \gg 1$
+\end{align} We focus on the case where $|\alpha_0| \gg 1$
 \cite{BarberisLC}, so that the $a^\dagger a$ term can be neglected as
 it is small when compared to the other two terms in the interaction.
 This leads to a further simplified Hamiltonian
 
 \begin{align} \label{LCHamiltonian}
 H(t) =& -\hbar \delta a^{\dagger}a +\hbar\omega\Gamma^{\dagger}\Gamma \\
-&+\frac{\hbar g\sqrt{\frac{\hbar}{2M}}}{\omega}(\alpha_0 a^{\dagger}+\alpha^*_0 a)(e^{i\omega t} \nonumber\Gamma^{\dagger}+e^{-i\omega t}\Gamma)
+&+\frac{\hbar g\sqrt{\frac{\hbar}{2M}}}{\omega}(\alpha_0 a^{\dagger}+\alpha^*_0 a)(e^{i\omega t} \nonumber\Gamma^{\dagger}+e^{-i\omega t}\Gamma).
 \end{align}
 This Hamiltonian corresponds to a standard optomechanical master
 equation with Floquet operators for the mechanical oscillator
@@ -436,17 +436,17 @@ its stationary state and tracing over the cavity degrees of freedom. The technic
 cavity-quadratures correlation $G(\nu_m,n_p)$ can be used to calculate the heating and cooling rates
 for the mirror and is given by
 \begin{equation} \label{CavityQuadrature}
-G(\nu_m,n_p) = \int_0^\infty dt e^{i\nu(t) t}Tr_c[X_c e^{L_c t} X_c \rho_{st}],
+G(\nu_m,n_p) = \int_0^\infty dt e^{i\nu(t) t}Tr_a[X_a e^{L_a t} X_a \rho_{st}],
 \end{equation} with 
 \begin{equation}
-X = \frac{a + a^\dagger}{\sqrt{2}\alpha_0},
+X_a = \frac{a + a^\dagger}{\sqrt{2}\alpha_0},
 \end{equation}
 
 the cooling and heating rates are given by
 
 
 \begin{equation}
-A_{\pm \nu}(n_p) = g'^2Real(G(\mp \nu_m,n_p)).
+A_\pm(\nu_m,n_p) = g'^2Real(G(\mp \nu_m,n_p)),
 \end{equation} where $A_+$ represents heating and $A_-$ represents cooling. The final number of phonon excitations is given by
 
 \begin{equation}
@@ -468,18 +468,18 @@ that the cavity is at zero temperature ($n_p=0$).  The trace inside
 \eqref{CavityQuadrature} can be easily calculated, we obtain
 \begin{align}
 G(\nu,0)=&\int_0^\infty dt e^{(i\nu(t)+\lambda_c) t}Tr[...]\nonumber\\
-&= \int_0^\infty e^{i \nu = \nu_0 + \epsilon' cos(2\omega t) t + \lambda_c t} Tr[...]dt, \nonumber\\
-&=\int_0^\infty e^{i \nu_0 t + \lambda_c t}e^{i \epsilon' cos(2\omega t)t} Tr[...]dt, \nonumber\\
-&\approx \int_0^\infty e^{i \nu_0 t + \lambda_c t}(1+i \epsilon' cos(2\omega t)t) Tr[...]dt, \nonumber\\
+&= \int_0^\infty e^{i(\nu_0 + \epsilon cos(2\omega t) )t + \lambda_c t} Tr[...]dt, \nonumber\\
+&=\int_0^\infty e^{i \nu_0 t + \lambda_c t}e^{i \epsilon cos(2\omega t)t} Tr[...]dt, \nonumber\\
+&\approx \int_0^\infty e^{i \nu_0 t + \lambda_c t}(1+i \epsilon cos(2\omega t)t) Tr[...]dt, \nonumber\\
 &=\int_0^\infty e^{i \nu_0 t + \lambda_c t}Tr[...]dt\nonumber\\
-&+i\epsilon'\int_0^\infty cos(2\omega t)t e^{i \nu_0 t + \lambda_c t}Tr[...]dt\, ,\nonumber
+&+i\epsilon\int_0^\infty cos(2\omega t)t e^{i \nu_0 t + \lambda_c t}Tr[...]dt\, ,\nonumber
 \end{align}
-where $\lambda_c$ represents the eigenvalues for the cavity's states.
+where $\lambda_c$ represents the eigenvalues for the cavity's states. The real part of these eigenvalues is either zero or negative and acts as a cut-off for the integral.
 This leads to an expression for \eqref{CavityQuadrature} which consist
 of two parts: one corresponding to the nondriven harmonic oscillator
 case plus a correction term proportional to $\epsilon$
 \begin{equation}
-\frac{G(\nu,0)}{g'^2}= \frac{1}{-k + 2i(\delta + \nu_0)} +i\epsilon'\frac{(-k + i(\nu_0 + \delta))^2 - 4\omega^2}{((-k + i(\nu_0 + \delta))^2 + 4\omega^2)^2}\, .
+\frac{G(\nu,0)}{g'^2}= \frac{1}{-\kappa + 2i(\delta + \nu_0)} +i\epsilon\frac{(-\kappa + i(\nu_0 + \delta))^2 - 4\omega^2}{((-\kappa + i(\nu_0 + \delta))^2 + 4\omega^2)^2}\, .
 \end{equation} %where  $E_0 = g \sqrt{\frac{\hbar}{2m\nu_0}}$.
 
 We evaluate the real part of this expression numerically. In order for
@@ -487,22 +487,22 @@ the adiabatic approximation to be valid, the variation in the
 mechanical oscillator's frequency must be slow when compared to the
 frequency itself ($\omega \ll \nu_0$) which translates to classical
 solutions with $1 \ll n$ due to \eqref{scattering}. Assuming that
-$\epsilon' = \frac{\nu_0}{10}$ we now have the condition
-$\epsilon' = \frac{n^2}{5}$. We wish for $n$ to be sufficiently large
+$\epsilon = \frac{\nu_0}{10}$ we now have the condition
+$\epsilon = \frac{n^2}{5}$. We wish for $n$ to be sufficiently large
 so as to fulfill the condition relating $\nu_0$ and $\omega$ but small
-enough so that $\epsilon' \ll \nu_0$. To this end we chose
+enough so that $\epsilon \ll \nu_0$. To this end we chose
 $n=\sqrt{\frac{\nu_0}{2}}$ (rounded to the nearest integer) which
 maintains the previous ratio between the two frequencies. Physically,
 we employ a classical solution which describes a situation where the
 oscillator's average $\nu_0$ frequency is the fastest one, while the
 secular frequency $\omega$ is of the order of the perturbation
-frequency $\epsilon'$. In figure \ref{GraficaTemp} it is shown the
+frequency $\epsilon$. In figure \ref{GraficaTemp} it is shown the
 number of mechanical oscillations when $\frac{\delta}{\nu_0}$ is in
 the range of $[-2,2]$. Compared with the non-driven case, the
 parametrically driven oscillator has a frequency shift of where to
 expect the minimum number of excitations, and a region where the
 predicted number of excitations is smaller. The reason of this
-behavior is that, as $\epsilon'$ increases, the parametric modulation
+behavior is that, as $\epsilon$ increases, the parametric modulation
 causes the cooling and heating coefficients to shift away from each
 other, and its distribution becomes narrower and presents a higher
 peak. This can be observed in figure \ref{GraficaA-}. As long as
@@ -572,17 +572,17 @@ Master equations of the type
 \end{equation} with
 
 \begin{align}\label{EMField}
-L_a \rho =& - \frac{A}{2}(\nu + 1)[a^\dagger a\rho + \rho a^\dagger a -2a\rho a^\dagger] \nonumber \\
- &- \frac{A}{2}(\nu)[ aa^\dagger\rho + \rho  aa^\dagger -2a^\dagger\rho a],
-\end{align} model the behavior of a bosonic field inside a cavity with just one mode and with $\nu$ thermal photons in contact with a thermal bath. $A$ is a constant related to the damping and $A,\nu \geq 0$  \cite{EnglertDB}. The density operator can be expressed in the Lindblad superoperator's eigenbasis to simplify the calculations. This is known as the damping basis \cite{EnglertDB}.
+L_a \rho =& - \frac{\kappa}{2}(n_p+1)[a^\dagger a\rho + \rho a^\dagger a -2a\rho a^\dagger] \nonumber \\
+ &- \frac{\kappa}{2}(n_p)[ aa^\dagger\rho + \rho  aa^\dagger -2a^\dagger\rho a],
+\end{align} model the behavior of a bosonic field inside a cavity with just one mode and with $\nu$ thermal photons in contact with a thermal bath. $A$ is a constant related to the damping and $A,n_p \geq 0$  \cite{EnglertDB}. The density operator can be expressed in the Lindblad superoperator's eigenbasis to simplify the calculations. This is known as the damping basis \cite{EnglertDB}.
 
 \begin{align}\label{DefDB}
-&a^{\dagger l}\frac{(-1)^n}{(\nu+1)^{l+1}}:L_n^l[\frac{a^\dagger a}{\nu+1}]e^{-[\frac{a^\dagger a}{\nu+1}]}:\quad l \geq 0, \\
-&\frac{(-1)^n}{(\nu+1)^{|l|+1}}:L_n^{|l|}[\frac{a^\dagger a}{\nu+1}]e^{-[\frac{a^\dagger a}{\nu+1}]}:a^{|l|}\quad l \leq 0,
+&a^{\dagger l}\frac{(-1)^n}{(n_p+1)^{l+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad l \geq 0, \\
+&\frac{(-1)^n}{(n_p+1)^{|l|+1}}:L_n^{|l|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|l|}\quad l \leq 0,
 \end{align} with eigenvalues
 
 \begin{equation}
-\lambda_n^l = -A[n + \frac{|l|}{2}],
+\lambda_n^l = -\kappa[n + \frac{|l|}{2}],
 \end{equation} which fulfill
 
 \begin{equation}
@@ -590,8 +590,8 @@ n=0,1,2...,\qquad l = 0,\pm 1, \pm 2,...
 \end{equation} These are the right eigenstates, which correspond to $L\hat{\rho_n^l} = \lambda_n^l\hat{\rho_n^l}$, however the left eigenstates must also be considered, these correspond to $\check{\rho_n^l}L = \lambda_n^l\check{\rho_n^l}$ and have the same eigenvalues. These are
 
 \begin{align}\label{DefDBDual}
-&(\frac{-\nu}{\nu+1})^n\frac{n!}{(n+l)!}:L_n^l[\frac{a^\dagger a}{\nu}]:a^{l}\quad l \geq 0, \\
-&(\frac{-\nu}{\nu+1})^n\frac{n!}{(n+|l|)!}a^{\dagger|l|}:L_n^{|l|}[\frac{a^\dagger a}{\nu}]:\quad l \leq 0.
+&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+l)!}:L_n^l[\frac{a^\dagger a}{n_p}]:a^{l}\quad l \geq 0, \\
+&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+|l|)!}a^{\dagger|l|}:L_n^{|l|}[\frac{a^\dagger a}{n_p}]:\quad l \leq 0.
 \end{align} These states are orthogonal under the trace
 
 \begin{equation}

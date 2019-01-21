@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.4)  16 JAN 2019 12:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.4)  21 JAN 2019 13:29
 entering extended mode
 **./OptomechanicalCooling.tex
 (OptomechanicalCooling.tex
@@ -736,8 +736,8 @@ Underfull \hbox (badness 1320) in paragraph at lines 222--234
  []
 
 [2] [3] [4]
-Overfull \hbox (11.41957pt too wide) detected at line 483
-[] \OT1/cmr/m/n/10 = [] + \OML/cmm/m/it/10 i[][] :
+Overfull \hbox (9.09549pt too wide) detected at line 483
+[] \OT1/cmr/m/n/10 = [] + \OML/cmm/m/it/10 i[] :
  []
 
 <Temperature.pdf, id=30, 602.25pt x 401.5pt>
@@ -810,7 +810,7 @@ oth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
 m/cmti9.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/symbols/msbm10.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on OptomechanicalCooling.pdf (8 pages, 1627221 bytes).
+Output written on OptomechanicalCooling.pdf (8 pages, 1626839 bytes).
 PDF statistics:
  143 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
