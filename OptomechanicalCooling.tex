@@ -1,7 +1,6 @@
 \documentclass[reprint, amsmath,amssymb, aps,pra]{revtex4-1}
 
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
 \usepackage[draft,inline,nomargin]{fixme}
 \usepackage{graphicx}
 \usepackage{dcolumn}
@@ -22,8 +21,8 @@
 
 \author{Pablo Barberis-Blostein}
 
-\affiliation{Instituto de Investigaciones en Matemáticas Aplicadas y en Sistemas,
-Universidad Nacional Autónoma de México, Circuito Escolar s/n Ciudad Universitaria México, D.F.}%
+\affiliation{Instituto de Investigaciones en Matem\'{a}ticas Aplicadas y en Sistemas,
+Universidad Nacional Aut\'{o}noma de M\'{e}xico, Circuito Escolar s/n Ciudad Universitaria M\'{e}xico, D.F.}%
 
 
 
@@ -612,7 +611,16 @@ Tr[\hat{\rho}_{n,l}\check{\rho}_{n',l'}] = \delta_{n,n'}\delta_{l,l'}.
 
 In order to find the master equation
 \eqref{eq:projected_master_equation} we employed projection operators
-like those in \cite{CarmichaelQO}, these fulfill a completeness
+like those in \cite{CarmichaelQO}. We also separate the $L$ terms into
+\begin{equation}
+L_0= (\frac{1}{i\hbar}[H_cav,\rho]+L_a) +(\frac{1}{i\hbar}[H_mec(t),\rho] L_\Gamma),
+\end{equation}
+
+and
+
+\begin{equation}
+L_1 = \frac{1}{i\hbar}[H_int,\rho].
+\end{equation}These projection operators fulfill a completeness
 relation
 
 \begin{equation}
