@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.4)  21 JAN 2019 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.4)  25 JAN 2019 11:39
 entering extended mode
 **./OptomechanicalCooling.tex
 (OptomechanicalCooling.tex
@@ -699,24 +699,24 @@ Underfull \hbox (badness 1320) in paragraph at lines 221--233
  []
 
 [2] [3] [4]
-Overfull \hbox (9.09549pt too wide) detected at line 482
+Overfull \hbox (9.09549pt too wide) detected at line 485
 [] \OT1/cmr/m/n/10 = [] + \OML/cmm/m/it/10 i[] :
  []
 
 <Temperature.pdf, id=30, 602.25pt x 401.5pt>
 File: Temperature.pdf Graphic file (type pdf)
 <use Temperature.pdf>
-Package pdftex.def Info: Temperature.pdf  used on input line 516.
+Package pdftex.def Info: Temperature.pdf  used on input line 519.
 (pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
 <GraficaA-.pdf, id=31, 602.25pt x 401.5pt>
 File: GraficaA-.pdf Graphic file (type pdf)
 <use GraficaA-.pdf>
-Package pdftex.def Info: GraficaA-.pdf  used on input line 526.
+Package pdftex.def Info: GraficaA-.pdf  used on input line 529.
 (pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
 [5 <./Temperature.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 562.
+ on input line 565.
 
 [6 <./GraficaA-.pdf>] (OptomechanicalCooling.bbl [7]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 69.
@@ -736,10 +736,10 @@ FiXme Summary: Number of notes: 0,
 
 [8] (OptomechanicalCooling.aux) ) 
 Here is how much of TeX's memory you used:
- 5603 strings out of 493305
- 76231 string characters out of 3129802
- 171121 words of memory out of 3000000
- 9039 multiletter control sequences out of 15000+200000
+ 5605 strings out of 493305
+ 76247 string characters out of 3129802
+ 172135 words of memory out of 3000000
+ 9041 multiletter control sequences out of 15000+200000
  13994 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,60p,506b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -767,7 +767,7 @@ oth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
 m/cmti9.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/symbols/msbm10.pfb><C:/Users/anoth/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on OptomechanicalCooling.pdf (8 pages, 1627284 bytes).
+Output written on OptomechanicalCooling.pdf (8 pages, 1627585 bytes).
 PDF statistics:
  143 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

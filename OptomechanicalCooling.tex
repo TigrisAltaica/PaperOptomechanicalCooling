@@ -466,14 +466,17 @@ To perform numerical computations we calculate
 that the cavity is at zero temperature ($n_p=0$).  The trace inside
 \eqref{CavityQuadrature} can be easily calculated, we obtain
 \begin{align}
-G(\nu,0)=&\int_0^\infty dt e^{(i\nu(t)+\lambda_c) t}Tr[...]\nonumber\\
-&= \int_0^\infty e^{i(\nu_0 + \epsilon cos(2\omega t) )t + \lambda_c t} Tr[...]dt, \nonumber\\
-&=\int_0^\infty e^{i \nu_0 t + \lambda_c t}e^{i \epsilon cos(2\omega t)t} Tr[...]dt, \nonumber\\
-&\approx \int_0^\infty e^{i \nu_0 t + \lambda_c t}(1+i \epsilon cos(2\omega t)t) Tr[...]dt, \nonumber\\
-&=\int_0^\infty e^{i \nu_0 t + \lambda_c t}Tr[...]dt\nonumber\\
-&+i\epsilon\int_0^\infty cos(2\omega t)t e^{i \nu_0 t + \lambda_c t}Tr[...]dt\, ,\nonumber
-\end{align}
-where $\lambda_c$ represents the eigenvalues for the cavity's states. The real part of these eigenvalues is either zero or negative and acts as a cut-off for the integral.
+G(\nu,0)=&\int_0^\infty dt e^{(i\nu(t)) t}Tr[...]\nonumber\\
+&= \int_0^\infty e^{i(\nu_0 + \epsilon cos(2\omega t) )t} Tr[...]dt, \nonumber\\
+&=\int_0^\infty e^{i \nu_0 t}e^{i \epsilon cos(2\omega t)t} Tr[...]dt, \nonumber\\
+&\approx \int_0^\infty e^{i \nu_0 t}(1+i \epsilon cos(2\omega t)t) Tr[...]dt, \nonumber\\
+&=\int_0^\infty e^{i \nu_0 t}Tr[...]dt\nonumber\\
+&+i\epsilon\int_0^\infty cos(2\omega t)t e^{i \nu_0 t}Tr[...]dt\, ,\nonumber
+\end{align}The $Tr[...]$ can be evaluated in a straightforward manner and results in
+
+\begin{equation}
+Tr_a[X_a e^{L_a t} X_a \rho_{st}] = \frac{1}{2},
+\end{equation} while $e^{L_a}$ leaves the trace as $e^{-\kappa}$ and acts as a as a cut-off for the integral. See Appendix \ref{App1} for more on the eigenvalues of the trace states.
 This leads to an expression for \eqref{CavityQuadrature} which consist
 of two parts: one corresponding to the nondriven harmonic oscillator
 case plus a correction term proportional to $\epsilon$
@@ -562,7 +565,7 @@ We plan to explore this case in future work.
  
 \appendix
 
-\section{The Damping Basis}
+\section{The Damping Basis}\label{App1}
 
 Master equations of the type 
 
