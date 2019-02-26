@@ -1,8 +1,51 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: OptomechanicalCooling.aux
+This is BibTeX, Version 0.99d (TeX Live 2016/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: OptomechanicalCooling.aux
 The style file: unsrt.bst
 Database file #1: OptomechanicalCoolingNotes.bib
 Database file #2: Bib.bib
 Warning--empty publisher in WardFT
 Warning--empty year in WardFT
 Warning--empty author and editor in EnglertFL
+You've used 23 entries,
+            1791 wiz_defined-function locations,
+            570 strings with 6618 characters,
+and the built_in function-call counts, 3101 in all, are:
+= -- 258
+> -- 105
+< -- 0
++ -- 49
+- -- 26
+* -- 89
+:= -- 561
+add.period$ -- 67
+call.type$ -- 23
+change.case$ -- 19
+chr.to.int$ -- 0
+cite$ -- 26
+duplicate$ -- 191
+empty$ -- 340
+format.name$ -- 26
+if$ -- 680
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 25
+newline$ -- 116
+num.names$ -- 22
+pop$ -- 84
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 69
+stack$ -- 0
+substring$ -- 0
+swap$ -- 22
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 22
+width$ -- 25
+write$ -- 229
 (There were 3 warnings)

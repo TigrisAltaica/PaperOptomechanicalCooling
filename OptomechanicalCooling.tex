@@ -272,7 +272,7 @@ U_{a,\Gamma} = e^{(\alpha(t) a^\dagger - \alpha^*(t)a)}e^{(\beta(t) \Gamma^\dagg
 \end{equation}
 and results in a displaced Hamiltonian and in turn a displaced master
 equation
-\begin{equation}
+\begin{equation}\label{eq:master_no_small}
 \dot{\rho}' = \frac{1}{i\hbar}[H',\rho'] +L_a\rho' + L_\Gamma \rho' + C(t)\rho'\, ,
 \end{equation}
 for the time evolution of the density operator $\rho'(t)$ which
@@ -280,16 +280,16 @@ represents the coupled cavity-mechanical resonator system. The primes
 indicate that the transformation has been applied. The displaced
 Hamiltonian, which includes a pump-like term that appears when making the
 transformation on the $L$ operators, is given by
-\begin{align*}
-  H'=& -\hbar \delta' a^\dagger a + \hbar\frac{W}{|f(t)|^2}\Gamma \Gamma^\dagger\\
-     &-\hbar g\sqrt{\frac{\hbar}{2M}}[(a^{\dagger}a +\alpha a^{\dagger}+\alpha^* a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)]\\
+\begin{align}\label{eq:hamiltonian_no_small}
+  H'=& -\hbar \delta' a^\dagger a + \hbar\frac{W}{|f(t)|^2}\Gamma \Gamma^\dagger\nonumber\\
+     &-\hbar g\sqrt{\frac{\hbar}{2M}}[(a^{\dagger}a +\alpha a^{\dagger}+\alpha^* a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)]\nonumber\\
      &+ i\hbar(\beta^*\dot{\Gamma} - \beta \dot{\Gamma}^\dagger),
-\end{align*}
+\end{align}
 with $\delta' = \delta + g\sqrt{\frac{\hbar}{2M}}(\beta + \beta^*)$.
 This Hamiltonian is valid as long as the coefficients $\alpha(t)$ and
 $\beta(t)$ fulfill the differential equations
 
-\begin{align}
+\begin{align}\label{eq:displaced_frame}
 \dot{\alpha} =& \alpha(-\frac{\kappa}{2}+i(\delta+g\sqrt{\frac{\hbar}{2M}}(\gamma_-(t) \beta^* + \gamma_+(t) \beta))-i\frac{\Omega}{2},\\
 \dot{\beta} =& \beta(-\frac{\gamma}{2}-i\frac{W}{|f(t)|^2})+ig\sqrt{\frac{\hbar}{2M}}|\alpha|^2\gamma_+(t).
 \end{align}
@@ -329,87 +329,56 @@ from now on as all calculations will be done in the displaced frame.
 
 \section{Solution for Small Oscillations}\label{SolSmallOsc}
  
-In order to obtain an explicit form of the Floquet operators, we focus
+In order to obtain an explicit form of the Floquet operators we focus
 on the case of small oscillations around a central frequency,
-specifically\fxnote{Pablo: cambie notacion, checalo.}
+specifically
 
 \begin{equation}
-\nu(t) = \nu_0 + \epsilon' cos(2\omega t),
-\end{equation} with $\epsilon' \ll \nu_0$ where $\nu_0$ is the mean frequency. This leads to the time-dependent harmonic oscillator equation
+\nu(t) = \nu_0 + \epsilon' cos(2\omega t)
+\end{equation}
+with $\epsilon' \ll \nu_0$, where $\nu_0$ is the mean frequency. This
+leads to the time-dependent harmonic oscillator equation
 
 \begin{equation}\label{SmallOscillationsTDHO}
 \ddot{f} + (\nu_0^2 + 2\epsilon' \nu_0 cos(2\omega t))f = 0,
 \end{equation}
-which is a particular case of the Mathieu equation \cite{PiatekME}. In
-order to put the equation into the standard form we employ the change
-of variables $t'= \omega t$ and set
-$\epsilon = \frac{2\epsilon' \nu_0}{\omega^2}$ and use the scattering
+which is a particular case of the Mathieu equation \cite{PiatekME}.
+In order to guarantee stable solutions we use the scattering
 relation
 \begin{equation}
 \frac{\nu_0^2}{\omega^2} = n^2,\label{scattering}
 \end{equation}
-with $n \in \mathbb{Z}^+$ in order to guarantee stable solutions
-\cite{WardFT}. Under these restrictions and returning to the original
-variable $t$, the solutions for \eqref{SmallOscillationsTDHO} are, to
-first order in $\epsilon$ and for the case of $n>>1$
-
+with $n \in \mathbb{Z}^+$\cite{WardFT}. We will focus on the case
+$n\gg 1$, which will be used in the next sections. The solutions for
+\eqref{SmallOscillationsTDHO} are, to first order in
+$\epsilon= \frac{2\epsilon' \nu_0}{\omega^2}$,
 \begin{equation}\label{SmallOscillationsSolution}
 f(t)=  e^{in\omega t} = e^{i\nu_0t},
-\end{equation} and its complex conjugate, which is equal to $f(-t)$. 
+\end{equation} and its complex conjugate.
 
-\subsection{Explicit Expressions for Small Oscillations}
 
-	With an explicit solution for \eqref{SmallOscillationsTDHO} in hand, we obtain explicit solutions for the Floquet operator commutator terms by direct substitution of \eqref{SmallOscillationsSolution} into \eqref{FloquetOperators} \cite{TesisMaestria}
-
-\begin{align}
-C(t)_{+-} =& i\nu_0^2,\\
-C(t)_{-+} =& -i\nu_0^2 .
-\end{align} The $\gamma_{\pm}$ coefficients can be calculated as well
-
+With an explicit solution for \eqref{SmallOscillationsTDHO} in hand,
+we can solve Eq.~\eqref{eq:displaced_frame}. Assuming that the time
+scale of the dissipatives processes are fast compared with the other
+time scales we can focus on the stationary case
+($\dot{\alpha}(t)=\dot{\beta}(t)=0$); we also assume a weak coupling
+regime (coefficients of first order in $g$ or higher are neglected)
+obtaining
+\begin{align}\label{eq:alpha_beta_sta}
+\alpha_0 =& \frac{\Omega}{2\delta-i\kappa},& \beta_0 =& 0.
+\end{align}
+The 0 sub-index denotes that the solutions are valid only to zeroth
+order in the coupling parameter. In obtaining the solution we used that
 \begin{equation}
 \gamma_\pm= \frac{\pm 1}{2i\nu_0}e^{\mp i\nu_0 t},
-\end{equation} as can be the overall time-dependent factor for the time-dependent harmonic oscillator expressed in terms of Floquet operators,
-
-\begin{equation}
-\frac{W}{|f|^2} = \nu_0.
-\end{equation} 
-
-
-With these expressions we may solve for the $\alpha(t)$ and $\beta(t)$ coefficients. The equations are
-
-\begin{align}
-\dot{\alpha} =& \alpha(-\frac{\kappa}{2}+i(\delta+g\sqrt{\frac{\hbar}{2M}}(\frac{
-e^{- i\nu_0 t}}{2i\nu_0} \beta^* - \frac{e^{ i\nu_0 t}}{2i\nu_0} \beta))-i\frac{\Omega}{2},\\
-\dot{\beta} =& \beta(-\frac{\gamma}{2}-i \nu_0)+ig\sqrt{\frac{\hbar}{2M}}|\alpha|^2\frac{e^{- i\nu_0 t},}{2i\nu_0}
-\end{align}
-however our focus is on the stationary case
-($\dot{\alpha}(t)=\dot{\beta}(t)=0$) and in a weak coupling regime, so
-coefficients of first order in $g$ or higher are neglected, which
-results in two simplified equations
-
-\begin{align}
-0 =& \alpha(-\frac{\kappa}{2}+i\delta)-i\frac{\Omega}{2},\\
-0 =& \beta(-\frac{\gamma}{2}-i \nu_0),
-\end{align} which are trivially solved 
-
-\begin{align}
-\alpha_0 =& \frac{\Omega}{2\delta-i\kappa},\\
-\beta_0 =& 0.
-\end{align} The 0 sub-index denotes that the solutions are valid only to zeroth order in the coupling parameter. 
-
-\subsection{Laser Cooling Hamiltonian}
-
-Under these parameters we can neglect the $C(t)$ terms as they
-figure into the
-master equation as terms of first order in $\epsilon$ and second order
-in $\beta$. The term involving the time derivatives of the Floquet
-operators can also be neglected for this reason. The Hamiltonian can
-then be written as
-
+\end{equation}
+and  $\frac{W}{|f|^2} = \nu_0$. Using \eqref{eq:alpha_beta_sta} in~(\ref{eq:hamiltonian_no_small})
+the Hamiltonian can be written as
 \begin{align}
 H =& -\hbar \delta a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
 &-\hbar g\sqrt{\frac{\hbar}{2M}}(a^{\dagger}a +\alpha_0 a^{\dagger}+\alpha^*_0 a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)\nonumber.
-\end{align} We focus on the case where $|\alpha_0| \gg 1$
+\end{align}
+We focus on the case where $|\alpha_0| \gg 1$
 \cite{BarberisLC}, so that the $a^\dagger a$ term can be neglected as
 it is small when compared to the other two terms in the interaction.
 This leads to a further simplified Hamiltonian
@@ -419,13 +388,16 @@ H(t) =& -\hbar \delta a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
 &+\hbar g\sqrt{\frac{\hbar}{2M}}(\alpha_0 a^{\dagger}+\alpha^*_0 a)(\frac{
 e^{- i\nu_0 t}}{2i\nu_0} \nonumber\Gamma^{\dagger}-\frac{e^{i\nu_0 t}}{2i\nu_0}\Gamma).
 \end{align}
-This Hamiltonian corresponds to a standard optomechanical master
-equation with Floquet operators for the mechanical oscillator
 
-
+Finally, using that $C(t)$ is proportional to $\beta_0$, the master
+equation~(\ref{eq:master_no_small}) simplifies to
 \begin{equation}\label{LCMasterEq}
-\dot{\rho} = \frac{1}{i\hbar}[H,\rho] +L_a\rho + L_\Gamma \rho,
-\end{equation} where $L_a$ corresponds to the cavity's light field \cite{ZollerQN} and $L_\Gamma$ corresponds to the time dependent harmonic oscillator \cite{HanngiFM}.
+\dot{\rho} = \frac{1}{i\hbar}[H,\rho] +L_a\rho + L_\Gamma \rho.
+\end{equation}
+This equation looks similar to the standard optomechanical master
+equation but it has Floquet operators instead of creation and
+annihilation operator for the mechanical oscillator and an explicit
+time dependence in the interaction Hamiltonian
 
 
 \section{Laser Cooling}\label{LasCool}
@@ -433,14 +405,28 @@ equation with Floquet operators for the mechanical oscillator
 Our focus is on the parameter regime where the mechanical resonator's
 temperature evolves much more slowly than the cavity's losses and than
 the mechanical frequency. This requires
-$(g\sqrt{\frac{\hbar}{2M}}\alpha_o)^2 \ll (\frac{\kappa}{\nu_0})$. Following the
-derivation found in \cite{LCNooshi}, we arrive at a master equation
-for the density operator, after projecting into the subspace corresponding to
-its stationary state and tracing over the cavity degrees of freedom. The technical details of the derivation is reported in App.~\ref{CoolingAppendix}. It leads to the master equation 
+$(g\sqrt{\frac{\hbar}{2M}}\alpha_o)^2 \ll (\frac{\kappa}{\nu_0})$.
+Following the derivation found in \cite{LCNooshi}, we arrive at a
+master equation for the density operator, after projecting into the
+subspace corresponding to its stationary state and tracing over the
+cavity degrees of freedom. \fxnote*{El apendice
+  esta incompleto, prometes derivar la ecuacion, pero no haces la
+  traza con respecto a los modos de la cavidad}{The technical details of the
+  derivation is reported in App.~\ref{CoolingAppendix}.} It leads to the master
+equation
 \begin{equation}\label{eq:projected_master_equation}
-\dot{\mu}\approx -\frac{g'^2}{2}G(\nu_m,n_c)[\Gamma^\dagger,\Gamma\mu]-G^*(-\nu_m,n_c)[\Gamma^\dagger,\mu\Gamma],
-\end{equation} where we have set $g'=g\sqrt{\frac{\hbar}{2M}}\alpha_0$  for convenience and use $\mu$ as the density operator of the mechanical degree of freedom. It is important to note that this master equation can be obtained via the usual derivation since the particular form of \eqref{SmallOscillationsSolution} makes it so the explicit time dependencies cancel out in operator products of the form $\Gamma^dagger \Gamma$ and $\Gamma \Gamma^\dagger$. The cavity-quadratures correlation $G(\nu_m,n_p)$ can then be used to calculate the heating and cooling rates
-for the mirror and is given by
+  \dot{\mu}\approx -\frac{g'^2}{2}G(\nu_m,n_c)[\Gamma^\dagger,\Gamma\mu]-G^*(-\nu_m,n_c)[\Gamma^\dagger,\mu\Gamma],
+\end{equation}
+where we have set $g'=g\sqrt{\frac{\hbar}{2M}}\alpha_0$ for
+convenience and use $\mu$ as the density operator of the mechanical
+degree of freedom. Note that this master equation is obtained via the
+usual derivation, since the particular form of
+\eqref{SmallOscillationsSolution} makes the explicit time dependencies
+cancel out in the operator products of the form
+$\Gamma^\dagger \Gamma$ and $\Gamma \Gamma^\dagger$.
+
+The cavity-quadratures correlation $G(\nu_m,n_p)$ is used to calculate
+the heating and cooling rates for the mirror and is given by
 \begin{equation} \label{CavityQuadrature}
 G(\nu_m,n_p) = \int_0^\infty dt e^{i\nu(t) t}Tr_a[X_a e^{L_a t} X_a \rho_{st}],
 \end{equation} with 
@@ -465,30 +451,28 @@ average number of phonon excitations) can be obtained in a
 straightforward manner. This procedure is done numerically in the
 following section.
 
-\fxnote{Una de las cosas mas bonitas es que desaparece la referencia a
-  la solucion de las ecuaciones de Mathieu en la aproximacion
-  adiabatica. Pon un parrafo explicando donde, porque  y cuando pasa esto.}
 \section{Calculation of Mean Vibrational Occupation Number}\label{NumCal}
 
-To perform numerical computations we calculate
-\eqref{CavityQuadrature} up to first order in $\epsilon$. We assume
-that the cavity is at zero temperature ($n_p=0$).  The trace inside
-\eqref{CavityQuadrature} can be easily calculated, we obtain
-\begin{align}
-G(\nu,0)=&\int_0^\infty dt e^{(i\nu(t)) t}Tr[...]\nonumber\\
-&= \int_0^\infty e^{i(\nu_0 + \epsilon cos(2\omega t) )t} Tr[...]dt, \nonumber\\
-&=\int_0^\infty e^{i \nu_0 t}e^{i \epsilon cos(2\omega t)t} Tr[...]dt, \nonumber\\
-&\approx \int_0^\infty e^{i \nu_0 t}(1+i \epsilon cos(2\omega t)t) Tr[...]dt, \nonumber\\
-&=\int_0^\infty e^{i \nu_0 t}Tr[...]dt\nonumber\\
-&+i\epsilon\int_0^\infty cos(2\omega t)t e^{i \nu_0 t}Tr[...]dt\, ,\nonumber
-\end{align}The $Tr[...]$ can be evaluated in a straightforward manner and results in
-
+Assuming that the cavity is at zero temperature ($n_p=0$) the trace
+inside \eqref{CavityQuadrature} gives
 \begin{equation}
 Tr_a[X_a e^{L_a t} X_a \rho_{st}] = \frac{1}{2}e^{-(\frac{\kappa}{2}-i\delta) t},
-\end{equation} the $e^{-\kappa t}$ factor acts as a cut-off for the integral, which allows for the expansion to be performed. See Appendix \ref{App1} for more on the eigenvalues of the trace states.
-This leads to an expression for \eqref{CavityQuadrature} which consist
-of two parts: one corresponding to the nondriven harmonic oscillator
-case plus a correction term proportional to $\epsilon$
+\end{equation} 
+up to first order in $\epsilon$~\eqref{CavityQuadrature} simplifies to
+\begin{align}
+  G(\nu,0)=&\int_0^\infty dt e^{(i\nu_0 +\epsilon'\cos{(2\omega t)})t }Tr[...]\nonumber\\
+           &\approx\frac{1}{2}\int_0^\infty e^{i (\nu_0+\delta)
+             t}e^{-\frac{\kappa t}{2}}dt\nonumber\\
+           &+\frac{i\epsilon}{2}\int_0^\infty cos(2\omega t)t e^{i (\nu_0+\delta)
+             t}e^{-\frac{\kappa t}{2}}dt\, ,\nonumber
+\end{align}
+where the $e^{-\kappa t}$ factor acts as a cut-off for the integral, which
+allows for the expansion in $\epsilon$ to be performed. \fxnote*{No
+  entiendo que son los trace states, ni como usar el apendice aqui.}{See Appendix
+\ref{App1} for more on the eigenvalues of the trace states.} This leads
+to an expression for \eqref{CavityQuadrature} which consist of two
+parts: one corresponding to the nondriven harmonic oscillator case
+plus a correction term proportional to $\epsilon$
 \begin{equation}
 \frac{G(\nu,0)}{g'^2}= \frac{1}{-\kappa + 2i(\delta + \nu_0)} +i\epsilon\frac{(-\kappa + i(\nu_0 + \delta))^2 - 4\omega^2}{((-\kappa + i(\nu_0 + \delta))^2 + 4\omega^2)^2}\, .
 \end{equation} %where  $E_0 = g \sqrt{\frac{\hbar}{2m\nu_0}}$.
@@ -569,108 +553,6 @@ We plan to explore this case in future work.
  
 \appendix
 
-
-\section{Master Equation for Small Oscillations}\label{App2}
-
-In order to obtain an explicit solution for \eqref{TimeDependentHO} we
-focus on the case of small oscillations around a central frequency,
-specifically\fxnote{Pablo: cambie notacion, checalo.}
-
-\begin{equation}\label{SmallOscillationsTDHO}
-\nu(t) = \nu_0 + \epsilon' cos(2\omega t),
-\end{equation}
-with $\epsilon' \ll \nu_0$ where $\nu_0$ is the mean frequency. This
-leads to the time-dependent harmonic oscillator equation
-
-\begin{equation}\label{SmallOscillations_equation}
-\ddot{f} + (\nu_0^2 + 2\epsilon' \nu_0 cos(2\omega t))f = 0,
-\end{equation}
-which is a particular case of the Mathieu equation \cite{PiatekME}. In
-order to put the equation into the standard form we employ the change
-of variables $t'= \omega t$ and set
-$\epsilon = \frac{2\epsilon' \nu_0}{\omega^2}$ and use the scattering
-relation
-\begin{equation}
-\frac{\nu_0^2}{\omega^2} = n^2,\label{scattering}
-\end{equation}
-with $n \in \mathbb{Z}^+$ in order to guarantee stable solutions
-\cite{WardFT}. Under these restrictions and returning to the original
-variable $t$, the solutions for \eqref{SmallOscillations_equation}
-are, to first order in $\epsilon$ and for the case of $n=1$
-
-\begin{equation}\label{SmallOscillationsSolution}
-f(t)=  e^{i\omega t} + \frac{\epsilon}{16} e^{3i\omega t},
-\end{equation} and its complex conjugate, which is equal to $f(-t)$. 
-
-
-
-With an explicit solution for \eqref{SmallOscillations_equation} in
-hand, we obtain explicit solutions for the Floquet operator commutator
-terms by direct substitution of \eqref{SmallOscillationsSolution} into
-\eqref{FloquetOperators} \cite{TesisMaestria}
-
-\begin{align}
-C(t)_{+-} =& i [1 -\frac{\epsilon}{16}e^{2i\omega t}-\frac{6\epsilon}{16}e^{-2i\omega t}],\\
-C(t)_{-+} =& i [1 -\frac{\epsilon}{16}e^{-2i\omega t}-\frac{6\epsilon}{16}e^{2i\omega t}].
-\end{align} The $\gamma_{\pm}$ coefficients can be calculated as well
-
-\begin{equation}
-\gamma_\pm= \frac{1}{\omega}e^{\mp i\omega t},
-\end{equation} as can be the overall time-dependent factor for the time-dependent harmonic oscillator expressed in terms of Floquet operators,
-
-\begin{equation}
-\frac{W}{|f|^2} = \omega.
-\end{equation} 
-
-With these expressions we may solve for the $\alpha(t)$ and $\beta(t)$ coefficients. The equations are
-
-\begin{align}
-\dot{\alpha} =& \alpha(-\frac{\kappa}{2}+i(\delta+g\sqrt{\frac{\hbar}{2M}}(e^{i\omega t} \beta^* + e^{-i\omega t} \beta))-i\frac{\Omega}{2},\\
-\dot{\beta} =& \beta(-\frac{\gamma}{2}-i 2\omega)+ig\sqrt{\frac{\hbar}{2M}}|\alpha|^2e^{i\omega t},
-\end{align}
-however our focus is on the stationary case
-($\dot{\alpha}(t)=\dot{\beta}(t)=0$) and in a weak coupling regime, so
-coefficients of first order in $g$ or higher are neglected, which
-results in two simplified equations
-
-\begin{align}
-0 =& \alpha(-\frac{\kappa}{2}+i\delta)-i\frac{\Omega}{2},\\
-0 =& \beta(-\frac{\gamma}{2}-i 2\omega),
-\end{align} which are trivially solved 
-
-\begin{align}
-\alpha_0 =& \frac{\Omega}{2\delta-i\kappa},\\
-\beta_0 =& 0.
-\end{align} The 0 sub-index denotes that the solutions are valid only to zeroth order in the coupling parameter. 
-
-\subsection{Laser Cooling Hamiltonian}
-
-Under these parameters we can neglect the $C(t)$ terms as they
-figure into the
-master equation as terms of first order in $\epsilon$ and second order
-in $\beta$. The term involving the time derivatives of the Floquet
-operators can also be neglected for this reason. The Hamiltonian can
-then be written as
-
-\begin{align}
-H =& -\hbar \delta a^{\dagger}a +\hbar\omega\Gamma^{\dagger}\Gamma \\
-&-\hbar g\sqrt{\frac{\hbar}{2M}}(a^{\dagger}a +\alpha_0 a^{\dagger}+\alpha^*_0 a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)\nonumber.
-\end{align} We focus on the case where $|\alpha_0| \gg 1$
-\cite{BarberisLC}, so that the $a^\dagger a$ term can be neglected as
-it is small when compared to the other two terms in the interaction.
-This leads to a further simplified Hamiltonian
-
-\begin{align} \label{LCHamiltonian}
-H(t) =& -\hbar \delta a^{\dagger}a +\hbar\omega\Gamma^{\dagger}\Gamma \\
-&+\frac{\hbar g\sqrt{\frac{\hbar}{2M}}}{\omega}(\alpha_0 a^{\dagger}+\alpha^*_0 a)(e^{i\omega t} \nonumber\Gamma^{\dagger}+e^{-i\omega t}\Gamma).
-\end{align}
-This Hamiltonian corresponds to a standard optomechanical master
-equation with Floquet operators for the mechanical oscillator
-
-
-\begin{equation}\label{LCMasterEq}
-\dot{\rho} = \frac{1}{i\hbar}[H,\rho] +L_a\rho + L_\Gamma \rho,
-\end{equation} where $L_a$ corresponds to the cavity's light field \cite{ZollerQN} and $L_\Gamma$ corresponds to the time dependent harmonic oscillator \cite{HanngiFM}.
 
 
 
