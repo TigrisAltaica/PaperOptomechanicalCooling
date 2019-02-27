@@ -409,10 +409,7 @@ $(g\sqrt{\frac{\hbar}{2M}}\alpha_o)^2 \ll (\frac{\kappa}{\nu_0})$.
 Following the derivation found in \cite{LCNooshi}, we arrive at a
 master equation for the density operator, after projecting into the
 subspace corresponding to its stationary state and tracing over the
-cavity degrees of freedom. \fxnote*{El apendice
-  esta incompleto, prometes derivar la ecuacion, pero no haces la
-  traza con respecto a los modos de la cavidad}{The technical details of the
-  derivation is reported in App.~\ref{CoolingAppendix}.} It leads to the master
+cavity degrees of freedom. The technical details of the derivation is reported in Appendix \ref{CoolingAppendix}. It leads to the master
 equation
 \begin{equation}\label{eq:projected_master_equation}
   \dot{\mu}\approx -\frac{g'^2}{2}G(\nu_m,n_c)[\Gamma^\dagger,\Gamma\mu]-G^*(-\nu_m,n_c)[\Gamma^\dagger,\mu\Gamma],
@@ -466,10 +463,9 @@ up to first order in $\epsilon$~\eqref{CavityQuadrature} simplifies to
            &+\frac{i\epsilon}{2}\int_0^\infty cos(2\omega t)t e^{i (\nu_0+\delta)
              t}e^{-\frac{\kappa t}{2}}dt\, ,\nonumber
 \end{align}
-where the $e^{-\kappa t}$ factor acts as a cut-off for the integral, which
-allows for the expansion in $\epsilon$ to be performed. \fxnote*{No
-  entiendo que son los trace states, ni como usar el apendice aqui.}{See Appendix
-\ref{App1} for more on the eigenvalues of the trace states.} This leads
+where the $e^{-\frac{kappa}{2} t}$ factor acts as a cut-off for the integral, which
+allows for the expansion in $\epsilon$ to be performed.See Appendix
+\ref{App1} for more on the states used to evaluate the trace and Appendix \ref{TraceAppendix} for a more detailed evaluation of the trace term. This leads
 to an expression for \eqref{CavityQuadrature} which consist of two
 parts: one corresponding to the nondriven harmonic oscillator case
 plus a correction term proportional to $\epsilon$
@@ -553,54 +549,6 @@ We plan to explore this case in future work.
  
 \appendix
 
-
-
-
-\section{The Damping Basis}\label{App1}
-
-Master equations of the type 
-
-\begin{equation}
-\dot{\rho} = \frac{i}{\hbar}[H,\rho]+L\rho, 
-\end{equation} with
-
-\begin{align}\label{EMField}
-L_a \rho =& - \frac{\kappa}{2}(n_p+1)[a^\dagger a\rho + \rho a^\dagger a -2a\rho a^\dagger] \nonumber \\
- &- \frac{\kappa}{2}(n_p)[ aa^\dagger\rho + \rho  aa^\dagger -2a^\dagger\rho a],
-\end{align} model the behavior of a bosonic field inside a cavity with just one mode and with $\nu$ thermal photons in contact with a thermal bath. $A$ is a constant related to the damping and $A,n_p \geq 0$  \cite{EnglertDB}. The density operator can be expressed in the Lindblad superoperator's eigenbasis to simplify the calculations. This is known as the damping basis \cite{EnglertDB}.
-
-\begin{align}\label{DefDB}
-&a^{\dagger l}\frac{(-1)^n}{(n_p+1)^{l+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad l \geq 0, \\
-&\frac{(-1)^n}{(n_p+1)^{|l|+1}}:L_n^{|l|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|l|}\quad l \leq 0,
-\end{align} with eigenvalues
-
-\begin{equation}
-\lambda_n^l = -\kappa[n + \frac{|l|}{2}],
-\end{equation} which fulfill
-
-\begin{equation}
-n=0,1,2...,\qquad l = 0,\pm 1, \pm 2,... 
-\end{equation} These are the right eigenstates, which correspond to $L\hat{\rho_n^l} = \lambda_n^l\hat{\rho_n^l}$, however the left eigenstates must also be considered, these correspond to $\check{\rho_n^l}L = \lambda_n^l\check{\rho_n^l}$ and have the same eigenvalues. These are
-
-\begin{align}\label{DefDBDual}
-&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+l)!}:L_n^l[\frac{a^\dagger a}{n_p}]:a^{l}\quad l \geq 0, \\
-&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+|l|)!}a^{\dagger|l|}:L_n^{|l|}[\frac{a^\dagger a}{n_p}]:\quad l \leq 0.
-\end{align} These states are orthogonal under the trace
-
-\begin{equation}
-Tr[\hat{\rho}_{n,l}\check{\rho}_{n',l'}] = \delta_{n,n'}\delta_{l,l'}.
-\end{equation} An important approximation can be obtained for a cavity at zero temperature, in these case the states are \cite{EnglertDB}
-
-\begin{align}\label{DefDBZero}
-&a^{\dagger l}(-1)^{a^\dagger a + n}\binom{n+l}{a^\dagger a+l} \quad l \geq 0, \\
-&(-1)^{a^\dagger a + n}\binom{n+|l|}{a^\dagger a+|l|}a^{|l|} \quad l \geq 0,
-\end{align} and the dual states are
-
-\begin{align}\label{DefDBDualZero}
-&\frac{n!}{(n+l)!}\binom{a^\dagger a}{n}a^l \quad l \geq 0, \\
-&a^{\dagger|l|}\frac{n!}{(n+|l|)!}\binom{a^\dagger a}{n} \quad l \geq 0.
-\end{align}
-
 \section{Laser Cooling and Projection Operators}\label{CoolingAppendix}
 
 In order to find the master equation
@@ -660,6 +608,91 @@ P e^{-L_0 t}L_1e^{L_0 t}\int_{t-\Delta t}^{t}dt'Qe^{-L_0 t}L_1e^{L_0 t}Pe^{-L_0 
 \begin{equation}
 P\dot{\rho}=\sum_{\lambda ,\lambda'} P e^{-L_0 t} L_1 \rho_{\lambda} L_1 \rho_{\lambda'} \rho(t-\Delta t)\frac{1}{\lambda' - \lambda} .
 \end{equation} We multiply by $Pe^{L_0 t}$ and return the projectors to their previous notation to obtain a projected master equation.
+
+
+
+
+\section{The Damping Basis}\label{App1}
+
+Master equations of the type 
+
+\begin{equation}
+\dot{\rho} = \frac{i}{\hbar}[H,\rho]+L\rho, 
+\end{equation} with
+
+\begin{align}\label{EMField}
+L_a \rho =& - \frac{\kappa}{2}(n_p+1)[a^\dagger a\rho + \rho a^\dagger a -2a\rho a^\dagger] \nonumber \\
+ &- \frac{\kappa}{2}(n_p)[ aa^\dagger\rho + \rho  aa^\dagger -2a^\dagger\rho a],
+\end{align} model the behavior of a bosonic field inside a cavity with just one mode and with $\nu$ thermal photons in contact with a thermal bath. $A$ is a constant related to the damping and $A,n_p \geq 0$  \cite{EnglertDB}. The density operator can be expressed in the Lindblad superoperator's eigenbasis to simplify the calculations. This is known as the damping basis \cite{EnglertDB}.
+
+\begin{align}\label{DefDB}
+&a^{\dagger l}\frac{(-1)^n}{(n_p+1)^{l+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad l \geq 0, \\
+&\frac{(-1)^n}{(n_p+1)^{|l|+1}}:L_n^{|l|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|l|}\quad l \leq 0,
+\end{align} with eigenvalues
+
+\begin{equation}
+\lambda_n^l = -\kappa[n + \frac{|l|}{2}],
+\end{equation} which fulfill
+
+\begin{equation}
+n=0,1,2...,\qquad l = 0,\pm 1, \pm 2,... 
+\end{equation} These are the right eigenstates, which correspond to $L\hat{\rho_n^l} = \lambda_n^l\hat{\rho_n^l}$, however the left eigenstates must also be considered, these correspond to $\check{\rho_n^l}L = \lambda_n^l\check{\rho_n^l}$ and have the same eigenvalues. These are
+
+\begin{align}\label{DefDBDual}
+&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+l)!}:L_n^l[\frac{a^\dagger a}{n_p}]:a^{l}\quad l \geq 0, \\
+&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+|l|)!}a^{\dagger|l|}:L_n^{|l|}[\frac{a^\dagger a}{n_p}]:\quad l \leq 0.
+\end{align} These states are orthogonal under the product
+
+\begin{equation}
+Tr[\hat{\rho}_{n,l}\check{\rho}_{n',l'}] = \delta_{n,n'}\delta_{l,l'},
+\end{equation} and also fulfill
+
+\begin{equation}\label{DampingBasisCompleteness}
+\sum_{\lambda} \hat{\rho}_\lambda \otimes \check{\rho}_\lambda = \mathbb{1},
+\end{equation} where the sum is over all possible eigenvalues. An important approximation can be obtained for a cavity at zero temperature, in these case the states are \cite{EnglertDB}
+
+\begin{align}\label{DefDBZero}
+&a^{\dagger l}(-1)^{a^\dagger a + n}\binom{n+l}{a^\dagger a+l} \quad l \geq 0, \\
+&(-1)^{a^\dagger a + n}\binom{n+|l|}{a^\dagger a+|l|}a^{|l|} \quad l < 0,
+\end{align} and the dual states are
+
+\begin{align}\label{DefDBDualZero}
+&\frac{n!}{(n+l)!}\binom{a^\dagger a}{n}a^l \quad l \geq 0, \\
+&a^{\dagger|l|}\frac{n!}{(n+|l|)!}\binom{a^\dagger a}{n} \quad l < 0.
+\end{align}
+
+\subsection{Evaluation of Trace Term}\label{TraceAppendix}
+
+In order to calculate the $G(\nu_m,n_c)$ terms in \eqref{eq:projected_master_equation}, the term
+
+\begin{equation}\label{CoolingTrace}
+T=Tr_a[X_ae^{L_at}X_a\rho_{st}],
+\end{equation} must be explicitly calculated first. The calculation hinges on the Damping Basis states detailed above. The cavity's stationary state is taken to be the base zero temperature state
+
+\begin{equation}
+\rho_{st} = \Ket{0}\Bra{0},
+\end{equation} and we recall that
+
+\begin{equation}
+X_a = \frac{(\alpha_0a^{\dagger}+\alpha_0^*a)}{\sqrt{2}}.
+\end{equation} The first step is to separate the term \eqref{CoolingTrace} using \eqref{DampingBasisCompleteness}
+
+\begin{equation}
+Tr_a[X_ae^{L_at}X_a\rho_st] = \sum_\lambda Tr_a[X_ae^{L_at}\hat{\rho}_\lambda] \otimes Tr_a[\check{\rho}_\lambda X_a\Ket{0}\Bra{0}].
+\end{equation} In this context $\lambda$ refers exclusively to the cavity eigenvalues. The $a$ term of $X_a$ is zero when applied to $\rho_{st}$ and so 
+
+\begin{align}
+T=& \alpha_0\sum_\lambda Tr_a[X_ae^{L_at}\hat{\rho}_\lambda] \otimes Tr_a[\check{\rho}_\lambda\Ket{1}\Bra{0}],\\
+=&\frac{\alpha_0}{\sqrt{2}}\sum_\lambda Tr_a[X_ae^{L_at}\hat{\rho}_\lambda] \delta_{N,0}\delta_{l,-1},\\
+=&\frac{\alpha_0}{\sqrt{2}} Tr_a[X_ae^{L_at}\hat{\rho}_{0,-1}],\\
+=&\frac{\alpha_0}{\sqrt{2}}e^{-\frac{\kappa}{2}} Tr_a[X_a\hat{\rho}_{0,-1}],\\
+=&\frac{\alpha_0}{2}e^{-\frac{\kappa}{2}}\alpha_0^*Tr_a[\Ket{0}\Bra{0}],\\
+=&\frac{|\alpha_0|^2}{2}e^{-\frac{\kappa}{2}}.
+\end{align} Here we used the fact that $F\hat{\rho_{0,-1}}=\Ket{0}\Bra{0}$. 
+
+
+
+
 
 
 
