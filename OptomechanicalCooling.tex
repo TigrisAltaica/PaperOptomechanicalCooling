@@ -412,7 +412,7 @@ subspace corresponding to its stationary state and tracing over the
 cavity degrees of freedom. The technical details of the derivation is reported in Appendix \ref{CoolingAppendix}. It leads to the master
 equation
 \begin{equation}\label{eq:projected_master_equation}
-  \dot{\mu}\approx -\frac{g'^2}{2}G(\nu_m,n_c)[\Gamma^\dagger,\Gamma\mu]-G^*(-\nu_m,n_c)[\Gamma^\dagger,\mu\Gamma],
+  \dot{\mu}\approx -\frac{g'^2}{2}(G(\nu_m,0)[\Gamma^\dagger,\Gamma\mu]-G^*(-\nu_m,0)[\Gamma^\dagger,\mu\Gamma]),
 \end{equation}
 where we have set $g'=g\sqrt{\frac{\hbar}{2M}}\alpha_0$ for
 convenience and use $\mu$ as the density operator of the mechanical
@@ -596,31 +596,55 @@ Q\rho =& Q\rho(t_0) + \int_{t_0}^{t}dt' QL(t')P\rho(t')\\
 \end{align*} and this is substituted into the $P$ equation
 
 \begin{align}
-P\dot{\rho}(t) =& PL_1Q\rho(t-\Delta t)\\ 
- &+ PL_1\int_{t_0}^{t}dt' QL_1(t')P\rho(t-\Delta t)\nonumber \\
- &+ PL_1\int_{t_0}^{t}dt'QL_1(t')Q\rho(t-\Delta t) \nonumber,
+P\dot{\rho}(t) =& PL_1Q\rho(t_0)\\ 
+ &+ PL_1\int_{t_0}^{t}dt' QL_1(t')P\rho(t_0)\nonumber \\
+ &+ PL_1\int_{t_0}^{t}dt'QL_1(t')Q\rho(t_0) \nonumber,
 \end{align} where only the second term is non zero. Transforming back from the decay picture
 
-\begin{equation}\label{ProyectionEQ}
-P e^{-L_0 t}L_1e^{L_0 t}\int_{t-\Delta t}^{t}dt'Qe^{-L_0 t'}L_1e^{L_0 t'}Pe^{-L_0( t-\Delta t)}\rho(t-\Delta t).
+\begin{equation}
+P e^{-L_0 t}L_1e^{L_0 t}\int_{t_0}^{t}dt'Qe^{-L_0 t'}L_1e^{L_0 t'}Pe^{-L_0(t_0)}\rho(t_0).
 \end{equation} Noting that the factors that multiply the Floquet operators cancel out their time dependence and decomposing the projectors into the forms $P=\sum_\lambda \hat{\rho}_\lambda \otimes \check{\rho}_\lambda$ and $Q=\sum_{\lambda'} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}$ we may evaluate the $L_0$ terms by applying them to the nearest states
 
-\begin{align}
-P e^{-L_0 t}L_1[&\sum_{\lambda',\lambda}\int_{t-\Delta t}^{t}dt'e^{\lambda' t} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}e^{-\lambda' t'}L_1\\
-&e^{\lambda t'}\hat{\rho}_\lambda \otimes \check{\rho}e^{-\lambda( t-\Delta t)}\rho(t-\Delta t)]\nonumber.
-\end{align} We wish to take the limit when $\Delta t \to \infty$. In this limit
+\begin{align}\label{ProyectionEQ}
+P e^{-L_0 t}L_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda' t} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}e^{-\lambda' t'}L_1\\
+&e^{\lambda t'}\hat{\rho}_\lambda \otimes \check{\rho}e^{-\lambda( t_0)}\rho(t_0)]\nonumber.
+\end{align} We focus only on the exponential terms, which are now numbers and can be shifted accordingly
+
+\begin{equation}\label{LambdaExponentials}
+[\int_{t_0}^t dt' e^{(\lambda'-\lambda)t'}]e^{\lambda t- \lambda't_0}.
+\end{equation} Here we notice that $\lambda' = \lambda_{mec}(t)$ as the cavity is taken to be at zero temperature. Since $\lambda_{mec}(t) = i\nu_0 + \epsilon \cos(2\omega t)$ we must take care of the integration. We employ the approximation
 
 \begin{equation}
-e^{\lambda' \Delta t} \to 1, \qquad \qquad e^{\lambda \Delta t} \to 0.
-\end{equation} This is because $\lambda'$ represents the slow time scale and $\lambda$ represents the fast time scale. Only the stationary sttes survive as all other eigenvalues have a negative real part.  We multiply both sides by $Pe^{L_0 t}$ remembering that $P^2 = P$ We then trace over the cavity degrees of freedom. As has already been noted, the Floquet operators can leave the integral and also leave the trace. We assume that the initial condition can be expressed as a separable state $\rho = \rho_m \otimes \rho_st$ and only $\rho_st$ must remain within the trace. Using $\mu=Tr_a[P\rho]$ we arrive at the equation
+e^{(\lambda'-\lambda)t'} \approx e^{(i\nu_0-\lambda)t'} + i\epsilon \cos(2 \omega t')t' e^{(i\nu_0-\lambda)t'}.
+\end{equation} Each terms is then integrated separately. The adiabatic approximation consists of taking the limit $(t-t_0) \to \infty$ or $t \to \infty, \quad t_0 \to 0$. In this limit
 
 \begin{equation}
-\dot{mu} = (L_1)_{\Gamma}(L_1)_{\Gamma}\mu \int_0^{\infty} e^{i\nu(t)t} Tr_a[(L_1)_a e^{L_at}(L_1)_a\rho_{st}],
-\end{equation} which then leads directly to \eqref{eq:projected_master_equation}.
+e^{\lambda t} \to 0 \qquad e^{\lambda' t} \to 1.
+\end{equation} This is due to $\lambda$ representing the fast time scale which decays quickly, while $\lambda'$ represents the slow time scale which contains stationary states. Under these conditions \eqref{LambdaExponentials} becomes, up to first order in $\epsilon$
 
+\begin{equation}
+[\int_{t_0}^t dt' e^{(\lambda'-\lambda)t'}]e^{\lambda t- \lambda't_0} = \frac{1}{a} + i\epsilon \frac{a^2 - \omega^2}{(4\omega^2 + a^2)^2} = I_{\lambda',\lambda},
+\end{equation} with $a = i\nu_0 - \lambda$. Returning to \eqref{ProyectionEQ}, we may now write it as
 
+\begin{equation}
+Pe^{-L_0 t} \sum_{\lambda',\lambda} L_1 I_{\lambda',\lambda} \rho_{\lambda'} L_1 \rho_\lambda \rho(t_0).
+\end{equation} We may return the projectors to their Original notation to remove the sums now sum over the possible values of the mechanical eigenvalues
 
+\begin{equation}
+Pe^{-L_0 t} \sum_{m} L_1 I_{m} Q L_1 P \rho(t_0).
+\end{equation} The full equation is multiplied by $Pe^{L_0 t}$ 
 
+\begin{equation}
+P\dot{\rho} = P[L_0]P \rho(t) + \sum_{m} P L_1 I_{m} Q L_1 P \rho(t_0).
+\end{equation} We then trace over all the cavity degrees of freedom and set  $\mu = Tr_c[P\rho]\otimes \rho_{st}$, where we assume no correlation between the cavity and mirror states at time $t_0$. This leads to the equation
+
+\begin{equation}\label{FinalProyectedEq}
+\dot{\mu}_m = L_{mec}\mu_m + Tr_c[ P L_1 I(\nu_m) Q L_1 P \rho(t_0)_m],
+\end{equation} for any given value of $m$. Remembering that $L_1 = \frac{1}{i\hbar}[X_a X_\Gamma,\bullet]$ and that the mirror operators $\Gamma$ may leave the trace alongside $\mu$, equation \eqref{FinalProyectedEq} can be written as \eqref{eq:projected_master_equation} where the second term has been written as
+
+\begin{equation}
+\int_0^tdt' e^{\i\nu(t')t'}Tr_c[ P X_a e^{L_a t'} Q X_a P \rho_st], 
+\end{equation} for convenience.
 
 
 \section{The Damping Basis}\label{App1}
