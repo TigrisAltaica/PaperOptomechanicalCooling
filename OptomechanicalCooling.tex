@@ -193,7 +193,7 @@ f(t) = e^{i\mu t}\phi(t),
 \begin{equation}
 H_{mec}(t) = \hbar\frac{W}{|f(t)|^2}\left[\Gamma^\dagger(t)\Gamma(t) + \frac{1}{2}\right],
 \end{equation}
-with the Wronskian $W$ for \eqref{TimeDependentHO}. Equation
+with the Wronskian $W$ for \eqref{TimeDependentHO}. The explicit time dependence of the Floquet operators will not be noted from now on for the sake of brevity. Equation
 \eqref{FloquetOperators} is then inverted and solved for the harmonic
 oscillator's position operator \cite{TesisMaestria}
 
@@ -209,7 +209,7 @@ These are then substituted back into the interaction Hamiltonian
 resulting in
 
 \begin{equation}
-H_{int}(t) = g\sqrt{\frac{\hbar}{2M}}a^\dagger a[\gamma_+(t)\Gamma (t) +\gamma_-(t)\Gamma^\dagger (t)],
+H_{int}(t) = g\sqrt{\frac{\hbar}{2M}}a^\dagger a[\gamma_+(t)\Gamma +\gamma_-(t)\Gamma^\dagger],
 \end{equation} with new coefficients
 
 \begin{align*}
@@ -369,7 +369,7 @@ obtaining
 \end{align}
 The 0 sub-index denotes that the solutions are valid only to zeroth
 order in the coupling parameter. In obtaining the solution we used
-\begin{equation}
+\begin{equation}\label{GammaCoefficients}
 \gamma_\pm= \frac{\pm 1}{2i\nu_0}e^{\mp i\nu_0 t},
 \end{equation}
 and  $\frac{W}{|f|^2} = \nu_0 + \frac{\epsilon \omega}{2n} cos(2\omega t)$. These expressions neglect terms of order $\frac{\epsilon}{n^2}$ and use the approximation $n+1 \approx n-1 \approx n$ since we work in the regime where $n >> 1$. Using \eqref{eq:alpha_beta_sta} in~(\ref{eq:hamiltonian_no_small})
@@ -412,30 +412,27 @@ subspace corresponding to its stationary state and tracing over the
 cavity degrees of freedom. The technical details of the derivation is reported in Appendix \ref{CoolingAppendix}. It leads to the master
 equation
 \begin{equation}\label{eq:projected_master_equation}
-  \dot{\mu}\approx -\frac{g'^2}{2}(G(\nu_m,0)[\Gamma^\dagger,\Gamma\mu]-G^*(-\nu_m,0)[\Gamma^\dagger,\mu\Gamma]),
+  \dot{\mu}\approx -\frac{g'^2}{2}(G(\nu_m,0)[\Gamma^\dagger_0,\Gamma_0\mu]-G^*(-\nu_m,0)[\Gamma_0^\dagger,\mu\Gamma_0]),
 \end{equation}
 where we have set $g'=g\sqrt{\frac{\hbar}{2M}}\alpha_0$ for
 convenience and use $\mu$ as the density operator of the mechanical
 degree of freedom. Note that this master equation is obtained via the
-usual derivation, since the particular form of
-\eqref{SmallOscillationsSolution} makes the explicit time dependencies
-cancel out in the operator products of the form
-$\Gamma^\dagger \Gamma$ and $\Gamma \Gamma^\dagger$.
+usual derivation, since the particular form of the coefficients \eqref{GammaCoefficients} cancel out the explicit time dependencies in the $\Gamma$ operators (save terms of order $\frac{\epsilon}{n^2}$) and thus they do not have to be accounted for during the integration in Appendix \ref{CoolingAppendix}. for this reason, we absorb the $\gamma_\pm$ coefficients into the $\Gamma$ operators in the interaction and denote them by $\Gamma_0$ and $\Gamma_0^\dagger$.
 
-The cavity-quadratures correlation $G(\nu_m,n_p)$ is used to calculate
+The cavity-quadratures correlation $G(\nu_m,0)$ is used to calculate
 the heating and cooling rates for the mirror and is given by
 \begin{equation} \label{CavityQuadrature}
-G(\nu_m,n_p) = \int_0^\infty dt e^{i\nu(t) t}Tr_a[X_a e^{L_a t} X_a \rho_{st}],
-\end{equation} with 
+G(\nu_m,0) = \int_0^\infty dt e^{i\nu(t) t}Tr_a[X_a e^{L_a t} X_a \rho_{st}],
+\end{equation} where we assume the cavity is at zero temperature and with 
 \begin{equation}
-X_a = \frac{a + a^\dagger}{\sqrt{2}\alpha_0},
+X_a = \frac{a + a^\dagger}{\sqrt{2}\alpha_0}.
 \end{equation}
 
-the cooling and heating rates are given by
+The cooling and heating rates are given by
 
 
 \begin{equation}
-A_\pm(\nu_m,n_p) = g'^2Real(G(\mp \nu_m,n_p)),
+A_\pm(\nu_m,0) = g'^2Real(G(\mp \nu_m,0)),
 \end{equation} where $A_+$ represents heating and $A_-$ represents cooling. The final number of phonon excitations is given by
 
 \begin{equation}
@@ -457,7 +454,7 @@ Tr_a[X_a e^{L_a t} X_a \rho_{st}] = \frac{1}{2}e^{-(\frac{\kappa}{2}-i\delta) t}
 \end{equation} 
 up to first order in $\epsilon$~\eqref{CavityQuadrature} simplifies to
 \begin{align}
-  G(\nu,0)=&\int_0^\infty dt e^{(i\nu_0 +\epsilon'\cos{(2\omega t)})t }Tr[...]\nonumber\\
+  G(\nu,0)=&\int_0^\infty dt e^{(i\nu_0 +i\epsilon'\cos{(2\omega t)})t }Tr[...]\nonumber\\
            &\approx\frac{1}{2}\int_0^\infty e^{i (\nu_0+\delta)
              t}e^{-\frac{\kappa t}{2}}dt\nonumber\\
            &+\frac{i\epsilon \omega}{4n}\int_0^\infty cos(2\omega t)t e^{i (\nu_0+\delta)
@@ -478,7 +475,7 @@ the adiabatic approximation to be valid, the variation in the
 mechanical oscillator's frequency must be slow when compared to the
 frequency itself ($\omega \ll \nu_0$) which translates to classical
 solutions with $1 \ll n$ due to \eqref{scattering}. We assume that
-$\epsilon = \frac{\nu_0}{10}$. Physically,
+$\epsilon' = \frac{\nu_0}{10}$, or, equivalently, $\epsilon = \frac{n^2}{5}$. Physically,
 we employ a classical solution which describes a situation where the
 oscillator's average $\nu_0$ frequency is the fastest one, while the
 secular frequency $\omega$ is the slowest one. In figure \ref{GraficaTemp} it is shown the
@@ -612,18 +609,18 @@ P e^{-L_0 t}L_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda' t} \hat{\rh
 
 \begin{equation}\label{LambdaExponentials}
 [\int_{t_0}^t dt' e^{(\lambda'-\lambda)t'}]e^{\lambda t- \lambda't_0}.
-\end{equation} Here we notice that $\lambda' = \lambda_{mec}(t)$ as the cavity is taken to be at zero temperature. Since $\lambda_{mec}(t) = i\nu_0 + \epsilon \cos(2\omega t)$ we must take care of the integration. We employ the approximation
+\end{equation} Here we notice that $\lambda' = \lambda_{mec}(t)$ as the cavity is taken to be at zero temperature. Since $\lambda_{mec}(t) = i\nu_0 + i\epsilon' \cos(2\omega t)$ we must take care during the integration. Here we make an important note. In general, the $\Gamma$ operators contained within the $L_1$ term are explicitly time dependent. However, in this particular case, due to the coefficients \eqref{GammaCoefficients} and the form of \eqref{SmallOscillationsSolution}, the explicit time dependence is canceled out excluding terms of order $\frac{\epsilon}{n^2}$ and so we consider them to be non time-dependent and do not account for them during the integration. To perform the integration we employ the approximation
 
 \begin{equation}
-e^{(\lambda'-\lambda)t'} \approx e^{(i\nu_0-\lambda)t'} + i\epsilon \cos(2 \omega t')t' e^{(i\nu_0-\lambda)t'}.
+e^{(\lambda'-\lambda)t'} \approx e^{(i\nu_0-\lambda)t'} + i\epsilon' \cos(2 \omega t')t' e^{(i\nu_0-\lambda)t'}.
 \end{equation} Each terms is then integrated separately. The adiabatic approximation consists of taking the limit $(t-t_0) \to \infty$ or $t \to \infty, \quad t_0 \to 0$. In this limit
 
 \begin{equation}
 e^{\lambda t} \to 0 \qquad e^{\lambda' t} \to 1.
-\end{equation} This is due to $\lambda$ representing the fast time scale which decays quickly, while $\lambda'$ represents the slow time scale which contains stationary states. Under these conditions \eqref{LambdaExponentials} becomes, up to first order in $\epsilon$
+\end{equation} This is due to $\lambda$ representing the fast time scale which decays quickly, while $\lambda'$ represents the slow time scale which contains stationary states. Under these conditions \eqref{LambdaExponentials} becomes, up to first order in $\epsilon'$
 
 \begin{equation}
-[\int_{t_0}^t dt' e^{(\lambda'-\lambda)t'}]e^{\lambda t- \lambda't_0} = \frac{1}{a} + i\epsilon \frac{a^2 - \omega^2}{(4\omega^2 + a^2)^2} = I_{\lambda',\lambda},
+[\int_{t_0}^t dt' e^{(\lambda'-\lambda)t'}]e^{\lambda t- \lambda't_0} = \frac{1}{a} + i\epsilon' \frac{a^2 - \omega^2}{(4\omega^2 + a^2)^2} = I_{\lambda',\lambda},
 \end{equation} with $a = i\nu_0 - \lambda$. Returning to \eqref{ProyectionEQ}, we may now write it as
 
 \begin{equation}
@@ -643,7 +640,7 @@ P\dot{\rho} = P[L_0]P \rho(t) + \sum_{m} P L_1 I_{m} Q L_1 P \rho(t_0).
 \end{equation} for any given value of $m$. Remembering that $L_1 = \frac{1}{i\hbar}[X_a X_\Gamma,\bullet]$ and that the mirror operators $\Gamma$ may leave the trace alongside $\mu$, equation \eqref{FinalProyectedEq} can be written as \eqref{eq:projected_master_equation} where the second term has been written as
 
 \begin{equation}
-\int_0^tdt' e^{\i\nu(t')t'}Tr_c[ P X_a e^{L_a t'} Q X_a P \rho_st], 
+\int_0^\infty dt' e^{\i\nu(t')t'}Tr_c[ P X_a e^{L_a t'} Q X_a P \rho_st], 
 \end{equation} for convenience.
 
 
