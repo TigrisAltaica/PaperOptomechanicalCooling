@@ -13,7 +13,7 @@
 
 %\preprint{APS/123-QED}
 
-\title{Optomechanical cooling with time-dependent parameters}%
+\title{Cooling in a parametrically driven optomechanical cavity}%
 
 \author{Pablo Yanes-Thomas}
 
@@ -56,44 +56,49 @@ Universidad Nacional Aut\'{o}noma de M\'{e}xico, Circuito Escolar s/n Ciudad Uni
 
 
 Quantum cavity optomechanics studies systems composed of macroscopic
-mechanical objects, such as mirrors, and an optical cavity's quantized light field
-usually coupled via radiation pressure.
-In a common scheme an end-mirror of a Fabry-Perot
-cavity is suspended while being able to freely oscillate.
-When photons are reflected by the mirror, there is a
-momentum transfer between the light field and the mirror and hence a coupling force. As the cavity's
-resonance depends on its length, the mechanical
-displacement affects the light field inside the cavity. Some of the first theoretical work predicting this sort of coupling was performed by \cite{BraginskiiOG}. This interaction between
-the macroscopic mechanical object and the light field leads to several
-interesting effects such as optomechanically induced
-transparency \cite{WeissOIT}, the optical spring effect \cite{VogelOT}
-or, most relevant to this study, optomechanical
-cooling \cite{CohadonCM, CorbittOC, SchliesserRPC, LCNooshi}.
+mechanical objects, such as mirrors, and an optical cavity's quantized
+light field usually coupled via radiation pressure. In a common scheme
+an end-mirror of a Fabry-Perot cavity is suspended while being able to
+freely oscillate. When photons are reflected by the mirror, there is a
+momentum transfer between the light field and the mirror and hence a
+coupling force. As the cavity's resonance depends on its length, the
+mechanical displacement affects the light field inside the cavity.
+Some of the first theoretical work predicting this sort of coupling is
+described in \cite{BraginskiiOG}. This interaction between the
+macroscopic mechanical object and the light field leads to several
+interesting effects such as optomechanically induced transparency
+\cite{WeissOIT}, the optical spring effect \cite{VogelOT} or, most
+relevant to this study, optomechanical cooling \cite{CohadonCM,
+  CorbittOC, SchliesserRPC, LCNooshi, ManciniOC}.
 	
 Optomechanical cooling was first proposed by Mancini, et al in
 \cite{ManciniOC}. It is the damping of the end mirror's mechanical
-motion due to the radiative coupling to the cavity field. Sideband cooling takes place when the cavity's resonance is much narrower than the mechanical frequency. It can be understood as Raman scattering
-\cite{MarquardtQTOQ} of incident photons, red-detuned from the
-cavity resonance, when the parameters are chosen to favor phonon absorption from the mechanical oscillator in order to scatter the photon
-into the cavity's resonance mode, resulting in cooling. For coherent quantum control over a mechanical object, it must be
-close to a pure quantum mechanical state \cite{KippenberCO} so
-effective methods of cooling macroscopic objects to low temperatures is highly desirable.
+motion due to the radiative coupling to the cavity field. Sideband
+cooling takes place when the cavity's resonance is much narrower than
+the mechanical frequency. It can be understood as Raman scattering
+\cite{MarquardtQTOQ} of incident photons, red-detuned from the cavity
+resonance, when the parameters are chosen to favor phonon absorption
+from the mechanical oscillator in order to scatter the photon into the
+cavity's resonance mode, resulting in cooling. For coherent quantum
+control over a mechanical object, it must be close to a pure quantum
+mechanical state \cite{KippenberCO} so effective methods of cooling
+macroscopic objects to low temperatures is highly desirable.
 
 One possible avenue for improved cooling lies in controlling the
 mechanical resonator's frequency as a function of time
 \cite{JockelMR}. The effect of this dependence on the mechanical
 object's final temperature was studied in \cite{BarberisLC}. In that
 study it was found that the final temperature of the parametrically
-driven harmonic oscillator was larger than the nondriven case.
-The master equation from which the cooling rates were derived,
-accounted for the natural frequency of the mechanical
-resonator via ad-hoc time-dependent coefficients. These were
-introduced after performing the Markov approximation. This approach
-could lead to an incomplete master equation and thus an incomplete
-description of the system's dynamics, as the system is being treated
-as essentially not time-dependent during the derivation of the master
-equation. In this study, we employ a different method that accounts
-for the time dependence throughout the entire derivation.
+driven harmonic oscillator was larger than the nondriven case. The
+master equation, from which the cooling rates were derived, accounted
+for the natural frequency of the mechanical resonator via ad-hoc
+time-dependent coefficients that were introduced after performing the
+Markov approximation; this approach lead to an incomplete master
+equation and thus an incomplete description of the system's dynamics,
+as the system is being treated as essentially not time-dependent
+during the derivation of the master equation. In this study, we employ
+a different method that accounts for the time dependence throughout
+the entire derivation.
 
 
 The formalism which we apply (section \ref{OptmechH}) is based on
@@ -102,14 +107,15 @@ Floquet theory and was demonstrated to be a more accurate treatment in
 periodic oscillation with respect to the central frequency of the
 mechanical oscillator, the Floquet operators can be given explicitly
 (section \ref{SolSmallOsc}). Under the adiabatic approximation, we
-derive an approximated expression for the
-mean phonon occupation number in the final stages of optomechanical cooling (section \ref{LasCool}). We perform numerical
-calculations in order to compare this expression to the one for the
-non-time-dependent case (section \ref{NumCal}). We find, using the
-formalism  presented here, that lower temperatures can be obtained if
-the mechanical object is parametrically driven. Our results suggest
-that the theoretical model of dissipation of the mechanical osscilator
-can have a significant influence on the resulting temperature. (section \ref{ConCl}).
+derive an approximated expression for the mean phonon occupation
+number in the final stages of optomechanical cooling (section
+\ref{LasCool}), and compare its prediction to the non-time-dependent
+case (section \ref{NumCal}). We find, using the formalism presented
+here, that lower temperatures can be obtained if the mechanical object
+is parametrically driven. Our results suggest that the theoretical
+model of dissipation of the mechanical osscilator can have a
+significant influence on the resulting temperature (section
+\ref{ConCl}).
 
 
 % The formalism which we apply is based on Floquet theory and was
@@ -147,32 +153,39 @@ can have a significant influence on the resulting temperature. (section \ref{Con
 \section{Optomechanical Hamiltonian}\label{OptmechH}
 \subsection{Hamiltonian with Floquet Operators}
 	
-	We employed the standard Hamiltonian for optomechanical cooling \cite{LCNooshi} in a reference system that rotates with the same frequency as a laser that continuously pumps photons into the cavity. 
+The standard Hamiltonian for optomechanical cooling \cite{LCNooshi}, in
+a reference system that rotates with the same frequency as a laser
+that continuously pumps photons into the cavity is
 
 \begin{equation}
-H(t) =   H_{cav} + H_{mec}(t) + H_{int} + H_{pump},
+H(t) =   H_{\rm cav} + H_{\rm mec}(t) + H_{\rm int} + H_{\rm pump},
 \end{equation}
 
 where
 
 \begin{align}
-H_{cav} =& -\hbar \delta a^\dagger a,\\
-H_{mec}(t) =& \frac{p^2}{2M} + \frac{1}{2}M \nu^2 (t) x^2,\\
-H_{int} =& -\hbar g a^\dagger a x,\\
-H_{pump} =& \hbar\frac{\Omega}{2}(a^\dagger + a),
+H_{\rm cav} =& -\hbar \delta a^\dagger a,\\
+H_{\rm mec}(t) =& \frac{p^2}{2M} + \frac{1}{2}M \nu^2 (t) x^2,\\
+H_{\rm int} =& -\hbar g a^\dagger a x,\\
+H_{\rm pump} =& \hbar\frac{\Omega}{2}(a^\dagger + a),
 \end{align}
-$\delta = \omega_{laser} - \omega_{cav}$ is the frequency difference
-between the laser and the cavity. $M$ is the mechanical oscillator's
-mass and $\nu(t)$ is its frequency. In order to employ the Floquet
-formalism $\nu(t)$ must be a periodic function of time. The $H_{int}$
-term models the interaction between photons and the mirror, and $g$
-sets the strength of the coupling. Finally, $\Omega$ describes the strength
-of the cavity pump. Readers interested in a derivation of the
-interaction term should consult \cite{KippenberCO}. In our case, the only term with
-an explicit time dependence is the term for the mechanical oscillator.
+$\delta = \omega_{laser} - \omega_{cav}$, in the hamiltonian of the
+cavity, $H_{\rm cav}$, is the frequency difference between the laser and
+the cavity; $M$, in the hamiltonian of the mechanical oscillator,
+$H_{\rm mec}$, is the mechanical oscillator's mass, $p$ its momentum
+operator, $x$ its position operator, and $\nu(t)$ its frequency. The
+$H_{\rm int}$ term models the interaction between the field and the cavity
+mirror where $g$ sets the strength of the coupling \cite{KippenberCO}.
+Finally, $H_{\rm pump}$ describes the pumping of the cavity by a field with
+a strength proportional to $\Omega$. The hamiltonian for the
+mechanical oscillator has an explicit time dependence given by
+$\nu(t)$; in order to employ the Floquet formalism it must be a
+periodic function of time.
 
-The Floquet operators are analogous to the usual creation and annihilation operators for the standard harmonic oscillator and can be expressed in terms of the
-mechanical oscillator's position and momentum operators \cite{HanngiFM}. These operators are
+The Floquet operators are analogous to the usual creation and
+annihilation operators for the standard harmonic oscillator and can be
+expressed in terms of the mechanical oscillator's position and
+momentum operators \cite{HanngiFM}. These operators are
 
 \begin{equation}\label{FloquetOperators}
 \Gamma(t) = \frac{1}{2i}\left[\hat{x}\sqrt{\frac{2M}{\hbar}}\dot{f}(t)-\hat{p}\sqrt{\frac{2}{M \hbar }}f(t)\right],
@@ -183,15 +196,19 @@ mechanical oscillator's position and momentum operators \cite{HanngiFM}. These o
 \end{equation} This equation has two solutions \cite{HanngiFM} of the form
 \begin{equation}
 f(t) = e^{i\mu t}\phi(t), 
-\end{equation} and its complex conjugate. $\phi(t)$ is a periodic function of time with the same period as $\nu(t)$.  $\mu$ is, in general, a complex number \cite{WardFT}. These operators follow the usual commutation relations for creation and annihilation operators
+\end{equation}
+and its complex conjugate, where $\phi(t)$ is a periodic function of
+time with the same period as $\nu(t)$. $\mu$ is, in general, a complex
+number \cite{WardFT}. The Floquet operators follow the usual
+commutation relations for creation and annihilation operators
 \begin{equation}
 [\Gamma(t)^\dagger,\Gamma(t)]=1.
 \end{equation}
 
- Using these operators $H_{mec}(t)$ can be written in the same form as the non time-dependent harmonic oscillator with the Floquet operators taking the place of the annihilation operators, with the exception of a global time-dependent scalar coefficient  \cite{BrownPT}
+ Using these operators $H_{\rm mec}(t)$ can be written in the same form as the non time-dependent harmonic oscillator with the Floquet operators taking the place of the annihilation operators, with the exception of a global time-dependent scalar coefficient  \cite{BrownPT}
 
 \begin{equation}
-H_{mec}(t) = \hbar\frac{W}{|f(t)|^2}\left[\Gamma^\dagger(t)\Gamma(t) + \frac{1}{2}\right],
+H_{\rm mec}(t) = \hbar\frac{W}{|f(t)|^2}\left[\Gamma^\dagger(t)\Gamma(t) + \frac{1}{2}\right],
 \end{equation}
 with the Wronskian $W$ for \eqref{TimeDependentHO}. The explicit time dependence of the Floquet operators will not be noted from now on for the sake of brevity. Equation
 \eqref{FloquetOperators} is then inverted and solved for the harmonic
@@ -209,8 +226,8 @@ These are then substituted back into the interaction Hamiltonian
 resulting in
 
 \begin{equation}
-H_{int}(t) = g\sqrt{\frac{\hbar}{2M}}a^\dagger a[\gamma_+(t)\Gamma +\gamma_-(t)\Gamma^\dagger],
-\end{equation} with new coefficients
+H_{\rm int}(t) = g\sqrt{\frac{\hbar}{2M}}a^\dagger a[\gamma_+(t)\Gamma +\gamma_-(t)\Gamma^\dagger],
+\end{equation} with coefficients
 
 \begin{align*}
 \gamma_+(t)=&\frac{f^*}{(f^*\dot{f}-f\dot{f}^*)},\\
@@ -219,19 +236,21 @@ H_{int}(t) = g\sqrt{\frac{\hbar}{2M}}a^\dagger a[\gamma_+(t)\Gamma +\gamma_-(t)\
 
 
 The Hamiltonian contains two separate harmonic oscillator-like terms
-that commute with each other, $H_{cav}$ and $H_{mec}$, so the standard
-harmonic oscillator master equation structure can be employed
-\cite{TesisMaestria}\cite{HanngiFM}. The usual derivation of the master
-equation involves a Markov approximation, under the formalism we
-employ, frequency's time dependence is accounted for during this
-approximation \cite{HanngiFM} via the Floquet operators. This differs
-from previous attempts to study this type of system, where this
-dependence was included after the Markov approximation had been
-performed via time-dependent ad-hoc coefficients for the damping
-\cite{BarberisLC}. As demonstrated in \cite{HanngiFM}, the method
-employed here is a more complete, and thus accurate, treatment.
+that commute with each other, $H_{\rm cav}$ and $H_{\rm mec}$, so the
+standard harmonic oscillator master equation structure can be derived
+\cite{TesisMaestria}\cite{HanngiFM}. The usual derivation of the
+master equation involves a Markov approximation; in previous attempts
+to study this type of system, the time dependence of the frequency was
+included after the Markov approximation had been performed, via
+time-dependent ad-hoc coefficients for the damping \cite{BarberisLC}.
+We use the formalism developed in \cite{HanngiFM} to derive the
+mechanical dissipation of the optomechanical master equation, under
+this formalism frequency's time dependence is accounted for, when the
+Markov approximation is performed, via the Floquet operators. As
+demonstrated in \cite{HanngiFM}, the method employed here is a more
+complete, and thus accurate, treatment.
 
-The corresponding master equation is
+The optomechanical master equation with improved dissipation model is
 \begin{equation} \label{LCMasterEquation}
 \dot{\rho} = \frac{1}{i\hbar}[H,\rho] +L_a\rho + L_\Gamma \rho,
 \end{equation}
@@ -248,25 +267,23 @@ L_a \rho =& - \frac{\kappa}{2}(n_p + 1)[a^\dagger a\rho + \rho a^\dagger a -2a\r
 $\kappa$ is the energy decay rate for the cavity and $\gamma$ is the
 decay rate for the mechanical oscillator. The number of thermal
 excitations for the cavity and the oscillator are given by $n_p$ and
-$n_m$ respectively \cite{EnglertFL}. The superoperators $L_\Gamma$ and
-$L_a$ model the energy exchanges between the environment and the
-cavity and the mechanical resonator respectively. Equation
-\eqref{LCMasterEquation} represents a master equation for a parametric
-optomechanical system with an improved dissipation model which
-accounts for the mechanical oscillator's time dependent frequency. The
-formalism developed in \cite{HanngiFM} was used to derive the
-mechanical dissipation term \eqref{eq:mechanical_dissipation}.
+$n_m$ respectively. The superoperators $L_\Gamma$ and $L_a$ model the
+energy exchanges between the environment, and the cavity and the
+mechanical resonator respectively. Equation \eqref{LCMasterEquation}
+is the master equation for a parametrically driven optomechanical
+system with an improved dissipation model which accounts for the
+mechanical oscillator's time dependent frequency.
 
 
 
 \subsection{Displaced Frame}
 
-In order to eliminate the pump term and to find useful
-  approximations, we employ a unitary transformation to
-shift \eqref{LCMasterEquation} into a displaced reference frame. This
-transformation depends on two time-dependent coefficients, $\alpha(t)$
-and $\beta(t)$, which are chosen in a convenient manner to simplify
-the Hamiltonian. The transformation is given by the operator
+In order to eliminate the pump term and to find useful approximations
+we employ a unitary transformation to shift \eqref{LCMasterEquation}
+into a displaced reference frame. This transformation depends on two
+time-dependent coefficients, $\alpha(t)$ and $\beta(t)$, which are
+chosen in a convenient manner to simplify the Hamiltonian. The
+transformation is given by the operator
 \begin{equation}\label{ShiftTransform}
 U_{a,\Gamma} = e^{(\alpha(t) a^\dagger - \alpha^*(t)a)}e^{(\beta(t) \Gamma^\dagger - \beta^*(t)\Gamma)},
 \end{equation}
@@ -275,13 +292,14 @@ equation
 \begin{equation}\label{eq:master_no_small}
 \dot{\rho}' = \frac{1}{i\hbar}[H',\rho'] +L_a\rho' + L_\Gamma \rho' + C(t)\rho'\, ,
 \end{equation}
-for the time evolution of the density operator $\rho'(t)$ which
-represents the coupled cavity-mechanical resonator system. The primes
-indicate that the transformation has been applied. The displaced
-Hamiltonian, which includes a pump-like term that appears when making the
-transformation on the $L$ operators, is given by
+for the time evolution of the density operator
+$\rho'(t)=U\rho U^\dagger$ which represents the coupled
+cavity-mechanical resonator system. The primes indicate that the
+transformation has been applied. The displaced Hamiltonian, which
+includes a pump-like term that appears when making the transformation
+on the $L$ operators, is given by
 \begin{align}\label{eq:hamiltonian_no_small}
-  H'=& -\hbar \delta' a^\dagger a + \hbar\frac{W}{|f(t)|^2}\Gamma \Gamma^\dagger\nonumber\\
+  H'=&U H U^\dagger\nonumber\\=& -\hbar \delta' a^\dagger a + \hbar\frac{W}{|f(t)|^2}\Gamma \Gamma^\dagger\nonumber\\
      &-\hbar g\sqrt{\frac{\hbar}{2M}}[(a^{\dagger}a +\alpha a^{\dagger}+\alpha^* a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)]\nonumber\\
      &+ i\hbar(\beta^*\dot{\Gamma} - \beta \dot{\Gamma}^\dagger),
 \end{align}
@@ -301,26 +319,13 @@ C(t)\rho = |\beta|^2(C(t)_{+-} - C(t)_{-+})\rho \nonumber,
  \end{align}
  where
 \begin{align*}
-C(t)_{+-} =& [\dot{\Gamma}^{\dagger}, \Gamma],\\
-C(t)_{-+} =& [\dot{\Gamma}, \Gamma^{\dagger}],
+C(t)_{+-} =& [\dot{\Gamma}^{\dagger}, \Gamma]=\frac{i}{2}(\dot{f}^*
+             \dot{f} - \ddot{f}^*f^*)\, ,\\
+C(t)_{-+} =& [\dot{\Gamma}, \Gamma^{\dagger}]=\frac{i}{2}(\dot{f}
+             \dot{f}^* - \ddot{f}f)\,,
 \end{align*}
 appears because the Floquet operators do not necessarily commute with
-their own time derivatives. In the case of the Hamiltonian for the
-cavity's light field, the operators contain no explicit time
-dependence. The Floquet operators, however,
-do include such a dependence, which introduces additional terms into
-the master equation. These terms involve the commutators between the
-Floquet operators and their time derivatives and contain no operator
-dependence whatsoever and as such are not considered part of the
-Hamiltonian. These commutation relations are not, in general, zero
-\cite{TesisMaestria}, they depend on the specific form of the
-solutions for \eqref{TimeDependentHO}, $f$ and $f^*$. For example
-
-\begin{equation}
-C(t)_{-+} = -(C(t)_{+-})^* = \frac{i}{2}(\dot{f}^* \dot{f} - \ddot{f}^*f^*).
-\end{equation}
-
-
+their own time derivatives.
 
 Proceeding further requires an explicit solution for
 \eqref{TimeDependentHO}. The primes in the operators will be omitted
@@ -334,7 +339,7 @@ on the case of small oscillations around a central frequency,
 specifically
 
 \begin{equation}
-\nu(t) = \nu_0 + \epsilon' cos(2\omega t)
+\nu(t) = \nu_0 + \epsilon' cos(2\omega t)\, ,
 \end{equation}
 with $\epsilon' \ll \nu_0$, where $\nu_0$ is the mean frequency. This
 leads to the time-dependent harmonic oscillator equation
@@ -359,7 +364,7 @@ f(t)=  e^{in\omega t}  + \epsilon \frac{1}{8(n+1)} e^{i(n+2)\omega t} - \epsilon
 
 With an explicit solution for \eqref{SmallOscillationsTDHO} in hand,
 we can solve Eq.~\eqref{eq:displaced_frame}. Assuming that the time
-scale of the dissipatives processes are fast compared with the other
+scales of the dissipative processes are fast compared with the other
 time scales we can focus on the stationary case
 ($\dot{\alpha}(t)=\dot{\beta}(t)=0$); we also assume a weak coupling
 regime (coefficients of first order in $g$ or higher are neglected)
@@ -379,7 +384,7 @@ H =& -\hbar \delta a^{\dagger}a +\hbar(\nu_0 + \frac{\epsilon \omega}{2n} cos(2\
 &-\hbar g\sqrt{\frac{\hbar}{2M}}(a^{\dagger}a +\alpha_0 a^{\dagger}+\alpha^*_0 a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)\nonumber.
 \end{align}
 We focus on the case where $|\alpha_0| \gg 1$
-\cite{BarberisLC}, so that the $a^\dagger a$ term can be neglected as
+\cite{BarberisLC} so that the $a^\dagger a$ term can be neglected as
 it is small when compared to the other two terms in the interaction.
 This leads to a further simplified Hamiltonian
 
@@ -404,46 +409,54 @@ time dependence in the interaction Hamiltonian
 
 Our focus is on the parameter regime where the mechanical resonator's
 temperature evolves much more slowly than the cavity's losses and than
-the mechanical frequency. This requires
+the inverse of the mechanical frequency. This requires
 $(g\sqrt{\frac{\hbar}{2M}}\alpha_o)^2 \ll (\frac{\kappa}{\nu_0})$.
-Following the derivation found in \cite{LCNooshi}, we arrive at a
-master equation for the density operator, after projecting into the
-subspace corresponding to its stationary state and tracing over the
-cavity degrees of freedom. The technical details of the derivation is reported in Appendix \ref{CoolingAppendix}. It leads to the master
-equation
+After projecting into the subspace corresponding to the slowly
+evolving part of the state and tracing over the cavity degrees of
+freedom, we arrive at the following master equation for the density
+operator (see Appendix \ref{CoolingAppendix})
+
 \begin{equation}\label{eq:projected_master_equation}
   \dot{\mu}\approx -\frac{g'^2}{2}(G(\nu_m,0)[\Gamma^\dagger_0,\Gamma_0\mu]-G^*(-\nu_m,0)[\Gamma_0^\dagger,\mu\Gamma_0]),
 \end{equation}
-where we have set $g'=g\sqrt{\frac{\hbar}{2M}}\alpha_0$ for
-convenience and use $\mu$ as the density operator of the mechanical
-degree of freedom. Note that this master equation is obtained via the
-usual derivation, since the particular form of the coefficients \eqref{GammaCoefficients} cancel out the explicit time dependencies in the $\Gamma$ operators (save terms of order $\frac{\epsilon}{n^2}$) and thus they do not have to be accounted for during the integration in Appendix \ref{CoolingAppendix}. for this reason, we absorb the $\gamma_\pm$ coefficients into the $\Gamma$ operators in the interaction and denote them by $\Gamma_0$ and $\Gamma_0^\dagger$.
-
-The cavity-quadratures correlation $G(\nu_m,0)$ is used to calculate
-the heating and cooling rates for the mirror and is given by
+where we have set $g'=g\sqrt{\frac{\hbar}{2M}}\alpha_0$,
+$\Gamma_0=\gamma_+\Gamma$, $\Gamma_0^\dagger=\gamma_-\Gamma^\dagger$
+and use $\mu$ as the density operator of the mechanical degree of
+freedom. The cavity-quadratures correlation $G(\nu_m,0)$ is given by
 \begin{equation} \label{CavityQuadrature}
 G(\nu_m,0) = \int_0^\infty dt e^{i\nu(t) t}Tr_a[X_a e^{L_a t} X_a \rho_{st}],
-\end{equation} where we assume the cavity is at zero temperature and with 
+\end{equation}
+where 
 \begin{equation}
 X_a = \frac{a + a^\dagger}{\sqrt{2}\alpha_0}.
 \end{equation}
+and we assumed the cavity is at zero temperature.
 
-The cooling and heating rates are given by
+Note that this master equation is obtained via the usual adiabatic
+approximation, since the particular form of the coefficients
+\eqref{GammaCoefficients} cancel out the explicit time dependencies in
+the $\Gamma$ operators (save terms of order $\frac{\epsilon}{n^2}$)
+and thus they do not have to be accounted for during the derivation
+given in Appendix \ref{CoolingAppendix}.\fxnote{Esto no se entiende
+  bien}
 
-
+The stationary solution of equation
+\eqref{eq:projected_master_equation} is known \fxnote{poner cita}.
+Defining the cooling and heating rates
 \begin{equation}
-A_\pm(\nu_m,0) = g'^2Real(G(\mp \nu_m,0)),
-\end{equation} where $A_+$ represents heating and $A_-$ represents cooling. The final number of phonon excitations is given by
+A_\pm(\nu_m,0) = g'^2{\rm Real}(G(\mp \nu_m,0)),
+\end{equation}
+where $A_+$ represents heating and $A_-$ represents cooling, the final
+number of phonon excitations is given by
 
 \begin{equation}
 \langle m \rangle =\langle \Gamma^\dagger \Gamma \rangle = \frac{A_+}{A_- - A_+}.
 \end{equation}
 
-Thus if \eqref{CavityQuadrature} can be calculated, the heating and
-cooling rates and the final temperature (represented by the
-average number of phonon excitations) can be obtained in a
-straightforward manner. This procedure is done numerically in the
-following section.
+In the following section we calculate \eqref{CavityQuadrature} in
+order to obtain the heating and cooling rates, and the final
+temperature (represented by the average number of phonon excitations)
+for an example of a parametrically driven optomechanical system.
 
 \section{Calculation of Mean Vibrational Occupation Number}\label{NumCal}
 
@@ -552,13 +565,13 @@ In order to find the master equation
 \eqref{eq:projected_master_equation} we employed projection operators
 like those in \cite{CarmichaelQO}. We also separate the $L$ terms into
 \begin{equation}
-L_0= (\frac{1}{i\hbar}[H_{cav},\bullet]+L_a) +(\frac{1}{i\hbar}[H_{mec}(t),\bullet]),
+L_0= (\frac{1}{i\hbar}[H_{\rm cav},\bullet]+L_a) +(\frac{1}{i\hbar}[H_{\rm mec}(t),\bullet]),
 \end{equation}
 
 and
 
 \begin{equation}
-L_1 = \frac{1}{i\hbar}[H_{int},\bullet].
+L_1 = \frac{1}{i\hbar}[H_{\rm int},\bullet].
 \end{equation}These projection operators fulfill a completeness
 relation
 
