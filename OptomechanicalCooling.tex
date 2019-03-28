@@ -9,6 +9,8 @@
 
 
 
+
+
 \begin{document}
 
 %\preprint{APS/123-QED}
@@ -68,11 +70,10 @@ described in \cite{BraginskiiOG}. This interaction between the
 macroscopic mechanical object and the light field leads to several
 interesting effects such as optomechanically induced transparency
 \cite{WeissOIT}, the optical spring effect \cite{VogelOT} or, most
-relevant to this study, optomechanical cooling \cite{CohadonCM,
+relevant to this study, optomechanical cooling, which was first proposed by Mancini, et al \cite{CohadonCM,
   CorbittOC, SchliesserRPC, LCNooshi, ManciniOC}.
 	
-Optomechanical cooling was first proposed by Mancini, et al in
-\cite{ManciniOC}. It is the damping of the end mirror's mechanical
+This effect consists of the damping of the end mirror's mechanical
 motion due to the radiative coupling to the cavity field. Sideband
 cooling takes place when the cavity's resonance is much narrower than
 the mechanical frequency. It can be understood as Raman scattering
@@ -169,17 +170,15 @@ H_{\rm mec}(t) =& \frac{p^2}{2M} + \frac{1}{2}M \nu^2 (t) x^2,\\
 H_{\rm int} =& -\hbar g a^\dagger a x,\\
 H_{\rm pump} =& \hbar\frac{\Omega}{2}(a^\dagger + a),
 \end{align}
-$\delta = \omega_{laser} - \omega_{cav}$, in the hamiltonian of the
-cavity, $H_{\rm cav}$, is the frequency difference between the laser and
-the cavity; $M$, in the hamiltonian of the mechanical oscillator,
+$\delta = \omega_{laser} - \omega_{cav}$, in the cavity Hamiltonian, $H_{\rm cav}$, is the frequency difference between the laser and
+the cavity; $M$, in the mechanical oscillator Hamiltonian,
 $H_{\rm mec}$, is the mechanical oscillator's mass, $p$ its momentum
 operator, $x$ its position operator, and $\nu(t)$ its frequency. The
 $H_{\rm int}$ term models the interaction between the field and the cavity
 mirror where $g$ sets the strength of the coupling \cite{KippenberCO}.
 Finally, $H_{\rm pump}$ describes the pumping of the cavity by a field with
-a strength proportional to $\Omega$. The hamiltonian for the
-mechanical oscillator has an explicit time dependence given by
-$\nu(t)$; in order to employ the Floquet formalism it must be a
+a strength proportional to $\Omega$. The mechanical oscillator Hamiltonian has an explicit time dependence given by
+$\nu(t)$; in order to employ the Floquet formalism this dependence must be a
 periodic function of time.
 
 The Floquet operators are analogous to the usual creation and
@@ -244,8 +243,8 @@ to study this type of system, the time dependence of the frequency was
 included after the Markov approximation had been performed, via
 time-dependent ad-hoc coefficients for the damping \cite{BarberisLC}.
 We use the formalism developed in \cite{HanngiFM} to derive the
-mechanical dissipation of the optomechanical master equation, under
-this formalism frequency's time dependence is accounted for, when the
+mechanical dissipation of the optomechanical master equation. Under
+this formalism, the frequency's time dependence is accounted for when the
 Markov approximation is performed, via the Floquet operators. As
 demonstrated in \cite{HanngiFM}, the method employed here is a more
 complete, and thus accurate, treatment.
@@ -358,7 +357,7 @@ $n\gg 1$, which will be used in the next sections. The solutions for
 \eqref{SmallOscillationsTDHO} are, to first order in
 $\epsilon= \frac{2\epsilon' \nu_0}{\omega^2}$,
 \begin{equation}\label{SmallOscillationsSolution}
-f(t)=  e^{in\omega t}  + \epsilon \frac{1}{8(n+1)} e^{i(n+2)\omega t} - \epsilon \frac{1}{8(n-1)} e^{i(n-2)\omega t}
+f(t)=  e^{in\omega t}  + \epsilon \frac{1}{8(n+1)} e^{i(n+2)\omega t} - \epsilon \frac{1}{8(n-1)} e^{i(n-2)\omega t},
 \end{equation} and its complex conjugate.
 
 
@@ -432,16 +431,18 @@ X_a = \frac{a + a^\dagger}{\sqrt{2}\alpha_0}.
 \end{equation}
 and we assumed the cavity is at zero temperature.
 
-Note that this master equation is obtained via the usual adiabatic
-approximation, since the particular form of the coefficients
-\eqref{GammaCoefficients} cancel out the explicit time dependencies in
-the $\Gamma$ operators (save terms of order $\frac{\epsilon}{n^2}$)
-and thus they do not have to be accounted for during the derivation
-given in Appendix \ref{CoolingAppendix}.\fxnote{Esto no se entiende
-  bien}
+The derivation in Appendix \ref{CoolingAppendix} includes a time
+integration. However, since the explicit time dependence in the
+Floquet Operators takes the form of \eqref{SmallOscillationsSolution}
+(and it's time derivative and their complex conjugates), and since
+$\nu_0 = n\omega$, this explicit dependence is canceled out by the
+coeffcients \eqref{GammaCoefficients}, save for terms that are of the
+order $\frac{\epsilon}{n\nu_0}$. Thus, we label these operators as
+$\Gamma_0, \Gamma^\dagger_0$ and treat them as non time dependent
+operators. \fxnote{Esto no se entiende bien}
 
 The stationary solution of equation
-\eqref{eq:projected_master_equation} is known \fxnote{poner cita}.
+\eqref{eq:projected_master_equation} is known \cite{LCNooshi}.
 Defining the cooling and heating rates
 \begin{equation}
 A_\pm(\nu_m,0) = g'^2{\rm Real}(G(\mp \nu_m,0)),
@@ -514,8 +515,7 @@ with the reported controlled frequency modulation
 \caption{ Mechanical oscillator phonon number as a function of the
   perturbation. The correction results in a shift of the location of
   the minimum temperature, as well as a lower minimum. All curves
-  cross the same point. We used the parameters in the text plus
-  $\kappa \ll \nu_0$}
+  cross the same point. $\nu_0=1000$, $\epsilon = \frac{\nu_0}{10}$, $n=100$}
 \label{GraficaTemp}
 \end{figure}
 
@@ -558,6 +558,54 @@ natural frequency of the cavity field changes periodically with time.
 We plan to explore this case in future work.
  
 \appendix
+\section{The Damping Basis}\label{App1}
+
+Master equations of the type 
+
+\begin{equation}
+\dot{\rho} = \frac{i}{\hbar}[H,\rho]+L\rho, 
+\end{equation} with
+
+\begin{align}\label{EMField}
+L_a \rho =& - \frac{\kappa}{2}(n_p+1)[a^\dagger a\rho + \rho a^\dagger a -2a\rho a^\dagger] \nonumber \\
+ &- \frac{\kappa}{2}(n_p)[ aa^\dagger\rho + \rho  aa^\dagger -2a^\dagger\rho a],
+\end{align} model the behavior of a bosonic field inside a cavity with just one mode and with $\nu$ thermal photons in contact with a thermal bath. $A$ is a constant related to the damping and $A,n_p \geq 0$  \cite{EnglertDB}. The density operator can be expressed in the Lindblad superoperator's eigenbasis to simplify the calculations. This is known as the damping basis \cite{EnglertDB}.
+
+\begin{align}\label{DefDB}
+&a^{\dagger l}\frac{(-1)^n}{(n_p+1)^{l+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad l \geq 0, \\
+&\frac{(-1)^n}{(n_p+1)^{|l|+1}}:L_n^{|l|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|l|}\quad l \leq 0,
+\end{align} with eigenvalues
+
+\begin{equation}
+\lambda_n^l = -\kappa[n + \frac{|l|}{2}],
+\end{equation} which fulfill
+
+\begin{equation}
+n=0,1,2...,\qquad l = 0,\pm 1, \pm 2,... 
+\end{equation} These are the right eigenstates, which correspond to $L\hat{\rho_n^l} = \lambda_n^l\hat{\rho_n^l}$, however the left eigenstates must also be considered, these correspond to $\check{\rho_n^l}L = \lambda_n^l\check{\rho_n^l}$ and have the same eigenvalues. These are
+
+\begin{align}\label{DefDBDual}
+&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+l)!}:L_n^l[\frac{a^\dagger a}{n_p}]:a^{l}\quad l \geq 0, \\
+&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+|l|)!}a^{\dagger|l|}:L_n^{|l|}[\frac{a^\dagger a}{n_p}]:\quad l \leq 0.
+\end{align} These states are orthogonal under the product
+
+\begin{equation}
+Tr[\hat{\rho}_{n,l}\check{\rho}_{n',l'}] = \delta_{n,n'}\delta_{l,l'},
+\end{equation} and also fulfill
+
+\begin{equation}\label{DampingBasisCompleteness}
+\sum_{\lambda} \hat{\rho}_\lambda \otimes \check{\rho}_\lambda = \mathbb{I},
+\end{equation} where the sum is over all possible eigenvalues. An important approximation can be obtained for a cavity at zero temperature, in these case the states are \cite{EnglertDB}
+
+\begin{align}\label{DefDBZero}
+&a^{\dagger l}(-1)^{a^\dagger a + n}\binom{n+l}{a^\dagger a+l} \quad l \geq 0, \\
+&(-1)^{a^\dagger a + n}\binom{n+|l|}{a^\dagger a+|l|}a^{|l|} \quad l < 0,
+\end{align} and the dual states are
+
+\begin{align}\label{DefDBDualZero}
+&\frac{n!}{(n+l)!}\binom{a^\dagger a}{n}a^l \quad l \geq 0, \\
+&a^{\dagger|l|}\frac{n!}{(n+|l|)!}\binom{a^\dagger a}{n} \quad l < 0.
+\end{align}
 
 \section{Laser Cooling and Projection Operators}\label{CoolingAppendix}
 
@@ -609,20 +657,20 @@ Q\rho =& Q\rho(t_0) + \int_{t_0}^{t}dt' QL(t')P\rho(t')\\
 P\dot{\rho}(t) =& PL_1Q\rho(t_0)\\ 
  &+ PL_1\int_{t_0}^{t}dt' QL_1(t')P\rho(t_0)\nonumber \\
  &+ PL_1\int_{t_0}^{t}dt'QL_1(t')Q\rho(t_0) \nonumber,
-\end{align} where only the second term is non zero. Transforming back from the decay picture
+\end{align} where only the first integral term is non zero. We focus on this term and transform back from the decay picture
 
 \begin{equation}
 P e^{-L_0 t}L_1e^{L_0 t}\int_{t_0}^{t}dt'Qe^{-L_0 t'}L_1e^{L_0 t'}Pe^{-L_0(t_0)}\rho(t_0).
-\end{equation} Noting that the factors that multiply the Floquet operators cancel out their time dependence and decomposing the projectors into the forms $P=\sum_\lambda \hat{\rho}_\lambda \otimes \check{\rho}_\lambda$ and $Q=\sum_{\lambda'} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}$ we may evaluate the $L_0$ terms by applying them to the nearest states
+\end{equation} We decompose the projectors into the forms $Q=\sum_\lambda \hat{\rho}_\lambda \otimes \check{\rho}_\lambda$ and $P=\sum_{\lambda'} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}$ corresponding to the damping basis states seen in Appendix \ref{App1}. $\lambda, \lambda'$ represent all of the damping basis eigenvalues, divided by time scale. We may thus evaluate the $L_0$ terms directly by applying them to the nearest states
 
 \begin{align}\label{ProyectionEQ}
-P e^{-L_0 t}L_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda' t} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}e^{-\lambda' t'}L_1\\
-&e^{\lambda t'}\hat{\rho}_\lambda \otimes \check{\rho}e^{-\lambda( t_0)}\rho(t_0)]\nonumber.
+P e^{-L_0 t}L_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda t} \hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda}e^{-\lambda t'}L_1\\
+&e^{\lambda' t'}\hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'} e^{-\lambda'( t_0)}\rho(t_0)]\nonumber.
 \end{align} We focus only on the exponential terms, which are now numbers and can be shifted accordingly
 
 \begin{equation}\label{LambdaExponentials}
 [\int_{t_0}^t dt' e^{(\lambda'-\lambda)t'}]e^{\lambda t- \lambda't_0}.
-\end{equation} Here we notice that $\lambda' = \lambda_{mec}(t)$ as the cavity is taken to be at zero temperature. Since $\lambda_{mec}(t) = i\nu_0 + i\epsilon' \cos(2\omega t)$ we must take care during the integration. Here we make an important note. In general, the $\Gamma$ operators contained within the $L_1$ term are explicitly time dependent. However, in this particular case, due to the coefficients \eqref{GammaCoefficients} and the form of \eqref{SmallOscillationsSolution}, the explicit time dependence is canceled out excluding terms of order $\frac{\epsilon}{n^2}$ and so we consider them to be non time-dependent and do not account for them during the integration. To perform the integration we employ the approximation
+\end{equation} Here we notice that $\lambda' = \lambda_{mec}(t)$ as the cavity is taken to be at zero temperature. Since $\lambda_{mec}(t) = i\nu_0 + i\epsilon' \cos(2\omega t)$ we must take care during the integration. Here we make an important note. In general, the $\Gamma$ operators contained within the $L_1$ term are explicitly time dependent. However, in this particular case, due to the form of \eqref{SmallOscillationsSolution}, when multiplied by \eqref{GammaCoefficients}, the explicit time dependence is canceled out excluding terms of order $\frac{\epsilon}{n\nu_0}$ and so we consider them to be non time-dependent and do not account for them during the integration. To perform the integration we employ the approximation
 
 \begin{equation}
 e^{(\lambda'-\lambda)t'} \approx e^{(i\nu_0-\lambda)t'} + i\epsilon' \cos(2 \omega t')t' e^{(i\nu_0-\lambda)t'}.
@@ -638,77 +686,30 @@ e^{\lambda t} \to 0 \qquad e^{\lambda' t} \to 1.
 
 \begin{equation}
 Pe^{-L_0 t} \sum_{\lambda',\lambda} L_1 I_{\lambda',\lambda} \rho_{\lambda'} L_1 \rho_\lambda \rho(t_0).
-\end{equation} We may return the projectors to their Original notation to remove the sums now sum over the possible values of the mechanical eigenvalues
+\end{equation} We may return the projectors to their original notation to remove the sums over $\lambda$.  Now, the sums are over the possible values of the mechanical eigenvalues 
 
 \begin{equation}
 Pe^{-L_0 t} \sum_{m} L_1 I_{m} Q L_1 P \rho(t_0).
-\end{equation} The full equation is multiplied by $Pe^{L_0 t}$ 
+\end{equation} We return to the full equation, which is multiplied by $Pe^{L_0 t}$ 
 
 \begin{equation}
 P\dot{\rho} = P[L_0]P \rho(t) + \sum_{m} P L_1 I_{m} Q L_1 P \rho(t_0).
 \end{equation} We then trace over all the cavity degrees of freedom and set  $\mu = Tr_c[P\rho]\otimes \rho_{st}$, where we assume no correlation between the cavity and mirror states at time $t_0$. This leads to the equation
 
 \begin{equation}\label{FinalProyectedEq}
-\dot{\mu}_m = L_{mec}\mu_m + Tr_c[ L_1 I(\nu_m) L_1  \rho(t_0)_m],
-\end{equation} for any given value of $m$. Remembering that $L_1 = \frac{1}{i\hbar}[X_a X_\Gamma,\bullet]$ and that the mirror operators $\Gamma$ may leave the trace alongside $\mu$, equation \eqref{FinalProyectedEq} can be written as \eqref{eq:projected_master_equation} where the second term has been written as
+\dot{\mu}_m = L_{mec}\mu_m + Tr_c[ L_1 I_m L_1  \mu_m],
+\end{equation} for any given value of $m$. Remembering that $L_1 = \frac{1}{i\hbar}[X_a X_\Gamma,\bullet]$ and that the mechanical operators $\Gamma$ may leave the trace alongside $\mu$, equation \eqref{FinalProyectedEq} can be written as \eqref{eq:projected_master_equation} where the second term has been written as
 
 \begin{equation}
 \int_0^\infty dt' e^{\i\nu(t')t'}Tr_c[X_a e^{L_a t'} X_a \rho_st], 
 \end{equation} for convenience.
 
 
-\section{The Damping Basis}\label{App1}
 
-Master equations of the type 
 
-\begin{equation}
-\dot{\rho} = \frac{i}{\hbar}[H,\rho]+L\rho, 
-\end{equation} with
+\section{Evaluation of Trace Term}\label{TraceAppendix}
 
-\begin{align}\label{EMField}
-L_a \rho =& - \frac{\kappa}{2}(n_p+1)[a^\dagger a\rho + \rho a^\dagger a -2a\rho a^\dagger] \nonumber \\
- &- \frac{\kappa}{2}(n_p)[ aa^\dagger\rho + \rho  aa^\dagger -2a^\dagger\rho a],
-\end{align} model the behavior of a bosonic field inside a cavity with just one mode and with $\nu$ thermal photons in contact with a thermal bath. $A$ is a constant related to the damping and $A,n_p \geq 0$  \cite{EnglertDB}. The density operator can be expressed in the Lindblad superoperator's eigenbasis to simplify the calculations. This is known as the damping basis \cite{EnglertDB}.
-
-\begin{align}\label{DefDB}
-&a^{\dagger l}\frac{(-1)^n}{(n_p+1)^{l+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad l \geq 0, \\
-&\frac{(-1)^n}{(n_p+1)^{|l|+1}}:L_n^{|l|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|l|}\quad l \leq 0,
-\end{align} with eigenvalues
-
-\begin{equation}
-\lambda_n^l = -\kappa[n + \frac{|l|}{2}],
-\end{equation} which fulfill
-
-\begin{equation}
-n=0,1,2...,\qquad l = 0,\pm 1, \pm 2,... 
-\end{equation} These are the right eigenstates, which correspond to $L\hat{\rho_n^l} = \lambda_n^l\hat{\rho_n^l}$, however the left eigenstates must also be considered, these correspond to $\check{\rho_n^l}L = \lambda_n^l\check{\rho_n^l}$ and have the same eigenvalues. These are
-
-\begin{align}\label{DefDBDual}
-&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+l)!}:L_n^l[\frac{a^\dagger a}{n_p}]:a^{l}\quad l \geq 0, \\
-&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+|l|)!}a^{\dagger|l|}:L_n^{|l|}[\frac{a^\dagger a}{n_p}]:\quad l \leq 0.
-\end{align} These states are orthogonal under the product
-
-\begin{equation}
-Tr[\hat{\rho}_{n,l}\check{\rho}_{n',l'}] = \delta_{n,n'}\delta_{l,l'},
-\end{equation} and also fulfill
-
-\begin{equation}\label{DampingBasisCompleteness}
-\sum_{\lambda} \hat{\rho}_\lambda \otimes \check{\rho}_\lambda = \mathbb{1},
-\end{equation} where the sum is over all possible eigenvalues. An important approximation can be obtained for a cavity at zero temperature, in these case the states are \cite{EnglertDB}
-
-\begin{align}\label{DefDBZero}
-&a^{\dagger l}(-1)^{a^\dagger a + n}\binom{n+l}{a^\dagger a+l} \quad l \geq 0, \\
-&(-1)^{a^\dagger a + n}\binom{n+|l|}{a^\dagger a+|l|}a^{|l|} \quad l < 0,
-\end{align} and the dual states are
-
-\begin{align}\label{DefDBDualZero}
-&\frac{n!}{(n+l)!}\binom{a^\dagger a}{n}a^l \quad l \geq 0, \\
-&a^{\dagger|l|}\frac{n!}{(n+|l|)!}\binom{a^\dagger a}{n} \quad l < 0.
-\end{align}
-
-\subsection{Evaluation of Trace Term}\label{TraceAppendix}
-
-In order to calculate the $G(\nu_m,n_c)$ terms in \eqref{eq:projected_master_equation}, the term
+In order to calculate the $G(\nu_m,0)$ terms in \eqref{eq:projected_master_equation}, the term
 
 \begin{equation}\label{CoolingTrace}
 T=Tr_a[X_ae^{L_at}X_a\rho_{st}],
