@@ -562,7 +562,7 @@ Master equations of the type
 \begin{align}\label{EMField}
 L_a \rho =& - \frac{\kappa}{2}(n_p+1)[a^\dagger a\rho + \rho a^\dagger a -2a\rho a^\dagger] \nonumber \\
  &- \frac{\kappa}{2}(n_p)[ aa^\dagger\rho + \rho  aa^\dagger -2a^\dagger\rho a],
-\end{align} model the behavior of a bosonic field inside a cavity with just one mode and with $n_p$ thermal photons in contact with a thermal bath. $\kappa$ is a constant related to the damping and $\kappa,n_p \geq 0$  \cite{EnglertDB}. The density operator can be expressed in the Lindblad superoperator's eigenbasis to simplify the calculations. This basis is known as the damping basis \cite{EnglertDB}.
+\end{align} model the behavior of a bosonic field inside a cavity with just one mode and with $n_p$ thermal photons in contact with a thermal bath. $\kappa$ is a constant related to the damping and $\kappa,n_p \geq 0$  \cite{EnglertDB}. The density operator can be expressed in the Lindblad superoperator's eigenbasis to simplify the calculations. This basis is known as the damping basis \cite{EnglertDB}
 
 \begin{align}\label{DefDB}
 \hat{\rho}_n^l=&a^{\dagger l}\frac{(-1)^n}{(n_p+1)^{l+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad l \geq 0, \\
@@ -575,7 +575,7 @@ L_a \rho =& - \frac{\kappa}{2}(n_p+1)[a^\dagger a\rho + \rho a^\dagger a -2a\rho
 
 \begin{equation}
 n=0,1,2,...\qquad l = 0,\pm 1, \pm 2,... 
-\end{equation} These are the right eigenstates, which are the eigenvalues of the equation $L\hat{\rho}_n^l = \lambda_n^l\hat{\rho}_n^l$, however the left eigenstates must also be considered, these are the eigenvalues of the equation $\check{\rho}_n^lL = \lambda_n^l\check{\rho}_n^l$ and have the same eigenvalues. These are
+\end{equation} These states are sometimes called "right" eigenstates, which are the eigenstates of the equation $L\hat{\rho}_n^l = \lambda_n^l\hat{\rho}_n^l$, however the "left" eigenstates must also be considered, these are the eigenstates of the equation $\check{\rho}_n^lL = \lambda_n^l\check{\rho}_n^l$ and have the same eigenvalues. These are
 
 \begin{align}\label{DefDBDual}
 \check{\rho}_n^l=&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+l)!}:L_n^l[\frac{a^\dagger a}{n_p}]:a^{l}\quad l \geq 0, \\
@@ -656,11 +656,11 @@ P\dot{\rho}(t) =& PL_1Q\rho(t_0)\\
 
 \begin{equation}
 P e^{-L_0 t}L_1e^{L_0 t}\int_{t_0}^{t}dt'Qe^{-L_0 t'}L_1e^{L_0 t'}Pe^{-L_0(t_0)}\rho(t_0).
-\end{equation} We decompose the projectors into the forms $Q=\sum_\lambda \hat{\rho}_\lambda \otimes \check{\rho}_\lambda$ and $P=\sum_{\lambda'} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}$ corresponding to the damping basis states seen in Appendix \ref{App1}. $\lambda, \lambda'$ represent all of the damping basis eigenvalues, divided by time scale. We may thus evaluate the $L_0$ terms directly by applying them to the nearest states
+\end{equation} We decompose the projectors into the forms $Q=\sum_\lambda \hat{\rho}_\lambda \otimes \check{\rho}_\lambda$ and $P=\sum_{\lambda'} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}$ corresponding to the damping basis states seen in Appendix \ref{App1}. $\lambda, \lambda'$ represent all of the damping basis eigenvalues, separated by time scale. We may thus evaluate the $L_0$ terms directly by applying them to the nearest states
 
 \begin{align}\label{ProyectionEQ}
 P e^{-L_0 t}L_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda t} \hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda}e^{-\lambda t'}L_1\\
-&e^{\lambda' t'}\hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'} e^{-\lambda'( t_0)}\rho(t_0)]\nonumber.
+&e^{\lambda' t'}\hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'} e^{-\lambda' t_0}\rho(t_0)]\nonumber.
 \end{align} We focus only on the exponential terms, which are now numbers and can be shifted accordingly
 
 \begin{equation}\label{LambdaExponentials}
@@ -693,10 +693,10 @@ P\dot{\rho} = P[L_0]P \rho(t) + \sum_{m} P L_1 I_{m} Q L_1 P \rho(t_0).
 
 \begin{equation}\label{FinalProyectedEq}
 \dot{\mu}_m = L_{mec}\mu_m + Tr_c[ L_1 I_m L_1  \mu_m],
-\end{equation} for any given value of $m$. Remembering that $L_1 = \frac{1}{i\hbar}[X_a X_\Gamma,\bullet]$ and that the mechanical operators $\Gamma$ may leave the trace alongside $\mu$, equation \eqref{FinalProyectedEq} can be written as \eqref{eq:projected_master_equation} where the second term has been written as
+\end{equation} for any given value of $m$. Remembering that $L_1 = \frac{1}{i\hbar}[X_a X_\Gamma,\bullet]$ and that the mechanical operators $\Gamma$ may leave the trace alongside $\mu$, equation \eqref{FinalProyectedEq} can be written as \eqref{eq:projected_master_equation}. The coefficients $G(\nu_m,0)$ can be written as
 
-\begin{equation}
-\int_0^\infty dt' e^{\i\nu(t')t'}Tr_c[X_a e^{L_a t'} X_a \rho_st], 
+\begin{equation}\label{GAppendix}
+G(\nu_m,0)=\int_0^\infty dt' e^{\i\nu(t')t'}Tr_c[X_a e^{L_a t'} X_a \rho_st], 
 \end{equation} for convenience.
 
 
