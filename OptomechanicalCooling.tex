@@ -568,46 +568,65 @@ Master equations of the type
 
 \begin{align}\label{EMField}
 L_a \rho =& - \frac{\kappa}{2}(n_p+1)[a^\dagger a\rho + \rho a^\dagger a -2a\rho a^\dagger] \nonumber \\
- &- \frac{\kappa}{2}(n_p)[ aa^\dagger\rho + \rho  aa^\dagger -2a^\dagger\rho a],
-\end{align} model the behavior of a bosonic field inside a cavity with just one mode and with $n_p$ thermal photons in contact with a thermal bath. $\kappa$ is a constant related to the damping and $\kappa,n_p \geq 0$  \cite{EnglertDB}. The density operator can be expressed in the Lindblad superoperator's eigenbasis to simplify the calculations. This basis is known as the damping basis \cite{EnglertDB}
+ &- \frac{\kappa}{2}(n_p)[ aa^\dagger\rho + \rho  aa^\dagger -2a^\dagger\rho a]\, ,
+\end{align}
+and
+\begin{equation}
+  H=\hbar \omega \, a^\dagger a\, ,
+\end{equation}
+model the behavior of a bosonic field inside a one mode leaky cavity
+with frequency $\omega$; the cavity is in contact with a thermal bath
+characterized by $n_p$ thermal photons with frequency $\omega$, the
+cavity damping is given by $\kappa$ \cite{EnglertDB} and $a^\dagger$,
+$a$ are cavity photons creation and anhilation operators. The density
+operator can be expressed in a basis given by the Lindblad
+superoperator's eigenstates, ${\hat{\rho}_n^l}$,
+$n=0,1,2,...\qquad l = 0,\pm 1, \pm 2,... $, where
+\begin{equation}
+L\hat{\rho}_n^l = \lambda_n^l\hat{\rho}_n^l\label{eq:eigen_damping}\, ,
+\end{equation}
+with
+\begin{equation}
+\lambda_n^l = -\kappa[n + \frac{|l|}{2}]\, .
+\end{equation} 
 
+This basis is known as the damping basis \cite{EnglertDB} and is given by
 \begin{align}\label{DefDB}
 \hat{\rho}_n^l=&a^{\dagger l}\frac{(-1)^n}{(n_p+1)^{l+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad l \geq 0, \\
 \hat{\rho}_n^l=&\frac{(-1)^n}{(n_p+1)^{|l|+1}}:L_n^{|l|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|l|}\quad l \leq 0,
 \end{align} with eigenvalues
 
-\begin{equation}
-\lambda_n^l = -\kappa[n + \frac{|l|}{2}],
-\end{equation} which fulfill
-
-\begin{equation}
-n=0,1,2,...\qquad l = 0,\pm 1, \pm 2,... 
-\end{equation} These states are sometimes called "right" eigenstates, which are the eigenstates of the equation $L\hat{\rho}_n^l = \lambda_n^l\hat{\rho}_n^l$, however the "left" eigenstates must also be considered, these are the eigenstates of the equation $\check{\rho}_n^lL = \lambda_n^l\check{\rho}_n^l$ and have the same eigenvalues. These are
-
+The Lindblad operator is not hermitian and the "left" eigenstates must
+be considered to find the coefficients of the density operator
+expansion in the damping basis. These are the eigenstates of the
+equation $\check{\rho}_n^lL = \lambda_n^l\check{\rho}_n^l$ they have
+the same eigenvalues and are given by
 \begin{align}\label{DefDBDual}
 \check{\rho}_n^l=&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+l)!}:L_n^l[\frac{a^\dagger a}{n_p}]:a^{l}\quad l \geq 0, \\
 \check{\rho}_n^l=&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+|l|)!}a^{\dagger|l|}:L_n^{|l|}[\frac{a^\dagger a}{n_p}]:\quad l \leq 0.
-\end{align} These states are orthogonal under the product
+\end{align}
 
+The left and right eigenstates are orthogonal under the product
 \begin{equation}
 Tr[\hat{\rho}_n^l\check{\rho}_{n'}^{l'}] = \delta_{n,n'}\delta_{l,l'},
-\end{equation} and also fulfill
+\end{equation} and fulfill
 
 \begin{equation}\label{DampingBasisCompleteness}
 \sum_{\lambda} \hat{\rho}_\lambda \otimes \check{\rho}_\lambda = \mathbb{I},
-\end{equation} where the sum is over all possible eigenvalues. An important case is a cavity at zero temperature, in this case the states are \cite{EnglertDB}
+\end{equation} where the sum is over all possible eigenvalues. An important case is a cavity at zero temperature, in this case the right states are \cite{EnglertDB}
 
 \begin{align}\label{DefDBZero}
 \hat{\rho}_n^l=&a^{\dagger l}(-1)^{a^\dagger a + n}\binom{n+l}{a^\dagger a+l} \quad l \geq 0, \\
 \hat{\rho}_n^l=&(-1)^{a^\dagger a + n}\binom{n+|l|}{a^\dagger a+|l|}a^{|l|} \quad l < 0,
-\end{align} and the dual states are
+\end{align} and the left states are
 
 \begin{align}\label{DefDBDualZero}
 \check{\rho}_n^l=&\frac{n!}{(n+l)!}\binom{a^\dagger a}{n}a^l \quad l \geq 0, \\
 \check{\rho}_n^l=&a^{\dagger|l|}\frac{n!}{(n+|l|)!}\binom{a^\dagger a}{n} \quad l < 0.
 \end{align}
 
-These states play an important part in the following sections, as they allow us to evaluate $L$ terms as well as trace over cavity degrees of freedom explicitly.
+These states play an important part in the derivation of the master
+equation of the cavity state in the adiabatic approximation.
 
 \section{Laser Cooling and Projection Operators}\label{CoolingAppendix}
 
