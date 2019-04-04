@@ -563,7 +563,7 @@ We plan to explore this case in future work.
 Master equations of the type 
 
 \begin{equation}
-\dot{\rho} = \frac{i}{\hbar}[H,\rho]+L\rho, 
+\dot{\rho} = \mathcal{L} \rho = \frac{1}{i\hbar}[H,\rho]+L_a\rho, 
 \end{equation} with
 
 \begin{align}\label{EMField}
@@ -588,7 +588,8 @@ L\hat{\rho}_n^l = \lambda_n^l\hat{\rho}_n^l\label{eq:eigen_damping}\, ,
 with
 \begin{equation}
 \lambda_n^l = -\kappa[n + \frac{|l|}{2}]\, .
-\end{equation} 
+\end{equation} These eigenvalues correspond only to the $L_a$ term. The full eigenvalues for $\mathcal{L}$ would also include the eigenvalues for the Hamiltonian term. In this section we focus only on the Lindblad term for clarity, but this is an important distinction.
+
 
 This basis is known as the damping basis \cite{EnglertDB} and is given by
 \begin{align}\label{DefDB}
@@ -631,18 +632,17 @@ equation of the cavity state in the adiabatic approximation.
 \section{Laser Cooling and Projection Operators}\label{CoolingAppendix}
 
 In order to find the master equation
-\eqref{eq:projected_master_equation} we employed projection operators
-like those in \cite{CarmichaelQO}. We also separate the $L$ terms into
-\begin{equation}
-L_0= (\frac{1}{i\hbar}[H_{\rm cav},\bullet]+L_a) +(\frac{1}{i\hbar}[H_{\rm mec}(t),\bullet]),
-\end{equation}
+\eqref{eq:projected_master_equation} we first separate  $\mathcal{L}$ into
+\begin{align}
+\mathcal{L}_0=& \mathcal{L}_{cav} + \mathcal{L}_{mec},\\
+ =&(\frac{1}{i\hbar}[H_{\rm cav},\bullet]+L_a) +(\frac{1}{i\hbar}[H_{\rm mec}(t),\bullet]), \nonumber
+\end{align}
 
 and
 
 \begin{equation}
-L_1 = \frac{1}{i\hbar}[H_{\rm int},\bullet].
-\end{equation}These projection operators fulfill a completeness
-relation
+\mathcal{L}_1 = \frac{1}{i\hbar}[H_{\rm int},\bullet],
+\end{equation} so that $\mathcal{L}=\mathcal{L}_0+\mathcal{L}_1$. We also employ projection operators like those in \cite{CarmichaelQO}. These projection operators fulfill a completeness relation
 
 \begin{equation}
 1 = P + Q,
@@ -650,48 +650,48 @@ relation
 
 \begin{enumerate}
 
-\item $ PL_{0} = L_{0}P = 0 $\qquad as the corresponding eigenvalues are 0
+\item $ P\mathcal{L}_{0} = \mathcal{L}_{0}P = 0 $\qquad as the corresponding eigenvalues are 0
 
-\item $PL_{1}P=0$ \qquad as the interaction does not couple states in P
+\item $P\mathcal{L}_{1}P=0$ \qquad as the interaction does not couple states in P
 
 \item $P^2 = P \quad Q^2 = Q$ \qquad as $P$ and $Q$ are projectors.
-\end{enumerate} In this case $P=P_m^{\lambda_m^0}P_c^{\lambda_c^0}$. We project the master equation $\dot{\rho}=L\rho$ into both $P$ and $Q$ spaces and insert the completeness relation to obtain two equations. Working in the decay picture
+\end{enumerate} In this case $P=P_m^{\lambda_m^0}P_c^{\lambda_c^0}$. We project the master equation $\dot{\rho}=\mathcal{L}\rho$ into both $P$ and $Q$ spaces and insert the completeness relation to obtain two equations. Working in the decay picture
 
 \begin{align*}
- \rho' =& e^{L_0t}\rho,\\
- L' =& e^{-L_0t}Le^{L_0t} = L_1'.
+ \rho' =& e^{\mathcal{L}_0t}\rho,\\
+ \mathcal{L}_1' =& e^{-\mathcal{L}_0t}\mathcal{L}_1e^{\mathcal{L}_0t} = \mathcal{L}_1'.
 \end{align*} and omitting primes, the equations are
 
 \begin{align*}
-P\dot{\rho} =& PL_1Q\rho, \\
-Q\dot{\rho} =& QLQ\rho + QLP\rho.
+P\dot{\rho} =& P\mathcal{L}_1Q\rho, \\
+Q\dot{\rho} =& Q\mathcal{L}Q\rho + Q\mathcal{L}P\rho.
 \end{align*} The equation for $Q$ can be formally integrated \cite{TesisMaestria}
 
 \begin{align*}
-Q\rho =& Q\rho(t_0) + \int_{t_0}^{t}dt' QL(t')P\rho(t')\\
-       &+\int_{t_0}^{t}dt'QL(t')Q\rho(t'),\\
-\simeq & Q\rho(t_0) + \int_{t_0}^{t}dt' QL_1(t')P\rho(t_0)\\
-       &+\int_{t_0}^{t}dt'QL_1(t')Q\rho(t_0)+O(\eta^2),
+Q\rho =& Q\rho(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}(t')P\rho(t')\\
+       &+\int_{t_0}^{t}dt'Q\mathcal{L}(t')Q\rho(t'),\\
+\simeq & Q\rho(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho(t_0)\\
+       &+\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho(t_0)+O(\eta^2),
 \end{align*} and this is substituted into the $P$ equation
 
 \begin{align}
-P\dot{\rho}(t) =& PL_1Q\rho(t_0)\\ 
- &+ PL_1\int_{t_0}^{t}dt' QL_1(t')P\rho(t_0)\nonumber \\
- &+ PL_1\int_{t_0}^{t}dt'QL_1(t')Q\rho(t_0) \nonumber,
+P\dot{\rho}(t) =& P\mathcal{L}_1Q\rho(t_0)\\ 
+ &+ P\mathcal{L}_1\int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho(t_0)\nonumber \\
+ &+ P\mathcal{L}_1\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho(t_0) \nonumber,
 \end{align} where only the first integral term is non zero. We focus on this term and transform back from the decay picture
 
 \begin{equation}
-P e^{-L_0 t}L_1e^{L_0 t}\int_{t_0}^{t}dt'Qe^{-L_0 t'}L_1e^{L_0 t'}Pe^{-L_0(t_0)}\rho(t_0).
-\end{equation} We decompose the projectors into the forms $Q=\sum_\lambda \hat{\rho}_\lambda \otimes \check{\rho}_\lambda$ and $P=\sum_{\lambda'} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}$ corresponding to the damping basis states seen in Appendix \ref{App1}. $\lambda, \lambda'$ represent all of the damping basis eigenvalues, separated by time scale. We may thus evaluate the $L_0$ terms directly by applying them to the nearest states
+P e^{-\mathcal{L}_0 t}\mathcal{L}_1e^{\mathcal{L}_0 t}\int_{t_0}^{t}dt'Qe^{-\mathcal{L}_0 t'}\mathcal{L}_1e^{\mathcal{L}_0 t'}Pe^{-\mathcal{L}_0(t_0)}\rho(t_0).
+\end{equation} We decompose the projectors into the forms $Q=\sum_\lambda \hat{\rho}_\lambda \otimes \check{\rho}_\lambda$ and $P=\sum_{\lambda'} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}$ corresponding to the damping basis states seen in Appendix \ref{App1}, plus the states for the $H$ terms. $\lambda, \lambda'$ represent both the damping basis eigenvalues plus the eigenvalues for the $H$ terms, separated by time scale. We may thus evaluate the $\mathcal{L}_0$ terms directly by applying them to the nearest states
 
 \begin{align}\label{ProyectionEQ}
-P e^{-L_0 t}L_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda t} \hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda}e^{-\lambda t'}L_1\\
+P e^{-\mathcal{L}_0 t}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda t} \hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda}e^{-\lambda t'}\mathcal{L}_1\\
 &e^{\lambda' t'}\hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'} e^{-\lambda' t_0}\rho(t_0)]\nonumber.
 \end{align} We focus only on the exponential terms, which are now numbers and can be shifted accordingly
 
 \begin{equation}\label{LambdaExponentials}
 [\int_{t_0}^t dt' e^{(\lambda'-\lambda)t'}]e^{\lambda t- \lambda't_0}.
-\end{equation} Here we notice that $\lambda' = \lambda_{mec}(t)$ as the cavity is taken to be at zero temperature. Since $\lambda_{mec}(t) = i\nu_0 + i\epsilon' \cos(2\omega t)$ we must take care during the integration. Here we make an important note. In general, the $\Gamma$ operators contained within the $L_1$ term are explicitly time dependent. However, in this particular case, due to the form of \eqref{SmallOscillationsSolution}, when multiplied by \eqref{GammaCoefficients}, the explicit time dependence is canceled out excluding terms of order $\frac{\epsilon}{n\nu_0}$ and so we consider them to be non time-dependent and do not account for them during the integration. To perform the integration we employ the approximation
+\end{equation} Here we notice that $\lambda' = \lambda_{mec}(t)$ as the cavity is taken to be at zero temperature. Since $\lambda_{mec}(t) = i\nu_0 + i\epsilon' \cos(2\omega t)$ we must take care during the integration. Here we make an important note. In general, the $\Gamma$ operators contained within the $\mathcal{L}_1$ term are explicitly time dependent. However, in this particular case, due to the form of \eqref{SmallOscillationsSolution}, when multiplied by \eqref{GammaCoefficients}, the explicit time dependence is canceled out excluding terms of order $\frac{\epsilon}{n\nu_0}$ and so we consider them to be non time-dependent and do not account for them during the integration. To perform the integration we employ the approximation
 
 \begin{equation}
 e^{(\lambda'-\lambda)t'} \approx e^{(i\nu_0-\lambda)t'} + i\epsilon' \cos(2 \omega t')t' e^{(i\nu_0-\lambda)t'}.
@@ -706,20 +706,20 @@ e^{\lambda t} \to 0 \qquad e^{\lambda' t} \to 1.
 \end{equation} with $a = i\nu_0 - \lambda$. Returning to \eqref{ProyectionEQ}, we may now write it as
 
 \begin{equation}
-Pe^{-L_0 t} \sum_{\lambda',\lambda} L_1 I_{\lambda',\lambda} \rho_{\lambda'} L_1 \rho_\lambda \rho(t_0).
+Pe^{-\mathcal{L}_0 t} \sum_{\lambda',\lambda} \mathcal{L}_1 I_{\lambda',\lambda} \rho_{\lambda'} \mathcal{L}_1 \rho_\lambda \rho(t_0).
 \end{equation} We may return the projectors to their original notation to remove the sums over $\lambda$.  Now, the sums are over the possible values of the mechanical eigenvalues 
 
 \begin{equation}
-Pe^{-L_0 t} \sum_{m} L_1 I_{m} Q L_1 P \rho(t_0).
-\end{equation} We return to the full equation, which is multiplied by $Pe^{L_0 t}$ 
+Pe^{-\mathcal{L}_0 t} \sum_{m} \mathcal{L}_1 I_{m} Q \mathcal{L}_1 P \rho(t_0).
+\end{equation} We return to the full equation, which is multiplied by $Pe^{\mathcal{L}_0 t}$ 
 
 \begin{equation}
-P\dot{\rho} = P[L_0]P \rho(t) + \sum_{m} P L_1 I_{m} Q L_1 P \rho(t_0).
+P\dot{\rho} = P[\mathcal{L}_0]P \rho(t) + \sum_{m} P \mathcal{L}_1 I_{m} Q \mathcal{L}_1 P \rho(t_0).
 \end{equation} We then trace over all the cavity degrees of freedom and set  $\mu = Tr_c[P\rho]\otimes \rho_{st}$, where we assume no correlation between the cavity and mirror states at time $t_0$. This leads to the equation
 
 \begin{equation}\label{FinalProyectedEq}
-\dot{\mu}_m = L_{mec}\mu_m + Tr_c[ L_1 I_m L_1  \mu_m],
-\end{equation} for any given value of $m$. Remembering that $L_1 = \frac{1}{i\hbar}[X_a X_\Gamma,\bullet]$ and that the mechanical operators $\Gamma$ may leave the trace alongside $\mu$, equation \eqref{FinalProyectedEq} can be written as \eqref{eq:projected_master_equation}. The coefficients $G(\nu_m,0)$ can be written as
+\dot{\mu}_m = \mathcal{L}_{mec}\mu_m + Tr_c[ \mathcal{L}_1 I_m \mathcal{L}_1  \mu_m],
+\end{equation} for any given value of $m$. Remembering that $\mathcal{L}_1 = \frac{1}{i\hbar}[X_a X_\Gamma,\bullet]$ and that the mechanical operators $\Gamma$ may leave the trace alongside $\mu$, equation \eqref{FinalProyectedEq} can be written as \eqref{eq:projected_master_equation}. The coefficients $G(\nu_m,0)$ can be written as
 
 \begin{equation}\label{GAppendix}
 G(\nu_m,0)=\int_0^\infty dt' e^{\i\nu(t')t'}Tr_c[X_a e^{L_a t'} X_a \rho_st], 
@@ -766,5 +766,3 @@ T=& \alpha_0\sum_\lambda Tr_c[X_ae^{L_at}\hat{\rho}_\lambda] \otimes Tr_c[\check
 \bibliographystyle{unsrt}
 \bibliography{Bib}
 \end{document}
-
-
