@@ -632,30 +632,47 @@ equation of the cavity state in the adiabatic approximation.
 \section{Laser Cooling and Projection Operators}\label{CoolingAppendix}
 
 In order to find the master equation
-\eqref{eq:projected_master_equation} we first separate  $\mathcal{L}$ into
+\eqref{eq:projected_master_equation} we write equation \eqref{LCMasterEq} as
+\begin{equation}
+\dot{\rho}=\mathcal{L}\rho\, ,
+\end{equation}
+with $\mathcal{L}=\mathcal{L}_0+\mathcal{L}_1$,
+where
 \begin{align}
 \mathcal{L}_0=& \mathcal{L}_{cav} + \mathcal{L}_{mec},\\
  =&(\frac{1}{i\hbar}[H_{\rm cav},\bullet]+L_a) +(\frac{1}{i\hbar}[H_{\rm mec}(t),\bullet]), \nonumber
 \end{align}
-
+gives the free dynamics 
 and
-
 \begin{equation}
 \mathcal{L}_1 = \frac{1}{i\hbar}[H_{\rm int},\bullet],
-\end{equation} so that $\mathcal{L}=\mathcal{L}_0+\mathcal{L}_1$. We also employ projection operators like those in \cite{CarmichaelQO}. These projection operators fulfill a completeness relation
-
+\end{equation}
+gives the field-mechanic oscillator interaction. We employ projection
+operators, like those in \cite{CarmichaelQO}, to separate the
+evolution in different time scales and make an adiabatic
+approximation. The projection operator $P$ projects the state in a
+slow-time evolution space whereas the projection operator $Q$ projects
+the system in a fast-time evolution space, they fulfill the completeness
+relation
 \begin{equation}
 1 = P + Q,
-\end{equation} and have the properties
-
+\end{equation}
+and have the properties
 \begin{enumerate}
 
-\item $ P\mathcal{L}_{0} = \mathcal{L}_{0}P = 0 $\qquad as the corresponding eigenvalues are 0
+\item $ P\mathcal{L}_{0} = \mathcal{L}_{0}P = 0 $\qquad as the
+  corresponding eigenvalues are 0 \fxnote{No debe de ser la parte
+    real?}
 
 \item $P\mathcal{L}_{1}P=0$ \qquad as the interaction does not couple states in P
 
 \item $P^2 = P \quad Q^2 = Q$ \qquad as $P$ and $Q$ are projectors.
-\end{enumerate} In this case $P=P_m^{\lambda_m^0}P_c^{\lambda_c^0}$. We project the master equation $\dot{\rho}=\mathcal{L}\rho$ into both $P$ and $Q$ spaces and insert the completeness relation to obtain two equations. Working in the decay picture
+\end{enumerate} In this case $P=P_m^{\lambda_m^0}P_c^{\lambda_c^0}$
+\fxnote{Los operadores $P_m$ y $P_c$ no estan definidos en ningun
+  lugar, me parece que los debes de introducir despues}. We project
+the master equation $\dot{\rho}=\mathcal{L}\rho$ into both $P$ and $Q$
+spaces and insert the completeness relation to obtain two equations.
+Working in the decay picture
 
 \begin{align*}
  \rho' =& e^{\mathcal{L}_0t}\rho,\\
@@ -682,7 +699,22 @@ P\dot{\rho}(t) =& P\mathcal{L}_1Q\rho(t_0)\\
 
 \begin{equation}
 P e^{-\mathcal{L}_0 t}\mathcal{L}_1e^{\mathcal{L}_0 t}\int_{t_0}^{t}dt'Qe^{-\mathcal{L}_0 t'}\mathcal{L}_1e^{\mathcal{L}_0 t'}Pe^{-\mathcal{L}_0(t_0)}\rho(t_0).
-\end{equation} We decompose the projectors into the forms $Q=\sum_\lambda \hat{\rho}_\lambda \otimes \check{\rho}_\lambda$ and $P=\sum_{\lambda'} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}$ corresponding to the damping basis states seen in Appendix \ref{App1}, plus the states for the $H$ terms. $\lambda, \lambda'$ represent both the damping basis eigenvalues plus the eigenvalues for the $H$ terms, separated by time scale. We may thus evaluate the $\mathcal{L}_0$ terms directly by applying them to the nearest states
+\end{equation}
+We decompose the projectors into the forms
+$Q=\sum_\lambda \hat{\rho}_\lambda \otimes \check{\rho}_\lambda$ and
+$P=\sum_{\lambda'} \hat{\rho}_{\lambda'} \otimes
+\check{\rho}_{\lambda'}$ corresponding to the damping basis states
+seen in Appendix \ref{App1}, plus the states for the $H$ terms
+\fxnote{Aqui hay algo mal, los operadores que defines solo actuan en
+  el espacio del campo y no en el espacio completo del sistema. De
+  hecho aqui deberias de introducir los operadores P como producto de
+  proyectores en el espacio del campo de la cavidad producto el
+  espacio del oscilador.}. $\lambda, \lambda'$ represent both the
+damping basis eigenvalues plus the eigenvalues for the $H$ terms,
+separated by time scale \fxnote{Es mas claro si pones directamente a
+  que es igual $\lambda$ y $\lambda'$}. \fxnote{Creo que aqui debes
+  definir explicitamente quien es P y Q}. We may thus evaluate the
+$\mathcal{L}_0$ terms directly by applying them to the nearest states
 
 \begin{align}\label{ProyectionEQ}
 P e^{-\mathcal{L}_0 t}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda t} \hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda}e^{-\lambda t'}\mathcal{L}_1\\
