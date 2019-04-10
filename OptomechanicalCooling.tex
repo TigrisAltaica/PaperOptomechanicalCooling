@@ -632,11 +632,10 @@ equation of the cavity state in the adiabatic approximation.
 \section{Laser Cooling and Projection Operators}\label{CoolingAppendix}
 
 In order to find the master equation
-\eqref{eq:projected_master_equation} we begin with equation \eqref{LCMasterEq}
-\begin{equation}
-\dot{\rho}=\mathcal{L}\rho\, ,
+\eqref{eq:projected_master_equation} we begin with the equation 
+\begin{equation}\label{eq:master_no_mechanical_damping}
+\dot{\rho}=(\mathcal{L}_0+\mathcal{L}_1)\rho\, ,
 \end{equation}
-with $\mathcal{L}=\mathcal{L}_0+\mathcal{L}_1$,
 where
 \begin{align}
 \mathcal{L}_0=& \mathcal{L}_{cav} + \mathcal{L}_{mec},\\
@@ -647,109 +646,121 @@ and
 \begin{equation}
 \mathcal{L}_1 = \frac{1}{i\hbar}[H_{\rm int},\bullet],
 \end{equation}
-gives the field-mechanic oscillator interaction. The mechanical
-damping occurs on a slower time scale than the other processes and can
-be incorporated after the procedure. We employ projection operators,
-like those in \cite{CarmichaelQO}, to separate the evolution in
-different time scales and make an adiabatic approximation. The
-projection operator $P$ projects the state in a slow-time evolution
-space whereas the projection operator $Q$ projects the system in a
-fast-time evolution space, they fulfill the completeness relation
+gives the field-mechanic oscillator interaction.
+
+Equation \eqref{eq:master_no_mechanical_damping} is the same as
+equation \eqref{LCMasterEq} without the mechanical damping, which
+occurs on a slower time scale than the other processes and can be
+incorporated after the adiabatic approximation. We employ projection
+operators, like those in \cite{CarmichaelQO}, to separate the
+evolution in different time scales and make an adiabatic
+approximation. The projection operator $P$ projects the state in a
+slow-decaying evolution space whereas the projection operator $Q$
+projects the system in a fast-decaying evolution space, they fulfill
+the completeness relation
 \begin{equation}
 1 = P + Q,
 \end{equation}
 and have the properties
 \begin{enumerate}
 
-\item $ P\mathcal{L}_{0} = \mathcal{L}_{0}P = 0 $\qquad as the real part of the
-  corresponding eigenvalues are 0 
-
+\item $ P\mathcal{L}_{0} = \mathcal{L}_{0}P = i w $\qquad with $w$ a
+  real number, because P projects the state in its stationary
+  part\fxnote{Checar}
 \item $P\mathcal{L}_{1}P=0$ \qquad as the interaction does not couple states in P
 
 \item $P^2 = P \quad Q^2 = Q$ \qquad as $P$ and $Q$ are projectors.
 \end{enumerate}
-We project the master equation $\dot{\rho}=\mathcal{L}\rho$ into both
-$P$ and $Q$ spaces and insert the completeness relation to obtain two
-equations. Working in the decay picture
-
+In the decay picture the master equation is 
+\begin{equation}
+  \label{eq:master_decay_picture}
+    \dot{\rho'} = \mathcal{L}_1\rho'\, ,
+\end{equation}
+where
 \begin{align*}
  \rho' =& e^{\mathcal{L}_0t}\rho,\\
- \mathcal{L}_1' =& e^{-\mathcal{L}_0t}\mathcal{L}_1e^{\mathcal{L}_0t} = \mathcal{L}_1'.
-\end{align*} and omitting primes, the equations are
+  \mathcal{L}_1' =& e^{-\mathcal{L}_0t}\mathcal{L}_1e^{\mathcal{L}_0t} = \mathcal{L}_1'\, .
+\end{align*}
 
+We project the master equation \eqref{eq:master_decay_picture} into
+both $P$ and $Q$ to obtain the equations (we ommit the primes from now on)
 \begin{align*}
 P\dot{\rho} =& P\mathcal{L}_1Q\rho, \\
 Q\dot{\rho} =& Q\mathcal{L}Q\rho + Q\mathcal{L}P\rho.
-\end{align*} The equation for $Q$ can be formally integrated \cite{TesisMaestria}
+\end{align*} The equation for $Q$ can be formally integrated
 
 \begin{align*}
 Q\rho =& Q\rho(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}(t')P\rho(t')\\
        &+\int_{t_0}^{t}dt'Q\mathcal{L}(t')Q\rho(t'),\\
 \simeq & Q\rho(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho(t_0)\\
        &+\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho(t_0)+O(\eta^2),
-\end{align*} and this is substituted into the $P$ equation
+\end{align*}
+and this is substituted into the $P$ equation \fxnote{comentar algo de la aproximacion}
 
 \begin{align}
 P\dot{\rho}(t) =& P\mathcal{L}_1Q\rho(t_0)\\ 
  &+ P\mathcal{L}_1\int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho(t_0)\nonumber \\
  &+ P\mathcal{L}_1\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho(t_0) \nonumber,
-\end{align} where only the first integral term is non zero. We focus on this term and transform back from the decay picture
+\end{align}
+where only the first integral term is non zero \fxnote{Creo que esto
+  solo es verdad si la condicion inicial no incluye terminos en Q. Es
+  asi?}. We focus on this term and transform back from the decay
+picture \fxnote{Creo que como regresas a la ``picture'' estandar, es confuso que hayas eliminado las primas}
 
+\begin{equation}\label{eq:temp_1}
+P\dot{\rho}(t)=P e^{-\mathcal{L}_0 t}\mathcal{L}_1e^{\mathcal{L}_0 t}\int_{t_0}^{t}dt'Qe^{-\mathcal{L}_0 t'}\mathcal{L}_1e^{\mathcal{L}_0 t'}Pe^{-\mathcal{L}_0(t_0)}\rho(t_0).
+\end{equation}\fxnote{Le agregue el lado izquierdo a la ecuacion de arriba, es asi? o tiene exponenciales por regresar a la picture normal?}
+
+We write the projectors as
+\begin{eqnarray}
+  P &=& \sum_{\lambda'} (\hat{\rho}_{\lambda'}^{cav}\otimes\hat{\rho}_{\lambda'}^{mec})\otimes(\check{\rho}_{\lambda'}^{cav}\otimes\check{\rho}_{\lambda'}^{mec}),\label{eq:projector_p}\\
+  Q &=& \sum_{\lambda} (\hat{\rho}_{\lambda}^{cav}\otimes \hat{\rho}_{\lambda}^{mec})\otimes(\check{\rho}_{\lambda}^{cav}\otimes\check{\rho}_{\lambda}^{mec})\label{eq:projector_q}\, ,
+\end{eqnarray}
+the operators with the $\lambda'$ label project the state in the
+slow-decaying time-scale subspace, they are eigenstates of
+$\mathcal{L}_0$ with imaginary eigenvalue. The operators with the
+$\lambda$ label corresponds to the fast-decaying time-scale, they are
+eigenstates of $\mathcal{L}_0$ with eigenvalues with a non-zero real
+part, those states decay quickly. Using the states defined in Appendix
+\ref{App1},
+$\hat{\rho}_{\lambda'}^{cav}=\hat{\rho}_n^l,\,\check{\rho}_{\lambda'}^{cav}=\check{\rho}_n^l$
+with $n=l=0$, and
+$\hat{\rho}_{\lambda}^{cav}=\hat{\rho}_n^l,\,\check{\rho}_{\lambda}^{cav}=\check{\rho}_n^l$
+with $n+|l|>0$. The mechanical states are the left and right
+eigenstates of $\mathcal{L}_{mec}$
 \begin{equation}
-P e^{-\mathcal{L}_0 t}\mathcal{L}_1e^{\mathcal{L}_0 t}\int_{t_0}^{t}dt'Qe^{-\mathcal{L}_0 t'}\mathcal{L}_1e^{\mathcal{L}_0 t'}Pe^{-\mathcal{L}_0(t_0)}\rho(t_0).
+\hat{\rho_{\lambda_m}^{mec}}=\Ket{n}\Bra{n+m}=\check{\rho_{\lambda_m}^{mec}}^\dagger,
+\end{equation} \fxnote{checa que puse bien los estados}
+with eigenvalues
+\begin{equation}
+\lambda_m = -i m \nu(t).
 \end{equation}
-We decompose the projectors into the forms
-$Q=\sum_\lambda \hat{\rho}_\lambda \otimes \check{\rho}_\lambda$ and
-$P=\sum_{\lambda'} \hat{\rho}_{\lambda'} \otimes
-\check{\rho}_{\lambda'}$.
 
-These projectors are a tensor product of both cavity and mechanical
-oscillator states. More explicitly
-\begin{equation}
-P = \sum_{\lambda'} (\hat{\rho}_{\lambda'}^{cav}\otimes\hat{\rho}_{\lambda'}^{mec})\otimes(\check{\rho}_{\lambda'}^{cav}\otimes\check{\rho}_{\lambda'}^{mec}),
-\end{equation} where the cavity states are those of Appendix \ref{App1} and the mechanical states are simply the eigenstates of $\mathcal{L}_{mec}$
-
-\begin{equation}
-\rho_{\lambda_l}^{mec}=\Ket{n}\Bra{n+l},
-\end{equation} with eigenvalues
-
-\begin{equation}
-\lambda_l = -i l \nu(t).
-\end{equation}
-The $Q$ projector is completely analogous. What defines the sub-spaces
-$P$ and $Q$ are the time scales associated with each space. The
-eigenvalues of the states are given by $\lambda, \lambda'$. $\lambda$
-corresponds to the fast time scale, which is equivalent to eigenvalues
-with a non-zero real part, as those states decay quickly. $\lambda'$
-states correspond to the slow time scale as their eigenvalues are
-imaginary and thus these states do not decay. With these explicit
-expressions on hand we may evaluate the $\mathcal{L}_0$ terms directly
-by applying them to the nearest states
-
+Using equations \eqref{eq:projector_p} and \eqref{eq:projector_q} in
+\eqref{eq:temp_1} and applying the operator $\mathcal{L}_0$ we obtain
 \begin{align}\label{ProyectionEQ}
-P e^{-\mathcal{L}_0 t}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda t} \hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda}e^{-\lambda t'}\mathcal{L}_1\\
+P\dot{\rho}(t)=P e^{-\mathcal{L}_0 t}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda t} \hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda}e^{-\lambda t'}\mathcal{L}_1\\
 &e^{\lambda' t'}\hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'} e^{-\lambda' t_0}\rho(t_0)]\nonumber.
-\end{align} We focus only on the exponential terms, which are now numbers and can be shifted accordingly
-
-\begin{equation}\label{LambdaExponentials}
-[\int_{t_0}^t dt' e^{(\lambda'-\lambda)t'}]e^{\lambda t- \lambda't_0}.
-\end{equation}
-Here we note that $\lambda' = \lambda_{mec}(t)$ as the cavity is taken
-to be at zero temperature. Since
-$\lambda_{mec}(t) = i\nu_0 + i\epsilon' \cos(2\omega t)$ we must take
-care during the integration. Here we make an important note. In
+\end{align}
+\fxnote*{aqui esto no es necesario, o si?}{as the cavity is taken to
+  be at zero temperature}
+\fxnote*{esto no va a aqui}{Here we make an important note. In
 general, the $\Gamma$ operators contained within the $\mathcal{L}_1$
 term are explicitly time dependent. However, in this particular case,
 due to the form of \eqref{SmallOscillationsSolution}, when multiplied
 by \eqref{GammaCoefficients}, the explicit time dependence is canceled
 out excluding terms of order $\frac{\epsilon}{n\nu_0}$ and so we
 consider them to be non time-dependent and do not account for them
-during the integration. To perform the integration we employ the
-approximation
+during the integration.}
 
+In order to perform the integration we write
 \begin{equation}
 e^{(\lambda'-\lambda)t'} \approx e^{(i\nu_0-\lambda)t'} + i\epsilon' \cos(2 \omega t')t' e^{(i\nu_0-\lambda)t'}.
-\end{equation} Each terms is then integrated separately. For the first term, this results in
+\end{equation}
+where we used that
+$\lambda' = \lambda_{mec}(t)=i\nu_0 + i\epsilon' \cos(2\omega t)$ and
+$\epsilon\ll \nu_0$, each term is now integrated separately. For the
+first term
 
 \begin{equation}
 \frac{1}{i\nu_0-\lambda}[e^{(i\nu_0-\lambda)t}-e^{(i\nu_0-\lambda)t_0}]e^{\lambda t - \lambda' t_0}.
@@ -757,7 +768,11 @@ e^{(\lambda'-\lambda)t'} \approx e^{(i\nu_0-\lambda)t'} + i\epsilon' \cos(2 \ome
 
 \begin{equation}\label{FirstTermLambdaExponentials}
 \frac{1}{i\nu_0-\lambda}[e^{\lambda'(t-t_0)}e^{\epsilon' \cos(2\omega t_0)t_0} -e^{\lambda'(t-t_0)}e^{\lambda(t-t_0)}e^{\epsilon' \cos(2\omega t_0)t_0}].
-\end{equation} The adiabatic approximation consists of taking the limit $(t-t_0) \to \infty$ or $t \to \infty, \quad t_0 \to 0$. In this limit
+\end{equation} \fxnote{Aqui me perdi, si sustituiste $\lambda'$ en una ecuacion ya no deberia aparecer en la segunda}
+
+
+The adiabatic approximation consists of taking the limit
+$(t-t_0) \to \infty$ or $t \to \infty, \quad t_0 \to 0$. In this limit
 
 \begin{equation}
 e^{\lambda t} \to 0 \qquad e^{\lambda' t} \to 1.
