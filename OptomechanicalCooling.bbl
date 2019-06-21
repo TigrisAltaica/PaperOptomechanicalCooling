@@ -85,35 +85,20 @@ Pablo Enrique~Yanes Thomas.
 \newblock Enfriamiento optomecanico con parametros dependientes del tiempo.
 \newblock Master's thesis, Universidad Nacional Autonoma de Mexico, 2016.
 
-\bibitem{EnglertFL}
-{\em Five Lectures on Dissipative Master Equations (in Coherent Evolution in
-  Noisy Environments)}.
-\newblock Springer, 2002.
-
 \bibitem{PiatekME}
 Artur R.~Pietrykowski Marcin~Piatek.
 \newblock Classical irregular blocks, hill’s equation and pt–symmetric
   periodic complex potentials.
 \newblock {\em arXiv:1604.03574v1 [hep-th]}, 2016.
 
-\bibitem{WoolleyNM}
-G.~J.~Milburn M.~J.~Woolley, A. C.~Doherty and K.~C. Schwab.
-\newblock Nanomechanical squeezing with detection via microwave cavity.
-\newblock {\em Physical Review A}, 2008.
-
-\bibitem{JockelS}
-et~al Andreas~J\"ockel.
-\newblock Spectroscopy of mechanical dissipation in micro-mechanical membranes.
-\newblock {\em Applied Physics Letters}, 2011.
+\bibitem{EnglertDB}
+Hans-Jurgen Briegel{,} Berthold-Georg Englert.
+\newblock Quantum optical master equations: The use of damping bases.
+\newblock {\em PHYSICAL REVIEW A}, 1993.
 
 \bibitem{CarmichaelQO}
 Howard Carmichael.
 \newblock {\em Statistical Methods in Quantum Optics, Vol 1}.
 \newblock Springer, 1999.
-
-\bibitem{EnglertDB}
-Hans-Jurgen Briegel{,} Berthold-Georg Englert.
-\newblock Quantum optical master equations: The use of damping bases.
-\newblock {\em PHYSICAL REVIEW A}, 1993.
 
 \end{thebibliography}
