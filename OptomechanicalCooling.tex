@@ -6,6 +6,8 @@
 \usepackage{dcolumn}
 \usepackage{bm}
 \usepackage{braket}
+\usepackage{physics}
+\usepackage{cancel}
 
 
 
@@ -59,12 +61,11 @@ Universidad Nacional Aut\'{o}noma de M\'{e}xico, Circuito Escolar s/n Ciudad Uni
 
 Quantum cavity optomechanics studies systems composed of macroscopic
 mechanical objects, such as mirrors, and an optical cavity's quantized
-light field usually coupled via radiation pressure. In a common scheme
-an end-mirror of a Fabry-Perot cavity is suspended while being able to
+light field usually coupled via radiation pressure. In a common scheme one of the end-mirrors of a Fabry-Perot cavity is suspended while able to
 freely oscillate. When photons are reflected by the mirror, there is a
 momentum transfer between the light field and the mirror and hence a
 coupling force. As the cavity's resonance depends on its length, the
-mechanical displacement affects the light field inside the cavity.
+mechanical displacement in turn affects the light field inside the cavity.
 Some of the first theoretical work predicting this sort of coupling is
 described in \cite{BraginskiiOG}. This interaction between the
 macroscopic mechanical object and the light field leads to several
@@ -77,24 +78,23 @@ This effect consists of the damping of the end mirror's mechanical
 motion due to the radiative coupling to the cavity field. Sideband
 cooling takes place when the cavity's resonance is much narrower than
 the mechanical frequency. It can be understood as Raman scattering
-\cite{MarquardtQTOQ} of incident photons, red-detuned from the cavity
-resonance, when the parameters are chosen to favor phonon absorption
-from the mechanical oscillator in order to scatter the photon into the
-cavity's resonance mode, resulting in cooling. For coherent quantum
+of incident photons \cite{MarquardtQTOQ} which are red-detuned from the cavity
+resonance. When the parameters are chosen appropriately, incident photons must absorb a phonon from the mechanical oscillator in order to scatter into the
+cavity's resonance mode, resulting in cooling of the resonator. For coherent quantum
 control over a mechanical object, it must be close to a pure quantum
 mechanical state \cite{KippenberCO} so effective methods of cooling
-macroscopic objects to low temperatures is highly desirable.
+macroscopic objects to low temperatures are highly desirable.
 
 One possible avenue for improved cooling lies in controlling the
 mechanical resonator's frequency as a function of time
 \cite{JockelMR}. The effect of this dependence on the mechanical
 object's final temperature was studied in \cite{BarberisLC}. In that
 study it was found that the final temperature of the parametrically
-driven harmonic oscillator was larger than the nondriven case. The
-master equation, from which the cooling rates were derived, accounted
+driven harmonic oscillator was larger than the nondriven case. However, the
+master equation from which the cooling rates were derived accounted
 for the natural frequency of the mechanical resonator via ad-hoc
 time-dependent coefficients that were introduced after performing the
-Markov approximation; this approach lead to an incomplete master
+Markov approximation; this approach led to an incomplete master
 equation and thus an incomplete description of the system's dynamics,
 as the system is being treated as essentially not time-dependent
 during the derivation of the master equation. In this study, we employ
@@ -102,9 +102,9 @@ a different method that accounts for the time dependence throughout
 the entire derivation.
 
 
-The formalism which we apply (section \ref{OptmechH}) is based on
+The formalism we apply (section \ref{OptmechH}) is based on
 Floquet theory and was demonstrated to be a more accurate treatment in
-\cite{HanngiFM}. For the case where the drive consist of a small
+\cite{HanngiFM}. For the case where the drive consists of a small
 periodic oscillation with respect to the central frequency of the
 mechanical oscillator, the Floquet operators can be given explicitly
 (section \ref{SolSmallOsc}). Under the adiabatic approximation, we
@@ -170,7 +170,7 @@ H_{\rm mec}(t) =& \frac{p^2}{2M} + \frac{1}{2}M \nu^2 (t) x^2,\\
 H_{\rm int} =& -\hbar g a^\dagger a x,\\
 H_{\rm pump} =& \hbar\frac{\Omega}{2}(a^\dagger + a),
 \end{align}
-$\delta = \omega_{laser} - \omega_{cav}$, in the cavity Hamiltonian, $H_{\rm cav}$, is the frequency difference between the laser and
+Where $\delta = \omega_{laser} - \omega_{cav}$, in the cavity Hamiltonian, $H_{\rm cav}$, is the frequency difference between the laser and
 the cavity; $M$, in the mechanical oscillator Hamiltonian,
 $H_{\rm mec}$, is the mechanical oscillator's mass, $p$ its momentum
 operator, $x$ its position operator, and $\nu(t)$ its frequency. The
@@ -188,11 +188,11 @@ momentum operators \cite{HanngiFM}. These operators are
 
 \begin{equation}\label{FloquetOperators}
 \Gamma(t) = \frac{1}{2i}\left[\hat{x}\sqrt{\frac{2M}{\hbar}}\dot{f}(t)-\hat{p}\sqrt{\frac{2}{M \hbar }}f(t)\right],
-\end{equation} as well as its Hermitian conjugate. $f(t)$ is the solution to the classical time-dependent harmonic oscillator equation of motion in one dimension and is generally a complex function \cite{BrownPT}
+\end{equation} as well as its Hermitian conjugate. $f(t)$ is the solution to the classical time-dependent harmonic oscillator equation of motion in one dimension 
 
 \begin{equation} \label{TimeDependentHO}
-\ddot{f} + \nu(t)^2f=0.
-\end{equation} This equation has two solutions \cite{HanngiFM} of the form
+\ddot{f} + \nu(t)^2f=0,
+\end{equation} and is generally a complex function \cite{BrownPT}. This equation has two solutions \cite{HanngiFM} of the form
 \begin{equation}
 f(t) = e^{i\mu t}\phi(t), 
 \end{equation}
@@ -210,15 +210,15 @@ commutation relations for creation and annihilation operators
 H_{\rm mec}(t) = \hbar\frac{W}{|f(t)|^2}\left[\Gamma^\dagger(t)\Gamma(t) + \frac{1}{2}\right],
 \end{equation}
 with the Wronskian $W$ for \eqref{TimeDependentHO}. The explicit time dependence of the Floquet operators will not be noted from now on for the sake of brevity. Equation
-\eqref{FloquetOperators} is then inverted and solved for the harmonic
+\eqref{FloquetOperators} is inverted and solved for the harmonic
 oscillator's position operator \cite{TesisMaestria}
 
 \begin{equation}
-\hat{x} = \frac{b^* \Gamma - b\Gamma^\dagger}{(b^*a-ba^*)}
+\hat{x} = \frac{b^* \Gamma - b\Gamma^\dagger}{(b^*c-bc^*)}
 \end{equation} with
 
 \begin{align}
-a =&  \frac{1}{2i}\sqrt{\frac{2M}{\hbar}}\dot{f}\, , \\
+c =&  \frac{1}{2i}\sqrt{\frac{2M}{\hbar}}\dot{f}\, , \\
 b =&  \frac{1}{2i}\sqrt{\frac{2}{M\hbar}}f\, .
 \end{align}
 These are then substituted back into the interaction Hamiltonian
@@ -295,14 +295,13 @@ for the time evolution of the density operator
 $\rho'(t)=U\rho U^\dagger$ which represents the coupled
 cavity-mechanical resonator system. The primes indicate that the
 transformation has been applied. The displaced Hamiltonian, which
-includes a pump-like term that appears when making the transformation
-on the $L$ operators, is given by
+includes a pump-like term that appears due to the transformation being applied to the time derivative term, is
 \begin{align}\label{eq:hamiltonian_no_small}
   H'=&U H U^\dagger\nonumber\\=& -\hbar \delta' a^\dagger a + \hbar\frac{W}{|f(t)|^2}\Gamma \Gamma^\dagger\nonumber\\
      &-\hbar g\sqrt{\frac{\hbar}{2M}}[(a^{\dagger}a +\alpha a^{\dagger}+\alpha^* a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)]\nonumber\\
      &+ i\hbar(\beta^*\dot{\Gamma} - \beta \dot{\Gamma}^\dagger),
 \end{align}
-with $\delta' = \delta + g\sqrt{\frac{\hbar}{2M}}(\beta + \beta^*)$.
+with $\delta' = \delta + g\sqrt{\frac{\hbar}{2M}}(\gamma_+(t)\beta + \gamma_-(t)\beta^*)$.
 This Hamiltonian is valid as long as the coefficients $\alpha(t)$ and
 $\beta(t)$ fulfill the differential equations
 
@@ -312,23 +311,12 @@ $\beta(t)$ fulfill the differential equations
 \end{align}
 
 
-The $C(t)$ term
- \begin{align}
-C(t)\rho = |\beta|^2(C(t)_{+-} - C(t)_{-+})\rho \nonumber,
- \end{align}
- where
-\begin{align*}
-C(t)_{+-} =& [\dot{\Gamma}^{\dagger}, \Gamma]=\frac{i}{2}(\dot{f}^*
-             \dot{f} - \ddot{f}^*f^*)\, ,\\
-C(t)_{-+} =& [\dot{\Gamma}, \Gamma^{\dagger}]=\frac{i}{2}(\dot{f}
-             \dot{f}^* - \ddot{f}f)\,,
-\end{align*}
-appears because the Floquet operators do not necessarily commute with
+The $C(t)$ term appears because the Floquet operators do not necessarily commute with
 their own time derivatives.
 
 Proceeding further requires an explicit solution for
 \eqref{TimeDependentHO}. The primes in the operators will be omitted
-from now on as all calculations will be done in the displaced frame.
+from now on as all calculations will carried out in the displaced frame.
 
 
 \section{Solution for Small Oscillations}\label{SolSmallOsc}
@@ -347,53 +335,62 @@ leads to the time-dependent harmonic oscillator equation
 \ddot{f} + (\nu_0^2 + 2\epsilon' \nu_0 cos(2\omega t))f = 0,
 \end{equation}
 which is a particular case of the Mathieu equation \cite{PiatekME}.
-In order to guarantee stable solutions we use the scattering
+In order to guarantee stable solutions we require the scattering
 relation
 \begin{equation}
 \frac{\nu_0^2}{\omega^2} = n^2,\label{scattering}
 \end{equation}
-with $n \in \mathbb{Z}^+$\cite{WardFT}. We will focus on the case
+with $n \in \mathbb{Z}^+$\cite{WardFT}. For simplicity we employ the normalization $\omega=1$ so that $\nu_0=n$. We will focus on the case
 $n\gg 1$, which will be used in the next sections. The solutions for
 \eqref{SmallOscillationsTDHO} are, to first order in
-$\epsilon= \frac{2\epsilon' \nu_0}{\omega^2}$,
+$\epsilon= 2\epsilon' \nu_0$,
 \begin{equation}\label{SmallOscillationsSolution}
-f(t)=  e^{in\omega t}  + \epsilon \frac{1}{8(n+1)} e^{i(n+2)\omega t} - \epsilon \frac{1}{8(n-1)} e^{i(n-2)\omega t},
-\end{equation} and its complex conjugate.
+f(t)=  \frac{1}{\sqrt{n}}(e^{int}  + \epsilon \frac{1}{8(n+1)} e^{i(n+2) t} - \epsilon \frac{1}{8(n-1)} e^{i(n-2)t}),
+\end{equation} and its complex conjugate. 
 
+With this solution we may calculate an explicit expression for $\dot{\Gamma}$ and it's Hermitian Conjugate. Since we are working in a regime where $\epsilon \ll n$, we neglect terms smaller than $\frac{\epsilon}{n}$ and can thus obtain the approximate expressions
 
-With an explicit solution for \eqref{SmallOscillationsTDHO} in hand,
+\begin{align}\label{eq:DotGammavsGamma}
+\dot{\Gamma} \approx & \quad in\Gamma,\\
+\dot{\Gamma}^\dagger \approx & \quad -in\Gamma^\dagger.
+\end{align} This of course adds and additional term to the $\beta$ equation \eqref{eq:displaced_frame}. With an explicit solution for \eqref{SmallOscillationsTDHO} in hand,
 we can solve Eq.~\eqref{eq:displaced_frame}. Assuming that the time
 scales of the dissipative processes are fast compared with the other
 time scales we can focus on the stationary case
 ($\dot{\alpha}(t)=\dot{\beta}(t)=0$); we also assume a weak coupling
-regime (coefficients of first order in $g$ or higher are neglected)
+regime (coefficients of second order in $g$ or higher are neglected)
 obtaining
 \begin{align}\label{eq:alpha_beta_sta}
-\alpha_0 =& \frac{\Omega}{2\delta-i\kappa},& \beta_0 =& 0.
-\end{align}
-The 0 sub-index denotes that the solutions are valid only to zeroth
-order in the coupling parameter. In obtaining the solution we used
+\alpha_1 =& \frac{\Omega}{2\delta-i\kappa},& \beta_1 =\chi_0\frac{\Omega^2 e^{-int}}{(\frac{\kappa^2}{4}+\delta^2)\gamma}& ,
+\end{align} where we have substituted in the parameter $\chi_0 = g\sqrt{\frac{\hbar}{2M\nu_0}}$ to represent the coupling.
+The  sub-index 1 denotes that the solutions are valid only to first
+order in the coupling parameter.  In obtaining the solution we used
 \begin{equation}\label{GammaCoefficients}
-\gamma_\pm= \frac{\pm 1}{2i\nu_0}e^{\mp i\nu_0 t},
+\gamma(t)_\pm= \frac{\pm 1}{2i\sqrt{\nu_0}}e^{\mp i\nu_0 t},
 \end{equation}
-and  $\frac{W}{|f|^2} = \nu_0 + \frac{\epsilon \omega}{2n} cos(2\omega t)$. These expressions neglect terms of order $\frac{\epsilon}{n^2}$ and use the approximation $n+1 \approx n-1 \approx n$ since we work in the regime where $n >> 1$. Using \eqref{eq:alpha_beta_sta} in~(\ref{eq:hamiltonian_no_small})
+and  $\frac{W}{|f|^2} \approx \nu_0$. These expressions neglect terms of order $\frac{\epsilon}{n^2}$  since we work in the regime where $n >> 1$. Using \eqref{eq:alpha_beta_sta} in~(\ref{eq:hamiltonian_no_small})
 the Hamiltonian can be written as
 \begin{align}
-H =& -\hbar \delta a^{\dagger}a +\hbar(\nu_0 + \frac{\epsilon \omega}{2n} cos(2\omega t))\Gamma^{\dagger}\Gamma \\
-&-\hbar g\sqrt{\frac{\hbar}{2M}}(a^{\dagger}a +\alpha_0 a^{\dagger}+\alpha^*_0 a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)\nonumber.
-\end{align}
-We focus on the case where $|\alpha_0| \gg 1$
+H =& -\hbar \delta' a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
+&-\hbar g\sqrt{\frac{\hbar}{2M}}(a^{\dagger}a +\alpha_1 a^{\dagger}+\alpha^*_1 a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)\nonumber.
+\end{align} It's important to note that, in this reference frame, the cavity detuning $\delta'$ acquires a time dependent correction that results from the Hamiltonian term involving the time derivatives of the $\Gamma$ operators. 
+
+\begin{align}
+\delta' =& \delta +\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma} (\cos(nt)), \nonumber\\
+=& \delta + \delta_t\cos(nt)
+\end{align} Here the correction is not neglected despite it being proportional to $\chi_0^2$ as it is also proportional to $\Omega^2$ which is large. We still require $\delta_t<<\delta$. This correction does not go into the expression for $\alpha_1$ because when doing a Taylor expansion the first correction term would be of the order $\frac{\delta_t}{\delta^2}$ which we may safely neglect.
+We focus on the case where $|\alpha_1| \gg 1$
 \cite{BarberisLC} so that the $a^\dagger a$ term can be neglected as
 it is small when compared to the other two terms in the interaction.
 This leads to a further simplified Hamiltonian
 
 \begin{align} \label{LCHamiltonian}
-H(t) =& -\hbar \delta a^{\dagger}a +\hbar(\nu_0 + \frac{\epsilon \omega}{2n} cos(2\omega t))\Gamma^{\dagger}\Gamma \\
-&+\hbar g\sqrt{\frac{\hbar}{2M}}(\alpha_0 a^{\dagger}+\alpha^*_0 a)(\frac{-e^{i\nu_0 t}}{2i\nu_0}\Gamma-\frac{
-e^{i\nu_0 t}}{2i\nu_0} \nonumber\Gamma^{\dagger}).
-\end{align}
+H(t) =& -\hbar \delta' a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
+&+\hbar \chi_0(\alpha_1 a^{\dagger}+\alpha^*_1 a)(\frac{-e^{i\nu_0 t}}{2i}\Gamma-\frac{
+e^{i\nu_0 t}}{2i} \nonumber\Gamma^{\dagger}).
+\end{align} 
 
-Finally, using that $C(t)$ is proportional to $\beta_0$, the master
+Finally, as the $C(t)$ term is proportional to $\epsilon\abs{\beta_1}^2$ given the approximation in equation \eqref{eq:DotGammavsGamma}, so it is neglected, and the master
 equation~(\ref{eq:master_no_small}) simplifies to
 \begin{equation}\label{LCMasterEq}
 \dot{\rho} = \frac{1}{i\hbar}[H,\rho] +L_a\rho + L_\Gamma \rho = \mathcal{L}\rho.
@@ -401,7 +398,7 @@ equation~(\ref{eq:master_no_small}) simplifies to
 This equation looks similar to the standard optomechanical master
 equation but it has Floquet operators instead of creation and
 annihilation operator for the mechanical oscillator and an explicit
-time dependence in the interaction Hamiltonian
+time dependence in the interaction Hamiltonian as well as in the cavity detuning.
 
 
 \section{Laser Cooling}\label{LasCool}
@@ -409,134 +406,60 @@ time dependence in the interaction Hamiltonian
 Our focus is on the parameter regime where the mechanical resonator's
 temperature evolves much more slowly than the cavity's losses and than
 the inverse of the mechanical frequency. This requires
-$(g\sqrt{\frac{\hbar}{2M}}\alpha_o)^2 \ll (\frac{\kappa}{\nu_0})$.
+$\frac{\abs{\alpha_1}^2\chi_0}{\nu_0}\ll 1$.
 After projecting into the subspace corresponding to the slowly
-evolving part of the state and tracing over the cavity degrees of
+evolving eigenvalues and tracing over the cavity degrees of
 freedom, we arrive at the following master equation for the density
-operator (see Appendix \ref{CoolingAppendix})
+operator $\mu$, which represents the mechanical degrees of freedom in the subspace corresponding to the steady state (see Appendix \ref{CoolingAppendix})
 
-\begin{equation}\label{eq:projected_master_equation}
-  \dot{\mu}\approx -\frac{g'^2}{2}(G(\nu_m,0)[\Gamma^\dagger_0,\Gamma_0\mu]-G^*(-\nu_m,0)[\Gamma_0^\dagger,\mu\Gamma_0]),
-\end{equation}
-where we have set $g'=g\sqrt{\frac{\hbar}{2M}}\alpha_0$,
-$\Gamma_0=\gamma_+\Gamma$, $\Gamma_0^\dagger=\gamma_-\Gamma^\dagger$
-and use $\mu$ as the density operator of the mechanical degree of
-freedom. The cavity-quadratures correlation $G(\nu_m,0)$ is given by
-\begin{equation} \label{CavityQuadrature}
-G(\nu_m,0) = \int_0^\infty dt e^{i\nu(t) t}Tr_a[X_a e^{L_a t} X_a \rho_{st}],
-\end{equation}
-where 
-\begin{equation}
-X_a = \frac{a + a^\dagger}{\sqrt{2}\alpha_0}.
-\end{equation}
-and we assumed the cavity is at zero temperature.
-
-The derivation in Appendix \ref{CoolingAppendix} includes a time
-integration. However, since the explicit time dependence in the
-Floquet Operators takes the form of \eqref{SmallOscillationsSolution}
-(and it's time derivative and their complex conjugates), and since
-$\nu_0 = n\omega$, this explicit dependence is canceled out by the
-coeffcients \eqref{GammaCoefficients}, save for terms that are of the
-order $\frac{\epsilon}{n\nu_0}$. Thus, we label these operators as
-$\Gamma_0, \Gamma^\dagger_0$ and treat them as non time dependent
-operators. \fxnote{Esto no se entiende bien}
-
-The stationary solution of equation
-\eqref{eq:projected_master_equation} is known \cite{LCNooshi}.
-Defining the cooling and heating rates
-\begin{equation}
-A_\pm(\nu_m,0) = g'^2{\rm Real}(G(\mp \nu_m,0)),
-\end{equation}
-where $A_+$ represents heating and $A_-$ represents cooling, the final
-number of phonon excitations is given by
+\begin{equation}\label{eq:ProyectedMasterEqCooling}
+\dot{\mu} \approx \frac{1}{i\hbar}[\overline{H},\mu] + \frac{A_-}{2}D[\Gamma]\mu + \frac{A_+}{2}D[\Gamma^\dagger]\mu, 
+\end{equation} with $D[\Gamma] = 2\Gamma \mu \Gamma^\dagger -\{\Gamma^\dagger \Gamma, \mu\}$. $A_-$ is the cooling rate and $A_+$ is the heating rate. $\overline{H}$ is a term proportional to $\Gamma^\dagger \Gamma$. This equation is obtained in detail in Appendix \ref{CoolingAppendix}. The coefficients are the usual rates for the non time-dependent case plus a correction proportional to the adimensional parameter $C_t=\frac{\delta_t}{\nu_0}$, in Appendix \ref{CoolingAppendix} we require $C_t << 1$. The temperature at the end of the cooling procedure is  given by 
 
 \begin{equation}
-\langle m \rangle =\langle \Gamma^\dagger \Gamma \rangle = \frac{A_+}{A_- - A_+}.
-\end{equation}
+\expval{m} =\langle \Gamma^\dagger \Gamma \rangle = \frac{A_+}{A_- - A_+}.
+\end{equation} This is the mean number of thermal excitations for the harmonic oscillator . Cooling towards zero in this reference frame is in reality cooling towards a coherent state in the laboratory frame. It's important to note that these excitations correspond to a harmonic oscillator with a time-dependent frequency and can't necessarily be directly compared with the excitations of a harmonic oscillator with constant frequency.
 
-In the following section we calculate \eqref{CavityQuadrature} in
-order to obtain the heating and cooling rates, and the final
-temperature (represented by the average number of phonon excitations)
-for an example of a parametrically driven optomechanical system.
+
 
 \section{Calculation of Mean Vibrational Occupation Number}\label{NumCal}
 
-Assuming that the cavity is at zero temperature ($n_p=0$) the trace
-inside \eqref{CavityQuadrature} gives
-\begin{equation}
-Tr_a[X_a e^{L_a t} X_a \rho_{st}] = \frac{1}{2}e^{-(\frac{\kappa}{2}-i\delta) t},
-\end{equation} 
-up to first order in $\epsilon$~\eqref{CavityQuadrature} simplifies to
+In order to calculate the temperature, we must provide explicit expressions for the coefficients $A_\pm$ that appear in equation \eqref{eq:ProyectedMasterEqCooling}.  They are composed of the usual values for these coefficients\citep{LCNooshi}
+
 \begin{align}
-  G(\nu,0)=&\int_0^\infty dt e^{(i\nu_0 +i\epsilon'\cos{(2\omega t)})t }Tr[...]\nonumber\\
-           &\approx\frac{1}{2}\int_0^\infty e^{i (\nu_0+\delta)
-             t}e^{-\frac{\kappa t}{2}}dt\nonumber\\
-           &+\frac{i\epsilon \omega}{4n}\int_0^\infty cos(2\omega t)t e^{i (\nu_0+\delta)
-             t}e^{-\frac{\kappa t}{2}}dt\, ,\nonumber
-\end{align}
-where the $e^{-\frac{\kappa}{2} t}$ factor acts as a cut-off for the integral, which
-allows for the expansion in $\epsilon$ to be performed.See Appendix
-\ref{App1} for more on the states used to evaluate the trace and Appendix \ref{TraceAppendix} for a more detailed evaluation of the trace term. This leads
-to an expression for \eqref{CavityQuadrature} which consist of two
-parts: one corresponding to the nondriven harmonic oscillator case
-plus a correction term proportional to $\epsilon$
+A_- =& a\frac{\kappa}{(\delta+\nu_0)^2+\kappa^2},\\
+A_+ =& a\frac{\kappa}{(\delta-\nu_0)^2+\kappa^2},
+\end{align} with 
+
 \begin{equation}
-\frac{G(\nu,0)}{g'^2}= \frac{1}{-\kappa + 2i(\delta + \nu_0)} +i\epsilon\frac{\omega}{4n}\frac{(-\kappa + i(\nu_0 + \delta))^2 - 4\omega^2}{((-\kappa + i(\nu_0 + \delta))^2 + 4\omega^2)^2}\, .
-\end{equation} %where  $E_0 = g \sqrt{\frac{\hbar}{2m\nu_0}}$.
+a = \hbar^2\abs{\gamma}^2\chi_0^2 I_0(C_t),
+\end{equation} plus a correction for each one, proportional to  $C_t$. These corrections are
 
-We evaluate the real part of this expression numerically. In order for
-the adiabatic approximation to be valid, the variation in the
-mechanical oscillator's frequency must be slow when compared to the
-frequency itself ($\omega \ll \nu_0$) which translates to classical
-solutions with $1 \ll n$ due to \eqref{scattering}. We assume that
-$\epsilon' = \frac{\nu_0}{10}$, or, equivalently, $\epsilon = \frac{n^2}{5}$. Physically,
-we employ a classical solution which describes a situation where the
-oscillator's average $\nu_0$ frequency is the fastest one, while the
-secular frequency $\omega$ is the slowest one. In figure \ref{GraficaTemp} it is shown the
-number of mechanical oscillations when $\frac{\delta}{\nu_0}$ is in
-the range of $[-2,2]$. Compared with the non-driven case, the
-parametrically driven oscillator has a frequency shift of where to
-expect the minimum number of excitations, and a region where the
-predicted number of excitations is smaller. The reason of this
-behavior is that, as $\epsilon$ increases, the parametric modulation
-causes the cooling and heating coefficients to shift away from each
-other, and its distribution becomes narrower and presents a higher
-peak. This can be observed in figure \ref{GraficaA-}. As long as
-$\nu_0$ and $\omega$ fulfill \eqref{scattering}, altering them does
-not change the final temperature. The parameters used are consistent
-with the reported controlled frequency modulation
-\cite{WoolleyNM}\cite{JockelS}. 
+\begin{align}
+A_-^c=& -bC_t(\frac{(\delta+\nu_0)^2\kappa+ \kappa\nu_0^2 + \kappa^3}{(-(\delta+\nu_0)^2+\kappa^2+\nu_0^2)^2+4(\delta+\nu_0)^2\kappa^2)})\\
+A_+^c=& -bC_t(\frac{(\delta-\nu_0)^2\kappa+ \kappa\nu_0^2 + \kappa^3}{(-(\delta-\nu_0)^2+\kappa^2+\nu_0^2)^2+4(\delta-\nu_0)^2\kappa^2)})
+\end{align} with
 
+\begin{equation}
+b= \hbar^2\abs{\gamma}^2\chi_0^2 J_1(C_t).
+\end{equation}  $I_0$ and $J_1$ are the modified Bessel Function of the first kind and the Bessel function of the first kind, respectively. They appear in the cooling and heating rates as a result of  averaging out the time dependencies for the cavity eigenvalues in Appendix \ref{CoolingAppendix}. With these expressions in hand, the temperature is easily calculated. Everything is first normalized with respect to $\nu_0$ and the graph is made using $\frac{\delta}{\nu_0}$ as the variable.
 
-
-\begin{figure}
-\includegraphics[scale=.4]{GraficaTemp.pdf}  
-\caption{ Mechanical oscillator phonon number as a function of the
-  perturbation. The correction results in a shift of the location of
-  the minimum temperature, as well as a lower minimum. All curves
-  cross the same point. $\nu_0=1000$, $\epsilon = \frac{\nu_0}{10}$, $n=100$}
-\label{GraficaTemp}
+\begin{figure}[h!]
+\includegraphics[scale=.5]{TempGorden1.pdf}   
+\caption{ Mechanical oscillator phonon number with and without a time dependence. The correction results in a lower minimum temperature, as well as a lower temperature in a region around this minimum.}\label{fig:TempComparisson}
 \end{figure}
 
+For figure \ref{fig:TempComparisson},we used $\kappa = 0.05\nu_0$ and calculated $\expval{m}$ in the region $\frac{\delta}{\nu_0}\in [-2,2]$. The positive half of the region corresponds to heating of the resonator and the negative part corresponds to cooling. We assume that the parameters are such that
+
+\begin{equation}
+\frac{C_tJ_1(C_t)}{I_0(C_t)} = 0.1,
+\end{equation} so that corrections proportional to higher orders in $C_t$ could be disregarded.  As we can see in figure \ref{fig:TempRatio}, the corrected temperature is lower over the majority of the inspected detuning range. 
+
 \begin{figure}
-\includegraphics[scale=.4]{GraficaA-.pdf}
-\caption{Cooling coefficient $A_-$ as a function of the perturbation.
-  As $\epsilon$ increases the $A_-$ presents a narrower distribution
-  and a higher peak. The peak shifts away from the cavity resonance
-  corresponding to $\nu_0$. $A_+$ is not shown as, in this region, it
-  is around 4 orders of magnitude smaller than $A_-$. We used the
-  parameters in the text plus $\kappa \ll \nu_0$.}
-\label{GraficaA-}
+\includegraphics[scale=.5]{TempPropGorden1.pdf}
+\caption{Ratio of the uncorrected and corrected temperatures over the cooling side of the detuning range. The corrected temperature is lower than the uncorrected temperature not just near the minimum.}
+\label{fig:TempRatio}
 \end{figure}
-
-
-
-% \begin{figure}
-% \includegraphics[scale=.4]{GraficaA-.pdf}
-% \caption{Cooling sideband for different perturbation levels. Besides all the scattering relations already stated, we
-%   work under $\kappa \ll \nu_0$}
-% \label{GraficaA-}
-% \end{figure}
 
 
 
@@ -544,8 +467,8 @@ with the reported controlled frequency modulation
 
 \section{Conclusions}\label{ConCl}
 
-Using an improved theoretical description of dissipation of a
-parametrically driven mechanical object, in an optomechanical setup,
+Using an improved theoretical description for the dissipation of a
+parametrically driven mechanical object in an optomechanical setup,
 we found that the lowest temperature reached can be lower than in the
 non-driven case. This implies that periodically changing the natural
 frequency of the mechanical object in optomechanics can be used for
@@ -553,7 +476,7 @@ reaching lower temperatures. This also opens the path for exploring
 what happens if the movement of a leaky cavity is taken into
 consideration when theoretically treating the dissipation of the
 cavity field, because, similarly to the setup study in this paper, the
-natural frequency of the cavity field changes periodically with time.
+natural frequency of the cavity field changes periodically with time, in addition to the time dependency the cavity acquires from the harmonic oscillator.
 We plan to explore this case in future work.
  
 \appendix
@@ -571,7 +494,7 @@ L_a \rho =& - \frac{\kappa}{2}(n_p+1)[a^\dagger a\rho + \rho a^\dagger a -2a\rho
 \end{align}
 and
 \begin{equation}
-  H=\hbar \omega \, a^\dagger a\, ,
+  H=\hbar \delta \, a^\dagger a\, ,
 \end{equation}
 model the behavior of a bosonic field inside a one mode leaky cavity
 with frequency $\omega$; the cavity is in contact with a thermal bath
@@ -579,37 +502,37 @@ characterized by $n_p$ thermal photons with frequency $\omega$, the
 cavity damping is given by $\kappa$ \cite{EnglertDB} and $a^\dagger$,
 $a$ are cavity photons creation and anhilation operators. The density
 operator can be expressed in a basis given by the Lindblad
-superoperator's eigenstates, ${\hat{\rho}_n^l}$,
-$n=0,1,2,...\qquad l = 0,\pm 1, \pm 2,... $, where
+superoperator's eigenstates, ${\hat{\rho}_n^j}$,
+$n=0,1,2,...\qquad j = 0,\pm 1, \pm 2,... $, where
 \begin{equation}
-L\hat{\rho}_n^l = \lambda_n^l\hat{\rho}_n^l\label{eq:eigen_damping}\, ,
+L\hat{\rho}_n^j = \lambda_n^j\hat{\rho}_n^j\label{eq:eigen_damping}\, ,
 \end{equation}
 with
 \begin{equation}
-\lambda_n^l = -il\omega -\kappa[n + \frac{|l|}{2}]\, .
+\lambda_n^j = ij\delta -\kappa[n + \frac{|j|}{2}]\, .
 \end{equation} The real part of these eigenvalues corresponds only to the $L_a$ term. The full eigenvalues for $\mathcal{L}$  also includes the eigenvalues for the Hamiltonian term, which is the imaginary part.
 
 
 
 This basis is known as the damping basis \cite{EnglertDB} and is given by
 \begin{align}\label{DefDB}
-\hat{\rho}_n^l=&a^{\dagger l}\frac{(-1)^n}{(n_p+1)^{l+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad l \geq 0, \\
-\hat{\rho}_n^l=&\frac{(-1)^n}{(n_p+1)^{|l|+1}}:L_n^{|l|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|l|}\quad l \leq 0,
+\hat{\rho}_n^l=&a^{\dagger j}\frac{(-1)^n}{(n_p+1)^{j+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad j \geq 0, \\
+\hat{\rho}_n^j=&\frac{(-1)^n}{(n_p+1)^{|j|+1}}:L_n^{|j|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|j|}\quad l \leq 0,
 \end{align} with eigenvalues
 
 The Lindblad operator is not hermitian and the "left" eigenstates must
 be considered to find the coefficients of the density operator
 expansion in the damping basis. These are the eigenstates of the
-equation $\check{\rho}_n^lL = \lambda_n^l\check{\rho}_n^l$ they have
+equation $\check{\rho}_n^jL = \lambda_n^j\check{\rho}_n^j$ they have
 the same eigenvalues and are given by
 \begin{align}\label{DefDBDual}
-\check{\rho}_n^l=&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+l)!}:L_n^l[\frac{a^\dagger a}{n_p}]:a^{l}\quad l \geq 0, \\
-\check{\rho}_n^l=&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+|l|)!}a^{\dagger|l|}:L_n^{|l|}[\frac{a^\dagger a}{n_p}]:\quad l \leq 0.
+\check{\rho}_n^j=&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+j)!}:L_n^j[\frac{a^\dagger a}{n_p}]:a^{j}\quad j \geq 0, \\
+\check{\rho}_n^j=&(\frac{-n_p}{n_p+1})^n\frac{n!}{(n+|j|)!}a^{\dagger|j|}:L_n^{|j|}[\frac{a^\dagger a}{n_p}]:\quad j \leq 0.
 \end{align}
 
 The left and right eigenstates are orthogonal under the product
 \begin{equation}
-Tr[\hat{\rho}_n^l\check{\rho}_{n'}^{l'}] = \delta_{n,n'}\delta_{l,l'},
+Tr[\hat{\rho}_n^j\check{\rho}_{n'}^{j'}] = \delta_{n,n'}\delta_{j,j'},
 \end{equation} and fulfill
 
 \begin{equation}\label{DampingBasisCompleteness}
@@ -617,13 +540,13 @@ Tr[\hat{\rho}_n^l\check{\rho}_{n'}^{l'}] = \delta_{n,n'}\delta_{l,l'},
 \end{equation} where the sum is over all possible eigenvalues. An important case is a cavity at zero temperature, in this case the right states are \cite{EnglertDB}
 
 \begin{align}\label{DefDBZero}
-\hat{\rho}_n^l=&a^{\dagger l}(-1)^{a^\dagger a + n}\binom{n+l}{a^\dagger a+l} \quad l \geq 0, \\
-\hat{\rho}_n^l=&(-1)^{a^\dagger a + n}\binom{n+|l|}{a^\dagger a+|l|}a^{|l|} \quad l < 0,
+\hat{\rho}_n^j=&a^{\dagger j}(-1)^{a^\dagger a + n}\binom{n+j}{a^\dagger a+j} \quad j \geq 0, \\
+\hat{\rho}_n^j=&(-1)^{a^\dagger a + n}\binom{n+|j|}{a^\dagger a+|j|}a^{|j|} \quad j < 0,
 \end{align} and the left states are
 
 \begin{align}\label{DefDBDualZero}
-\check{\rho}_n^l=&\frac{n!}{(n+l)!}\binom{a^\dagger a}{n}a^l \quad l \geq 0, \\
-\check{\rho}_n^l=&a^{\dagger|l|}\frac{n!}{(n+|l|)!}\binom{a^\dagger a}{n} \quad l < 0.
+\check{\rho}_n^j=&\frac{n!}{(n+j)!}\binom{a^\dagger a}{n}a^j \quad j \geq 0, \\
+\check{\rho}_n^j=&a^{\dagger|j|}\frac{n!}{(n+|j|)!}\binom{a^\dagger a}{n} \quad j < 0.
 \end{align}
 
 These states play an important part in the derivation of the master
@@ -632,7 +555,7 @@ equation of the cavity state in the adiabatic approximation.
 \section{Laser Cooling and Projection Operators}\label{CoolingAppendix}
 
 In order to find the master equation
-\eqref{eq:projected_master_equation} we begin with the equation 
+\eqref{eq:ProyectedMasterEqCooling} we begin with the equation 
 \begin{equation}\label{eq:master_no_mechanical_damping}
 \dot{\rho}=(\mathcal{L}_0+\mathcal{L}_1)\rho\, ,
 \end{equation}
@@ -653,10 +576,10 @@ equation \eqref{LCMasterEq} without the mechanical damping, which
 occurs on a slower time scale than the other processes and can be
 incorporated after the adiabatic approximation. We employ projection
 operators, like those in \cite{CarmichaelQO}, to separate the
-evolution in different time scales and make an adiabatic
-approximation. The projection operator $P$ projects the state in a
+evolution into different time scales and perform an adiabatic
+approximation. The projection operator $P$ projects the state into a
 slow-decaying evolution space whereas the projection operator $Q$
-projects the system in a fast-decaying evolution space, they fulfill
+projects the system into a fast-decaying evolution space, they fulfill
 the completeness relation
 \begin{equation}
 1 = P + Q,
@@ -664,9 +587,7 @@ the completeness relation
 and have the properties
 \begin{enumerate}
 
-\item $ P\mathcal{L}_{0} = \mathcal{L}_{0}P = i w $\qquad with $w$ a
-  real number, because P projects the state in its stationary
-  part\fxnote{Checar}
+\item $ P\mathcal{L}_{0} = \mathcal{L}_{0}P = 0 $\qquad as P projects the state to the stationary subspace
 \item $P\mathcal{L}_{1}P=0$ \qquad as the interaction does not couple states in P
 
 \item $P^2 = P \quad Q^2 = Q$ \qquad as $P$ and $Q$ are projectors.
@@ -678,165 +599,143 @@ In the decay picture the master equation is
 \end{equation}
 where
 \begin{align*}
- \rho' =& e^{\mathcal{L}_0t}\rho,\\
-  \mathcal{L}_1' =& e^{-\mathcal{L}_0t}\mathcal{L}_1e^{\mathcal{L}_0t} = \mathcal{L}_1'\, .
-\end{align*}
+ \rho' =& e^{\int_0^t \mathcal{L}_0 dt'}\rho,\\
+  \mathcal{L}_1' =& e^{-\int_0^t \mathcal{L}_0 dt'}\mathcal{L}_1e^{\int_0^t \mathcal{L}_0 dt'}.
+\end{align*} or more explicitly
 
-We project the master equation \eqref{eq:master_decay_picture} into
-both $P$ and $Q$ to obtain the equations (we ommit the primes from now on)
+\begin{align}
+\rho' =& e^{-\mathcal{L}_0t - \frac{\delta_t}{\nu_0} \sin(\nu_0t)}\rho,\\
+\mathcal{L}_1' =&e^{-\mathcal{L}_0t - \frac{\delta_t}{\nu_0} \sin(\nu_0t)}\mathcal{L}_1' e^{\mathcal{L}_0t +\frac{\delta_t}{\nu_0} \sin(\nu_0t)},
+\end{align} where $\mathcal{L}_0$ refers to all of the non time-dependent eigenvalues.  The time integration is needed because the cavity detuning is explicitly time dependent. We project the master equation \eqref{eq:master_decay_picture} into
+both $P$ and $Q$ to obtain the equations 
 \begin{align*}
-P\dot{\rho} =& P\mathcal{L}_1Q\rho, \\
-Q\dot{\rho} =& Q\mathcal{L}Q\rho + Q\mathcal{L}P\rho.
+P\dot{\rho}' =& P\mathcal{L}_1Q\rho', \\
+Q\dot{\rho}' =& Q\mathcal{L}Q\rho' + Q\mathcal{L}P\rho'.
 \end{align*} The equation for $Q$ can be formally integrated
 
 \begin{align*}
-Q\rho =& Q\rho(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}(t')P\rho(t')\\
-       &+\int_{t_0}^{t}dt'Q\mathcal{L}(t')Q\rho(t'),\\
-\simeq & Q\rho(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho(t_0)\\
-       &+\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho(t_0)+O(\eta^2),
+Q\rho =& Q\rho'(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}(t')P\rho'(t')\\
+       &+\int_{t_0}^{t}dt'Q\mathcal{L}(t')Q\rho'(t'),\\
+\simeq & Q\rho'(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho'(t_0)\\
+       &+\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho'(t_0)
 \end{align*}
-and this is substituted into the $P$ equation \fxnote{comentar algo de la aproximacion}
+and this is substituted into the $P$ equation. Here we have employed the Markov approximation with respect to the time dependency in $\rho(t)$.
 
 \begin{align}
-P\dot{\rho}(t) =& P\mathcal{L}_1Q\rho(t_0)\\ 
- &+ P\mathcal{L}_1\int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho(t_0)\nonumber \\
- &+ P\mathcal{L}_1\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho(t_0) \nonumber,
+P\dot{\rho}(t) =& P\mathcal{L}_1Q\rho'(t_0)\\ 
+ &+ P\mathcal{L}_1\int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho'(t_0)\nonumber \\
+ &+ P\mathcal{L}_1\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho'(t_0)\nonumber,
 \end{align}
-where only the first integral term is non zero \fxnote{Creo que esto
-  solo es verdad si la condicion inicial no incluye terminos en Q. Es
-  asi?}. We focus on this term and transform back from the decay
-picture \fxnote{Creo que como regresas a la ``picture'' estandar, es confuso que hayas eliminado las primas}
+where only the first integral term is non zero as we can choose the initial condition to have no part in $Q$. We focus on this term and transform back from the decay
+picture
 
-\begin{equation}\label{eq:temp_1}
-P\dot{\rho}(t)=P e^{-\mathcal{L}_0 t}\mathcal{L}_1e^{\mathcal{L}_0 t}\int_{t_0}^{t}dt'Qe^{-\mathcal{L}_0 t'}\mathcal{L}_1e^{\mathcal{L}_0 t'}Pe^{-\mathcal{L}_0(t_0)}\rho(t_0).
-\end{equation}\fxnote{Le agregue el lado izquierdo a la ecuacion de arriba, es asi? o tiene exponenciales por regresar a la picture normal?}
 
-We write the projectors as
+\begin{align}\label{eq:temp_1}
+P\dot{\rho}'(t)=&P e^{-\mathcal{L}_0 t-\delta(t)}\mathcal{L}_1e^{\mathcal{L}_0 t+\delta(t)}\\
+\int_{t_0}^{t}dt'&Qe^{-\mathcal{L}_0 t'-\delta(t')}\mathcal{L}_1e^{\mathcal{L}_0 t'+\delta(t')}Pe^{-\mathcal{L}_0(t_0)-\delta(t_0)}\rho(t_0).\nonumber
+\end{align} with $\delta(t)=\frac{\delta_t}{\nu_0} \sin(\nu_0t)$. We write the projectors as
 \begin{eqnarray}
-  P &=& \sum_{\lambda'} (\hat{\rho}_{\lambda'}^{cav}\otimes\hat{\rho}_{\lambda'}^{mec})\otimes(\check{\rho}_{\lambda'}^{cav}\otimes\check{\rho}_{\lambda'}^{mec}),\label{eq:projector_p}\\
-  Q &=& \sum_{\lambda} (\hat{\rho}_{\lambda}^{cav}\otimes \hat{\rho}_{\lambda}^{mec})\otimes(\check{\rho}_{\lambda}^{cav}\otimes\check{\rho}_{\lambda}^{mec})\label{eq:projector_q}\, ,
+  P &=& \sum_{\lambda} (\hat{\rho}_{\lambda}^{cav}\otimes\hat{\rho}_{\lambda}^{mec})\otimes(\check{\rho}_{\lambda}^{cav}\otimes\check{\rho}_{\lambda}^{mec}),\label{eq:projector_p}\\
+  Q &=& \sum_{\lambda'} (\hat{\rho}_{\lambda'}^{cav}\otimes \hat{\rho}_{\lambda'}^{mec})\otimes(\check{\rho}_{\lambda'}^{cav}\otimes\check{\rho}_{\lambda'}^{mec})\label{eq:projector_q}\, ,
 \end{eqnarray}
-the operators with the $\lambda'$ label project the state in the
+the projectors with the $\lambda$ label project the state in the
 slow-decaying time-scale subspace, they are eigenstates of
-$\mathcal{L}_0$ with imaginary eigenvalue. The operators with the
-$\lambda$ label corresponds to the fast-decaying time-scale, they are
+$\mathcal{L}_0$ with purely imaginary  eigenvalues. The projectors with the
+$\lambda'$ label corresponds to the fast-decaying time-scale, they are
 eigenstates of $\mathcal{L}_0$ with eigenvalues with a non-zero real
-part, those states decay quickly. Using the states defined in Appendix
-\ref{App1},
-$\hat{\rho}_{\lambda'}^{cav}=\hat{\rho}_n^l,\,\check{\rho}_{\lambda'}^{cav}=\check{\rho}_n^l$
-with $n=l=0$, and
-$\hat{\rho}_{\lambda}^{cav}=\hat{\rho}_n^l,\,\check{\rho}_{\lambda}^{cav}=\check{\rho}_n^l$
-with $n+|l|>0$. The mechanical states are the left and right
+part, those states decay quickly. The projectors are applied via the product
+
+\begin{equation}
+PX = \hat{\rho_{\lambda}}Tr[\check{\rho}_{\lambda}X].
+\end{equation} We employ the states defined in Appendix
+\ref{App1} for the cavity. The mechanical states are the left and right
 eigenstates of $\mathcal{L}_{mec}$
 \begin{equation}
-\hat{\rho_{\lambda_m}^{mec}}=\Ket{n}\Bra{n+m}=\check{\rho_{\lambda_m}^{mec}}^\dagger,
-\end{equation} \fxnote{checa que puse bien los estados}
+\hat{\rho_{\lambda_l}^{mec}}=\Ket{n+l}\Bra{n}=\check{\rho_{\lambda_l}^{mec}}^\dagger,
+\end{equation} 
 with eigenvalues
 \begin{equation}
-\lambda_m = -i m \nu(t).
+\lambda_l = i l \nu_0.
 \end{equation}
 
 Using equations \eqref{eq:projector_p} and \eqref{eq:projector_q} in
 \eqref{eq:temp_1} and applying the operator $\mathcal{L}_0$ we obtain
 \begin{align}\label{ProyectionEQ}
-P\dot{\rho}(t)=P e^{-\mathcal{L}_0 t}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda t} \hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda}e^{-\lambda t'}\mathcal{L}_1\\
-&e^{\lambda' t'}\hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'} e^{-\lambda' t_0}\rho(t_0)]\nonumber.
-\end{align}
-\fxnote*{aqui esto no es necesario, o si?}{as the cavity is taken to
-  be at zero temperature}
-\fxnote*{esto no va a aqui}{Here we make an important note. In
-general, the $\Gamma$ operators contained within the $\mathcal{L}_1$
-term are explicitly time dependent. However, in this particular case,
-due to the form of \eqref{SmallOscillationsSolution}, when multiplied
-by \eqref{GammaCoefficients}, the explicit time dependence is canceled
-out excluding terms of order $\frac{\epsilon}{n\nu_0}$ and so we
-consider them to be non time-dependent and do not account for them
-during the integration.}
+P\dot{\rho}'(t)=P e^{-\mathcal{L}_0 t}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda' t} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}e^{-\lambda' t'}\mathcal{L}_1\\
+&e^{\lambda t'}\hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda} e^{-\lambda t_0}\rho(t_0)]\nonumber.
+\end{align} where it is important to remember that the part of these eigenvalues that corresponds to the cavity has an explicitly time dependent part. If we  set $t_0=0$ and note $\delta(0)=0$ we may write \eqref{ProyectionEQ}, returning $P$ and $Q$ to their original notation, as
 
-In order to perform the integration we write
+\begin{align}
+P\dot{\rho}'(t)=&\sum_{\lambda,\lambda'}[P \mathcal{L}_1Q\\
+\int_0^t dt' & e^{(\lambda'-\lambda)t}e^{(\lambda_c'-\lambda_c)\delta(t)}e^{(\lambda-\lambda')t'}e^{(\lambda_c-\lambda_c')\delta(t')}\mathcal{L}_1P\rho(0)]\nonumber
+\end{align} In order to perform the integration we make the approximation
 \begin{equation}
-e^{(\lambda'-\lambda)t'} \approx e^{(i\nu_0-\lambda)t'} + i\epsilon' \cos(2 \omega t')t' e^{(i\nu_0-\lambda)t'}.
-\end{equation}
-where we used that
-$\lambda' = \lambda_{mec}(t)=i\nu_0 + i\epsilon' \cos(2\omega t)$ and
-$\epsilon\ll \nu_0$, each term is now integrated separately. For the
+e^{(\lambda_c-\lambda_c')\delta(t')} \approx 1+(\lambda_c-\lambda_c')\delta(t')
+\end{equation} each term is now integrated separately. For the
 first term
 
 \begin{equation}
-\frac{1}{i\nu_0-\lambda}[e^{(i\nu_0-\lambda)t}-e^{(i\nu_0-\lambda)t_0}]e^{\lambda t - \lambda' t_0}.
-\end{equation} Remembering that in this case $\lambda' = i\nu_0 + i \epsilon' \cos(2\omega t)$ this is equivalent to
+\text{First term}=\sum_{\lambda,\lambda'}P \mathcal{L}_1Qe^{(\lambda'-\lambda)t}[\frac{e^{(\lambda-\lambda')t}-1}{(\lambda-\lambda')}]e^{(\lambda_c'-\lambda_c)\delta(t)}\mathcal{L}_1P\rho(0).
+\end{equation}
+Here we make the adiabatic approximation. For large enough $t$,
+$e^{\lambda't}$ can be set equal to zero as the $\lambda'$ states
+decay very quickly. We now also use that $\lambda$ states all have
+eigenvalues equal to zero, as only those eigenvalues have no negative
+real part. This makes the first term
 
-\begin{equation}\label{FirstTermLambdaExponentials}
-\frac{1}{i\nu_0-\lambda}[e^{\lambda'(t-t_0)}e^{\epsilon' \cos(2\omega t_0)t_0} -e^{\lambda'(t-t_0)}e^{\lambda(t-t_0)}e^{\epsilon' \cos(2\omega t_0)t_0}].
-\end{equation} \fxnote{Aqui me perdi, si sustituiste $\lambda'$ en una ecuacion ya no deberia aparecer en la segunda}
-
-
-The adiabatic approximation consists of taking the limit
-$(t-t_0) \to \infty$ or $t \to \infty, \quad t_0 \to 0$. In this limit
 
 \begin{equation}
-e^{\lambda t} \to 0 \qquad e^{\lambda' t} \to 1.
-\end{equation} This is due to $\lambda$ representing the fast time scale which decays quickly, while $\lambda'$ represents the slow time scale which contains stationary states. Under these conditions, \eqref{FirstTermLambdaExponentials} is equal to simply
+\text{First term}=\sum_{\lambda,\lambda'}P \mathcal{L}_1Q[E(\lambda')]\mathcal{L}_1P\rho(0),
+\end{equation} with
 
 \begin{equation}
-\frac{1}{a},
-\end{equation}  with $a = i\nu_0 - \lambda$. The procedure for the second term is completely analogous, and so, up to first order in $\epsilon'$ and under the adiabatic approximation, \eqref{LambdaExponentials} is equal to
+E(\lambda') = \frac{1}{-\lambda'}e^{\lambda_c'\delta(t)}.
+\end{equation} The second term is also similarly integrated and can be written as
 
 \begin{equation}
-[\int_{t_0}^t dt' e^{(\lambda'-\lambda)t'}]e^{\lambda t- \lambda't_0} = \frac{1}{a} + i\epsilon' \frac{a^2 - \omega^2}{(4\omega^2 + a^2)^2} = I_{\lambda',\lambda}.
-\end{equation} Returning to \eqref{ProyectionEQ}, we may now write it as
+\text{Second term } =\frac{\delta_t}{\nu_0}\sum_{\lambda,\lambda'}P\mathcal{L}_1Q[E_c(\lambda')]\mathcal{L}_1P\rho(0),
+\end{equation} with
 
 \begin{equation}
-Pe^{-\mathcal{L}_0 t} \sum_{\lambda',\lambda} \mathcal{L}_1 I_{\lambda',\lambda} \rho_{\lambda'} \mathcal{L}_1 \rho_\lambda \rho(t_0).
-\end{equation} We may return the projectors to their original notation to remove the sums over $\lambda$.  Now, the sums are over the possible values of the mechanical eigenvalues 
-
-\begin{equation}
-Pe^{-\mathcal{L}_0 t} \sum_{m} \mathcal{L}_1 I_{m} Q \mathcal{L}_1 P \rho(t_0).
-\end{equation} We return to the full equation, which is multiplied by $Pe^{\mathcal{L}_0 t}$ 
-
-\begin{equation}
-P\dot{\rho} = P[\mathcal{L}_0]P \rho(t) + \sum_{m} P \mathcal{L}_1 I_{m} Q \mathcal{L}_1 P \rho(t_0).
-\end{equation} We then trace over all the cavity degrees of freedom and set  $\mu = Tr_c[P\rho]\otimes \rho_{st}$, where we assume no correlation between the cavity and mirror states at time $t_0$. This leads to the equation
-
-\begin{equation}\label{FinalProyectedEq}
-\dot{\mu}_m = \mathcal{L}_{mec}\mu_m + Tr_c[ \mathcal{L}_1 I_m \mathcal{L}_1  \mu_m],
-\end{equation} for any given value of $m$. Remembering that $\mathcal{L}_1 = \frac{1}{i\hbar}[X_a X_\Gamma,\bullet]$ and that the mechanical operators $\Gamma$ may leave the trace alongside $\mu$, equation \eqref{FinalProyectedEq} can be written as \eqref{eq:projected_master_equation}. The coefficients $G(\nu_m,0)$ can be written as
-
-\begin{equation}\label{GAppendix}
-G(\nu_m,0)=\int_0^\infty dt' e^{\i\nu(t')t'}Tr_c[X_a e^{L_a t'} X_a \rho_st], 
-\end{equation} for convenience.
-
-
-
-
-\subsection{Evaluation of Trace Term}\label{TraceAppendix}
-
-In order to calculate the $G(\nu_m,0)$ terms in \eqref{eq:projected_master_equation}, the term
-
-\begin{equation}\label{CoolingTrace}
-T=Tr_a[X_ae^{L_at}X_a\rho_{st}],
-\end{equation} must be calculated explicitly. The calculation hinges on the damping basis states detailed in Appendix \ref{App1}. The cavity's stationary state is taken to be the zero temperature base state.
-
-\begin{equation}
-\rho_{st} = \Ket{0}\Bra{0},
-\end{equation} and we recall that
-
-\begin{equation}
-X_a = \frac{(\alpha_0a^{\dagger}+\alpha_0^*a)}{\sqrt{2}}.
-\end{equation} The first step is to separate the term \eqref{CoolingTrace} using \eqref{DampingBasisCompleteness}
-
-\begin{equation}
-Tr_c[X_ae^{L_at}X_a\rho_st] = \sum_\lambda Tr_c[X_ae^{L_at}\hat{\rho}_\lambda] \otimes Tr_c[\check{\rho}_\lambda X_a\Ket{0}\Bra{0}].
-\end{equation} In this context $\lambda$ refers exclusively to the cavity eigenvalues. The $a$ term of $X_a$ is zero when applied to $\rho_{st}$ and so 
+E_c(\lambda')=\frac{(-\lambda'_c)((-\lambda')\sin(\nu_0 t)-\nu_0\cos(\nu_0t))}{(-\lambda')^2 + \nu_0^2}e^{\lambda_c'\delta(t)}.
+\end{equation} We then trace over all cavity degrees of freedom to obtain a master equation for the harmonic oscillator in the steady state subspace $P$. Here we assume that the initial condition is a separable state of the cavity and the harmonic oscillator $\rho(0)=\rho_{c}(0)\otimes\rho_{m}(0)$  and  set $\mu = Tr_c[P\rho_{cav}]$ to arrive at 
 
 \begin{align}
-T=& \alpha_0\sum_\lambda Tr_c[X_ae^{L_at}\hat{\rho}_\lambda] \otimes Tr_c[\check{\rho}_\lambda\Ket{1}\Bra{0}],\\
-=&\frac{\alpha_0}{\sqrt{2}}\sum_\lambda Tr_c[X_ae^{L_at}\hat{\rho}_\lambda] \delta_{n,0}\delta_{l,-1},\\
-=&\frac{\alpha_0}{\sqrt{2}} Tr_c[X_ae^{L_at}\hat{\rho}_0^{-1}],\\
-=&\frac{\alpha_0}{\sqrt{2}}e^{-\frac{\kappa}{2}} Tr_c[X_a\hat{\rho}_0^{-1}],\\
-=&\frac{\alpha_0}{2}e^{-\frac{\kappa}{2}}\alpha_0^*Tr_c[\Ket{0}\Bra{0}],\\
-=&\frac{|\alpha_0|^2}{2}e^{-\frac{\kappa}{2}}.
-\end{align} Here we used the fact that $F\hat{\rho}_0^{-1}=\Ket{0}\Bra{0}$. 
+\dot{\mu}=&\sum_{\lambda'}Tr_c[P \mathcal{L}_1Q[E(\lambda')]\mathcal{L}_1P\rho_{c}(0)\otimes\rho_{m}(0) ],\\
+&+\sum_{\lambda'}\frac{\delta_t}{\nu_0}Tr_c[P\mathcal{L}_1Q[E_c(\lambda')]\mathcal{L}_1P\rho_{c}(0)\otimes\rho_{m}(0) ]\nonumber.
+\end{align} we use the explicit form of $\mathcal{L}_1$ 
+
+\begin{equation}
+\mathcal{L}_1 = [\chi_0 F_aF_\Gamma,\cdot] = [\chi_0(\alpha_0 a^\dagger + \alpha_0^* a)(\gamma_-\Gamma^\dagger-\gamma_+\Gamma),\cdot],
+\end{equation}and set $E= E(\lambda') +\frac{\delta_t}{\nu_0} E_c(\lambda')$ to  arrive at the expression
+
+\begin{align*}
+\dot{\mu} = \chi_0^2 \sum_{\lambda'}&( Tr_c[PF_aF_\Gamma QEF_aF_\Gamma \mu \otimes \rho_{c}]\\
+&- Tr_c[PQEF_aF_\Gamma\mu \otimes \rho_{c} F_aF_\Gamma ]\nonumber \\
+&-Tr_c[PF_aF_\Gamma QE\mu \otimes \rho_{c} F_aF_\Gamma ] \nonumber\\ 
+&+Tr_c[PQE\mu \otimes \rho_{c}F_aF_\Gamma  F_aF_\Gamma ]). \nonumber
+\end{align*}  We note that each projector is composed of a projector for cavity states and a projector for mechanical oscillator states, $P=P_c P_m$ so we can move everything that does not depend on the cavity outside of the trace to obtain
+
+\begin{align}
+\dot{\mu}=\chi_0^2 \sum_{\lambda'}& E(T_{1c}P_m[F_\Gamma,Q_m F_\Gamma \mu]\\
+&-T_{2c}P_m[F_\Gamma,Q_m \mu F_\Gamma ]),\nonumber
+\end{align} where $T_{1c}$ and $T_{2c}$ depend only on the cavity variables. These traces are readily calculated and result in
+
+\begin{align}
+T_1c=& \hbar^2\abs{\alpha_1}^2 \delta_{j,1}\delta{n,0},\\
+T_2c=& \hbar^2 \abs{\alpha_1}^2 \delta_{j,-1}\delta{n,0},\\
+\end{align} while the mechanical terms result in
+
+\begin{align}\label{CoolingBeforecoefficients}
+P_m[F_\Gamma,Q_m F_\Gamma \mu] =& \abs{\gamma}^2((\Gamma\Gamma^\dagger \mu - \Gamma^\dagger \mu  \Gamma)\delta_{l,-1} \\
+&+ (\Gamma^\dagger\Gamma \mu - \Gamma \mu  \Gamma^\dagger)\delta_{l,1}),\nonumber \\
+P_m[F_\Gamma,Q_m  \mu F_\Gamma] =& \abs{\gamma}^2((\Gamma\mu\Gamma^\dagger  - \mu\Gamma^\dagger   \Gamma)\delta_{l,-1}\\ 
+&+ (\Gamma^\dagger \mu\Gamma -  \mu \Gamma \Gamma^\dagger)\delta_{l,1}). \nonumber
+\end{align} the Kronecker deltas refer to the numbers in the eigenvalues, both for the cavity and the mechanical oscillator. These eliminate the sum over all possible $\lambda'$ values. This eigenvalue selection then determines the value of the functions $E(\lambda')$ and $E_c(\lambda')$ which are then averaged over time and equation \eqref{CoolingBeforecoefficients} can then be straightforwardly arranged in the form \eqref{eq:ProyectedMasterEqCooling}.
+
+
+
+
 
 
 
@@ -847,5 +746,3 @@ T=& \alpha_0\sum_\lambda Tr_c[X_ae^{L_at}\hat{\rho}_\lambda] \otimes Tr_c[\check
 \bibliographystyle{unsrt}
 \bibliography{Bib}
 \end{document}
-
-
