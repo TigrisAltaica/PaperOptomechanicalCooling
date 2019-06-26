@@ -7,7 +7,7 @@
 \usepackage{bm}
 \usepackage{braket}
 \usepackage{physics}
-\usepackage{cancel}
+
 
 
 
@@ -555,14 +555,14 @@ equation of the cavity state in the adiabatic approximation.
 \section{Laser Cooling and Projection Operators}\label{CoolingAppendix}
 
 In order to find the master equation
-\eqref{eq:ProyectedMasterEqCooling} we begin with the equation 
+\eqref{eq:ProyectedMasterEqCooling} we begin with the equation based on the Hamiltonian \eqref{LCHamiltonian}
 \begin{equation}\label{eq:master_no_mechanical_damping}
 \dot{\rho}=(\mathcal{L}_0+\mathcal{L}_1)\rho\, ,
 \end{equation}
 where
 \begin{align}
 \mathcal{L}_0=& \mathcal{L}_{cav} + \mathcal{L}_{mec},\\
- =&(\frac{1}{i\hbar}[H_{\rm cav},\bullet]+L_a) +(\frac{1}{i\hbar}[H_{\rm mec}(t),\bullet]), \nonumber
+ =&(\frac{1}{i\hbar}[H_{\rm cav}(t),\bullet]+L_a) +(\frac{1}{i\hbar}[H_{\rm mec},\bullet]), \nonumber
 \end{align}
 gives the free dynamics 
 and
@@ -604,9 +604,9 @@ where
 \end{align*} or more explicitly
 
 \begin{align}
-\rho' =& e^{-\mathcal{L}_0t - \frac{\delta_t}{\nu_0} \sin(\nu_0t)}\rho,\\
-\mathcal{L}_1' =&e^{-\mathcal{L}_0t - \frac{\delta_t}{\nu_0} \sin(\nu_0t)}\mathcal{L}_1' e^{\mathcal{L}_0t +\frac{\delta_t}{\nu_0} \sin(\nu_0t)},
-\end{align} where $\mathcal{L}_0$ refers to all of the non time-dependent eigenvalues.  The time integration is needed because the cavity detuning is explicitly time dependent. We project the master equation \eqref{eq:master_decay_picture} into
+\rho' =& e^{-\mathcal{L}_0t - \mathcal{L}_0^t(t)}\rho,\\
+\mathcal{L}_1' =&e^{-\mathcal{L}_0t - \mathcal{L}_0^t(t)}\mathcal{L}_1' e^{\mathcal{L}_0t +\mathcal{L}_0^t(t)},
+\end{align} where $\mathcal{L}_0$ refers to all of the non time-dependent eigenvalues and $\mathcal{L}_0^t=\frac{\delta_t}{\nu_0} \sin(\nu_0t)[a^\dagger a,\bullet]$ refers to the explicitly time dependent part of the cavity Hamiltonian.  The time integration is needed because the cavity detuning is explicitly time dependent. We project the master equation \eqref{eq:master_decay_picture} into
 both $P$ and $Q$ to obtain the equations 
 \begin{align*}
 P\dot{\rho}' =& P\mathcal{L}_1Q\rho', \\
@@ -631,18 +631,18 @@ picture
 
 
 \begin{align}\label{eq:temp_1}
-P\dot{\rho}'(t)=&P e^{-\mathcal{L}_0 t-\delta(t)}\mathcal{L}_1e^{\mathcal{L}_0 t+\delta(t)}\\
-\int_{t_0}^{t}dt'&Qe^{-\mathcal{L}_0 t'-\delta(t')}\mathcal{L}_1e^{\mathcal{L}_0 t'+\delta(t')}Pe^{-\mathcal{L}_0(t_0)-\delta(t_0)}\rho(t_0).\nonumber
-\end{align} with $\delta(t)=\frac{\delta_t}{\nu_0} \sin(\nu_0t)$. We write the projectors as
+P\dot{\rho}'(t)=&P e^{-\mathcal{L}_0 t-\mathcal{L}_0^t(t)}\mathcal{L}_1e^{\mathcal{L}_0 t+\mathcal{L}_0^t(t)}\\
+\int_{t_0}^{t}dt'&Qe^{-\mathcal{L}_0 t'-\mathcal{L}_0^t(t')}\mathcal{L}_1e^{\mathcal{L}_0 t'+\mathcal{L}_0^t(t')}Pe^{-\mathcal{L}_0(t_0)-\mathcal{L}_0^t(t_0)}\rho(t_0).\nonumber
+\end{align} We write the projectors as
 \begin{eqnarray}
   P &=& \sum_{\lambda} (\hat{\rho}_{\lambda}^{cav}\otimes\hat{\rho}_{\lambda}^{mec})\otimes(\check{\rho}_{\lambda}^{cav}\otimes\check{\rho}_{\lambda}^{mec}),\label{eq:projector_p}\\
   Q &=& \sum_{\lambda'} (\hat{\rho}_{\lambda'}^{cav}\otimes \hat{\rho}_{\lambda'}^{mec})\otimes(\check{\rho}_{\lambda'}^{cav}\otimes\check{\rho}_{\lambda'}^{mec})\label{eq:projector_q}\, ,
 \end{eqnarray}
 the projectors with the $\lambda$ label project the state in the
 slow-decaying time-scale subspace, they are eigenstates of
-$\mathcal{L}_0$ with purely imaginary  eigenvalues. The projectors with the
+$\mathcal{L}_0+\mathcal{L}_0^t(t)$ with purely imaginary  eigenvalues. The projectors with the
 $\lambda'$ label corresponds to the fast-decaying time-scale, they are
-eigenstates of $\mathcal{L}_0$ with eigenvalues with a non-zero real
+eigenstates of $\mathcal{L}_0+\mathcal{L}_0^t(t)$ with eigenvalues with a non-zero real
 part, those states decay quickly. The projectors are applied via the product
 
 \begin{equation}
@@ -659,9 +659,9 @@ with eigenvalues
 \end{equation}
 
 Using equations \eqref{eq:projector_p} and \eqref{eq:projector_q} in
-\eqref{eq:temp_1} and applying the operator $\mathcal{L}_0$ we obtain
+\eqref{eq:temp_1} and applying the operator $\mathcal{L}_0+\mathcal{L}_0^t(t)$ we obtain
 \begin{align}\label{ProyectionEQ}
-P\dot{\rho}'(t)=P e^{-\mathcal{L}_0 t}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda' t} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}e^{-\lambda' t'}\mathcal{L}_1\\
+P\dot{\rho}'(t)=P e^{-\mathcal{L}_0 t-\mathcal{L}_0^t(t)}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda' t} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}e^{-\lambda' t'}\mathcal{L}_1\\
 &e^{\lambda t'}\hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda} e^{-\lambda t_0}\rho(t_0)]\nonumber.
 \end{align} where it is important to remember that the part of these eigenvalues that corresponds to the cavity has an explicitly time dependent part. If we  set $t_0=0$ and note $\delta(0)=0$ we may write \eqref{ProyectionEQ}, returning $P$ and $Q$ to their original notation, as
 
@@ -670,8 +670,8 @@ P\dot{\rho}'(t)=&\sum_{\lambda,\lambda'}[P \mathcal{L}_1Q\\
 \int_0^t dt' & e^{(\lambda'-\lambda)t}e^{(\lambda_c'-\lambda_c)\delta(t)}e^{(\lambda-\lambda')t'}e^{(\lambda_c-\lambda_c')\delta(t')}\mathcal{L}_1P\rho(0)]\nonumber
 \end{align} In order to perform the integration we make the approximation
 \begin{equation}
-e^{(\lambda_c-\lambda_c')\delta(t')} \approx 1+(\lambda_c-\lambda_c')\delta(t')
-\end{equation} each term is now integrated separately. For the
+e^{(\lambda_c-\lambda_c')\delta(t')} \approx 1+(\lambda_c-\lambda_c')\delta(t'),
+\end{equation}  where $\delta(t)=\frac{\delta_t}{\nu_0} \sin(\nu_0t)$ and $\lambda_c$ represents the value of $a^\dagger a$. Each term is now integrated separately. For the
 first term
 
 \begin{equation}
