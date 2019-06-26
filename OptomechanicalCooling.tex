@@ -497,8 +497,8 @@ and
   H=\hbar \delta \, a^\dagger a\, ,
 \end{equation}
 model the behavior of a bosonic field inside a one mode leaky cavity
-with frequency $\omega$; the cavity is in contact with a thermal bath
-characterized by $n_p$ thermal photons with frequency $\omega$, the
+in a reference system which rotates with frequency $\delta$; the cavity is in contact with a thermal bath
+characterized by $n_p$ thermal photons, the
 cavity damping is given by $\kappa$ \cite{EnglertDB} and $a^\dagger$,
 $a$ are cavity photons creation and anhilation operators. The density
 operator can be expressed in a basis given by the Lindblad
@@ -517,9 +517,8 @@ with
 This basis is known as the damping basis \cite{EnglertDB} and is given by
 \begin{align}\label{DefDB}
 \hat{\rho}_n^l=&a^{\dagger j}\frac{(-1)^n}{(n_p+1)^{j+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad j \geq 0, \\
-\hat{\rho}_n^j=&\frac{(-1)^n}{(n_p+1)^{|j|+1}}:L_n^{|j|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|j|}\quad l \leq 0,
-\end{align} with eigenvalues
-
+\hat{\rho}_n^j=&\frac{(-1)^n}{(n_p+1)^{|j|+1}}:L_n^{|j|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|j|}\quad l \leq 0.
+\end{align}
 The Lindblad operator is not hermitian and the "left" eigenstates must
 be considered to find the coefficients of the density operator
 expansion in the damping basis. These are the eigenstates of the
@@ -550,7 +549,22 @@ Tr[\hat{\rho}_n^j\check{\rho}_{n'}^{j'}] = \delta_{n,n'}\delta_{j,j'},
 \end{align}
 
 These states play an important part in the derivation of the master
-equation of the cavity state in the adiabatic approximation.
+equation of the cavity state in the adiabatic approximation. In the absence of damping, the mechanical states are the left and right
+eigenstates of 
+
+\begin{equation}
+H=\hbar\nu_0\Gamma^\dagger\Gamma,
+\end{equation}
+
+are given by
+
+\begin{equation}
+\hat{\rho_{\lambda_l}^{mec}}=\Ket{n+l}\Bra{n}=\check{\rho_{\lambda_l}^{mec}}^\dagger,
+\end{equation} 
+with eigenvalues
+\begin{equation}
+\lambda_l = i l \nu_0.
+\end{equation}
 
 \section{Laser Cooling and Projection Operators}\label{CoolingAppendix}
 
@@ -595,7 +609,7 @@ and have the properties
 In the decay picture the master equation is 
 \begin{equation}
   \label{eq:master_decay_picture}
-    \dot{\rho'} = \mathcal{L}_1\rho'\, ,
+    \dot{\rho'} = \mathcal{L}'_1\rho'\, ,
 \end{equation}
 where
 \begin{align*}
@@ -609,24 +623,26 @@ where
 \end{align} where $\mathcal{L}_0$ refers to all of the non time-dependent eigenvalues and $\mathcal{L}_0^t=\frac{\delta_t}{\nu_0} \sin(\nu_0t)[a^\dagger a,\bullet]$ refers to the explicitly time dependent part of the cavity Hamiltonian.  The time integration is needed because the cavity detuning is explicitly time dependent. We project the master equation \eqref{eq:master_decay_picture} into
 both $P$ and $Q$ to obtain the equations 
 \begin{align*}
-P\dot{\rho}' =& P\mathcal{L}_1Q\rho', \\
-Q\dot{\rho}' =& Q\mathcal{L}Q\rho' + Q\mathcal{L}P\rho'.
+P\dot{\rho}' =& P\mathcal{L}_1'Q\rho', \\
+Q\dot{\rho}' =& Q\mathcal{L}'_1Q\rho' + Q\mathcal{L}'_1P\rho'.
 \end{align*} The equation for $Q$ can be formally integrated
 
 \begin{align*}
-Q\rho =& Q\rho'(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}(t')P\rho'(t')\\
-       &+\int_{t_0}^{t}dt'Q\mathcal{L}(t')Q\rho'(t'),\\
-\simeq & Q\rho'(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho'(t_0)\\
-       &+\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho'(t_0)
+Q\rho =& Q\rho'(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}'_1(t')P\rho'(t')\\
+       &+\int_{t_0}^{t}dt'Q\mathcal{L}'_1(t')Q\rho'(t'),
 \end{align*}
-and this is substituted into the $P$ equation. Here we have employed the Markov approximation with respect to the time dependency in $\rho(t)$.
-
+ and then the Markov approximation is performed, approximating $\rho(t')$ by $\rho(t_0)$
+\begin{align*}
+Q\rho\simeq & Q\rho'(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}'_1(t')P\rho'(t_0)\\
+       &+\int_{t_0}^{t}dt'Q\mathcal{L}'_1(t')Q\rho'(t_0),
+\end{align*}
+and this is substituted into the $P$ equation. 
 \begin{align}
 P\dot{\rho}(t) =& P\mathcal{L}_1Q\rho'(t_0)\\ 
  &+ P\mathcal{L}_1\int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho'(t_0)\nonumber \\
  &+ P\mathcal{L}_1\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho'(t_0)\nonumber,
 \end{align}
-where only the first integral term is non zero as we can choose the initial condition to have no part in $Q$. We focus on this term and transform back from the decay
+where only the second term is non zero as we can choose the initial condition to have no part in $Q$. We focus on this term and transform back from the decay
 picture
 
 
@@ -640,59 +656,57 @@ P\dot{\rho}'(t)=&P e^{-\mathcal{L}_0 t-\mathcal{L}_0^t(t)}\mathcal{L}_1e^{\mathc
 \end{eqnarray}
 the projectors with the $\lambda$ label project the state in the
 slow-decaying time-scale subspace, they are eigenstates of
-$\mathcal{L}_0+\mathcal{L}_0^t(t)$ with purely imaginary  eigenvalues. The projectors with the
+$\mathcal{L}_0+\mathcal{L}_0^t(t)$ with only zero eigenvalues. The projectors with the
 $\lambda'$ label corresponds to the fast-decaying time-scale, they are
 eigenstates of $\mathcal{L}_0+\mathcal{L}_0^t(t)$ with eigenvalues with a non-zero real
 part, those states decay quickly. The projectors are applied via the product
 
 \begin{equation}
-PX = \hat{\rho_{\lambda}}Tr[\check{\rho}_{\lambda}X].
+PX =\sum_\lambda \hat{\rho_{\lambda}}Tr[\check{\rho}_{\lambda}X],
+\end{equation} with
+
+\begin{equation}
+\hat{\rho}_\lambda = \hat{\rho}_\lambda^{mec} \otimes  \hat{\rho}_\lambda^{cav}.
 \end{equation} We employ the states defined in Appendix
-\ref{App1} for the cavity. The mechanical states are the left and right
-eigenstates of $\mathcal{L}_{mec}$
-\begin{equation}
-\hat{\rho_{\lambda_l}^{mec}}=\Ket{n+l}\Bra{n}=\check{\rho_{\lambda_l}^{mec}}^\dagger,
-\end{equation} 
-with eigenvalues
-\begin{equation}
-\lambda_l = i l \nu_0.
-\end{equation}
+\ref{App1} for both the cavity and the mechanical resonator. 
 
 Using equations \eqref{eq:projector_p} and \eqref{eq:projector_q} in
 \eqref{eq:temp_1} and applying the operator $\mathcal{L}_0+\mathcal{L}_0^t(t)$ we obtain
 \begin{align}\label{ProyectionEQ}
 P\dot{\rho}'(t)=P e^{-\mathcal{L}_0 t-\mathcal{L}_0^t(t)}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda' t} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}e^{-\lambda' t'}\mathcal{L}_1\\
 &e^{\lambda t'}\hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda} e^{-\lambda t_0}\rho(t_0)]\nonumber.
-\end{align} where it is important to remember that the part of these eigenvalues that corresponds to the cavity has an explicitly time dependent part. If we  set $t_0=0$ and note $\delta(0)=0$ we may write \eqref{ProyectionEQ}, returning $P$ and $Q$ to their original notation, as
+\end{align} where it is important to remember that the part of these eigenvalues that corresponds to the cavity has an explicitly time dependent part. If we  set $t_0=0$ and note that $\mathcal{L}_0^t(0)=0$, we may write \eqref{ProyectionEQ}, returning $P$ and $Q$ to their original notation, as
 
 \begin{align}
-P\dot{\rho}'(t)=&\sum_{\lambda,\lambda'}[P \mathcal{L}_1Q\\
-\int_0^t dt' & e^{(\lambda'-\lambda)t}e^{(\lambda_c'-\lambda_c)\delta(t)}e^{(\lambda-\lambda')t'}e^{(\lambda_c-\lambda_c')\delta(t')}\mathcal{L}_1P\rho(0)]\nonumber
-\end{align} In order to perform the integration we make the approximation
+P\dot{\rho}'(t)=&\sum_{\lambda,\lambda'}[P \mathcal{L}_1Q[...]\mathcal{L}_1P\rho(0)],\\
+[...] =& (\int_0^t dt' e^{(\lambda'-\lambda)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda-\lambda')t'}\nonumber \\ 
+&\qquad \quad e^{(\lambda_c-\lambda_c')\frac{\delta_t}{\nu_0} \sin(\nu_0t')}),\nonumber
+\end{align} where $\lambda_c=ia^\dagger a$. In order to perform the integration we make the approximation
 \begin{equation}
-e^{(\lambda_c-\lambda_c')\delta(t')} \approx 1+(\lambda_c-\lambda_c')\delta(t'),
-\end{equation}  where $\delta(t)=\frac{\delta_t}{\nu_0} \sin(\nu_0t)$ and $\lambda_c$ represents the value of $a^\dagger a$. Each term is now integrated separately. For the
-first term
+e^{(\lambda_c-\lambda_c')\frac{\delta_t}{\nu_0} \sin(\nu_0t')} \approx 1+(\lambda_c-\lambda_c')\frac{\delta_t}{\nu_0} \sin(\nu_0t'),
+\end{equation} for the $t'$ term. This leads to
+
+\begin{align}
+&P\dot{\rho}'(t)\approx \\
+&\sum_{\lambda'}P \mathcal{L}_1Q[\int_0^t dt' e^{(\lambda'-\lambda)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda-\lambda')t'}]\mathcal{L}_1P\rho(0)\nonumber \\
+&+\frac{\delta_t}{\nu_0}\sum_{\lambda'}(\lambda_c-\lambda_c')P\mathcal{L}_1Q \nonumber\\
+&[\int_0^t dt'\sin(\nu_0t') e^{(\lambda'-\lambda)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda-\lambda')t'}]\mathcal{L}_1P\rho(0),\nonumber
+\end{align}
+
+ After integration this results in
+
+\begin{align}
+P\dot{\rho}'(t)\approx& \sum_{\lambda'}P \mathcal{L}_1Q[E(\lambda')]\mathcal{L}_1P\rho(0)\\
+&+\frac{\delta_t}{\nu_0}\sum_{\lambda'}P\mathcal{L}_1Q[E_c(\lambda')]\mathcal{L}_1P\rho(0),\nonumber
+\end{align}  with
 
 \begin{equation}
-\text{First term}=\sum_{\lambda,\lambda'}P \mathcal{L}_1Qe^{(\lambda'-\lambda)t}[\frac{e^{(\lambda-\lambda')t}-1}{(\lambda-\lambda')}]e^{(\lambda_c'-\lambda_c)\delta(t)}\mathcal{L}_1P\rho(0).
-\end{equation} Here we make the adiabatic approximation. For large enough $t$, $e^{\lambda't}$ can be set equal to zero as the $\lambda'$ states decay very quickly. We now also use that $\lambda$ states all have eigenvalues equal to zero, as only those eigenvalues have no negative real part. This makes the first term
+E(\lambda') = \frac{1}{-\lambda'}e^{\lambda_c'\frac{\delta_t}{\nu_0}\sin(\nu_0t)}.
+\end{equation} and
 
 \begin{equation}
-\text{First term}=\sum_{\lambda,\lambda'}P \mathcal{L}_1Q[E(\lambda')]\mathcal{L}_1P\rho(0),
-\end{equation} with
-
-\begin{equation}
-E(\lambda') = \frac{1}{-\lambda'}e^{\lambda_c'\delta(t)}.
-\end{equation} The second term is also similarly integrated and can be written as
-
-\begin{equation}
-\text{Second term } =\frac{\delta_t}{\nu_0}\sum_{\lambda,\lambda'}P\mathcal{L}_1Q[E_c(\lambda')]\mathcal{L}_1P\rho(0),
-\end{equation} with
-
-\begin{equation}
-E_c(\lambda')=\frac{(-\lambda'_c)((-\lambda')\sin(\nu_0 t)-\nu_0\cos(\nu_0t))}{(-\lambda')^2 + \nu_0^2}e^{\lambda_c'\delta(t)}.
-\end{equation} We then trace over all cavity degrees of freedom to obtain a master equation for the harmonic oscillator in the steady state subspace $P$. Here we assume that the initial condition is a separable state of the cavity and the harmonic oscillator $\rho(0)=\rho_{c}(0)\otimes\rho_{m}(0)$  and  set $\mu = Tr_c[P\rho_{cav}]$ to arrive at 
+E_c(\lambda')=\frac{(-\lambda'_c)((-\lambda')\sin(\nu_0 t)-\nu_0\cos(\nu_0t))}{(-\lambda')^2 + \nu_0^2}e^{\lambda_c'\frac{\delta_t}{\nu_0}\sin(\nu_0t)}.
+\end{equation} Here we have used the adiabatic approximation. For large enough $t$, $e^{\lambda't}$ can be set equal to zero as the $\lambda'$ states decay very quickly. Note that this does not refer to $\lambda'_c$ as this does not include the cavity decay. We have also used that $\lambda$ states all have eigenvalues equal to zero. We then trace over all cavity degrees of freedom to obtain a master equation for the harmonic oscillator in the steady state subspace $P$. Here we assume that the initial condition is a separable state of the cavity and the harmonic oscillator $\rho(0)=\rho_{c}(0)\otimes\rho_{m}(0)$  and  set $\mu = Tr_c[P\rho_{cav}]$ to arrive at 
 
 \begin{align}
 \dot{\mu}=&\sum_{\lambda'}Tr_c[P \mathcal{L}_1Q[E(\lambda')]\mathcal{L}_1P\rho_{c}(0)\otimes\rho_{m}(0) ],\\
@@ -716,8 +730,10 @@ E_c(\lambda')=\frac{(-\lambda'_c)((-\lambda')\sin(\nu_0 t)-\nu_0\cos(\nu_0t))}{(
 \end{align} where $T_{1c}$ and $T_{2c}$ depend only on the cavity variables. These traces are readily calculated and result in
 
 \begin{align}
-T_1c=& \hbar^2\abs{\alpha_1}^2 \delta_{j,1}\delta{n,0},\\
-T_2c=& \hbar^2 \abs{\alpha_1}^2 \delta_{j,-1}\delta{n,0},\\
+T_{1c}=& Tr_c[F_aP_cF_a\rho_c]\\
+=&\hbar^2\abs{\alpha_1}^2 \delta_{j,1}\delta{n,0},\\
+T_{2c}=& Tr_c[F_aP_c\rho_cF_a]\\
+=&\hbar^2 \abs{\alpha_1}^2 \delta_{j,-1}\delta{n,0},\\
 \end{align} while the mechanical terms result in
 
 \begin{align}\label{CoolingBeforecoefficients}
