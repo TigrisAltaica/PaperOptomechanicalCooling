@@ -340,19 +340,19 @@ relation
 \begin{equation}
 \frac{\nu_0^2}{\omega^2} = n^2,\label{scattering}
 \end{equation}
-with $n \in \mathbb{Z}^+$\cite{WardFT}. For simplicity we employ the normalization $\omega=1$ so that $\nu_0=n$. We will focus on the case
+with $n \in \mathbb{Z}^+$\cite{WardFT}. We will focus on the case
 $n\gg 1$, which will be used in the next sections. The solutions for
 \eqref{SmallOscillationsTDHO} are, to first order in
-$\epsilon= 2\epsilon' \nu_0$,
+$\epsilon= \frac{2\epsilon' \nu_0}{\omega^2}$,
 \begin{equation}\label{SmallOscillationsSolution}
-f(t)=  \frac{1}{\sqrt{n}}(e^{int}  + \epsilon \frac{1}{8(n+1)} e^{i(n+2) t} - \epsilon \frac{1}{8(n-1)} e^{i(n-2)t}),
-\end{equation} and its complex conjugate. 
+f(t)=  \frac{1}{\sqrt{n\omega}}(e^{in\omega t}  + \epsilon \frac{1}{8(n+1)} e^{i(n+2) \omega t} - \epsilon \frac{1}{8(n-1)} e^{i(n-2) \omega t}),
+\end{equation} and its complex conjugate.  For simplicity we employ the normalization $\omega=1$ so that, numerically $\nu_0=n$. 
 
 With this solution we may calculate an explicit expression for $\dot{\Gamma}$ and it's Hermitian Conjugate. Since we are working in a regime where $\epsilon \ll n$, we neglect terms smaller than $\frac{\epsilon}{n}$ and can thus obtain the approximate expressions
 
 \begin{align}\label{eq:DotGammavsGamma}
-\dot{\Gamma} \approx & \quad in\Gamma,\\
-\dot{\Gamma}^\dagger \approx & \quad -in\Gamma^\dagger.
+\dot{\Gamma} \approx & \quad i\nu_0\Gamma,\\
+\dot{\Gamma}^\dagger \approx & \quad -i\nu_0\Gamma^\dagger.
 \end{align} This of course adds and additional term to the $\beta$ equation \eqref{eq:displaced_frame}. With an explicit solution for \eqref{SmallOscillationsTDHO} in hand,
 we can solve Eq.~\eqref{eq:displaced_frame}. Assuming that the time
 scales of the dissipative processes are fast compared with the other
@@ -376,8 +376,8 @@ H =& -\hbar \delta' a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
 \end{align} It's important to note that, in this reference frame, the cavity detuning $\delta'$ acquires a time dependent correction that results from the Hamiltonian term involving the time derivatives of the $\Gamma$ operators. 
 
 \begin{align}
-\delta' =& \delta +\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma} (\cos(nt)), \nonumber\\
-=& \delta + \delta_t\cos(nt)
+\delta' =& \delta +\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma} (\cos(\nu_0 t)), \nonumber\\
+=& \delta + \delta_t\cos(\nu_0 t)
 \end{align} Here the correction is not neglected despite it being proportional to $\chi_0^2$ as it is also proportional to $\Omega^2$ which is large. We still require $\delta_t<<\delta$. This correction does not go into the expression for $\alpha_1$ because when doing a Taylor expansion the first correction term would be of the order $\frac{\delta_t}{\delta^2}$ which we may safely neglect.
 We focus on the case where $|\alpha_1| \gg 1$
 \cite{BarberisLC} so that the $a^\dagger a$ term can be neglected as
