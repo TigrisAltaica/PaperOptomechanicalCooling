@@ -360,7 +360,7 @@ With this solution we may calculate an explicit expression for $\dot{\Gamma}$ an
 \end{align}
 \fxnote*{No es claro como lo haces, lo puedes poner de forma mas
   explicita?}{This of course adds and additional term to the $\beta$
-  equation \eqref{eq:displaced_frame}}. With an explicit solution for
+  equation \eqref{eq:displaced_frame}, $-i\nu_0$, as the term involving $\dot{\Gamma}$ and $\dot{\Gamma}^\dagger$ is completely analogous to the laser pump term after perfoming this substitution and can also be eliminated by the shift in reference frame. }. With an explicit solution for
 \eqref{SmallOscillationsTDHO} in hand, we can solve
 Eq.~\eqref{eq:displaced_frame}. Assuming that the time scales of the
 dissipative processes are fast compared with the other time scales we
@@ -410,10 +410,8 @@ time dependence in the interaction Hamiltonian as well as in the cavity detuning
 
 \section{Laser Cooling}\label{LasCool}
 
-Our focus is on the parameter regime where the mechanical resonator's
-temperature evolves much more slowly than the cavity's losses and than
-the inverse of the mechanical frequency. \fxnote*{Poner porque}{This requires}
-$\frac{\abs{\alpha_1}^2\chi_0}{\nu_0}\ll 1$.
+Our focus is on the parameter regime where the coupling is weak enough that \fxnote*{Poner porque}{}
+$\frac{\delta_t}{\delta}\ll 1$.
 After projecting into the subspace corresponding to the slowly
 evolving time scale and tracing over the cavity degrees of
 freedom, we arrive at the following master equation for the density
@@ -430,7 +428,7 @@ This is the mean number of thermal excitations for the harmonic
 oscillator . Cooling towards zero in this reference frame is in
 reality cooling towards a \fxnote*{poner cual coherent state es al que
   evoluciona en el laboratory frame}{coherent state in the laboratory
-  frame}. It's important to note that these excitations correspond to
+  frame, $\ket{\beta_1}$}. It's important to note that these excitations correspond to
 a harmonic oscillator with a time-dependent frequency and can't
 necessarily be directly compared with the excitations of a harmonic
 oscillator with constant frequency.
@@ -764,16 +762,6 @@ P_m[F_\Gamma,Q_m F_\Gamma \mu] =& \abs{\gamma}^2((\Gamma\Gamma^\dagger \mu - \Ga
 P_m[F_\Gamma,Q_m  \mu F_\Gamma] =& \abs{\gamma}^2((\Gamma\mu\Gamma^\dagger  - \mu\Gamma^\dagger   \Gamma)\delta_{l,-1}\\ 
 &+ (\Gamma^\dagger \mu\Gamma -  \mu \Gamma \Gamma^\dagger)\delta_{l,1}). \nonumber
 \end{align} the Kronecker deltas refer to the numbers in the eigenvalues, both for the cavity and the mechanical oscillator. These eliminate the sum over all possible $\lambda'$ values. This eigenvalue selection then determines the value of the functions $E(\lambda')$ and $E_c(\lambda')$ which are then averaged over time and equation \eqref{CoolingBeforecoefficients} can then be straightforwardly arranged in the form \eqref{eq:ProyectedMasterEqCooling}.
-
-
-
-
-
-
-
-
-
-
 
 \bibliographystyle{unsrt}
 \bibliography{Bib}
