@@ -74,32 +74,35 @@ interesting effects such as optomechanically induced transparency
 relevant to this study, optomechanical cooling, which was first proposed by Mancini, et al \cite{CohadonCM,
   CorbittOC, SchliesserRPC, LCNooshi, ManciniOC}.
 	
-This effect consists of the damping of the end mirror's mechanical
-motion due to the radiative coupling to the cavity field. Sideband
-cooling takes place when the cavity's resonance is much narrower than
-the mechanical frequency. It can be understood as Raman scattering
-of incident photons \cite{MarquardtQTOQ} which are red-detuned from the cavity
-resonance. When the parameters are chosen appropriately, incident photons must absorb a phonon from the mechanical oscillator in order to scatter into the
-cavity's resonance mode, resulting in cooling of the resonator. For coherent quantum
+Optomechanical cooling consists of the damping of the end mirror's
+mechanical motion due to the radiative coupling to the cavity field.
+Sideband cooling takes place when the cavity's resonance is much
+narrower than the mechanical frequency. It can be understood as Raman
+scattering of incident photons \cite{MarquardtQTOQ} which are
+red-detuned from the cavity resonance. When the parameters are chosen
+appropriately, incident photons must absorb a phonon from the
+mechanical oscillator in order to scatter into the cavity's resonance
+mode, resulting in cooling of the resonator. For coherent quantum
 control over a mechanical object, it must be close to a pure quantum
 mechanical state \cite{KippenberCO} so effective methods of cooling
 macroscopic objects to low temperatures are highly desirable.
 
-One possible avenue for improved cooling lies in controlling the
-mechanical resonator's frequency as a function of time
-\cite{JockelMR}. The effect of this dependence on the mechanical
-object's final temperature was studied in \cite{BarberisLC}. In that
-study it was found that the final temperature of the parametrically
-driven harmonic oscillator was larger than the nondriven case. However, the
-master equation from which the cooling rates were derived accounted
-for the natural frequency of the mechanical resonator via ad-hoc
-time-dependent coefficients that were introduced after performing the
-Markov approximation; this approach led to an incomplete master
-equation and thus an incomplete description of the system's dynamics,
-as the system is being treated as essentially not time-dependent
-during the derivation of the master equation. In this study, we employ
-a different method that accounts for the time dependence throughout
-the entire derivation.
+One possible avenue for manipulating the mechanical object and
+improving cooling lies in controlling the mechanical resonator's
+frequency as a function of time \cite{JockelMR}. The effect of this
+dependence on the mechanical object's final temperature was studied in
+\cite{BarberisLC}. In that study it was found that the final
+temperature of the parametrically driven harmonic oscillator was
+larger than the nondriven case. However, the master equation from
+which the cooling rates were derived accounted for the natural
+frequency of the mechanical resonator via ad-hoc time-dependent
+coefficients that were introduced after performing the Markov
+approximation; this approach led to an incomplete master equation and
+thus an incomplete description of the system's dynamics, as the system
+is being treated as essentially not time-dependent during the
+derivation of the master equation. In this study, we employ a
+different method that accounts for the time dependence throughout the
+entire derivation.
 
 
 The formalism we apply (section \ref{OptmechH}) is based on
@@ -154,9 +157,10 @@ significant influence on the resulting temperature (section
 \section{Optomechanical Hamiltonian}\label{OptmechH}
 \subsection{Hamiltonian with Floquet Operators}
 	
-The standard Hamiltonian for optomechanical cooling \cite{LCNooshi}, in
-a reference system that rotates with the same frequency as a laser
-that continuously pumps photons into the cavity is
+The Hamiltonian for a parametrically driven optomechanical system
+\cite{LCNooshi}, in a reference system that rotates with the same
+frequency as a laser that continuously pumps photons into the cavity
+is
 
 \begin{equation}
 H(t) =   H_{\rm cav} + H_{\rm mec}(t) + H_{\rm int} + H_{\rm pump},
@@ -192,7 +196,7 @@ momentum operators \cite{HanngiFM}. These operators are
 
 \begin{equation} \label{TimeDependentHO}
 \ddot{f} + \nu(t)^2f=0,
-\end{equation} and is generally a complex function \cite{BrownPT}. This equation has two solutions \cite{HanngiFM} of the form
+\end{equation} and is generally a complex function \cite{BrownPT}. This equation has two solutions \cite{HanngiFM} 
 \begin{equation}
 f(t) = e^{i\mu t}\phi(t), 
 \end{equation}
@@ -293,7 +297,7 @@ equation
 \end{equation}
 for the time evolution of the density operator
 $\rho'(t)=U\rho U^\dagger$ which represents the coupled
-cavity-mechanical resonator system. The primes indicate that the
+cavity-mechanical system. The primes indicate that the
 transformation has been applied. The displaced Hamiltonian, which
 includes a pump-like term that appears due to the transformation being applied to the time derivative term, is
 \begin{align}\label{eq:hamiltonian_no_small}
@@ -353,13 +357,16 @@ With this solution we may calculate an explicit expression for $\dot{\Gamma}$ an
 \begin{align}\label{eq:DotGammavsGamma}
 \dot{\Gamma} \approx & \quad i\nu_0\Gamma,\\
 \dot{\Gamma}^\dagger \approx & \quad -i\nu_0\Gamma^\dagger.
-\end{align} This of course adds and additional term to the $\beta$ equation \eqref{eq:displaced_frame}. With an explicit solution for \eqref{SmallOscillationsTDHO} in hand,
-we can solve Eq.~\eqref{eq:displaced_frame}. Assuming that the time
-scales of the dissipative processes are fast compared with the other
-time scales we can focus on the stationary case
-($\dot{\alpha}(t)=\dot{\beta}(t)=0$); we also assume a weak coupling
-regime (coefficients of second order in $g$ or higher are neglected)
-obtaining
+\end{align}
+\fxnote*{No es claro como lo haces, lo puedes poner de forma mas
+  explicita?}{This of course adds and additional term to the $\beta$
+  equation \eqref{eq:displaced_frame}}. With an explicit solution for
+\eqref{SmallOscillationsTDHO} in hand, we can solve
+Eq.~\eqref{eq:displaced_frame}. Assuming that the time scales of the
+dissipative processes are fast compared with the other time scales we
+can focus on the stationary case ($\dot{\alpha}(t)=\dot{\beta}(t)=0$);
+we also assume a weak coupling regime (coefficients of second order in
+$g$ or higher are neglected) obtaining
 \begin{align}\label{eq:alpha_beta_sta}
 \alpha_1 =& \frac{\Omega}{2\delta-i\kappa},& \beta_1 =\chi_0\frac{\Omega^2 e^{-int}}{(\frac{\kappa^2}{4}+\delta^2)\gamma}& ,
 \end{align} where we have substituted in the parameter $\chi_0 = g\sqrt{\frac{\hbar}{2M\nu_0}}$ to represent the coupling.
@@ -368,7 +375,7 @@ order in the coupling parameter.  In obtaining the solution we used
 \begin{equation}\label{GammaCoefficients}
 \gamma(t)_\pm= \frac{\pm 1}{2i\sqrt{\nu_0}}e^{\mp i\nu_0 t},
 \end{equation}
-and  $\frac{W}{|f|^2} \approx \nu_0$. These expressions neglect terms of order $\frac{\epsilon}{n^2}$  since we work in the regime where $n >> 1$. Using \eqref{eq:alpha_beta_sta} in~(\ref{eq:hamiltonian_no_small})
+and  $\frac{W}{|f|^2} \approx \nu_0$. These expressions neglect terms of order $\frac{\epsilon}{n^2}$  since we work in the regime where $n \gg 1$. Using \eqref{eq:alpha_beta_sta} in~(\ref{eq:hamiltonian_no_small})
 the Hamiltonian can be written as
 \begin{align}
 H =& -\hbar \delta' a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
@@ -378,7 +385,7 @@ H =& -\hbar \delta' a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
 \begin{align}
 \delta' =& \delta +\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma} (\cos(\nu_0 t)), \nonumber\\
 =& \delta + \delta_t\cos(\nu_0 t)
-\end{align} Here the correction is not neglected despite it being proportional to $\chi_0^2$ as it is also proportional to $\Omega^2$ which is large. We still require $\delta_t<<\delta$. This correction does not go into the expression for $\alpha_1$ because when doing a Taylor expansion the first correction term would be of the order $\frac{\delta_t}{\delta^2}$ which we may safely neglect.
+\end{align} Here the correction is not neglected despite it being proportional to $\chi_0^2$ as it is also proportional to $\Omega^2$ which is large. We still require $\delta_t\ll\delta$. This correction does not go into the expression for $\alpha_1$ because when doing a Taylor expansion the first correction term would be of the order $\frac{\delta_t}{\delta^2}$ which we may safely neglect.
 We focus on the case where $|\alpha_1| \gg 1$
 \cite{BarberisLC} so that the $a^\dagger a$ term can be neglected as
 it is small when compared to the other two terms in the interaction.
@@ -405,20 +412,28 @@ time dependence in the interaction Hamiltonian as well as in the cavity detuning
 
 Our focus is on the parameter regime where the mechanical resonator's
 temperature evolves much more slowly than the cavity's losses and than
-the inverse of the mechanical frequency. This requires
+the inverse of the mechanical frequency. \fxnote*{Poner porque}{This requires}
 $\frac{\abs{\alpha_1}^2\chi_0}{\nu_0}\ll 1$.
 After projecting into the subspace corresponding to the slowly
-evolving eigenvalues and tracing over the cavity degrees of
+evolving time scale and tracing over the cavity degrees of
 freedom, we arrive at the following master equation for the density
 operator $\mu$, which represents the mechanical degrees of freedom in the subspace corresponding to the steady state (see Appendix \ref{CoolingAppendix})
 
 \begin{equation}\label{eq:ProyectedMasterEqCooling}
 \dot{\mu} \approx \frac{1}{i\hbar}[\overline{H},\mu] + \frac{A_-}{2}D[\Gamma]\mu + \frac{A_+}{2}D[\Gamma^\dagger]\mu, 
-\end{equation} with $D[\Gamma] = 2\Gamma \mu \Gamma^\dagger -\{\Gamma^\dagger \Gamma, \mu\}$. $A_-$ is the cooling rate and $A_+$ is the heating rate. $\overline{H}$ is a term proportional to $\Gamma^\dagger \Gamma$. This equation is obtained in detail in Appendix \ref{CoolingAppendix}. The coefficients are the usual rates for the non time-dependent case plus a correction proportional to the adimensional parameter $C_t=\frac{\delta_t}{\nu_0}$, in Appendix \ref{CoolingAppendix} we require $C_t << 1$. The temperature at the end of the cooling procedure is  given by 
+\end{equation} with $D[\Gamma] = 2\Gamma \mu \Gamma^\dagger -\{\Gamma^\dagger \Gamma, \mu\}$. $A_-$ is the cooling rate and $A_+$ is the heating rate. $\overline{H}$ is a term proportional to $\Gamma^\dagger \Gamma$. This equation is obtained in detail in Appendix \ref{CoolingAppendix}. The coefficients are the usual rates for the non time-dependent case plus a correction proportional to the adimensional parameter $C_t=\frac{\delta_t}{\nu_0}$, in Appendix \ref{CoolingAppendix} we require $C_t \ll 1$. The temperature at the end of the cooling procedure is  given by 
 
 \begin{equation}
 \expval{m} =\langle \Gamma^\dagger \Gamma \rangle = \frac{A_+}{A_- - A_+}.
-\end{equation} This is the mean number of thermal excitations for the harmonic oscillator . Cooling towards zero in this reference frame is in reality cooling towards a coherent state in the laboratory frame. It's important to note that these excitations correspond to a harmonic oscillator with a time-dependent frequency and can't necessarily be directly compared with the excitations of a harmonic oscillator with constant frequency.
+\end{equation}
+This is the mean number of thermal excitations for the harmonic
+oscillator . Cooling towards zero in this reference frame is in
+reality cooling towards a \fxnote*{poner cual coherent state es al que
+  evoluciona en el laboratory frame}{coherent state in the laboratory
+  frame}. It's important to note that these excitations correspond to
+a harmonic oscillator with a time-dependent frequency and can't
+necessarily be directly compared with the excitations of a harmonic
+oscillator with constant frequency.
 
 
 
