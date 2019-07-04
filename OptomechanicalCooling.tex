@@ -319,7 +319,7 @@ The $C(t)$ term appears because the Floquet operators do not necessarily commute
 their own time derivatives.
 
 Proceeding further requires an explicit solution for
-\eqref{TimeDependentHO}. The primes in the operators will be omitted
+\eqref{TimeDependentHO} in order to calculate explicit expressions for several of the coefficients and to deal with the $\dot{\Gamma}$ and $\dot{\Gamma}^\dagger$ operators. The primes in the operators will be omitted
 from now on as all calculations will carried out in the displaced frame.
 
 
@@ -359,8 +359,16 @@ With this solution we may calculate an explicit expression for $\dot{\Gamma}$ an
 \dot{\Gamma}^\dagger \approx & \quad -i\nu_0\Gamma^\dagger.
 \end{align}
 \fxnote*{No es claro como lo haces, lo puedes poner de forma mas
-  explicita?}{This of course adds and additional term to the $\beta$
-  equation \eqref{eq:displaced_frame}, $-i\nu_0$, as the term involving $\dot{\Gamma}$ and $\dot{\Gamma}^\dagger$ is completely analogous to the laser pump term after perfoming this substitution and can also be eliminated by the shift in reference frame. }. With an explicit solution for
+  explicita?}{This means that an additional term should be considered in the $\beta$
+  equation \eqref{eq:displaced_frame}, $-i\nu_0$, as the term involving $\dot{\Gamma}$ and $\dot{\Gamma}^\dagger$ is completely analogous to the laser pump term after perfoming this substitution and can also be eliminated by the reference frame shift. This means $\alpha$ and $\beta$ must actually fulfill the differential equations}
+
+\begin{align}\label{eq:displaced_frame_dot_gamma}
+\dot{\alpha} =& \alpha(-\frac{\kappa}{2}+i(\delta+g\sqrt{\frac{\hbar}{2M}}(\gamma_-(t) \beta^* + \gamma_+(t) \beta))-i\frac{\Omega}{2},\\
+\dot{\beta} =& \beta(-\frac{\gamma}{2}-i\frac{W}{|f(t)|^2}+i\nu_0)+ig\sqrt{\frac{\hbar}{2M}}|\alpha|^2\gamma_+(t).
+\end{align}
+
+  
+  . With an explicit solution for
 \eqref{SmallOscillationsTDHO} in hand, we can solve
 Eq.~\eqref{eq:displaced_frame}. Assuming that the time scales of the
 dissipative processes are fast compared with the other time scales we
@@ -384,8 +392,8 @@ H =& -\hbar \delta' a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
 
 \begin{align}
 \delta' =& \delta +\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma} (\cos(\nu_0 t)), \nonumber\\
-=& \delta + \delta_t\cos(\nu_0 t)
-\end{align} Here the correction is not neglected despite it being proportional to $\chi_0^2$ as it is also proportional to $\Omega^2$ which is large. We still require $\delta_t\ll\delta$. This correction does not go into the expression for $\alpha_1$ because when doing a Taylor expansion the first correction term would be of the order $\frac{\delta_t}{\delta^2}$ which we may safely neglect.
+=& \delta + \delta_t\cos(\nu_0 t),
+\end{align} with $\delta_t=\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma}$.  Here the correction is not neglected despite it being proportional to $\chi_0^2$ as it is also proportional to $\Omega^2$ which is large. We still require $\delta_t\ll\delta$. This correction does not go into the expression for $\alpha_1$ because when doing a Taylor expansion the first correction term would be of the order $\frac{\delta_t}{\delta^2}$ which we may safely neglect.
 We focus on the case where $|\alpha_1| \gg 1$
 \cite{BarberisLC} so that the $a^\dagger a$ term can be neglected as
 it is small when compared to the other two terms in the interaction.
