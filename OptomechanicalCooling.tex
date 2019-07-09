@@ -298,11 +298,16 @@ U_{a,\Gamma} = e^{(\alpha(t) a^\dagger - \alpha^*(t)a)}e^{(\beta(t) \Gamma^\dagg
 and results in a displaced Hamiltonian and in turn a displaced master
 equation
 \begin{equation}\label{eq:master_no_small}
-\dot{\rho}' = \frac{1}{i\hbar}[H',\rho'] +L_a\rho' + L_\Gamma \rho' + C(t)\rho'\, ,
-\end{equation}\fxnote{Por aqui hay que poner quien es $C(t)$}
-for the time evolution of the density operator
+\dot{\rho}' = \frac{1}{i\hbar}[H',\rho'] +L_a\rho' + L_\Gamma \rho' + C(t)\rho' ,
+\end{equation} for the time evolution of the density operator
 $\rho'(t)=U\rho U^\dagger$ which represents the coupled
-cavity-mechanical system. The primes indicate that the
+cavity-mechanical system,  with 
+
+\begin{equation}
+C(t)=(\beta^2-|\beta|^2)[\dot{\Gamma}^\dagger,\Gamma^\dagger]-((\beta^*)^2-|\beta|^2)[\dot{\Gamma},\Gamma].
+\end{equation}
+\fxnote{Listo}
+ The primes indicate that the
 transformation has been applied. The displaced Hamiltonian, which
 includes a pump-like term that appears due to the transformation being applied to the time derivative term, is
 \begin{align}\label{eq:hamiltonian_no_small}
@@ -417,9 +422,9 @@ H(t) =& -\hbar \delta' a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
 e^{i\nu_0 t}}{2i} \nonumber\Gamma^{\dagger}).
 \end{align} 
 
-\fxnote*{Usando la ecuacion para C(t), explica mejor porque lo desprecias}{Finally, as the $C(t)$ term is proportional to
-$\epsilon\abs{\beta_1}^2$ given the approximation in equation
-\eqref{eq:DotGammavsGamma}, so it is neglected,} and the master
+\fxnote*{Está sería la explicación aún sin la aproximación de los operadores gamma punto, pero con esa aproximación esto no es necesario}{Finally, as the $C(t)$ term is proportional to
+$\abs{\beta_1}^2$ and the commutators are proportional to $\frac{\epsilon}{n^{3/2}}$ they can be neglected.} Given the approximation in equation
+\eqref{eq:DotGammavsGamma}, the term $C(t)$ is taken to be zero and the master
 equation~(\ref{eq:master_no_small}) simplifies to
 \begin{equation}\label{LCMasterEq}
 \dot{\rho} = \frac{1}{i\hbar}[H,\rho] +L_a\rho + L_\Gamma \rho = \mathcal{L}\rho.
@@ -451,9 +456,10 @@ steady state (see Appendix \ref{CoolingAppendix})
 with
 $D[\Gamma] = 2\Gamma \mu \Gamma^\dagger -\{\Gamma^\dagger \Gamma,
 \mu\}$. $A_-$ is the cooling rate and $A_+$ is the heating rate.
-\fxnote{Pon quien es $\overline{H}$ aqui, y tambien en el apendice, ya
-  que no aparece en ningun lado}$\overline{H}$ is a term proportional
-to $\Gamma^\dagger \Gamma$. This equation is obtained in detail in
+\fxnote{Creo que va en el apéndice, me abstengo de hacerlo hasta que
+  estén tus cambios} $\overline{H}$ is a term proportional to
+$\Gamma^\dagger \Gamma$ that may be neglected, as it is very small
+when compared to $nu_0$ . This equation is obtained in detail in
 Appendix \ref{CoolingAppendix}. The coefficients are the usual rates
 for the non time-dependent case plus a correction proportional to the
 adimensional parameter $C_t=\frac{\delta_t}{\nu_0}$, in Appendix
@@ -463,8 +469,7 @@ end of the cooling procedure is given by
 \begin{equation}
 \expval{m} =\langle \Gamma^\dagger \Gamma \rangle = \frac{A_+}{A_- - A_+}.
 \end{equation}
-\fxnote{En ningun lugar esta escrito explicitamente quienes son $A_-$
-  y $A_+$, lo puedes poner?}.
+\fxnote{The coefficients $A_-$ and $A_+$ are given explicitly in the next section}.
 This is the mean number of thermal excitations for the harmonic
 oscillator. Cooling towards zero in this reference frame is in
 reality cooling towards the coherent state $\ket{\beta_1}$ in the
@@ -494,25 +499,30 @@ A_+^c=& -bC_t(\frac{(\delta-\nu_0)^2\kappa+ \kappa\nu_0^2 + \kappa^3}{(-(\delta-
 \end{align} with
 
 \begin{equation}
-b= \hbar^2\abs{\gamma}^2\chi_0^2 J_1(C_t).
+b= \hbar^2\abs{\gamma}^2\chi_0^2 J_1(C_t)\, ,
 \end{equation}
+so that the total heating and cooling rates are given by
+
+\begin{align}
+A_-^t =& A_- + A_-^c,\\
+A_+^t =& A_+ + A_+^c.\\
+\end{align}
 $I_0$ and $J_1$ are the modified Bessel Function of the first kind and
 the Bessel function of the first kind, respectively. They appear in
 the cooling and heating rates as a result of averaging out the time
 dependencies for the cavity eigenvalues in Appendix
 \ref{CoolingAppendix}\fxnote{Tienes que poner explicitamente como
-  hiciste el promedio, ya sea aqui o, de preferencia, en el apendice}.
+  hiciste el promedio, ya sea aqui o, de preferencia, en el apendice. Lo pongo cuando ya estén tus cambios al apéndice}.
 With these expressions in hand, the temperature is easily calculated.
-\fxnote*{Creo que solo las desintonias, pon explicitamente que es lo
-  que normalizas}{Everything} is first normalized with respect to $\nu_0$ and the graph
-is made using $\frac{\delta}{\nu_0}$ as the variable.
+\fxnote*{}{Everything is calculated using $\frac{\delta}{\nu_0}$ as the variable}.
+
 
 \begin{figure}[h!]
 \includegraphics[scale=.5]{TempGorden1.pdf}   
 \caption{ Mechanical oscillator phonon number with and without a time dependence. The correction results in a lower minimum temperature, as well as a lower temperature in a region around this minimum.}\label{fig:TempComparisson}
 \end{figure}
 
-For figure \ref{fig:TempComparisson},we used $\kappa = 0.05\nu_0$ and calculated $\expval{m}$ in the region $\frac{\delta}{\nu_0}\in [-2,2]$. The positive half of the region corresponds to heating of the resonator and the negative part corresponds to cooling. We assume that the parameters are such that
+For figure \ref{fig:TempComparisson},we used $\kappa = 0.05\nu_0$ and calculated $\expval{m}$ in the region $\frac{\delta}{\nu_0}\in [-2,2]$. We restrict the figures to the region near the temperature minimum at $\frac{\delta}{\nu_0}=-1$ The positive half of the region corresponds to heating of the resonator and the negative part corresponds to cooling. We assume that the parameters are such that
 
 \begin{equation}
 \frac{C_tJ_1(C_t)}{I_0(C_t)} = 0.05,
@@ -520,32 +530,25 @@ For figure \ref{fig:TempComparisson},we used $\kappa = 0.05\nu_0$ and calculated
 so that corrections proportional to higher orders in $C_t$ could be
 disregarded. As we can see in figure \ref{fig:TempRatio}, the
 corrected temperature is lower over a range around the minimum point.
-\fxnote*{A esta frase le falta algo}{It must be noted that since terms
-  of order $\frac{\delta_t}{\delta^2}$ the approximation does not hold
-  as $\delta$ approaches 0.} The approximation is valid around
-$\frac{\delta}{\nu_0}\approx -1$, since we only keep one term for the
-correction to $\delta$. \fxnote{Aqui estaria muy bueno que puedas
-  poner explicitamente para que parametros falla, es decir, porque
-  para $\delta=-1$ se satisfacen todas las condiciones y a partir de
-  que valor falla}
-\fxnote{Creo que tienes razon, la figura 3 no parece aportar nada. La
-  figura 2 me parece que esta buena, tienes que hacer referencia a
-  ella en el texto. Nos falta una explicacion de porque esto funciona:
-Checaste si hay mucha diferencia con los A que calientan? Capas que
-los A que enfrian son casi iguales, pero los otros son bastante diferentes.}
+
+\fxnote*{Le faltaba una palabra}{It must be noted that since terms of
+  order $\frac{\delta_t}{\delta^2}$ are neglected, the approximation
+  does not hold as $\delta$ approaches 0.} The approximation is valid
+near $\frac{\delta}{\nu_0} = -1$, since we only keep one term for the
+correction to $\delta$, \fxnote{and this correction assumes that
+  $|\frac{\delta_t}{\nu_0}|<<1$ so, at this level of approximation, we
+  require that $\delta \approx \nu_0$} \fxnote{As can be seen in
+  figure \ref{fig:TempRatio}, the corrected temperature begins to rise
+  in comparison to the uncorrected temperature around
+  $\frac{\delta}{\nu_0}=-1.5$ and also begins to rapidly rise near
+  $\frac{\delta}{\nu_0}=-.7$. These points seem to signal where the
+  approximation begins to break down.}
+
 
 \begin{figure}
 \includegraphics[scale=.5]{TempPropGorden1.pdf}
 \caption{Ratio of the uncorrected and corrected temperatures over the cooling side of the detuning range. The corrected temperature is lower than the uncorrected temperature not just near the minimum.}
 \label{fig:TempRatio}
-\end{figure}
-
-
-
-\begin{figure}
-\includegraphics[scale=.4]{SidebandsGorden1.pdf} 
-\caption{(a) Ratio between the sidebands. (b )Cooling Sidebands.  (c) Corrected and uncorrected cooling sideband near the temperature minimum. }
-\label{fig:SideBands}
 \end{figure}
 
 
