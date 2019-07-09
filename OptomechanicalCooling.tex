@@ -584,32 +584,31 @@ L_a \rho =& - \frac{\kappa}{2}(n_p+1)[a^\dagger a\rho + \rho a^\dagger a -2a\rho
 \end{align}
 and
 \begin{equation}
-  H=\hbar \delta \, a^\dagger a\, ,
+  H=\hbar \omega_c \, a^\dagger a\, ,
 \end{equation}
 model the behavior of a bosonic field inside a one mode leaky cavity
-in a reference system which rotates with frequency $\delta$; the cavity is in contact with a thermal bath
-characterized by $n_p$ thermal photons, the
-cavity damping is given by $\kappa$ \cite{EnglertDB} and $a^\dagger$,
-$a$ are cavity photons creation and anhilation operators. The density
-operator can be expressed in a basis given by the Lindblad
-superoperator's eigenstates, ${\hat{\rho}_n^j}$,
+with frequency $\omega_c$; the cavity is in contact with a thermal bath
+characterized by $n_p$ thermal photons, the cavity damping is given by
+$\kappa$ \cite{EnglertDB} and $a^\dagger$, $a$ are cavity photons
+creation and anhilation operators. The density operator can be
+expressed in a basis given by the right Lindblad superoperator's
+eigenstates, ${\hat{\rho}_n^j}$,
 $n=0,1,2,...\qquad j = 0,\pm 1, \pm 2,... $, where
 \begin{equation}
 L\hat{\rho}_n^j = \lambda_n^j\hat{\rho}_n^j\label{eq:eigen_damping}\, ,
 \end{equation}
 with
 \begin{equation}
-\lambda_n^j = ij\delta -\kappa[n + \frac{|j|}{2}]\, .
-\end{equation} The real part of these eigenvalues corresponds only to the $L_a$ term. The full eigenvalues for $\mathcal{L}$  also includes the eigenvalues for the Hamiltonian term, which is the imaginary part.
-
-
-
-This basis is known as the damping basis \cite{EnglertDB} and is given by
+\lambda_n^j = ij\omega_c -\kappa[n + \frac{|j|}{2}]\, .
+\end{equation}
+The real part of these eigenvalues corresponds to the 
+eigenvalues of the operator $L_a$. This basis is known as the damping
+basis \cite{EnglertDB} and is given by
 \begin{align}\label{DefDB}
 \hat{\rho}_n^l=&a^{\dagger j}\frac{(-1)^n}{(n_p+1)^{j+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad j \geq 0, \\
 \hat{\rho}_n^j=&\frac{(-1)^n}{(n_p+1)^{|j|+1}}:L_n^{|j|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|j|}\quad l \leq 0.
 \end{align}
-The Lindblad operator is not hermitian and the "left" eigenstates must
+The Lindblad operator is not hermitian and the left eigenstates must
 be considered to find the coefficients of the density operator
 expansion in the damping basis. These are the eigenstates of the
 equation $\check{\rho}_n^jL = \lambda_n^j\check{\rho}_n^j$ they have
@@ -621,7 +620,7 @@ the same eigenvalues and are given by
 
 The left and right eigenstates are orthogonal under the product
 \begin{equation}
-Tr[\hat{\rho}_n^j\check{\rho}_{n'}^{j'}] = \delta_{n,n'}\delta_{j,j'},
+(\hat{\rho}_n^j,\check{\rho}_{n'}^{j'})=Tr[\hat{\rho}_n^j\check{\rho}_{n'}^{j'}] = \delta_{n,n'}\delta_{j,j'},
 \end{equation} and fulfill
 
 \begin{equation}\label{DampingBasisCompleteness}
@@ -639,12 +638,15 @@ Tr[\hat{\rho}_n^j\check{\rho}_{n'}^{j'}] = \delta_{n,n'}\delta_{j,j'},
 \end{align}
 
 These states play an important part in the derivation of the master
-equation of the cavity state in the adiabatic approximation. In the absence of damping, the mechanical states are the left and right
-eigenstates of 
+equation of the cavity state in the adiabatic approximation.
+
+\fxnote*{Esto esta mal, los eigenstates de H son los estados de fock.
+  Lo tienes que poner bien.}{In the absence of damping, the mechanical
+states are the left and right eigenstates of
 
 \begin{equation}
 H=\hbar\nu_0\Gamma^\dagger\Gamma,
-\end{equation}
+\end{equation}}
 
 are given by
 
@@ -726,9 +728,9 @@ Q\rho =& Q\rho'(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}'_1(t')P\rho'(t')\\
 Q\rho\simeq & Q\rho'(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}'_1(t')P\rho'(t_0)\\
        &+\int_{t_0}^{t}dt'Q\mathcal{L}'_1(t')Q\rho'(t_0),
 \end{align*}
-and this is substituted into the $P$ equation. 
+and this is substituted into the $P$ equation
 \begin{align}
-P\dot{\rho}(t) =& P\mathcal{L}_1Q\rho'(t_0)\\ 
+P\dot{\rho'}(t) =& P\mathcal{L}_1Q\rho'(t_0)\\ 
  &+ P\mathcal{L}_1\int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho'(t_0)\nonumber \\
  &+ P\mathcal{L}_1\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho'(t_0)\nonumber,
 \end{align}
