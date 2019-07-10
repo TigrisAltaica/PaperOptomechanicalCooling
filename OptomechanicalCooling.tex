@@ -456,8 +456,10 @@ steady state (see Appendix \ref{CoolingAppendix})
 with
 $D[\Gamma] = 2\Gamma \mu \Gamma^\dagger -\{\Gamma^\dagger \Gamma,
 \mu\}$. $A_-$ is the cooling rate and $A_+$ is the heating rate.
-\fxnote{Creo que va en el apéndice, me abstengo de hacerlo hasta que estén tus cambios} $\overline{H}$ is a term proportional
-to $\Gamma^\dagger \Gamma$ that may be neglected, as it is very small when compared to $nu_0$ . This equation is obtained in detail in
+\fxnote{Creo que va en el apéndice, me abstengo de hacerlo hasta que
+  estén tus cambios} $\overline{H}$ is a term proportional to
+$\Gamma^\dagger \Gamma$ that may be neglected, as it is very small
+when compared to $nu_0$ . This equation is obtained in detail in
 Appendix \ref{CoolingAppendix}. The coefficients are the usual rates
 for the non time-dependent case plus a correction proportional to the
 adimensional parameter $C_t=\frac{\delta_t}{\nu_0}$, in Appendix
@@ -497,9 +499,8 @@ A_+^c=& -bC_t(\frac{(\delta-\nu_0)^2\kappa+ \kappa\nu_0^2 + \kappa^3}{(-(\delta-
 \end{align} with
 
 \begin{equation}
-b= \hbar^2\abs{\gamma}^2\chi_0^2 J_1(C_t).
+b= \hbar^2\abs{\gamma}^2\chi_0^2 J_1(C_t)\, ,
 \end{equation}
-
 so that the total heating and cooling rates are given by
 
 \begin{align}
@@ -510,9 +511,11 @@ $I_0$ and $J_1$ are the modified Bessel Function of the first kind and
 the Bessel function of the first kind, respectively. They appear in
 the cooling and heating rates as a result of averaging out the time
 dependencies for the cavity eigenvalues in Appendix
-\ref{CoolingAppendix}\fxnote{Lo pongo cuando ya estén tus cambios al apéndice}.
+\ref{CoolingAppendix}\fxnote{Tienes que poner explicitamente como
+  hiciste el promedio, ya sea aqui o, de preferencia, en el apendice. Lo pongo cuando ya estén tus cambios al apéndice}.
 With these expressions in hand, the temperature is easily calculated.
 \fxnote*{}{Everything is calculated using $\frac{\delta}{\nu_0}$ as the variable}.
+
 
 \begin{figure}[h!]
 \includegraphics[scale=.5]{TempGorden1.pdf}   
@@ -527,12 +530,20 @@ For figure \ref{fig:TempComparisson},we used $\kappa = 0.05\nu_0$ and calculated
 so that corrections proportional to higher orders in $C_t$ could be
 disregarded. As we can see in figure \ref{fig:TempRatio}, the
 corrected temperature is lower over a range around the minimum point.
-\fxnote*{Le faltaba una palabra}{It must be noted that since terms
-  of order $\frac{\delta_t}{\delta^2}$ are neglected, the approximation does not hold
-  as $\delta$ approaches 0.} The approximation is valid near
-$\frac{\delta}{\nu_0} = -1$, since we only keep one term for the
-correction to $\delta$, \fxnote{and this correction assumes that $|\frac{\delta_t}{\nu_0}|<<1$ so, at this level of approximation, we require that $\delta \approx \nu_0$}
-\fxnote{As can be seen in figure \ref{fig:TempRatio}, the corrected temperature begins to rise in comparison to the uncorrected temperature around $\frac{\delta}{\nu_0}=-1.5$ and also begins to rapidly rise near $\frac{\delta}{\nu_0}=-.7$. These points seem to signal where the approximation begins to break down.}
+
+\fxnote*{Le faltaba una palabra}{It must be noted that since terms of
+  order $\frac{\delta_t}{\delta^2}$ are neglected, the approximation
+  does not hold as $\delta$ approaches 0.} The approximation is valid
+near $\frac{\delta}{\nu_0} = -1$, since we only keep one term for the
+correction to $\delta$, \fxnote{and this correction assumes that
+  $|\frac{\delta_t}{\nu_0}|<<1$ so, at this level of approximation, we
+  require that $\delta \approx \nu_0$} \fxnote{As can be seen in
+  figure \ref{fig:TempRatio}, the corrected temperature begins to rise
+  in comparison to the uncorrected temperature around
+  $\frac{\delta}{\nu_0}=-1.5$ and also begins to rapidly rise near
+  $\frac{\delta}{\nu_0}=-.7$. These points seem to signal where the
+  approximation begins to break down.}
+
 
 \begin{figure}
 \includegraphics[scale=.5]{TempPropGorden1.pdf}
@@ -573,32 +584,31 @@ L_a \rho =& - \frac{\kappa}{2}(n_p+1)[a^\dagger a\rho + \rho a^\dagger a -2a\rho
 \end{align}
 and
 \begin{equation}
-  H=\hbar \delta \, a^\dagger a\, ,
+  H=\hbar \omega_c \, a^\dagger a\, ,
 \end{equation}
 model the behavior of a bosonic field inside a one mode leaky cavity
-in a reference system which rotates with frequency $\delta$; the cavity is in contact with a thermal bath
-characterized by $n_p$ thermal photons, the
-cavity damping is given by $\kappa$ \cite{EnglertDB} and $a^\dagger$,
-$a$ are cavity photons creation and anhilation operators. The density
-operator can be expressed in a basis given by the Lindblad
-superoperator's eigenstates, ${\hat{\rho}_n^j}$,
+with frequency $\omega_c$; the cavity is in contact with a thermal bath
+characterized by $n_p$ thermal photons, the cavity damping is given by
+$\kappa$ \cite{EnglertDB} and $a^\dagger$, $a$ are cavity photons
+creation and anhilation operators. The density operator can be
+expressed in a basis given by the right Lindblad superoperator's
+eigenstates, ${\hat{\rho}_n^j}$,
 $n=0,1,2,...\qquad j = 0,\pm 1, \pm 2,... $, where
 \begin{equation}
 L\hat{\rho}_n^j = \lambda_n^j\hat{\rho}_n^j\label{eq:eigen_damping}\, ,
 \end{equation}
 with
 \begin{equation}
-\lambda_n^j = ij\delta -\kappa[n + \frac{|j|}{2}]\, .
-\end{equation} The real part of these eigenvalues corresponds only to the $L_a$ term. The full eigenvalues for $\mathcal{L}$  also includes the eigenvalues for the Hamiltonian term, which is the imaginary part.
-
-
-
-This basis is known as the damping basis \cite{EnglertDB} and is given by
+\lambda_n^j = ij\omega_c -\kappa[n + \frac{|j|}{2}]\, .
+\end{equation}
+The real part of these eigenvalues corresponds to the 
+eigenvalues of the operator $L_a$. This basis is known as the damping
+basis \cite{EnglertDB} and is given by
 \begin{align}\label{DefDB}
 \hat{\rho}_n^l=&a^{\dagger j}\frac{(-1)^n}{(n_p+1)^{j+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad j \geq 0, \\
 \hat{\rho}_n^j=&\frac{(-1)^n}{(n_p+1)^{|j|+1}}:L_n^{|j|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|j|}\quad l \leq 0.
 \end{align}
-The Lindblad operator is not hermitian and the "left" eigenstates must
+The Lindblad operator is not hermitian and the left eigenstates must
 be considered to find the coefficients of the density operator
 expansion in the damping basis. These are the eigenstates of the
 equation $\check{\rho}_n^jL = \lambda_n^j\check{\rho}_n^j$ they have
@@ -610,7 +620,7 @@ the same eigenvalues and are given by
 
 The left and right eigenstates are orthogonal under the product
 \begin{equation}
-Tr[\hat{\rho}_n^j\check{\rho}_{n'}^{j'}] = \delta_{n,n'}\delta_{j,j'},
+(\hat{\rho}_n^j,\check{\rho}_{n'}^{j'})=Tr[\hat{\rho}_n^j\check{\rho}_{n'}^{j'}] = \delta_{n,n'}\delta_{j,j'},
 \end{equation} and fulfill
 
 \begin{equation}\label{DampingBasisCompleteness}
@@ -628,12 +638,15 @@ Tr[\hat{\rho}_n^j\check{\rho}_{n'}^{j'}] = \delta_{n,n'}\delta_{j,j'},
 \end{align}
 
 These states play an important part in the derivation of the master
-equation of the cavity state in the adiabatic approximation. In the absence of damping, the mechanical states are the left and right
-eigenstates of 
+equation of the cavity state in the adiabatic approximation.
+
+\fxnote*{Esto esta mal, los eigenstates de H son los estados de fock.
+  Lo tienes que poner bien.}{In the absence of damping, the mechanical
+states are the left and right eigenstates of
 
 \begin{equation}
-H=\hbar\nu_0\Gamma^\dagger\Gamma,
-\end{equation}
+\frac{1}{i\hbar}[H,\bullet], \text{   with    } H =\hbar\nu_0\Gamma^\dagger\Gamma,
+\end{equation}}
 
 are given by
 
@@ -715,9 +728,9 @@ Q\rho =& Q\rho'(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}'_1(t')P\rho'(t')\\
 Q\rho\simeq & Q\rho'(t_0) + \int_{t_0}^{t}dt' Q\mathcal{L}'_1(t')P\rho'(t_0)\\
        &+\int_{t_0}^{t}dt'Q\mathcal{L}'_1(t')Q\rho'(t_0),
 \end{align*}
-and this is substituted into the $P$ equation. 
+and this is substituted into the $P$ equation
 \begin{align}
-P\dot{\rho}(t) =& P\mathcal{L}_1Q\rho'(t_0)\\ 
+P\dot{\rho'}(t) =& P\mathcal{L}_1Q\rho'(t_0)\\ 
  &+ P\mathcal{L}_1\int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho'(t_0)\nonumber \\
  &+ P\mathcal{L}_1\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho'(t_0)\nonumber,
 \end{align}
@@ -754,22 +767,27 @@ Using equations \eqref{eq:projector_p} and \eqref{eq:projector_q} in
 \begin{align}\label{ProyectionEQ}
 P\dot{\rho}'(t)=P e^{-\mathcal{L}_0 t-\mathcal{L}_0^t(t)}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda' t} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}e^{-\lambda' t'}\mathcal{L}_1\\
 &e^{\lambda t'}\hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda} e^{-\lambda t_0}\rho(t_0)]\nonumber.
-\end{align} where it is important to remember that the part of these eigenvalues that corresponds to the cavity has an explicitly time dependent part. If we  set $t_0=0$ and note that $\mathcal{L}_0^t(0)=0$, we may write \eqref{ProyectionEQ}, returning $P$ and $Q$ to their original notation, as
+\end{align} where it is important to remember that the part of these eigenvalues that corresponds to the cavity has an explicitly time dependent part. To this effect, we split the eigenvalues into two distinct parts
+
+\begin{align}
+\lambda =& \lambda_0 + \lambda_c\frac{\delta_t}{\nu_0}\sin(\nu_0 t),\\
+\lambda' =& \lambda'_0 + \lambda'_c\frac{\delta_t}{\nu_0}\sin(\nu_0 t),
+\end{align} as the time dependent part will be handled separately. $\lambda_c$ simply refers to $i$ times the value acquired by the operator $a^\dagger a$. If we then set $t_0=0$ and note that $\mathcal{L}_0^t(0)=0$, we may write \eqref{ProyectionEQ}, returning $P$ and $Q$ to their original notation, as
 
 \begin{align}
 P\dot{\rho}'(t)=&\sum_{\lambda,\lambda'}[P \mathcal{L}_1Q[...]\mathcal{L}_1P\rho(0)],\\
-[...] =& (\int_0^t dt' e^{(\lambda'-\lambda)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda-\lambda')t'}\nonumber \\ 
+[...] =& (\int_0^t dt' e^{(\lambda'_0-\lambda_0)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda_0-\lambda_0')t'}\nonumber \\ 
 &\qquad \quad e^{(\lambda_c-\lambda_c')\frac{\delta_t}{\nu_0} \sin(\nu_0t')}),\nonumber
-\end{align} where $\lambda_c=ia^\dagger a$. In order to perform the integration we make the approximation
+\end{align} In order to perform the integration we make the approximation
 \begin{equation}
 e^{(\lambda_c-\lambda_c')\frac{\delta_t}{\nu_0} \sin(\nu_0t')} \approx 1+(\lambda_c-\lambda_c')\frac{\delta_t}{\nu_0} \sin(\nu_0t'),
 \end{equation} for the $t'$ term. This leads to
 
 \begin{align}
 &P\dot{\rho}'(t)\approx \\
-&\sum_{\lambda'}P \mathcal{L}_1Q[\int_0^t dt' e^{(\lambda'-\lambda)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda-\lambda')t'}]\mathcal{L}_1P\rho(0)\nonumber \\
+&\sum_{\lambda'}P \mathcal{L}_1Q[\int_0^t dt' e^{(\lambda'_0-\lambda_0)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda_0-\lambda_0')t'}]\mathcal{L}_1P\rho(0)\nonumber \\
 &+\frac{\delta_t}{\nu_0}\sum_{\lambda'}(\lambda_c-\lambda_c')P\mathcal{L}_1Q \nonumber\\
-&[\int_0^t dt'\sin(\nu_0t') e^{(\lambda'-\lambda)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda-\lambda')t'}]\mathcal{L}_1P\rho(0),\nonumber
+&[\int_0^t dt'\sin(\nu_0t') e^{(\lambda'_0-\lambda_0)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda_0-\lambda_0')t'}]\mathcal{L}_1P\rho(0),\nonumber
 \end{align}
 
  After integration this results in
@@ -780,12 +798,12 @@ P\dot{\rho}'(t)\approx& \sum_{\lambda'}P \mathcal{L}_1Q[E(\lambda')]\mathcal{L}_
 \end{align}  with
 
 \begin{equation}
-E(\lambda') = \frac{1}{-\lambda'}e^{\lambda_c'\frac{\delta_t}{\nu_0}\sin(\nu_0t)}.
+E(\lambda') = \frac{1}{-\lambda'_0}e^{\lambda_c'\frac{\delta_t}{\nu_0}\sin(\nu_0t)}.
 \end{equation} and
 
 \begin{equation}
-E_c(\lambda')=\frac{(-\lambda'_c)((-\lambda')\sin(\nu_0 t)-\nu_0\cos(\nu_0t))}{(-\lambda')^2 + \nu_0^2}e^{\lambda_c'\frac{\delta_t}{\nu_0}\sin(\nu_0t)}.
-\end{equation} Here we have used the adiabatic approximation. For large enough $t$, $e^{\lambda't}$ can be set equal to zero as the $\lambda'$ states decay very quickly. Note that this does not refer to $\lambda'_c$ as this does not include the cavity decay. We have also used that $\lambda$ states all have eigenvalues equal to zero. We then trace over all cavity degrees of freedom to obtain a master equation for the harmonic oscillator in the steady state subspace $P$. Here we assume that the initial condition is a separable state of the cavity and the harmonic oscillator $\rho(0)=\rho_{c}(0)\otimes\rho_{m}(0)$  and  set $\mu = Tr_c[P\rho_{cav}]$ to arrive at 
+E_c(\lambda')=\frac{(-\lambda'_c)((-\lambda'_0)\sin(\nu_0 t)-\nu_0\cos(\nu_0t))}{(-\lambda_0')^2 + \nu_0^2}e^{\lambda_c'\frac{\delta_t}{\nu_0}\sin(\nu_0t)}.
+\end{equation} Here we have used the adiabatic approximation. For large enough $t$, $e^{\lambda'_0t}$ can be set equal to zero as the $\lambda'$ states decay very quickly.  We have also used that $\lambda$ states all have eigenvalues equal to zero. We then trace over all cavity degrees of freedom to obtain a master equation for the harmonic oscillator in the steady state subspace $P$. Here we assume that the initial condition is a separable state of the cavity and the harmonic oscillator $\rho(0)=\rho_{c}(0)\otimes\rho_{m}(0)$  and  set $\mu = Tr_c[P\rho_{cav}]$ to arrive at 
 
 \begin{align}
 \dot{\mu}=&\sum_{\lambda'}Tr_c[P \mathcal{L}_1Q[E(\lambda')]\mathcal{L}_1P\rho_{c}(0)\otimes\rho_{m}(0) ],\\
