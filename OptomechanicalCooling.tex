@@ -645,7 +645,7 @@ equation of the cavity state in the adiabatic approximation.
 states are the left and right eigenstates of
 
 \begin{equation}
-H=\hbar\nu_0\Gamma^\dagger\Gamma,
+\frac{1}{i\hbar}[H,\bullet], \text{   with    } H =\hbar\nu_0\Gamma^\dagger\Gamma,
 \end{equation}}
 
 are given by
@@ -767,22 +767,27 @@ Using equations \eqref{eq:projector_p} and \eqref{eq:projector_q} in
 \begin{align}\label{ProyectionEQ}
 P\dot{\rho}'(t)=P e^{-\mathcal{L}_0 t-\mathcal{L}_0^t(t)}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda' t} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}e^{-\lambda' t'}\mathcal{L}_1\\
 &e^{\lambda t'}\hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda} e^{-\lambda t_0}\rho(t_0)]\nonumber.
-\end{align} where it is important to remember that the part of these eigenvalues that corresponds to the cavity has an explicitly time dependent part. If we  set $t_0=0$ and note that $\mathcal{L}_0^t(0)=0$, we may write \eqref{ProyectionEQ}, returning $P$ and $Q$ to their original notation, as
+\end{align} where it is important to remember that the part of these eigenvalues that corresponds to the cavity has an explicitly time dependent part. To this effect, we split the eigenvalues into two distinct parts
+
+\begin{align}
+\lambda =& \lambda_0 + \lambda_c\frac{\delta_t}{\nu_0}\sin(\nu_0 t),\\
+\lambda' =& \lambda'_0 + \lambda'_c\frac{\delta_t}{\nu_0}\sin(\nu_0 t),
+\end{align} as the time dependent part will be handled separately. $\lambda_c$ simply refers to $i$ times the value acquired by the operator $a^\dagger a$. If we then set $t_0=0$ and note that $\mathcal{L}_0^t(0)=0$, we may write \eqref{ProyectionEQ}, returning $P$ and $Q$ to their original notation, as
 
 \begin{align}
 P\dot{\rho}'(t)=&\sum_{\lambda,\lambda'}[P \mathcal{L}_1Q[...]\mathcal{L}_1P\rho(0)],\\
-[...] =& (\int_0^t dt' e^{(\lambda'-\lambda)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda-\lambda')t'}\nonumber \\ 
+[...] =& (\int_0^t dt' e^{(\lambda'_0-\lambda_0)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda_0-\lambda_0')t'}\nonumber \\ 
 &\qquad \quad e^{(\lambda_c-\lambda_c')\frac{\delta_t}{\nu_0} \sin(\nu_0t')}),\nonumber
-\end{align} where $\lambda_c=ia^\dagger a$. In order to perform the integration we make the approximation
+\end{align} In order to perform the integration we make the approximation
 \begin{equation}
 e^{(\lambda_c-\lambda_c')\frac{\delta_t}{\nu_0} \sin(\nu_0t')} \approx 1+(\lambda_c-\lambda_c')\frac{\delta_t}{\nu_0} \sin(\nu_0t'),
 \end{equation} for the $t'$ term. This leads to
 
 \begin{align}
 &P\dot{\rho}'(t)\approx \\
-&\sum_{\lambda'}P \mathcal{L}_1Q[\int_0^t dt' e^{(\lambda'-\lambda)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda-\lambda')t'}]\mathcal{L}_1P\rho(0)\nonumber \\
+&\sum_{\lambda'}P \mathcal{L}_1Q[\int_0^t dt' e^{(\lambda'_0-\lambda_0)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda_0-\lambda_0')t'}]\mathcal{L}_1P\rho(0)\nonumber \\
 &+\frac{\delta_t}{\nu_0}\sum_{\lambda'}(\lambda_c-\lambda_c')P\mathcal{L}_1Q \nonumber\\
-&[\int_0^t dt'\sin(\nu_0t') e^{(\lambda'-\lambda)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda-\lambda')t'}]\mathcal{L}_1P\rho(0),\nonumber
+&[\int_0^t dt'\sin(\nu_0t') e^{(\lambda'_0-\lambda_0)t}e^{(\lambda_c'-\lambda_c)\frac{\delta_t}{\nu_0} \sin(\nu_0t)}e^{(\lambda_0-\lambda_0')t'}]\mathcal{L}_1P\rho(0),\nonumber
 \end{align}
 
  After integration this results in
@@ -793,12 +798,12 @@ P\dot{\rho}'(t)\approx& \sum_{\lambda'}P \mathcal{L}_1Q[E(\lambda')]\mathcal{L}_
 \end{align}  with
 
 \begin{equation}
-E(\lambda') = \frac{1}{-\lambda'}e^{\lambda_c'\frac{\delta_t}{\nu_0}\sin(\nu_0t)}.
+E(\lambda') = \frac{1}{-\lambda'_0}e^{\lambda_c'\frac{\delta_t}{\nu_0}\sin(\nu_0t)}.
 \end{equation} and
 
 \begin{equation}
-E_c(\lambda')=\frac{(-\lambda'_c)((-\lambda')\sin(\nu_0 t)-\nu_0\cos(\nu_0t))}{(-\lambda')^2 + \nu_0^2}e^{\lambda_c'\frac{\delta_t}{\nu_0}\sin(\nu_0t)}.
-\end{equation} Here we have used the adiabatic approximation. For large enough $t$, $e^{\lambda't}$ can be set equal to zero as the $\lambda'$ states decay very quickly. Note that this does not refer to $\lambda'_c$ as this does not include the cavity decay. We have also used that $\lambda$ states all have eigenvalues equal to zero. We then trace over all cavity degrees of freedom to obtain a master equation for the harmonic oscillator in the steady state subspace $P$. Here we assume that the initial condition is a separable state of the cavity and the harmonic oscillator $\rho(0)=\rho_{c}(0)\otimes\rho_{m}(0)$  and  set $\mu = Tr_c[P\rho_{cav}]$ to arrive at 
+E_c(\lambda')=\frac{(-\lambda'_c)((-\lambda'_0)\sin(\nu_0 t)-\nu_0\cos(\nu_0t))}{(-\lambda_0')^2 + \nu_0^2}e^{\lambda_c'\frac{\delta_t}{\nu_0}\sin(\nu_0t)}.
+\end{equation} Here we have used the adiabatic approximation. For large enough $t$, $e^{\lambda'_0t}$ can be set equal to zero as the $\lambda'$ states decay very quickly.  We have also used that $\lambda$ states all have eigenvalues equal to zero. We then trace over all cavity degrees of freedom to obtain a master equation for the harmonic oscillator in the steady state subspace $P$. Here we assume that the initial condition is a separable state of the cavity and the harmonic oscillator $\rho(0)=\rho_{c}(0)\otimes\rho_{m}(0)$  and  set $\mu = Tr_c[P\rho_{cav}]$ to arrive at 
 
 \begin{align}
 \dot{\mu}=&\sum_{\lambda'}Tr_c[P \mathcal{L}_1Q[E(\lambda')]\mathcal{L}_1P\rho_{c}(0)\otimes\rho_{m}(0) ],\\
