@@ -306,10 +306,10 @@ cavity-mechanical system,  with
 \begin{equation}
 C(t)=(\beta^2-|\beta|^2)[\dot{\Gamma}^\dagger,\Gamma^\dagger]-((\beta^*)^2-|\beta|^2)[\dot{\Gamma},\Gamma].
 \end{equation}
-\fxnote{Listo}
- The primes indicate that the
-transformation has been applied. The displaced Hamiltonian, which
-includes a pump-like term that appears due to the transformation being applied to the time derivative term, is
+The primes indicate that the transformation has been applied. The
+displaced Hamiltonian, which includes a pump-like term that appears
+due to the transformation being applied to the time derivative term,
+is
 \begin{align}\label{eq:hamiltonian_no_small}
   H'=&U H U^\dagger\nonumber\\=& -\hbar \delta' a^\dagger a + \hbar\frac{W}{|f(t)|^2}\Gamma \Gamma^\dagger\nonumber\\
      &-\hbar g\sqrt{\frac{\hbar}{2M}}[(a^{\dagger}a +\alpha a^{\dagger}+\alpha^* a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)]\nonumber\\
@@ -422,9 +422,9 @@ H(t) =& -\hbar \delta' a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
 e^{i\nu_0 t}}{2i} \nonumber\Gamma^{\dagger}).
 \end{align} 
 
-\fxnote*{Está sería la explicación aún sin la aproximación de los operadores gamma punto, pero con esa aproximación esto no es necesario}{Finally, as the $C(t)$ term is proportional to
-$\abs{\beta_1}^2$ and the commutators are proportional to $\frac{\epsilon}{n^{3/2}}$ they can be neglected.} Given the approximation in equation
-\eqref{eq:DotGammavsGamma}, the term $C(t)$ is taken to be zero and the master
+Finally, as the commutators $[\dot{\Gamma},\Gamma]$ and
+$[\dot{\Gamma}^\dagger,\Gamma^\dagger]$ are proportional to
+$\frac{\epsilon}{n^{3/2}}$ the $C(t)$ can be neglected and the master
 equation~(\ref{eq:master_no_small}) simplifies to
 \begin{equation}\label{LCMasterEq}
 \dot{\rho} = \frac{1}{i\hbar}[H,\rho] +L_a\rho + L_\Gamma \rho = \mathcal{L}\rho.
@@ -458,10 +458,10 @@ $D[\Gamma] = 2\Gamma \mu \Gamma^\dagger -\{\Gamma^\dagger \Gamma,
 \mu\}$. $A_-$ is the cooling rate and $A_+$ is the heating rate.
 \fxnote{Creo que va en el apéndice, me abstengo de hacerlo hasta que
   estén tus cambios} $\overline{H}$ is a term proportional to
-$\Gamma^\dagger \Gamma$ that may be neglected, as it is very small
-when compared to $nu_0$ . This equation is obtained in detail in
-Appendix \ref{CoolingAppendix}. The coefficients are the usual rates
-for the non time-dependent case plus a correction proportional to the
+$\Gamma^\dagger \Gamma$ that may be neglected, as it is small when
+compared to $\nu_0 \Gamma^\dagger \Gamma$ . This equation is obtained in detail in Appendix
+\ref{CoolingAppendix}. The coefficients are the usual rates for the
+non time-dependent case plus a correction proportional to the
 adimensional parameter $C_t=\frac{\delta_t}{\nu_0}$, in Appendix
 \ref{CoolingAppendix} we require $C_t \ll 1$. The temperature at the
 end of the cooling procedure is given by
@@ -469,7 +469,6 @@ end of the cooling procedure is given by
 \begin{equation}
 \expval{m} =\langle \Gamma^\dagger \Gamma \rangle = \frac{A_+}{A_- - A_+}.
 \end{equation}
-\fxnote{The coefficients $A_-$ and $A_+$ are given explicitly in the next section}.
 This is the mean number of thermal excitations for the harmonic
 oscillator. Cooling towards zero in this reference frame is in
 reality cooling towards the coherent state $\ket{\beta_1}$ in the
@@ -522,7 +521,17 @@ With these expressions in hand, the temperature is easily calculated.
 \caption{ Mechanical oscillator phonon number with and without a time dependence. The correction results in a lower minimum temperature, as well as a lower temperature in a region around this minimum.}\label{fig:TempComparisson}
 \end{figure}
 
-For figure \ref{fig:TempComparisson},we used $\kappa = 0.05\nu_0$ and calculated $\expval{m}$ in the region $\frac{\delta}{\nu_0}\in [-2,2]$. We restrict the figures to the region near the temperature minimum at $\frac{\delta}{\nu_0}=-1$ The positive half of the region corresponds to heating of the resonator and the negative part corresponds to cooling. We assume that the parameters are such that
+
+\fxnote{Como acordamos por telefono: agrega una figura alrededor de
+  $\delta=1$ y explica las dos figuras en el texto}
+
+For figure \ref{fig:TempComparisson},we used $\kappa = 0.05\nu_0$ and
+calculated $\expval{m}$ in the region
+$\frac{\delta}{\nu_0}\in [-2,2]$. We restrict the figures to the
+region near the temperature minimum at $\frac{\delta}{\nu_0}=-1$ The
+positive half of the region corresponds to heating of the resonator
+and the negative part corresponds to cooling. We assume that the
+parameters are such that
 
 \begin{equation}
 \frac{C_tJ_1(C_t)}{I_0(C_t)} = 0.05,
@@ -531,19 +540,10 @@ so that corrections proportional to higher orders in $C_t$ could be
 disregarded. As we can see in figure \ref{fig:TempRatio}, the
 corrected temperature is lower over a range around the minimum point.
 
-\fxnote*{Le faltaba una palabra}{It must be noted that since terms of
-  order $\frac{\delta_t}{\delta^2}$ are neglected, the approximation
-  does not hold as $\delta$ approaches 0.} The approximation is valid
-near $\frac{\delta}{\nu_0} = -1$, since we only keep one term for the
-correction to $\delta$, \fxnote{and this correction assumes that
-  $|\frac{\delta_t}{\nu_0}|<<1$ so, at this level of approximation, we
-  require that $\delta \approx \nu_0$} \fxnote{As can be seen in
-  figure \ref{fig:TempRatio}, the corrected temperature begins to rise
-  in comparison to the uncorrected temperature around
-  $\frac{\delta}{\nu_0}=-1.5$ and also begins to rapidly rise near
-  $\frac{\delta}{\nu_0}=-.7$. These points seem to signal where the
-  approximation begins to break down.}
-
+It must be noted that since terms of order $\frac{\delta_t}{\delta^2}$
+are neglected, the approximation does not hold as $\delta$ approaches
+0. The approximation is valid near $\frac{\delta}{\nu_0} = -1$ as long
+as $|\frac{\delta_t}{\nu_0}|,\frac{\delta_t}{\delta^2}\ll 1$. 
 
 \begin{figure}
 \includegraphics[scale=.5]{TempPropGorden1.pdf}
@@ -640,25 +640,22 @@ The left and right eigenstates are orthogonal under the product
 These states play an important part in the derivation of the master
 equation of the cavity state in the adiabatic approximation.
 
-\fxnote*{Esto esta mal, los eigenstates de H son los estados de fock.
-  Lo tienes que poner bien.}{In the absence of damping, the mechanical
-states are the left and right eigenstates of
+When there is no damping ($\kappa=0$) the left and right eigenstates reduces to 
 
 \begin{equation}
-\frac{1}{i\hbar}[H,\bullet], \text{   with    } H =\hbar\nu_0\Gamma^\dagger\Gamma,
-\end{equation}}
-
-are given by
-
-\begin{equation}
-\hat{\rho_{\lambda_l}^{mec}}=\Ket{n+l}\Bra{n}=\check{\rho_{\lambda_l}^{mec}}^\dagger,
-\end{equation} 
+\hat{\rho}_{n}^{j}=\Ket{n+j}\Bra{n}=\check{\rho}_{n}^{\dagger j},
+\end{equation}
 with eigenvalues
 \begin{equation}
-\lambda_l = i l \nu_0.
+\lambda_l = i j \nu_0\, ,
 \end{equation}
+$\Ket{n}$ is the number state of the harmonic oscillator, $j$ is an
+integer satisfying $(n+j)>0$.
+
 
 \section{Laser Cooling and Projection Operators}\label{CoolingAppendix}
+
+\fxnote{Agregar una explicacion explicita de como haces los promedios en el tiempo}
 
 In order to find the master equation
 \eqref{eq:ProyectedMasterEqCooling} we begin with the equation based on the Hamiltonian \eqref{LCHamiltonian}
@@ -772,7 +769,12 @@ P\dot{\rho}'(t)=P e^{-\mathcal{L}_0 t-\mathcal{L}_0^t(t)}\mathcal{L}_1[&\sum_{\l
 \begin{align}
 \lambda =& \lambda_0 + \lambda_c\frac{\delta_t}{\nu_0}\sin(\nu_0 t),\\
 \lambda' =& \lambda'_0 + \lambda'_c\frac{\delta_t}{\nu_0}\sin(\nu_0 t),
-\end{align} as the time dependent part will be handled separately. $\lambda_c$ simply refers to $i$ times the value acquired by the operator $a^\dagger a$. If we then set $t_0=0$ and note that $\mathcal{L}_0^t(0)=0$, we may write \eqref{ProyectionEQ}, returning $P$ and $Q$ to their original notation, as
+\end{align}
+as the time dependent part will be handled separately. $\lambda_c$
+simply refers to \fxnote*{Sigue sin entenderse, ya que no dices quien es $i$, no se si lo que quieres decir es simplemente que $\lambda_c$ es igual a los enteros, y el valor depende simplemente sobre que estado actuo el operador L}{$i$ times the value acquired by the operator
+$a^\dagger a$.} If we then set $t_0=0$ and note that
+$\mathcal{L}_0^t(0)=0$, we may write \eqref{ProyectionEQ}, returning
+$P$ and $Q$ to their original notation, as
 
 \begin{align}
 P\dot{\rho}'(t)=&\sum_{\lambda,\lambda'}[P \mathcal{L}_1Q[...]\mathcal{L}_1P\rho(0)],\\
