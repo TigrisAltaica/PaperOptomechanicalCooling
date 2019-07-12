@@ -38,7 +38,7 @@ Universidad Nacional Aut\'{o}noma de M\'{e}xico, Circuito Escolar s/n Ciudad Uni
   optomechanical cavity using a dissipation model that accounts for
   the modification of the quasi-energy spectrum caused by the driving
   when the natural frequency of the mechanical object oscillates
-  periodically around its mean value. The master equation with its
+  periodically around its mean value. The master equation with the
   improved dissipation model is expressed using Floquet operators. We
   apply the master equation to model the laser cooling of the
   mechanical object. Using an adiabatic approximation, an analytical
@@ -64,7 +64,7 @@ Universidad Nacional Aut\'{o}noma de M\'{e}xico, Circuito Escolar s/n Ciudad Uni
 
 Quantum cavity optomechanics studies systems composed of macroscopic
 mechanical objects, such as mirrors, and an optical cavity's quantized
-light field usually coupled via radiation pressure. In a common scheme
+light field, usually coupled via radiation pressure. In a common scheme
 one of the end-mirrors of a Fabry-Perot cavity is suspended while able
 to freely oscillate. When photons are reflected by the mirror, there
 is a momentum transfer between the light field and the mirror and
@@ -218,7 +218,7 @@ commutation relations for creation and annihilation operators
 \begin{equation}
 H_{\rm mec}(t) = \hbar\frac{W}{|f(t)|^2}\left[\Gamma^\dagger(t)\Gamma(t) + \frac{1}{2}\right],
 \end{equation}
-with the Wronskian $W$ for \eqref{TimeDependentHO}. The explicit time dependence of the Floquet operators will not be noted from now on for the sake of brevity. Equation
+with $W$ the Wronskianfor for \eqref{TimeDependentHO}. The explicit time dependence of the Floquet operators will not be noted from now on for the sake of brevity. Equation
 \eqref{FloquetOperators} is inverted and solved for the harmonic
 oscillator's position operator \cite{TesisMaestria}
 
@@ -286,7 +286,7 @@ mechanical oscillator's time dependent frequency.
 
 \subsection{Displaced Frame}
 
-In order to eliminate the pump term and to find useful approximations
+In order to eliminate the pump term, and to find useful approximations,
 we employ a unitary transformation to shift \eqref{LCMasterEquation}
 into a displaced reference frame. This transformation depends on two
 time-dependent coefficients, $\alpha(t)$ and $\beta(t)$, which are
@@ -304,8 +304,8 @@ $\rho'(t)=U\rho U^\dagger$ which represents the coupled
 cavity-mechanical system,  with 
 
 \begin{equation}
-C(t)=(\beta^2-|\beta|^2)[\dot{\Gamma}^\dagger,\Gamma^\dagger]-((\beta^*)^2-|\beta|^2)[\dot{\Gamma},\Gamma].
-\end{equation}
+C(t)=(\beta^2-|\beta|^2)[\dot{\Gamma}^\dagger,\Gamma^\dagger]-((\beta^*)^2-|\beta|^2)[\dot{\Gamma},\Gamma],
+\end{equation} this term arises due to the explicit time dependence in the Floquet operators as they do not, in general, commute with their own time derivatives.
 The primes indicate that the transformation has been applied. The
 displaced Hamiltonian, which includes a pump-like term that appears
 due to the transformation being applied to the time derivative term,
@@ -325,8 +325,7 @@ $\beta(t)$ fulfill the differential equations
 \end{align}
 
 
-The $C(t)$ term appears because the Floquet operators do not necessarily commute with
-their own time derivatives.
+
 
 Proceeding further requires an explicit solution for
 \eqref{TimeDependentHO} in order to calculate explicit expressions for several of the coefficients and to deal with the $\dot{\Gamma}$ and $\dot{\Gamma}^\dagger$ operators. The primes in the operators will be omitted
@@ -343,7 +342,7 @@ specifically
 \nu(t) = \nu_0 + \epsilon' cos(2\omega t)\, ,
 \end{equation}
 with $\epsilon' \ll \nu_0$, where $\nu_0$ is the mean frequency. This
-leads to the time-dependent harmonic oscillator equation
+leads to the time-dependent harmonic oscillator equation, neglecting terms of order 2 or higher in $\epsilon$
 
 \begin{equation}\label{SmallOscillationsTDHO}
 \ddot{f} + (\nu_0^2 + 2\epsilon' \nu_0 cos(2\omega t))f = 0,
@@ -364,7 +363,7 @@ f(t)=  \frac{1}{\sqrt{n\omega}}(e^{in\omega t}  + \epsilon \frac{1}{8(n+1)} e^{i
 
 With this solution we may calculate an explicit expression for
 $\dot{\Gamma}$ and it's Hermitian Conjugate. Since we are working in a
-regime where $\epsilon \ll n$, we neglect terms smaller than
+regime where $1 \ll n$, we neglect terms smaller than
 $\frac{\epsilon}{n}$ and can thus obtain the approximate expressions
 
 \begin{align}\label{eq:DotGammavsGamma}
@@ -400,12 +399,12 @@ order in the coupling parameter.  In obtaining the solution we used
 \begin{equation}\label{GammaCoefficients}
 \gamma(t)_\pm= \frac{\pm 1}{2i\sqrt{\nu_0}}e^{\mp i\nu_0 t},
 \end{equation}
-and  $\frac{W}{|f|^2} \approx \nu_0$. These expressions neglect terms of order $\frac{\epsilon}{n^2}$  since we work in the regime where $n \gg 1$. Using \eqref{eq:alpha_beta_sta} in~(\ref{eq:hamiltonian_no_small_2})
+and  $\frac{W}{|f|^2} \approx \nu_0$. These expressions neglect terms of order $\frac{\epsilon}{n^2}$ . Using \eqref{eq:alpha_beta_sta} in~(\ref{eq:hamiltonian_no_small_2})
 the Hamiltonian can be written as
 \begin{align}
 H =& -\hbar \delta' a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
 &-\hbar g\sqrt{\frac{\hbar}{2M}}(a^{\dagger}a +\alpha_1 a^{\dagger}+\alpha^*_1 a)(\gamma_-(t)\Gamma^{\dagger}+\gamma_+(t)\Gamma)\nonumber.
-\end{align} It's important to note that, in this reference frame, the cavity detuning $\delta'$ acquires a time dependent correction that results from the Hamiltonian term involving the time derivatives of the $\Gamma$ operators. 
+\end{align} It's important to note that, in this reference frame, the cavity detuning $\delta'$ acquires a time dependent correction 
 
 \begin{align}
 \delta' =& \delta +\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma} (\cos(\nu_0 t)), \nonumber\\
@@ -468,7 +467,7 @@ end of the cooling procedure is given by
 \begin{equation}\label{eq:TempExpression}
 \expval{m} =\langle \Gamma^\dagger \Gamma \rangle = \frac{A_+}{A_- - A_+}.
 \end{equation}
-This is the mean number of thermal excitations for the harmonic
+This is the mean number of thermal excitations for the time-dependent harmonic
 oscillator. Cooling towards zero in this reference frame is in
 reality cooling towards the coherent state $\ket{\beta_1}$ in the
 laboratory frame. It's important to note that these excitations
@@ -604,7 +603,7 @@ eigenvalues of the operator $L_a$. This basis is known as the damping
 basis \cite{EnglertDB} and is given by
 \begin{align}\label{DefDB}
 \hat{\rho}_n^l=&a^{\dagger j}\frac{(-1)^n}{(n_p+1)^{j+1}}:L_n^l[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:\quad j \geq 0, \\
-\hat{\rho}_n^j=&\frac{(-1)^n}{(n_p+1)^{|j|+1}}:L_n^{|j|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|j|}\quad l \leq 0.
+\hat{\rho}_n^j=&\frac{(-1)^n}{(n_p+1)^{|j|+1}}:L_n^{|j|}[\frac{a^\dagger a}{n_p+1}]e^{-[\frac{a^\dagger a}{n_p+1}]}:a^{|j|}\quad j \leq 0.
 \end{align}
 The Lindblad operator is not hermitian and the left eigenstates must
 be considered to find the coefficients of the density operator
@@ -638,10 +637,10 @@ The left and right eigenstates are orthogonal under the product
 These states play an important part in the derivation of the master
 equation of the cavity state in the adiabatic approximation.
 
-When there is no damping ($\kappa=0$) the left and right eigenstates reduces to 
+In Appendix \ref{CoolingAppendix} we consider a harmonic oscillator with no damping, so the left and right eigenstates of the damping basis reduce to 
 
 \begin{equation}
-\hat{\rho}_{n}^{j}=\Ket{n+j}\Bra{n}=\check{\rho}_{n}^{\dagger j},
+\hat{\rho}_{n}^{l}=\Ket{n+l}\Bra{n}=\check{\rho}_{n}^{\dagger l},
 \end{equation}
 with eigenvalues
 \begin{equation}
@@ -803,7 +802,7 @@ E(\lambda') = \frac{1}{-\lambda'_0}e^{\lambda_c'\frac{\delta_t}{\nu_0}\sin(\nu_0
 
 \begin{equation}
 E_c(\lambda')=\frac{(-\lambda'_c)((-\lambda'_0)\sin(\nu_0 t)-\nu_0\cos(\nu_0t))}{(-\lambda_0')^2 + \nu_0^2}e^{\lambda_c'\frac{\delta_t}{\nu_0}\sin(\nu_0t)}.
-\end{equation} Here we have used the adiabatic approximation. For large enough $t$, $e^{\lambda'_0t}$ can be set equal to zero as the $\lambda'$ states decay very quickly.  We have also used that $\lambda$ states all have eigenvalues equal to zero. We then trace over all cavity degrees of freedom to obtain a master equation for the harmonic oscillator in the steady state subspace $P$. Here we assume that the initial condition is a separable state of the cavity and the harmonic oscillator $\rho(0)=\rho_{c}(0)\otimes\rho_{m}(0)$  and  set $\mu = Tr_c[P\rho_{cav}]$ to arrive at 
+\end{equation} Here we have used the adiabatic approximation. For large enough $t$, $e^{\lambda'_0t}$ can be set equal to zero as the $\lambda'$ states decay very quickly.  We have also used that $\lambda$ states all have eigenvalues equal to zero. We then trace over all cavity degrees of freedom to obtain a master equation for the harmonic oscillator in the steady state subspace $P$. Here we assume that the initial condition is a separable state of the cavity and the harmonic oscillator $\rho(0)=\rho_{c}(0)\otimes\rho_{m}(0)$  and  set $\mu = Tr_c[P\rho]$ to arrive at 
 
 \begin{align}
 \dot{\mu}=&\sum_{\lambda'}Tr_c[P \mathcal{L}_1Q[E(\lambda')]\mathcal{L}_1P\rho_{c}(0)\otimes\rho_{m}(0) ],\\
