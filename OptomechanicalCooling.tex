@@ -280,11 +280,7 @@ energy exchanges between the environment, and the cavity and the
 mechanical resonator respectively. Equation \eqref{LCMasterEquation}
 is the master equation for a parametrically driven optomechanical
 system with an improved dissipation model which accounts for the
-mechanical oscillator's time dependent frequency.
-
-\fxnote{¿Vale la pena una discusion del significado de las
-  excitaciones e introducir el operador de numero aqui, o lo dejamos
-  donde esta?}
+mechanical oscillator's time dependent frequency. 
 
 \subsection{Displaced Frame}
 
@@ -392,13 +388,11 @@ With an explicit solution for \eqref{SmallOscillationsTDHO} in hand,
 we can solve Eq.~\eqref{eq:displaced_frame_2}. Assuming that the time
 scales of the dissipative processes are fast compared with the other
 time scales we can focus on the stationary case
-($\dot{\alpha}(t)=\dot{\beta}(t)=0$); we also assume a weak coupling
-regime (coefficients of second order in $g$ or higher are neglected)
-obtaining
+($\dot{\alpha}(t)=\dot{\beta}(t)=0$), resulting in
 \begin{align}\label{eq:alpha_beta_sta}
 \alpha_1 =& \frac{\Omega}{2\delta-i\kappa},& \beta_1 =\chi_0\frac{\Omega^2 e^{-i\nu_0 t}}{(\frac{\kappa^2}{4}+\delta^2)\gamma}& ,
 \end{align} where  $\chi_0 = g\sqrt{\frac{\hbar}{2M\nu_0}}$ represents the coupling.
-The  sub-index 1 denotes that the solutions are valid only to first
+The  sub-index 1 denotes that these solutions are valid only to first
 order in the coupling parameter.  In obtaining the solution we used
 \begin{equation}\label{GammaCoefficients}
 \gamma(t)_\pm= \frac{\pm 1}{2i\sqrt{\nu_0}}e^{\mp i\nu_0 t},
@@ -413,7 +407,7 @@ H =& -\hbar \delta' a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
 \begin{align}
 \delta' =& \delta +\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma} (\cos(\nu_0 t)), \nonumber\\
 =& \delta + \delta_t\cos(\nu_0 t),
-\end{align} with $\delta_t=\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma}$.  Here the correction is not neglected despite it being proportional to $\chi_0^2$ as it is also proportional to $\Omega^2$ which is large. We still require $\delta_t\ll\delta$. This correction does not go into the expression for $\alpha_1$ because when doing a Taylor expansion the first correction term would be of the order $\frac{\delta_t}{\delta^2}$ which we may safely neglect.
+\end{align} with $\delta_t=\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma}$.  We work in a weak coupling regime, so we require the coupling $\chi_0$ to be small enough so that $\delta_t\ll\delta$. As $\Omega$ is large, we may work with the second order of the coupling parameter in this expression. This correction does not go into the expression for $\alpha_1$ because when doing a Taylor expansion the first correction term would be of the order $\frac{\delta_t}{\delta^2}$ which we may safely neglect.
 We focus on the case where $|\alpha_1| \gg 1$
 \cite{BarberisLC} so that the $a^\dagger a$ term can be neglected as
 it is small when compared to the other two terms in the interaction.
@@ -492,7 +486,7 @@ A_+ =& a\frac{\kappa}{(\delta-\nu_0)^2+\kappa^2},
 
 \begin{equation}
 a = \hbar^2\abs{\gamma}^2\chi_0^2 I_0(C_t),
-\end{equation} plus a correction for each one, proportional to  $C_t$. These corrections are
+\end{equation} with $|\gamma|^2 = \gamma_+(t) \gamma_-(t)$ which is not time dependent at our level of approximation, plus a correction for each one, proportional to  $C_t$. These corrections are
 
 \begin{align}
 A_-^c=& -bC_t(\frac{(\delta+\nu_0)^2\kappa+ \kappa\nu_0^2 + \kappa^3}{(-(\delta+\nu_0)^2+\kappa^2+\nu_0^2)^2+4(\delta+\nu_0)^2\kappa^2)})\\
@@ -536,11 +530,14 @@ $\frac{\delta}{\nu_0}=-1$. We assume that the parameters are such that
 so that corrections proportional to higher orders in $C_t$ could be
 disregarded. As we can see in figure \ref{fig:TempRatio}, the
 temperature for the parametrically driven oscillator is lower than the
-non-driven case over a range around the minimum point. \fxnote*{Agregue
-  esta frase, checa que sea cierto. ¿Valdra la pena aqui agregar una
-  lista de todas las aproximaciones hechas?}{As long as the parameters
-  satisfy the assumptions done in the derivation, the final
-  temperature does not depend on the driven frequency $\omega$.}
+non-driven case over a range around the minimum point. \fxnote*{Creo que lo que queria decir es que no depende de $n$}{As long as the
+parameters satisfy the assumptions done in the derivation, the final
+temperature does not depend on $n$.}
+It is worth remembering the assumptions made to this point. In order
+to derive the cooling rates we have neglected terms of order
+$\epsilon^2$, $\frac{\epsilon}{n^3/2}$ and smaller and terms of order
+$\frac{\delta_t}{\delta^2}$ and smaller.
+
 
 It must be noted that since terms of order $\frac{\delta_t}{\delta^2}$
 are neglected, the approximation does not hold as $\delta$ approaches
@@ -854,17 +851,39 @@ P_m[F_\Gamma,Q_m  \mu F_\Gamma] =& \abs{\gamma}^2((\Gamma\mu\Gamma^\dagger  - \m
 \end{equation}
 and equation \eqref{CoolingBeforecoefficients} can then be
 straightforwardly arranged in the form
-\eqref{eq:ProyectedMasterEqCooling}. When arranging in this form, the
+\begin{equation}\label{eq:LaserCoolingEqAppendixB}
+\dot{\mu} \approx \frac{1}{i\hbar}[\overline{H},\mu] + \frac{A_-}{2}D[\Gamma]\mu + \frac{A_+}{2}D[\Gamma^\dagger]\mu, 
+\end{equation}
+with
+$D[\Gamma] = 2\Gamma \mu \Gamma^\dagger -\{\Gamma^\dagger \Gamma,
+\mu\}$. When arranging in this form, the
 coefficients that are obtained are complex. The real part corresponds
 to the cooling and heating rates and the imaginary part corresponds to
-a negligible correction to the mechanical frequency $\nu_0$.
-\fxnote{Poner explicitamente la ecuacion de $\mu$ con $A_-$ y $A_+$ aqui, poner
-  la expresion que usaste para derivar las expresiones (44) y (45),
-  que debe ser una expresion con trazas relativamente compacta.
-  Agregar despues una pequeña discusion de como se agrega la
-  disipacion del oscilador y porque no la tomamos en cuenta en el
-  texto (en el articulo con Marc o en las notas hay una discusion de
-  eso, no me acuerdo bien en donde)}
+a negligible correction to the mechanical frequency $\nu_0$. The cooling coefficient, $A_-$ is given by
+
+\begin{equation}
+A_- = - \frac{1}{2}\sum_{\lambda'}\hbar^2\chi_0^2 |\alpha_1|^2 |\gamma^2|(\delta_{l,1}\delta_{j,1}+\delta_{l,-1}\delta_{j,-1})\delta_{n,0}\expval{E(\lambda'}),
+\end{equation} where the Kroenecker deltas eliminate the sum ober $\lambda'$. The heating rate $A_+$ is quite similar and is given by
+
+\begin{equation}
+A_+ = - \frac{1}{2}\sum_{\lambda'}\hbar^2\chi_0^2 |\alpha_1|^2 |\gamma^2|(\delta_{l,1}\delta_{j,-1}+\delta_{l,-1}\delta_{j,1})\delta_{n,0}\expval{E(\lambda'}.
+\end{equation}
+
+We still have to include the mechanical damping; as this process has
+the longest timescale, it is included by adding $L_\Gamma \mu$ to
+equation~\eqref{eq:LaserCoolingEqAppendixB} \cite{BarberisLC}. The
+mean number of mechanical excitations is given by:
+\begin{equation}
+  \label{eq:finalm}
+   m_{\rm final} =\frac{\langle m \rangle
+    (A_--A_+)+\gamma n_m}{A_--A_++\gamma}\, ,
+\end{equation}
+where $\langle m \rangle=A_+/(A_--A_+)$. We are considering the case
+where $\gamma \ll (A_--A_+)$ and
+$ m_{\rm final}\approx \langle m \rangle$.
+
+
+
 \bibliographystyle{unsrt}
 \bibliography{Bib}
 \end{document}
