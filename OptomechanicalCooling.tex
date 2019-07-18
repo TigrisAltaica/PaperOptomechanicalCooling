@@ -407,11 +407,17 @@ H =& -\hbar \delta' a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
 \begin{align}
 \delta' =& \delta +\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma} (\cos(\nu_0 t)), \nonumber\\
 =& \delta + \delta_t\cos(\nu_0 t),
-\end{align} with $\delta_t=\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma}$.  We work in a weak coupling regime, so we require the coupling $\chi_0$ to be small enough so that $\delta_t\ll\delta$. As $\Omega$ is large, we may work with the second order of the coupling parameter in this expression. This correction does not go into the expression for $\alpha_1$ because when doing a Taylor expansion the first correction term would be of the order $\frac{\delta_t}{\delta^2}$ which we may safely neglect.
-We focus on the case where $|\alpha_1| \gg 1$
-\cite{BarberisLC} so that the $a^\dagger a$ term can be neglected as
-it is small when compared to the other two terms in the interaction.
-This leads to a further simplified Hamiltonian
+\end{align}
+with $\delta_t=\frac{\chi_0^2 \abs{\alpha_1}^2}{\gamma}$. We work in a
+weak coupling regime, so we require the coupling $\chi_0$ to be small
+enough so that $\delta_t\ll\delta$. Corrections of the order of
+$\delta_t$ does not go into the expression for $\alpha_1$ because when
+doing a Taylor expansion the first correction term would be of the
+order $\frac{\delta_t}{\delta^2}$ which we may safely neglect. We
+focus on the case where $|\alpha_1| \gg 1$ \cite{BarberisLC} so that
+the $a^\dagger a$ term can be neglected as it is small when compared
+to the other two terms in the interaction. This leads to a further
+simplified Hamiltonian
 
 \begin{align} \label{LCHamiltonian}
 H(t) =& -\hbar \delta' a^{\dagger}a +\hbar\nu_0\Gamma^{\dagger}\Gamma \\
@@ -477,17 +483,27 @@ harmonic oscillator with constant frequency.
 
 \section{Calculation of Mean Vibrational Occupation Number}\label{NumCal}
 
-In order to calculate the temperature, we must provide explicit expressions for the coefficients $A_\pm$ that appear in equation \eqref{eq:ProyectedMasterEqCooling}.  They are composed of the usual values for these coefficients\citep{LCNooshi}
+In order to calculate the temperature, we must provide explicit
+expressions for the coefficients $A_\pm$ that appear in equation
+\eqref{eq:ProyectedMasterEqCooling}. We write them as 
 
 \begin{align}
-A_- =& a\frac{\kappa}{(\delta+\nu_0)^2+\kappa^2},\\
-A_+ =& a\frac{\kappa}{(\delta-\nu_0)^2+\kappa^2},
+A_- =& A_-^0 + A_-^c,\\
+A_+ =& A_+^0 + A_+^c.\\
+\end{align}
+
+Where $A_\pm^0$ are the values for the nondriven mechanic oscillator
+\citep{LCNooshi}
+\begin{align}
+A_-^0 =& a\frac{\kappa}{(\delta+\nu_0)^2+\kappa^2},\\
+A_+^0 =& a\frac{\kappa}{(\delta-\nu_0)^2+\kappa^2},
 \end{align} with 
 
 \begin{equation}
 a = \hbar^2\abs{\gamma}^2\chi_0^2 I_0(C_t),
-\end{equation} with $|\gamma|^2 = \gamma_+(t) \gamma_-(t)$ which is not time dependent at our level of approximation, plus a correction for each one, proportional to  $C_t$. These corrections are
-
+\end{equation}
+and $|\gamma|^2 = \gamma_+(t) \gamma_-(t)$, which is not time
+dependent at our level of approximation. The coefficients $A_\pm^c$  are corrections proportional to $C_t$
 \begin{align}
 A_-^c=& -bC_t(\frac{(\delta+\nu_0)^2\kappa+ \kappa\nu_0^2 + \kappa^3}{(-(\delta+\nu_0)^2+\kappa^2+\nu_0^2)^2+4(\delta+\nu_0)^2\kappa^2)})\\
 A_+^c=& -bC_t(\frac{(\delta-\nu_0)^2\kappa+ \kappa\nu_0^2 + \kappa^3}{(-(\delta-\nu_0)^2+\kappa^2+\nu_0^2)^2+4(\delta-\nu_0)^2\kappa^2)})
@@ -496,12 +512,6 @@ A_+^c=& -bC_t(\frac{(\delta-\nu_0)^2\kappa+ \kappa\nu_0^2 + \kappa^3}{(-(\delta-
 \begin{equation}
 b= \hbar^2\abs{\gamma}^2\chi_0^2 J_1(C_t)\, ,
 \end{equation}
-so that the total heating and cooling rates are given by
-
-\begin{align}
-A_-^t =& A_- + A_-^c,\\
-A_+^t =& A_+ + A_+^c.\\
-\end{align}
 $I_0$ and $J_1$ are the modified Bessel Function of the first kind and
 the Bessel function of the first kind, respectively. They appear in
 the cooling and heating rates as a result of averaging out the time
@@ -565,9 +575,8 @@ reaching lower temperatures. This also opens the path for exploring
 what happens if the movement of a leaky cavity is taken into
 consideration when theoretically treating the dissipation of the
 cavity field, because, similarly to the setup study in this paper, the
-natural frequency of the cavity field changes periodically with time,
-in addition to the time dependency the cavity acquires from the
-harmonic oscillator. We plan to explore this case in future work.
+natural frequency of the cavity field changes periodically with time.
+We plan to explore this case in future work.
  
 \appendix
 \section{The Damping Basis}\label{App1}
@@ -664,10 +673,10 @@ In order to find the master equation
 \dot{\rho}=(\mathcal{L}_0+\mathcal{L}_1)\rho\, ,
 \end{equation}
 where
-\begin{align}
+\begin{eqnarray}\label{eq:freelindblat}
 \mathcal{L}_0=& \mathcal{L}_{cav} + \mathcal{L}_{mec},\\
  =&(\frac{1}{i\hbar}[H_{\rm cav}(t),\bullet]+L_a) +(\frac{1}{i\hbar}[H_{\rm mec},\bullet]), \nonumber
-\end{align}
+\end{eqnarray}
 gives the free dynamics 
 and
 \begin{equation}
@@ -708,10 +717,17 @@ where
 \end{align*} or more explicitly
 
 \begin{align}
-\rho' =& e^{-\mathcal{L}_0t - \mathcal{L}_0^t(t)}\rho,\\
-\mathcal{L}_1' =&e^{-\mathcal{L}_0t - \mathcal{L}_0^t(t)}\mathcal{L}_1' e^{\mathcal{L}_0t +\mathcal{L}_0^t(t)},
-\end{align} where $\mathcal{L}_0$ refers to all of the non time-dependent eigenvalues and $\mathcal{L}_0^t=\frac{\delta_t}{\nu_0} \sin(\nu_0t)[a^\dagger a,\bullet]$ refers to the explicitly time dependent part of the cavity Hamiltonian.  The time integration is needed because the cavity detuning is explicitly time dependent. We project the master equation \eqref{eq:master_decay_picture} into
-both $P$ and $Q$ to obtain the equations 
+\rho' =& e^{-\mathcal{L}_0^0t - \mathcal{L}_0^t(t)}\rho,\\
+\mathcal{L}_1' =&e^{-\mathcal{L}_0^0t - \mathcal{L}_0^t(t)}\mathcal{L}_1' e^{\mathcal{L}_0^0t +\mathcal{L}_0^t(t)},
+\end{align}
+where $\mathcal{L}_0^0$ refers to the non time-dependent part of
+equation~\eqref{eq:freelindblat} and
+$\mathcal{L}_0^t(t)=\frac{\delta_t}{\nu_0 i \hbar} \sin(\nu_0t)[a^\dagger
+a,\bullet]$ refers to the explicitly time dependent part. The time
+integration is needed because the cavity detuning is explicitly time
+dependent. We project the master equation
+\eqref{eq:master_decay_picture} into both $P$ and $Q$ to obtain the
+equations
 \begin{align*}
 P\dot{\rho}' =& P\mathcal{L}_1'Q\rho', \\
 Q\dot{\rho}' =& Q\mathcal{L}'_1Q\rho' + Q\mathcal{L}'_1P\rho'.
@@ -732,13 +748,14 @@ P\dot{\rho'}(t) =& P\mathcal{L}_1Q\rho'(t_0)\\
  &+ P\mathcal{L}_1\int_{t_0}^{t}dt' Q\mathcal{L}_1(t')P\rho'(t_0)\nonumber \\
  &+ P\mathcal{L}_1\int_{t_0}^{t}dt'Q\mathcal{L}_1(t')Q\rho'(t_0)\nonumber,
 \end{align}
-where only the second term is non zero as we can choose the initial condition to have no part in $Q$. We focus on this term and transform back from the decay
-picture
+where only the second term is non zero as we can choose the initial
+condition to have no part in $Q$. We focus on this term and transform
+back from the decay picture
 
 
 \begin{align}\label{eq:temp_1}
-P\dot{\rho}'(t)=&P e^{-\mathcal{L}_0 t-\mathcal{L}_0^t(t)}\mathcal{L}_1e^{\mathcal{L}_0 t+\mathcal{L}_0^t(t)}\\
-\int_{t_0}^{t}dt'&Qe^{-\mathcal{L}_0 t'-\mathcal{L}_0^t(t')}\mathcal{L}_1e^{\mathcal{L}_0 t'+\mathcal{L}_0^t(t')}Pe^{-\mathcal{L}_0(t_0)-\mathcal{L}_0^t(t_0)}\rho(t_0).\nonumber
+P\dot{\rho}'(t)=&P e^{-\mathcal{L}_0^0 t-\mathcal{L}_0^t(t)}\mathcal{L}_1e^{\mathcal{L}_0^0 t+\mathcal{L}_0^t(t)}\\
+\int_{t_0}^{t}dt'&Qe^{-\mathcal{L}_0^0 t'-\mathcal{L}_0^t(t')}\mathcal{L}_1e^{\mathcal{L}_0^0 t'+\mathcal{L}_0^t(t')}Pe^{-\mathcal{L}_0^0 t_0-\mathcal{L}_0^t(t_0)}\rho(t_0).\nonumber
 \end{align} We write the projectors as
 \begin{eqnarray}
   P &=& \sum_{\lambda} (\hat{\rho}_{\lambda}^{cav}\otimes\hat{\rho}_{\lambda}^{mec})\otimes(\check{\rho}_{\lambda}^{cav}\otimes\check{\rho}_{\lambda}^{mec}),\label{eq:projector_p}\\
@@ -746,9 +763,9 @@ P\dot{\rho}'(t)=&P e^{-\mathcal{L}_0 t-\mathcal{L}_0^t(t)}\mathcal{L}_1e^{\mathc
 \end{eqnarray}
 the projectors with the $\lambda$ label project the state in the
 slow-decaying time-scale subspace, they are eigenstates of
-$\mathcal{L}_0+\mathcal{L}_0^t(t)$ with only zero eigenvalues. The projectors with the
+$\mathcal{L}_0^0+\mathcal{L}_0^t(t)$ with only zero eigenvalues. The projectors with the
 $\lambda'$ label corresponds to the fast-decaying time-scale, they are
-eigenstates of $\mathcal{L}_0+\mathcal{L}_0^t(t)$ with eigenvalues with a non-zero real
+eigenstates of $\mathcal{L}_0^0+\mathcal{L}_0^t(t)$ with eigenvalues with a non-zero real
 part, those states decay quickly. The projectors are applied via the product
 
 \begin{equation}
@@ -761,24 +778,21 @@ PX =\sum_\lambda \hat{\rho_{\lambda}}Tr[\check{\rho}_{\lambda}X],
 \ref{App1} for both the cavity and the mechanical resonator. 
 
 Using equations \eqref{eq:projector_p} and \eqref{eq:projector_q} in
-\eqref{eq:temp_1} and applying the operator $\mathcal{L}_0+\mathcal{L}_0^t(t)$ we obtain
+\eqref{eq:temp_1} and applying the operator $\mathcal{L}_0^0+\mathcal{L}_0^t(t)$ we obtain
 \begin{align}\label{ProyectionEQ}
-P\dot{\rho}'(t)=P e^{-\mathcal{L}_0 t-\mathcal{L}_0^t(t)}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda' t} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}e^{-\lambda' t'}\mathcal{L}_1\\
-&e^{\lambda t'}\hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda} e^{-\lambda t_0}\rho(t_0)]\nonumber.
+P\dot{\rho}'(t)=P e^{-\mathcal{L}_0^0 t-\mathcal{L}_0^t(t)}\mathcal{L}_1[&\sum_{\lambda',\lambda}\int_{t_0}^{t}dt'e^{\lambda'(t)} \hat{\rho}_{\lambda'} \otimes \check{\rho}_{\lambda'}e^{-\lambda'(t')}\mathcal{L}_1\\
+&e^{\lambda(t')}\hat{\rho}_{\lambda} \otimes \check{\rho}_{\lambda} e^{-\lambda (t_0)}\rho(t_0)]\nonumber.
 \end{align} where it is important to remember that the part of these eigenvalues that corresponds to the cavity has an explicitly time dependent part. To this effect, we split the eigenvalues into two distinct parts as the time dependent part will be handled separately,
 
 \begin{align}
-\lambda =& \lambda_0 + \lambda_c\frac{\delta_t}{\nu_0}\sin(\nu_0 t),\\
-\lambda' =& \lambda'_0 + \lambda'_c\frac{\delta_t}{\nu_0}\sin(\nu_0 t),
-\end{align} with
-
-\begin{equation}
-\lambda_c = ij,
-\end{equation}
-with $i$ the imaginary unit and $j$ the cavity quantum number. If we
-then set $t_0=0$ and note that $\mathcal{L}_0^t(0)=0$, we may write
-\eqref{ProyectionEQ}, returning $P$ and $Q$ to their original
-notation, as
+\lambda(t) =& \lambda_0 t + \lambda_c\frac{\delta_t}{\nu_0}\sin(\nu_0 t),\\
+\lambda'(t) =& \lambda'_0 t + \lambda'_c\frac{\delta_t}{\nu_0}\sin(\nu_0 t),
+\end{align} 
+with $\lambda_0$ the eigenvalue of $\mathcal{L}_0^0$ and
+$\lambda_c=i n$, $n$ a positive integer, the eigenvalue of
+$\frac{1}{i\hbar}[a^\dagger a,\bullet]$. If we then set $t_0=0$ and note that
+$\mathcal{L}_0^t(0)=0$, we may write \eqref{ProyectionEQ}, returning
+$P$ and $Q$ to their original notation, as
 
 \begin{align}
 P\dot{\rho}'(t)=&\sum_{\lambda,\lambda'}[P \mathcal{L}_1Q[...]\mathcal{L}_1P\rho(0)],\\
@@ -814,43 +828,55 @@ E_c(\lambda')=\frac{(-\lambda'_c)((-\lambda'_0)\sin(\nu_0 t)-\nu_0\cos(\nu_0t))}
 \begin{align}
 \dot{\mu}=&\sum_{\lambda'}Tr_c[P \mathcal{L}_1Q[E(\lambda')]\mathcal{L}_1P\rho_{c}(0)\otimes\rho_{m}(0) ],\\
 &+\sum_{\lambda'}\frac{\delta_t}{\nu_0}Tr_c[P\mathcal{L}_1Q[E_c(\lambda')]\mathcal{L}_1P\rho_{c}(0)\otimes\rho_{m}(0) ]\nonumber.
-\end{align} we use the explicit form of $\mathcal{L}_1$ 
+\end{align}
+We use the explicit form of $\mathcal{L}_1$ 
 
 \begin{equation}
 \mathcal{L}_1 = [\chi_0 F_aF_\Gamma,\cdot] = [\chi_0(\alpha_0 a^\dagger + \alpha_0^* a)(\gamma_-\Gamma^\dagger-\gamma_+\Gamma),\cdot],
-\end{equation}and set $E= E(\lambda') +\frac{\delta_t}{\nu_0} E_c(\lambda')$ to  arrive at the expression
-
+\end{equation}
+and set $E= E(\lambda') +\frac{\delta_t}{\nu_0} E_c(\lambda')$ to
+arrive at the expression
 \begin{align*}
 \dot{\mu} = \chi_0^2 \sum_{\lambda'}&( Tr_c[PF_aF_\Gamma QEF_aF_\Gamma \mu \otimes \rho_{c}]\\
 &- Tr_c[PQEF_aF_\Gamma\mu \otimes \rho_{c} F_aF_\Gamma ]\nonumber \\
 &-Tr_c[PF_aF_\Gamma QE\mu \otimes \rho_{c} F_aF_\Gamma ] \nonumber\\ 
 &+Tr_c[PQE\mu \otimes \rho_{c}F_aF_\Gamma  F_aF_\Gamma ]). \nonumber
-\end{align*}  We note that each projector is composed of a projector for cavity states and a projector for mechanical oscillator states, $P=P_c P_m$ so we can move everything that does not depend on the cavity outside of the trace to obtain
+\end{align*}
+We note that each projector is composed of a projector for cavity
+states and a projector for mechanical oscillator states, $P=P_c P_m$
+so we can move everything that does not depend on the cavity outside
+of the trace to obtain
 
 \begin{align}
 \dot{\mu}=\chi_0^2 \sum_{\lambda'}& E(T_{1c}P_m[F_\Gamma,Q_m F_\Gamma \mu]\\
 &-T_{2c}P_m[F_\Gamma,Q_m \mu F_\Gamma ]),\nonumber
-\end{align} where $T_{1c}$ and $T_{2c}$ depend only on the cavity variables. These traces are readily calculated and result in
-
+\end{align}
+where $T_{1c}$ and $T_{2c}$ depend only on the cavity variables. These
+traces are readily calculated and result in
 \begin{align}
 T_{1c}=& Tr_c[F_aP_cF_a\rho_c]\\
-=&\hbar^2\abs{\alpha_1}^2 \delta_{j,1}\delta{n,0},\\
+=&\hbar^2\abs{\alpha_1}^2 \delta_{j,1}\delta{n,0}\, ,\\
 T_{2c}=& Tr_c[F_aP_c\rho_cF_a]\\
-=&\hbar^2 \abs{\alpha_1}^2 \delta_{j,-1}\delta{n,0},\\
-\end{align} while the mechanical terms result in
-
+=&\hbar^2 \abs{\alpha_1}^2 \delta_{j,-1}\delta{n,0}\, ,\\
+\end{align}
+while the mechanical terms result in
 \begin{align}\label{CoolingBeforecoefficients}
 P_m[F_\Gamma,Q_m F_\Gamma \mu] =& \abs{\gamma}^2((\Gamma\Gamma^\dagger \mu - \Gamma^\dagger \mu  \Gamma)\delta_{l,-1} \\
 &+ (\Gamma^\dagger\Gamma \mu - \Gamma \mu  \Gamma^\dagger)\delta_{l,1}),\nonumber \\
 P_m[F_\Gamma,Q_m  \mu F_\Gamma] =& \abs{\gamma}^2((\Gamma\mu\Gamma^\dagger  - \mu\Gamma^\dagger   \Gamma)\delta_{l,-1}\\ 
 &+ (\Gamma^\dagger \mu\Gamma -  \mu \Gamma \Gamma^\dagger)\delta_{l,1}). \nonumber
-\end{align} the Kronecker deltas refer to the numbers in the eigenvalues, both for the cavity and the mechanical oscillator. These eliminate the sum over all possible $\lambda'$ values. This eigenvalue selection then determines the value of the functions $E(\lambda')$ and $E_c(\lambda')$ which are then averaged over time using
+\end{align}
+The Kronecker deltas refer to the numbers in the eigenvalues, both for
+the cavity and the mechanical oscillator. These eliminate the sum over
+all possible $\lambda'$ values. This eigenvalue selection then
+determines the value of the functions $E(\lambda')$ and
+$E_c(\lambda')$ which are then averaged over time using
 
 \begin{equation}
-<E(\lambda)> = \frac{2\pi}{\nu_0}\int_0^\frac{2\pi}{\nu_0}dt E(\lambda) 
+\langle E(\lambda)\rangle = \frac{2\pi}{\nu_0}\int_0^\frac{2\pi}{\nu_0}dt E(\lambda) 
 \end{equation}
 and equation \eqref{CoolingBeforecoefficients} can then be
-straightforwardly arranged in the form
+ arranged in the form
 \begin{equation}\label{eq:LaserCoolingEqAppendixB}
 \dot{\mu} \approx \frac{1}{i\hbar}[\overline{H},\mu] + \frac{A_-}{2}D[\Gamma]\mu + \frac{A_+}{2}D[\Gamma^\dagger]\mu, 
 \end{equation}
