@@ -77,7 +77,7 @@ several interesting effects such as optomechanically induced
 transparency \cite{WeissOIT}, the optical spring effect \cite{VogelOT}
 or, most relevant to this study, optomechanical cooling, which was
 first proposed by Mancini, et al \cite{CohadonCM, CorbittOC,
-  SchliesserRPC, LCNooshi, ManciniOC}.
+  SchliesserRPC, LCNooshi, ManciniOC}. {\textbf Referee may ask for more papers, like those from Marquadt etc.}
 	
 Optomechanical cooling consists of the damping of the end mirror's
 mechanical motion due to the radiative coupling to the cavity field.
@@ -98,17 +98,11 @@ frequency as a function of time \cite{JockelMR}. The effect of this
 dependence on the mechanical object's final temperature was studied in
 \cite{BarberisLC}. In that study it was found that the final
 temperature of the parametrically driven harmonic oscillator was
-larger than the non-driven case. However, the master equation from
+larger than the non-driven case. The master equation from
 which the cooling rates were derived accounted for the natural
 frequency of the mechanical resonator via ad-hoc time-dependent
 coefficients that were introduced after performing the Markov
-approximation; this approach led to an incomplete master equation and
-thus an incomplete description of the system's dynamics, as the system
-is being treated as essentially not time-dependent during the
-derivation of the master equation. In this study, we employ a
-different method that accounts for the time dependence throughout the
-entire derivation.
-
+approximation. In this paper we complement our previous work and pose the question, how the cooling dynamics changes when the time-dependence of the system is taken into account in the derivation of the master equation.
 
 The formalism we apply (section \ref{OptmechH}) is based on
 Floquet theory and was demonstrated to be a more accurate treatment in
@@ -118,11 +112,10 @@ mechanical oscillator, the Floquet operators can be given explicitly
 (section \ref{SolSmallOsc}). Under the adiabatic approximation, we
 derive an approximated expression for the mean phonon occupation
 number in the final stages of optomechanical cooling (section
-\ref{LasCool}), and compare its prediction to the non-time-dependent
-case (section \ref{NumCal}). We find, using the formalism presented
-here, that lower temperatures can be obtained if the mechanical object
-is parametrically driven. Our results suggest that the theoretical
-model of dissipation of the mechanical osscilator can have a
+\ref{LasCool}), and compare its prediction to the time-independent
+case (section \ref{NumCal}). From the treatment presented here follows, that lower temperatures can be obtained if the mechanical object
+is parametrically driven. Our result suggests that the details of the theoretical
+model of dissipation of the mechanical oscillator can have a
 significant influence on the resulting temperature (section
 \ref{ConCl}).
 
@@ -168,27 +161,23 @@ frequency as a laser that continuously pumps photons into the cavity
 is
 
 \begin{equation}
-H(t) =   H_{\rm cav} + H_{\rm mec}(t) + H_{\rm int} + H_{\rm pump},
+H(t) =   H_{\rm cav} + H_{\rm mec}(t) + H_{\rm int} + H_{\rm pump},\label{eq:Hfull}
 \end{equation}
 
 where
 
 \begin{align}
 H_{\rm cav} =& -\hbar \delta a^\dagger a,\\
-H_{\rm mec}(t) =& \frac{p^2}{2M} + \frac{1}{2}M \nu^2 (t) x^2,\\
+H_{\rm mec}(t) =& \frac{p^2}{2M} + \frac{1}{2}M \nu^2 (t) x^2,\label{eq:Hmec}\\
 H_{\rm int} =& -\hbar g a^\dagger a x,\\
 H_{\rm pump} =& \hbar\frac{\Omega}{2}(a^\dagger + a),
 \end{align}
-where $\delta = \omega_{laser} - \omega_{cav}$, in the cavity Hamiltonian, $H_{\rm cav}$, is the frequency difference between the laser and
-the cavity; $M$, in the mechanical oscillator Hamiltonian,
-$H_{\rm mec}$, is the mechanical oscillator's mass, $p$ its momentum
-operator, $x$ its position operator, and $\nu(t)$ its frequency. The
-$H_{\rm int}$ term models the interaction between the field and the cavity
+where $\delta = \omega_{laser} - \omega_{cav}$ is the detuning between laser and cavity. The mechanical oscillator's mass is denoted by $M$, $p$ and $x$ are its momentum and position operator, and $\nu(t)$ the modulated mechanical frequency. The term
+$H_{\rm int}$ models the interaction between the field and the cavity
 mirror where $g$ sets the strength of the coupling \cite{KippenberCO}.
 Finally, $H_{\rm pump}$ describes the pumping of the cavity by a field with
-a strength proportional to $\Omega$. The mechanical oscillator Hamiltonian has an explicit time dependence given by
-$\nu(t)$; in order to employ the Floquet formalism this dependence must be a
-periodic function of time.
+ strength proportional to $\Omega$. The mechanical oscillator Hamiltonian has an explicit time dependence given by
+$\nu(t)$; We assume here a periodic function of time time, what allows for employing the Floquet formalism.
 
 The Floquet operators are analogous to the usual creation and
 annihilation operators for the standard harmonic oscillator and can be
@@ -213,12 +202,12 @@ commutation relations for creation and annihilation operators
 [\Gamma(t)^\dagger,\Gamma(t)]=1.
 \end{equation}
 
- Using these operators $H_{\rm mec}(t)$ can be written in the same form as the non time-dependent harmonic oscillator with the Floquet operators taking the place of the annihilation operators, with the exception of a global time-dependent scalar coefficient  \cite{BrownPT}
+ Using these operators, $H_{\rm mec}(t)$, Eq.~\eqref{eq:Hmec}, can be written in the same form as the non time-dependent harmonic oscillator with the Floquet operators playing the role of the annihilation operators, with the exception of a global time-dependent scalar coefficient  \cite{BrownPT}
 
 \begin{equation}
 H_{\rm mec}(t) = \hbar\frac{W}{|f(t)|^2}\left[\Gamma^\dagger(t)\Gamma(t) + \frac{1}{2}\right],
 \end{equation}
-with $W$ the Wronskianfor for \eqref{TimeDependentHO}. The explicit time dependence of the Floquet operators will not be noted from now on for the sake of brevity. Equation
+where $W$ is the Wronskian for the differential equation \eqref{TimeDependentHO}. The explicit time dependence of the Floquet operators will not be noted from now on for the sake of brevity. Equation
 \eqref{FloquetOperators} is inverted and solved for the harmonic
 oscillator's position operator \cite{TesisMaestria}
 
@@ -243,11 +232,9 @@ H_{\rm int}(t) = g\sqrt{\frac{\hbar}{2M}}a^\dagger a[\gamma_+(t)\Gamma +\gamma_-
 \end{align*} 
 
 
-The Hamiltonian contains two separate harmonic oscillator-like terms
-that commute with each other, $H_{\rm cav}$ and $H_{\rm mec}$, so the
-standard harmonic oscillator master equation structure can be derived
-\cite{TesisMaestria}\cite{HanngiFM}. The usual derivation of the
-master equation involves a Markov approximation; in previous attempts
+The Hamiltonian~\eqref{eq:Hfull} contains two separate harmonic oscillator-like terms,  $H_{\rm cav}$ and $H_{\rm mec}$,
+that commute such that the standard derivation of the master equation can be applied
+\cite{TesisMaestria,HanngiFM}. This derivation involves the Markov approximation; in previous attempts
 to study this type of system, the time dependence of the frequency was
 included after the Markov approximation had been performed, via
 time-dependent ad-hoc coefficients for the damping \cite{BarberisLC}.
@@ -317,7 +304,7 @@ derivative term, is
 \end{align}
 with $\delta' = \delta + g\sqrt{\frac{\hbar}{2M}}(\gamma_+(t)\beta + \gamma_-(t)\beta^*)$.
 This Hamiltonian is valid as long as the coefficients $\alpha(t)$ and
-$\beta(t)$ fulfill the differential equations
+$\beta(t)$ fulfill the differential equations\textbf{Closed parenthesis missing? - better use different parenthesis, i.e. (, [ etc}
 
 \begin{align}\label{eq:displaced_frame}
 \dot{\alpha} =& \alpha(-\frac{\kappa}{2}+i(\delta+g\sqrt{\frac{\hbar}{2M}}(\gamma_-(t) \beta^* + \gamma_+(t) \beta))-i\frac{\Omega}{2},\\
@@ -342,19 +329,19 @@ specifically
 \nu(t) = \nu_0 + \epsilon' cos(2\omega t)\, ,
 \end{equation}
 with $\epsilon' \ll \nu_0$, where $\nu_0$ is the mean frequency. This
-leads to the time-dependent harmonic oscillator equation, neglecting terms of order 2 or higher in $\epsilon$
-
+leads to the time-dependent harmonic oscillator equation
 \begin{equation}\label{SmallOscillationsTDHO}
 \ddot{f} + (\nu_0^2 + 2\epsilon' \nu_0 cos(2\omega t))f = 0,
 \end{equation}
-which is a particular case of the Mathieu equation \cite{PiatekME}.
+when neglecting terms of order 2 or higher in $\epsilon$ an represents
+ a particular case of the Mathieu equation~\cite{PiatekME}.
 In order to guarantee stable solutions we require the scattering
 relation
 \begin{equation}
 \frac{\nu_0^2}{\omega^2} = n^2,\label{scattering}
 \end{equation}
 with $n \in \mathbb{Z}^+$\cite{WardFT}. We will focus on the case
-$n\gg 1$, which will be used in the next sections. The solutions for
+$n\gg 1$\textbf{What does this case physically mean?}, which will be used in the next sections. The solutions for
 \eqref{SmallOscillationsTDHO} are, to first order in
 $\epsilon= \frac{2\epsilon' \nu_0}{\omega^2}$,
 \begin{equation}\label{SmallOscillationsSolution}
@@ -384,7 +371,7 @@ if
 \dot{\beta} =& \beta(-\frac{\gamma}{2}-i\frac{W}{|f(t)|^2}+i\nu_0)+ig\sqrt{\frac{\hbar}{2M}}|\alpha|^2\gamma_+(t)\, .
 \end{align}
 
-With an explicit solution for \eqref{SmallOscillationsTDHO} in hand,
+With an explicit solution for \eqref{SmallOscillationsTDHO} at hand,
 we can solve Eq.~\eqref{eq:displaced_frame_2}. Assuming that the time
 scales of the dissipative processes are fast compared with the other
 time scales we can focus on the stationary case
@@ -513,11 +500,13 @@ A_+^c=& -a_cC_t(\frac{(\delta-\nu_0)^2\kappa+ \kappa\nu_0^2 + \kappa^3}{(-(\delt
 a_c= \hbar^2\abs{\gamma}^2\chi_0^2 J_1(C_t)\, ,
 \end{equation}
 $I_0$ and $J_1$ are the modified Bessel Function of the first kind and
-the Bessel function of the first kind, respectively. They appear in
+the Bessel function of the first kind, respectively. 
+\textbf{Since $C_t$ is small, does it make sense to write down the Bessel functions? Wouldn't it be sufficient to use their first Taylor-terms? The functional properties of the Bessel function seem not to be relevant for what follows.} 
+They appear in
 the cooling and heating rates as a result of averaging out the time
 dependencies for the cavity eigenvalues (see Appendix
 \ref{CoolingAppendix}).
-With these expressions in hand, the temperature is easily calculated.
+With these expressions in hand, the temperature is easily calculated.\textbf{$A_\pm$ seem to be Fano-like or at least double-peaked curves, right? Is there interference in the excitation paths? Where do the two resonances come from? Can they be used to find a different parameter regime of cooling, which does not exist in the time-independent case? (When setting $\delta$ such that $A_+$ is in the minimum)}
 
 
 \begin{figure}[h!]
@@ -557,7 +546,7 @@ long as $|\frac{\delta_t}{\nu_0}|,\frac{\delta_t}{\delta^2}\ll 1$.
 
 \begin{figure}
 \includegraphics[scale=.5]{TempPropGorden1.pdf}
-\caption{Ratio of the uncorrected and corrected temperatures over the cooling side of the detuning range. The corrected temperature is lower than the uncorrected temperature not just near the minimum.}
+\caption{Ratio of the uncorrected and corrected temperatures over the cooling side of the detuning range. The corrected temperature is lower than the uncorrected temperature not just near the minimum.\textbf{Showing the inverse $\langle m_x\rangle/\langle m\rangle$ would be more intuitive}}
 \label{fig:TempRatio}
 \end{figure}
 
@@ -565,6 +554,8 @@ long as $|\frac{\delta_t}{\nu_0}|,\frac{\delta_t}{\delta^2}\ll 1$.
 
 
 \section{Conclusions}\label{ConCl}
+
+\textbf{Conclusions should contain a physical discussion of the result - what is the reason for the lower temperature? The corrections are of course small due to the assumptions which allow for perturbation theory. It would be interesting to explore the non-perturbative paramter regime (I know it's dificult, but maybe as an outlook).}
 
 Using an improved theoretical description for the dissipation of a
 parametrically driven mechanical object in an optomechanical setup, we
@@ -577,6 +568,7 @@ consideration when theoretically treating the dissipation of the
 cavity field, because, similarly to the setup study in this paper, the
 natural frequency of the cavity field changes periodically with time.
 We plan to explore this case in future work.
+
  
 \appendix
 \section{The Damping Basis}\label{App1}
